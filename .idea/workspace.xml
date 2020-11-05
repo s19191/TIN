@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43fb9b5f-6329-4750-83a6-793ce162d81c" name="Default Changelist" comment="początek">
+    <list default="true" id="43fb9b5f-6329-4750-83a6-793ce162d81c" name="Default Changelist" comment="stopka, cała strona główna">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604581556753</updated>
-      <workItem from="1604581557802" duration="706000" />
+      <workItem from="1604581557802" duration="2296000" />
     </task>
     <task id="LOCAL-00001" summary="początek">
       <created>1604581649014</created>
@@ -74,7 +75,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604581649014</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="nagłówki, menu nawigacyjne oraz zawartość główna">
+      <created>1604582306183</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604582306183</updated>
+    </task>
+    <task id="LOCAL-00003" summary="stopka, cała strona główna">
+      <created>1604582408208</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604582408208</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,13 +108,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="początek" />
-    <option name="LAST_COMMIT_MESSAGE" value="początek" />
+    <MESSAGE value="nagłówki, menu nawigacyjne oraz zawartość główna" />
+    <MESSAGE value="stopka, cała strona główna" />
+    <option name="LAST_COMMIT_MESSAGE" value="stopka, cała strona główna" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1604581652787">
+    <state x="1303" y="358" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604582490319">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604581652787" />
+    <state x="1303" y="358" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604582490319" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1604582412865">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604582412865" />
     <state x="842" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604581575428">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
