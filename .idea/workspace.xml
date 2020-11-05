@@ -19,8 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43fb9b5f-6329-4750-83a6-793ce162d81c" name="Default Changelist" comment="dodane szczegóły">
+    <list default="true" id="43fb9b5f-6329-4750-83a6-793ce162d81c" name="Default Changelist" comment="dodane drugie połączenie ze szczegółów, ale coś nie tak bo trzeba było dodać div">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/ksiazka-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ksiazka-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ksiazka-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ksiazka-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ksiazki-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ksiazki-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -55,6 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -65,7 +71,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604581556753</updated>
-      <workItem from="1604581557802" duration="9095000" />
+      <workItem from="1604581557802" duration="9365000" />
+      <workItem from="1604612653480" duration="4690000" />
     </task>
     <task id="LOCAL-00001" summary="początek">
       <created>1604581649014</created>
@@ -123,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604602269225</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="dodane drugie połączenie ze szczegółów, ale coś nie tak bo trzeba było dodać div">
+      <created>1604602742254</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1604602742254</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +153,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="początek" />
@@ -149,17 +164,18 @@
     <MESSAGE value="dodany odnośnik do formularza" />
     <MESSAGE value="dodany formularz, ale coś jest z *" />
     <MESSAGE value="dodane szczegóły" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodane szczegóły" />
+    <MESSAGE value="dodane drugie połączenie ze szczegółów, ale coś nie tak bo trzeba było dodać div" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodane drugie połączenie ze szczegółów, ale coś nie tak bo trzeba było dodać div" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1303" y="358" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604582490319">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1303" y="358" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604582490319" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1604602272226">
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1604602747018">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604602272226" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604602747018" />
     <state x="842" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604581575428">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
