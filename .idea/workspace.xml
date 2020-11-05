@@ -19,8 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43fb9b5f-6329-4750-83a6-793ce162d81c" name="Default Changelist" comment="dodany odnośnik do formularza">
+    <list default="true" id="43fb9b5f-6329-4750-83a6-793ce162d81c" name="Default Changelist" comment="dodany formularz, ale coś jest z *">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ksiazka-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ksiazka-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ksiazki-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ksiazki-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604581556753</updated>
-      <workItem from="1604581557802" duration="5445000" />
+      <workItem from="1604581557802" duration="8790000" />
     </task>
     <task id="LOCAL-00001" summary="początek">
       <created>1604581649014</created>
@@ -109,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604585411699</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="dodany formularz, ale coś jest z *">
+      <created>1604599013004</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604599013004</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,17 +143,18 @@
     <MESSAGE value="dodana lista książek bez logo bo coś nie wychodzi" />
     <MESSAGE value="dodane logo w ksiązki-lista" />
     <MESSAGE value="dodany odnośnik do formularza" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodany odnośnik do formularza" />
+    <MESSAGE value="dodany formularz, ale coś jest z *" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodany formularz, ale coś jest z *" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1303" y="358" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604582490319">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1303" y="358" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604582490319" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1604585414751">
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1604599017654">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604585414751" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604599017654" />
     <state x="842" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604581575428">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

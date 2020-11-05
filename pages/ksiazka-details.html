@@ -19,25 +19,48 @@
     </ul>
 </nav>
 <main>
-    <h2>Dodaj książkę</h2>
+    <h2>Szczegóły książki</h2>
     <form>
         <div>
             <label for="tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
-            <input type="text" name="tytul" id="tytul">
+            <input type="text" name="tytul" value="Lew, czarownica i stara szafa" id="tytul" disabled>
         </div>
         <div>
             <label for="autor">Autor:<sup>*</sup></label>
-            <input type="text" name="autor" id="autor">
+            <input type="text" name="autor" value="C.S. Lewis" id="autor" disabled>
         </div>
         <div>
             <label for="dataWydania">Data wydania:<sup>*</sup></label>
-            <input type="date" name="dataWydania" id="dataWydania">
+            <input type="date" name="dataWydania" value="1950-01-01" id="dataWydania" disabled>
         </div>
         <div>
-            <input type="submit" value="Dodaj" />
-            <a href="">Anuluj</a>
+            <a href="ksiazka-form.html">Edytuj</a>
         </div>
     </form>
+    <h3>Szczegóły stanu książki w magazynach</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Nazwa magazynu</th>
+            <th>Ilość na stanie</th>
+            <th>Cena hurtowa</th>
+            <th>Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej</th>
+            <th>Cena detaliczna</th>
+        </tr>
+        </thead>
+    </table>
+    <tbody>
+    <tr>
+        <td>Magazyn na górce</td>
+        <td>1000</td>
+        <td>20,50</td>
+        <td>100</td>
+        <td>30,50</td>
+    </tr>
+    </tbody>
+    <div>
+        <a href="ksiazki-list.html">Powrót</a>
+    </div>
 </main>
 <footer>
     Jan, Kwasowski, s19191
