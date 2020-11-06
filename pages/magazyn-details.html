@@ -14,27 +14,25 @@
 <nav>
     <ul>
         <li><a href="../index.html">Strona główna</a></li>
-        <li><a href="ksiazki-list.html" class="active">Książki</a></li>
-        <li><a href="">Magazyny</a></li>
-        <li><a href="">Stan w magazynach</a></li>
+        <li><a href="ksiazki-list.html">Książki</a></li>
+        <li><a href="magazyn-list.html" class="active">Magazyny</a></li>
+        <li><a href="stanWMagazynie-list.html">Stan w magazynach</a></li>
     </ul>
 </nav>
 <main>
-    <h2>Szczegóły książki</h2>
+    <h2>Szczegóły magazynu</h2>
     <form class="form">
-        <label for="tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="tytul" value="Lew, czarownica i stara szafa" id="tytul" disabled>
-        <label for="autor">Autor:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="autor" value="C.S. Lewis" id="autor" disabled>
-        <label for="dataWydania">Data wydania:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="date" name="dataWydania" value="1950-01-01" id="dataWydania" disabled>
+        <label for="name">Nazwa:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="name" value="Magazyn na górce" id="name" disabled>
+        <label for="adress">Adres:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="adress" value="Górka 15/67" id="adress" disabled>
     </form>
-    <p><a href="ksiazka-edit.html" class="list-actions-button-edit">Edytuj</a></p>
-    <h2>Szczegóły stanu książki w magazynach</h2>
+    <p><a href="magazyn-edit.html" class="list-actions-button-edit">Edytuj</a></p>
+    <h2>Szczegóły stanu w magazynie konkretnych książek</h2>
     <table class="table-list">
         <thead>
         <tr>
-            <th>Nazwa magazynu</th>
+            <th>Tytuł książki</th>
             <th>Ilość na stanie</th>
             <th>Cena hurtowa</th>
             <th>Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej</th>
@@ -43,24 +41,22 @@
         </thead>
         <tbody>
         <tr>
-            <td>Magazyn na górce</td>
+            <td>Lew, czarownica i stara szafa</td>
             <td>1000</td>
             <td>20,50</td>
             <td>100</td>
             <td>30,50</td>
         </tr>
-        <div>
-            <tr>
-                <td>Magazyn w dołku</td>
-                <td>5000</td>
-                <td>18,50</td>
-                <td>20</td>
-                <td>35,50</td>
-            </tr>
-        </div>
+        <tr>
+            <td>Książę Kaspian</td>
+            <td>5000</td>
+            <td>18,50</td>
+            <td>20</td>
+            <td>35,50</td>
+        </tr>
         </tbody>
     </table>
-    <p><a href="ksiazki-list.html" class="list-actions-button-details">Powrót</a></p>
+    <p><a href="magazyn-list.html" class="list-actions-button-details">Powrót</a></p>
 </main>
 <footer>
     Jan, Kwasowski, s19191
