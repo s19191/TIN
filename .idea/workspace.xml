@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43fb9b5f-6329-4750-83a6-793ce162d81c" name="Default Changelist" comment="wszystko git">
-      <change beforePath="$PROJECT_DIR$/pages/ksiazka-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ksiazka-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/ksiazki-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ksiazki-list.html" afterDir="false" />
-    </list>
+    <list default="true" id="43fb9b5f-6329-4750-83a6-793ce162d81c" name="Default Changelist" comment="dodany magazyn, ale funkcjonalność książki" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +67,7 @@
       <updated>1604581556753</updated>
       <workItem from="1604581557802" duration="9365000" />
       <workItem from="1604612653480" duration="11168000" />
-      <workItem from="1604663738394" duration="6788000" />
+      <workItem from="1604663738394" duration="7174000" />
     </task>
     <task id="LOCAL-00001" summary="początek">
       <created>1604581649014</created>
@@ -184,7 +181,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604670842624</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="wszystko git">
+      <created>1604671191801</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1604671191801</updated>
+    </task>
+    <task id="LOCAL-00018" summary="dodany magazyn, ale funkcjonalność książki">
+      <created>1604671322565</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1604671322565</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,17 +230,18 @@
     <MESSAGE value="teoretycznie wszystko ale nie działa formularz" />
     <MESSAGE value="formularz chyba działa" />
     <MESSAGE value="wszystko git" />
-    <option name="LAST_COMMIT_MESSAGE" value="wszystko git" />
+    <MESSAGE value="dodany magazyn, ale funkcjonalność książki" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodany magazyn, ale funkcjonalność książki" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1303" y="358" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604582490319">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1303" y="358" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604582490319" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1604670847024">
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1604671194780">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604670847024" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604671194780" />
     <state x="842" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604581575428">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

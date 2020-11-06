@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Księgarnia Dobra Książka</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<header>
+    <h1>Księgarnia Dobra Książka</h1>
+    <img src="../images/logo.jpg" style="width: 100px; hight: 100px;" alt="Księgarnia Dobra Książka Logo">
+</header>
+<nav>
+    <ul>
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="ksiazki-list.html" class="active">Książki</a></li>
+        <li><a href="">Magazyny</a></li>
+        <li><a href="">Stan w magazynach</a></li>
+    </ul>
+</nav>
+<main>
+    <h2>Lista magazynów</h2>
+    <table class="table-list">
+        <thead>
+        <tr>
+            <th>Tytuł</th>
+            <th>Autor</th>
+            <th>Data wydania</th>
+            <th class="list-actions">Akcje</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Lew, czarownica i stara szafa</td>
+            <td>C.S. Lewis</td>
+            <td>1950</td>
+            <td>
+                <ul class="list-actions">
+                    <li>
+                        <a href="ksiazka-details.html" class="list-actions-button-details">Szczegóły</a>
+                    </li>
+                    <li>
+                        <a href="ksiazka-edit.html" class="list-actions-button-edit">Edytuj</a>
+                    </li>
+                    <li>
+                        <a href="" class="list-actions-button-delete">Usuń</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Książę Kaspian</td>
+            <td>C.S. Lewis</td>
+            <td>1951</td>
+            <td>
+                <ul class="list-actions">
+                    <li>
+                        <a href="ksiazka-details.html" class="list-actions-button-details">Szczegóły</a>
+                    </li>
+                    <li>
+                        <a href="ksiazka-edit.html" class="list-actions-button-edit">Edytuj</a>
+                    </li>
+                    <li>
+                        <a href="" class="list-actions-button-delete">Usuń</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p><a href="ksiazka-form.html" class="button-add">Dodaj nowego pracownika</a></p>
+</main>
+<footer>
+    Jan, Kwasowski, s19191
+</footer>
+</body>
+</html>
