@@ -21,25 +21,23 @@
 </nav>
 <main>
     <h2>Szczegóły książki</h2>
-    <form>
-        <div>
+    <form class="form">
+        <div class="form-group">
             <label for="tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
             <input type="text" name="tytul" value="Lew, czarownica i stara szafa" id="tytul" disabled>
         </div>
-        <div>
+        <div class="form-group">
             <label for="autor">Autor:<sup>*</sup></label>
             <input type="text" name="autor" value="C.S. Lewis" id="autor" disabled>
         </div>
-        <div>
+        <div class="form-group">
             <label for="dataWydania">Data wydania:<sup>*</sup></label>
             <input type="date" name="dataWydania" value="1950-01-01" id="dataWydania" disabled>
         </div>
-        <div>
-            <a href="ksiazka-form.html">Edytuj</a>
-        </div>
     </form>
-    <h3>Szczegóły stanu książki w magazynach</h3>
-    <table>
+    <p><a href="ksiazka-form.html" class="list-actions-button-edit">Edytuj</a></p>
+    <h2>Szczegóły stanu książki w magazynach</h2>
+    <table class="table-list">
         <thead>
         <tr>
             <th>Nazwa magazynu</th>
@@ -49,28 +47,26 @@
             <th>Cena detaliczna</th>
         </tr>
         </thead>
+        <tbody>
+        <tr>
+            <td>Magazyn na górce</td>
+            <td>1000</td>
+            <td>20,50</td>
+            <td>100</td>
+            <td>30,50</td>
+        </tr>
+        <div>
+            <tr>
+                <td>Magazyn w dołku</td>
+                <td>5000</td>
+                <td>18,50</td>
+                <td>20</td>
+                <td>35,50</td>
+            </tr>
+        </div>
+        </tbody>
     </table>
-    <tbody>
-    <tr>
-        <td>Magazyn na górce</td>
-        <td>1000</td>
-        <td>20,50</td>
-        <td>100</td>
-        <td>30,50</td>
-    </tr>
-    <div>
-    <tr>
-        <td>Magazyn w dołku</td>
-        <td>5000</td>
-        <td>18,50</td>
-        <td>20</td>
-        <td>35,50</td>
-    </tr>
-    </div>
-    </tbody>
-    <div>
-        <a href="ksiazki-list.html">Powrót</a>
-    </div>
+    <p><a href="ksiazki-list.html" class="list-actions-button-details">Powrót</a></p>
 </main>
 <footer>
     Jan, Kwasowski, s19191
