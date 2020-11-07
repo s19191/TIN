@@ -20,47 +20,31 @@
     </ul>
 </nav>
 <main>
-    <h2>Szczegóły książki</h2>
+    <h2>Szczegóły stanu w magazynach</h2>
     <form class="form">
-        <label for="tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="tytul" value="Lew, czarownica i stara szafa" id="tytul" disabled>
-        <label for="autor">Autor:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="autor" value="C.S. Lewis" id="autor" disabled>
-        <label for="dataWydania">Data wydania:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="date" name="dataWydania" value="1950-01-01" id="dataWydania" disabled>
+        <label for="magazyn">Magazyn:<abbr title="required" aria-label="required">*</abbr></label>
+        <select name="magazyn" id="magazyn" disabled>
+            <option value="">Magazyn na górce</option>
+            <option value="Magazyn1">Magazyn na górce</option>
+            <option value="Magazyn2">Magazyn w dołku</option>
+        </select>
+        <label for="ksiazka">Książka:<abbr title="required" aria-label="required">*</abbr></label>
+        <select name="ksiazka" id="ksiazka" disabled>
+            <option value="">Lew, czarownica i stara szafa</option>
+            <option value="Ksiazka1">Lew, czarownica i stara szafa</option>
+            <option value="Ksiazka2">Książę Kaspian</option>
+        </select>
+        <label for="iloscNaStanie">Ilość na stanie:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="iloscNaStanie" value="1000" id="iloscNaStanie" disabled>
+        <label for="cenaHurtowa">Cena hurtowa:</label>
+        <input type="text" name="cenaHurtowa" value="20,50" id="cenaHurtowa" disabled>
+        <label for="minilamnaIloscDoCenyHurtowej">Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej:</label>
+        <input type="text" name="minilamnaIloscDoCenyHurtowej" value="100" id="minilamnaIloscDoCenyHurtowej" disabled>
+        <label for="cenaDetaliczna">Cena detaliczna:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="cenaDetaliczna" value="30,50" id="cenaDetaliczna" disabled>
     </form>
-    <p><a href="ksiazka-edit.html" class="list-actions-button-edit">Edytuj</a></p>
-    <h2>Szczegóły stanu książki w magazynach</h2>
-    <table class="table-list">
-        <thead>
-        <tr>
-            <th>Nazwa magazynu</th>
-            <th>Ilość na stanie</th>
-            <th>Cena hurtowa</th>
-            <th>Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej</th>
-            <th>Cena detaliczna</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Magazyn na górce</td>
-            <td>1000</td>
-            <td>20,50</td>
-            <td>100</td>
-            <td>30,50</td>
-        </tr>
-        <div>
-            <tr>
-                <td>Magazyn w dołku</td>
-                <td>5000</td>
-                <td>18,50</td>
-                <td>20</td>
-                <td>35,50</td>
-            </tr>
-        </div>
-        </tbody>
-    </table>
-    <p><a href="ksiazki-list.html" class="list-actions-button-details">Powrót</a></p>
+    <p><a href="stanWMagazynie-edit.html" class="list-actions-button-edit">Edytuj</a></p>
+    <p><a href="stanWMagazynie-list.html" class="list-actions-button-details">Powrót</a></p>
 </main>
 <footer>
     Jan, Kwasowski, s19191
