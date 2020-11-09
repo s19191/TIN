@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43fb9b5f-6329-4750-83a6-793ce162d81c" name="Default Changelist" comment="chyba skończone, bez zmiany kolorów">
+    <list default="true" id="43fb9b5f-6329-4750-83a6-793ce162d81c" name="Default Changelist" comment="poprawki vol.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +73,9 @@
       <workItem from="1604612653480" duration="11168000" />
       <workItem from="1604663738394" duration="9896000" />
       <workItem from="1604703849036" duration="4219000" />
-      <workItem from="1604760308145" duration="405000" />
+      <workItem from="1604760308145" duration="1065000" />
+      <workItem from="1604933133642" duration="133000" />
+      <workItem from="1604941189316" duration="5535000" />
     </task>
     <task id="LOCAL-00001" summary="początek">
       <created>1604581649014</created>
@@ -221,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604707701402</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="poprawki vol.1">
+      <created>1604760832980</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1604760832980</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,17 +270,18 @@
     <MESSAGE value="dodany stan w magazynie, ale funkcjonalność książki" />
     <MESSAGE value="Zrobiona książka, magazyn oraz sam początek stanu w magazynie" />
     <MESSAGE value="chyba skończone, bez zmiany kolorów" />
-    <option name="LAST_COMMIT_MESSAGE" value="chyba skończone, bez zmiany kolorów" />
+    <MESSAGE value="poprawki vol.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawki vol.1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1303" y="358" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604582490319">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1303" y="358" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604582490319" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1604707705305">
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1604760837685">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604707705305" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1604760837685" />
     <state x="842" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604581575428">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
