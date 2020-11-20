@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60c0c51a-fd0f-47e0-81a4-9c5f47c31e2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/stanWMagazynie-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/stanWMagazynie-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/stanWMagazynie-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/stanWMagazynie-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/stanWMagazynie-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/stanWMagazynie-form.html" afterDir="false" />
-    </list>
+    <list default="true" id="60c0c51a-fd0f-47e0-81a4-9c5f47c31e2f" name="Default Changelist" comment="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,8 +54,16 @@
       <updated>1605627758250</updated>
       <workItem from="1605627759315" duration="37000" />
       <workItem from="1605882612827" duration="38000" />
-      <workItem from="1605882687308" duration="838000" />
+      <workItem from="1605882687308" duration="1144000" />
     </task>
+    <task id="LOCAL-00001" summary="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric">
+      <created>1605883830040</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605883830040</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,11 +81,19 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric" />
+    <option name="LAST_COMMIT_MESSAGE" value="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1605627784433">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1605627784433" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1605883834738">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1605883834738" />
     <state x="842" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605882635694">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
