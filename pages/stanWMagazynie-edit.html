@@ -9,7 +9,7 @@
 <body>
 <header>
     <h1>Księgarnia Dobra Książka</h1>
-    <img src="../images/logo.jpg" style="width: 100px; hight: 100px;" alt="Księgarnia Dobra Książka Logo">
+    <img src="../images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
 </header>
 <nav>
     <ul>
@@ -35,13 +35,13 @@
             <option value="Ksiazka2">Książę Kaspian</option>
         </select>
         <label for="iloscNaStanie">Ilość na stanie:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="iloscNaStanie" value="1000" id="iloscNaStanie">
+        <input type="number" name="iloscNaStanie" value=1000 id="iloscNaStanie">
         <label for="cenaHurtowa">Cena hurtowa:</label>
-        <input type="text" name="cenaHurtowa" value="20,50" id="cenaHurtowa">
+        <input type="number" name="cenaHurtowa" value=20.50 id="cenaHurtowa" step="any">
         <label for="minilamnaIloscDoCenyHurtowej">Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej:</label>
-        <input type="text" name="minilamnaIloscDoCenyHurtowej" value="100" id="minilamnaIloscDoCenyHurtowej">
+        <input type="number" name="minilamnaIloscDoCenyHurtowej" value=100 id="minilamnaIloscDoCenyHurtowej">
         <label for="cenaDetaliczna">Cena detaliczna:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="cenaDetaliczna" value="30,50" id="cenaDetaliczna">
+        <input type="number" name="cenaDetaliczna" value=30.50 id="cenaDetaliczna" step="any">
         <div class="form-buttons">
             <input type="submit" class="form-button-submit" value="Dodaj" />
             <a href="" class="form-button-cancel">Anuluj</a>

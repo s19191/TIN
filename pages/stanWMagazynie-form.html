@@ -9,7 +9,7 @@
 <body>
 <header>
     <h1>Księgarnia Dobra Książka</h1>
-    <img src="../images/logo.jpg" style="width: 100px; hight: 100px;" alt="Księgarnia Dobra Książka Logo">
+    <img src="../images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
 </header>
 <nav>
     <ul>
@@ -24,24 +24,24 @@
     <form class="form">
         <label for="magazyn">Magazyn:<abbr title="required" aria-label="required">*</abbr></label>
         <select name="magazyn" id="magazyn">
-            <option value=""></option>
+            <option value="">-- Wybierz magazyn --</option>
             <option value="Magazyn1">Magazyn na górce</option>
             <option value="Magazyn2">Magazyn w dołku</option>
         </select>
         <label for="ksiazka">Książka:<abbr title="required" aria-label="required">*</abbr></label>
         <select name="ksiazka" id="ksiazka">
-            <option value=""></option>
+            <option value="">-- Wybierz książkę --</option>
             <option value="Ksiazka1">Lew, czarownica i stara szafa</option>
             <option value="Ksiazka2">Książę Kaspian</option>
         </select>
         <label for="iloscNaStanie">Ilość na stanie:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="iloscNaStanie" id="iloscNaStanie">
+        <input type="number" name="iloscNaStanie" id="iloscNaStanie">
         <label for="cenaHurtowa">Cena hurtowa:</label>
-        <input type="text" name="cenaHurtowa" id="cenaHurtowa">
+        <input type="number" name="cenaHurtowa" id="cenaHurtowa" step="any">
         <label for="minilamnaIloscDoCenyHurtowej">Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej:</label>
-        <input type="text" name="minilamnaIloscDoCenyHurtowej" id="minilamnaIloscDoCenyHurtowej">
+        <input type="number" name="minilamnaIloscDoCenyHurtowej" id="minilamnaIloscDoCenyHurtowej">
         <label for="cenaDetaliczna">Cena detaliczna:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="cenaDetaliczna" id="cenaDetaliczna">
+        <input type="number" name="cenaDetaliczna" id="cenaDetaliczna" step="any">
         <div class="form-buttons">
             <input type="submit" class="form-button-submit" value="Dodaj" />
             <a href="" class="form-button-cancel">Anuluj</a>
