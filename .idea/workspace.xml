@@ -19,21 +19,39 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60c0c51a-fd0f-47e0-81a4-9c5f47c31e2f" name="Default Changelist" comment="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric" />
+    <list default="true" id="60c0c51a-fd0f-47e0-81a4-9c5f47c31e2f" name="Default Changelist" comment="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ksiazka-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ksiazka-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ksiazka-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ksiazka-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/magazyn-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/magazyn-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/magazyn-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/magazyn-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/stanWMagazynie-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/stanWMagazynie-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/stanWMagazynie-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/stanWMagazynie-form.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="MP1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kQLEg94atSUl2uMTzZdYkpmXE6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -55,7 +73,15 @@
       <workItem from="1605627759315" duration="37000" />
       <workItem from="1605882612827" duration="38000" />
       <workItem from="1605882687308" duration="1144000" />
-      <workItem from="1605887796945" duration="780000" />
+      <workItem from="1605887796945" duration="876000" />
+      <workItem from="1605977025360" duration="154000" />
+      <workItem from="1606070397823" duration="6000" />
+      <workItem from="1606419072320" duration="22000" />
+      <workItem from="1606504037610" duration="841000" />
+      <workItem from="1606515282171" duration="33000" />
+      <workItem from="1606515455509" duration="4627000" />
+      <workItem from="1607125566617" duration="26000" />
+      <workItem from="1607192285013" duration="2642000" />
     </task>
     <task id="LOCAL-00001" summary="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric">
       <created>1605883830040</created>
@@ -64,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605883830040</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric">
+      <created>1605893055787</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605893055787</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,19 +118,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric" />
     <option name="LAST_COMMIT_MESSAGE" value="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1605627784433">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1605627784433" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1605883834738">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1605883834738" />
-    <state x="842" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605882635694">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state x="842" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1605882635694" />
   </component>
 </project>
