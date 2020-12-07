@@ -1,6 +1,6 @@
 function resetErrors(inputs, errorTexts, errorInfo) {
     for(let i = 0; i < inputs.length; i++) {
-        inputs[i].classList.remove("error_input");
+        inputs[i].classList.remove("error-input");
     }
     for(let i = 0; i < errorTexts.length; i++) {
         errorTexts[i].innerText = "";
@@ -70,4 +70,28 @@ function checkAdress(value) {
     }
     const pattern = /((ul\.)|(al\.))\s(.+)\s(\d+[a-zA-Z]?[\/-]?\d+[a-zA-Z]?[\/-]?\d*)/;
     return pattern.test(value);
+}
+
+function checkNumber(value) {
+    if (!value) {
+        return false;
+    }
+    if (isNaN(value)) {
+        return false;
+    }
+    return true;
+}
+
+function checkNumberRange(value, min) {
+    if (!value) {
+        return false;
+    }
+    if (isNaN(value)) {
+        return false;
+    }
+    value = parseFloat(value);
+    if (value < min) {
+        return false;
+    }
+    return true;
 }
