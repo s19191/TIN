@@ -48,11 +48,10 @@ function validateForm() {
         valid = false;
         dataWydaniaInput.classList.add("error-input");
         errorDataWydania.innerText = "Pole jest wymagane";
-        // czy nastpęna część jest potrzebna co do typu date, gdzie nie da się nic innego wpisać
     } else if (!checkDate(dataWydaniaInput.value)) {
         valid = false;
         dataWydaniaInput.classList.add("error-input");
-        errorDataWydania.innerText = "Pole powinno zawierać datę w formacie dd.MM.yyyy (np. 01.01.2000)";
+        errorDataWydania.innerText = "Pole powinno zawierać datę w formacie yyyy-MM-dd (np. 2000-01-01)";
     } else if (checkDateIfAfter(dataWydaniaInput.value, nowString)) {
         valid = false;
         dataWydaniaInput.classList.add("error-input");
