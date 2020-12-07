@@ -6,6 +6,7 @@
     <title>Księgarnia Dobra Książka</title>
     <link rel="stylesheet" href="../css/style.css"/>
     <script type="application/javascript" src="../js/validationCommon.js"></script>
+    <script type="application/javascript" src="../js/validationKsiazkaForm.js"></script>
 </head>
 <body>
 <header>
@@ -22,14 +23,18 @@
 </nav>
 <main>
     <h2>Edytuj dane o książce</h2>
-    <form class="form">
+    <form class="form" novalidate onsubmit="return validateForm()">
         <label for="tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="tytul" value="Lew, czarownica i stara szafa" id="tytul">
+        <input type="text" name="tytul" placeholder="2-60 znaków" value="Lew, czarownica i stara szafa" id="tytul">
+        <span id="errorTytul" class="errors-text"></span>
         <label for="autor">Autor:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="autor" value="C.S. Lewis" id="autor">
+        <input type="text" name="autor" placeholder="2-60 znaków" value="C.S. Lewis" id="autor">
+        <span id="errorAutor" class="errors-text"></span>
         <label for="dataWydania">Data wydania:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="date" name="dataWydania" value="1950-01-01" id="dataWydania">
+        <span id="errorDataWydania" class="errors-text"></span>
         <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
             <input type="submit" class="form-button-submit" value="Dodaj" />
             <a href="" class="form-button-cancel">Anuluj</a>
         </div>

@@ -6,6 +6,7 @@
     <title>Księgarnia Dobra Książka</title>
     <link rel="stylesheet" href="../css/style.css"/>
     <script type="application/javascript" src="../js/validationCommon.js"></script>
+    <script type="application/javascript" src="../js/validationMagazynForm.js"></script>
 </head>
 <body>
 <header>
@@ -22,12 +23,15 @@
 </nav>
 <main>
     <h2>Dodaj magazyn</h2>
-    <form class="form">
+    <form class="form" novalidate onsubmit="return validateForm()">
         <label for="name">Nazwa:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" placeholder="2-60 znaków" id="name">
+        <span id="errorName" class="errors-text"></span>
         <label for="adress">Adres:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="adress" id="adress">
+        <input type="text" name="adress" placeholder="np. ul. Gorka 14C" id="adress">
+        <span id="errorAdress" class="errors-text"></span>
         <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
             <input type="submit" class="form-button-submit" value="Dodaj" />
             <a href="" class="form-button-cancel">Anuluj</a>
         </div>

@@ -19,11 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60c0c51a-fd0f-47e0-81a4-9c5f47c31e2f" name="Default Changelist" comment="początek &quot;Walidacja formularzy w JS&quot;">
+    <list default="true" id="60c0c51a-fd0f-47e0-81a4-9c5f47c31e2f" name="Default Changelist" comment="dodane podstawy walidacji oraz walidacja ksiazka-form.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/validationCommon.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/validationCommon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/ksiazka-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ksiazka-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/validationKsiazkaForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/validationKsiazkaForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/validationMagazynForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/validationMagazynForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ksiazka-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ksiazka-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/magazyn-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/magazyn-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/magazyn-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/magazyn-form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +84,7 @@
       <workItem from="1607192285013" duration="5265000" />
       <workItem from="1607269848510" duration="8998000" />
       <workItem from="1607293667064" duration="669000" />
-      <workItem from="1607294348512" duration="1589000" />
+      <workItem from="1607294348512" duration="6246000" />
     </task>
     <task id="LOCAL-00001" summary="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric">
       <created>1605883830040</created>
@@ -104,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607201203910</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="dodane podstawy walidacji oraz walidacja ksiazka-form.html">
+      <created>1607296386675</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607296386675</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +135,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric" />
     <MESSAGE value="początek &quot;Walidacja formularzy w JS&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="początek &quot;Walidacja formularzy w JS&quot;" />
+    <MESSAGE value="dodane podstawy walidacji oraz walidacja ksiazka-form.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodane podstawy walidacji oraz walidacja ksiazka-form.html" />
   </component>
 </project>
