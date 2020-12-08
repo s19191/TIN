@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="60c0c51a-fd0f-47e0-81a4-9c5f47c31e2f" name="Default Changelist" comment="poprawki w stanWMagazynie-edit.html" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="MP1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kQLEg94atSUl2uMTzZdYkpmXE6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tin-projekt-Kwasowski-s19191" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60c0c51a-fd0f-47e0-81a4-9c5f47c31e2f" name="Default Changelist" comment="" />
+      <created>1605627758250</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605627758250</updated>
+      <workItem from="1605627759315" duration="37000" />
+      <workItem from="1605882612827" duration="38000" />
+      <workItem from="1605882687308" duration="1144000" />
+      <workItem from="1605887796945" duration="876000" />
+      <workItem from="1605977025360" duration="154000" />
+      <workItem from="1606070397823" duration="6000" />
+      <workItem from="1606419072320" duration="22000" />
+      <workItem from="1606504037610" duration="841000" />
+      <workItem from="1606515282171" duration="33000" />
+      <workItem from="1606515455509" duration="4627000" />
+      <workItem from="1607125566617" duration="26000" />
+      <workItem from="1607192285013" duration="5265000" />
+      <workItem from="1607269848510" duration="8998000" />
+      <workItem from="1607293667064" duration="669000" />
+      <workItem from="1607294348512" duration="6277000" />
+      <workItem from="1607342611181" duration="9449000" />
+      <workItem from="1607383005654" duration="1001000" />
+      <workItem from="1607384387782" duration="746000" />
+    </task>
+    <task id="LOCAL-00001" summary="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric">
+      <created>1605883830040</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605883830040</updated>
+    </task>
+    <task id="LOCAL-00002" summary="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric">
+      <created>1605893055787</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605893055787</updated>
+    </task>
+    <task id="LOCAL-00003" summary="początek &quot;Walidacja formularzy w JS&quot;">
+      <created>1607201203910</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607201203910</updated>
+    </task>
+    <task id="LOCAL-00004" summary="dodane podstawy walidacji oraz walidacja ksiazka-form.html">
+      <created>1607296386675</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607296386675</updated>
+    </task>
+    <task id="LOCAL-00005" summary="dodane walidacje co do magazynów">
+      <created>1607301663274</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607301663274</updated>
+    </task>
+    <task id="LOCAL-00006" summary="poprawione szczegóły">
+      <created>1607375558689</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607375558689</updated>
+    </task>
+    <task id="LOCAL-00007" summary="zrobiona walidacja stanWMagazynie">
+      <created>1607381365100</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607381365100</updated>
+    </task>
+    <task id="LOCAL-00008" summary="poprawki w stanWMagazynie-edit.html">
+      <created>1607381748291</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607381748291</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="zmiana rozmiaru logo, dodane pisy w select, zmienione pola na numeric" />
+    <MESSAGE value="początek &quot;Walidacja formularzy w JS&quot;" />
+    <MESSAGE value="dodane podstawy walidacji oraz walidacja ksiazka-form.html" />
+    <MESSAGE value="dodane walidacje co do magazynów" />
+    <MESSAGE value="poprawione szczegóły" />
+    <MESSAGE value="zrobiona walidacja stanWMagazynie" />
+    <MESSAGE value="poprawki w stanWMagazynie-edit.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawki w stanWMagazynie-edit.html" />
+  </component>
+</project>
