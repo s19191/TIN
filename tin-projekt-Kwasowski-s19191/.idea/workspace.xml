@@ -36,6 +36,7 @@
       <workItem from="1607383814179" duration="206000" />
       <workItem from="1607384542125" duration="1860000" />
       <workItem from="1607386441421" duration="22000" />
+      <workItem from="1607386471866" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -58,7 +59,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607386454280</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="do szablony - wporowadzenie">
+      <created>1607386486465</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607386486465</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,8 +85,8 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="do szablony - wporowadzenie" />
     <MESSAGE value="dodatki" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodatki" />
+    <MESSAGE value="do szablony - wporowadzenie" />
+    <option name="LAST_COMMIT_MESSAGE" value="do szablony - wporowadzenie" />
   </component>
 </project>
