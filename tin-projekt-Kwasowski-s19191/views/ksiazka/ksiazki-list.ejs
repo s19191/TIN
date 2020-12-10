@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Księgarnia Dobra Książka</title>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../../public/css/style.css"/>
 </head>
 <body>
 <header>
     <h1>Księgarnia Dobra Książka</h1>
-    <img src="../images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
+    <img src="../../public/images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
 </header>
 <nav>
     <ul>
-        <li><a href="../index.html">Strona główna</a></li>
-        <li><a href="ksiazki-list.html" class="active">Książki</a></li>
-        <li><a href="magazyn-list.html">Magazyny</a></li>
-        <li><a href="stanWMagazynie-list.html">Stan w magazynach</a></li>
+        <li><a href="../index.ejs">Strona główna</a></li>
+        <li><a href="ksiazki-list.ejs" class="active">Książki</a></li>
+        <li><a href="../magazyn/magazyn-list.ejs">Magazyny</a></li>
+        <li><a href="../stanWMagazynie/stanWMagazynie-list.ejs">Stan w magazynach</a></li>
     </ul>
 </nav>
 <main>
@@ -38,10 +38,10 @@
             <td>
                 <ul class="list-actions">
                     <li>
-                        <a href="ksiazka-details.html" class="list-actions-button-details">Szczegóły</a>
+                        <a href="ksiazka-details.ejs" class="list-actions-button-details">Szczegóły</a>
                     </li>
                     <li>
-                        <a href="ksiazka-edit.html" class="list-actions-button-edit">Edytuj</a>
+                        <a href="ksiazka-edit.ejs" class="list-actions-button-edit">Edytuj</a>
                     </li>
                     <li>
                         <a href="" class="list-actions-button-delete">Usuń</a>
@@ -56,10 +56,10 @@
             <td>
                 <ul class="list-actions">
                     <li>
-                        <a href="ksiazka-details.html" class="list-actions-button-details">Szczegóły</a>
+                        <a href="ksiazka-details.ejs" class="list-actions-button-details">Szczegóły</a>
                     </li>
                     <li>
-                        <a href="ksiazka-edit.html" class="list-actions-button-edit">Edytuj</a>
+                        <a href="ksiazka-edit.ejs" class="list-actions-button-edit">Edytuj</a>
                     </li>
                     <li>
                         <a href="" class="list-actions-button-delete">Usuń</a>
@@ -69,7 +69,7 @@
         </tr>
         </tbody>
     </table>
-    <p><a href="ksiazka-form.html" class="button-add">Dodaj nowego pracownika</a></p>
+    <p><a href="ksiazka-form.ejs" class="button-add">Dodaj nowego pracownika</a></p>
 </main>
 <footer>
     Jan, Kwasowski, s19191

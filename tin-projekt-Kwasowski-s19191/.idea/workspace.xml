@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="do szablony - wporowadzenie" />
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="do szablony - wporowadzenie">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/ksiazka-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/ksiazka/ksiazka-details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/ksiazka-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/ksiazka/ksiazka-edit.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/ksiazka-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/ksiazka/ksiazka-form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/ksiazki-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/ksiazka/ksiazki-list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/magazyn-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/magazyn/magazyn-details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/magazyn-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/magazyn/magazyn-edit.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/magazyn-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/magazyn/magazyn-form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/magazyn-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/magazyn/magazyn-list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/stanWMagazynie-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/stanWMagazynie/stanWMagazynie-details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/stanWMagazynie-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/stanWMagazynie/stanWMagazynie-edit.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/stanWMagazynie-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/stanWMagazynie/stanWMagazynie-form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/stanWMagazynie-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/stanWMagazynie/stanWMagazynie-list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +53,9 @@
       <workItem from="1607384542125" duration="1860000" />
       <workItem from="1607386441421" duration="22000" />
       <workItem from="1607386471866" duration="24000" />
+      <workItem from="1607386503783" duration="30000" />
+      <workItem from="1607429602531" duration="2376000" />
+      <workItem from="1607607344034" duration="932000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -66,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607386486465</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="do szablony - wporowadzenie">
+      <created>1607386510255</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607386510255</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

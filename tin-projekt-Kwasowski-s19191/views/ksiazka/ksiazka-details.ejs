@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Księgarnia Dobra Książka</title>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../../public/css/style.css"/>
 </head>
 <body>
 <header>
     <h1>Księgarnia Dobra Książka</h1>
-    <img src="../images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
+    <img src="../../public/images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
 </header>
 <nav>
     <ul>
-        <li><a href="../index.html">Strona główna</a></li>
-        <li><a href="ksiazki-list.html" class="active">Książki</a></li>
-        <li><a href="magazyn-list.html">Magazyny</a></li>
-        <li><a href="stanWMagazynie-list.html">Stan w magazynach</a></li>
+        <li><a href="../index.ejs">Strona główna</a></li>
+        <li><a href="ksiazki-list.ejs" class="active">Książki</a></li>
+        <li><a href="../magazyn/magazyn-list.ejs">Magazyny</a></li>
+        <li><a href="../stanWMagazynie/stanWMagazynie-list.ejs">Stan w magazynach</a></li>
     </ul>
 </nav>
 <main>
@@ -29,7 +29,7 @@
         <label for="dataWydania">Data wydania:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="date" name="dataWydania" value="1950-01-01" id="dataWydania" disabled>
     </form>
-    <p><a href="ksiazka-edit.html" class="list-actions-button-edit">Edytuj</a></p>
+    <p><a href="ksiazka-edit.ejs" class="list-actions-button-edit">Edytuj</a></p>
     <h2>Szczegóły stanu książki w magazynach</h2>
     <table class="table-list">
         <thead>
@@ -60,7 +60,7 @@
         </div>
         </tbody>
     </table>
-    <p><a href="ksiazki-list.html" class="list-actions-button-details">Powrót</a></p>
+    <p><a href="ksiazki-list.ejs" class="list-actions-button-details">Powrót</a></p>
 </main>
 <footer>
     Jan, Kwasowski, s19191
