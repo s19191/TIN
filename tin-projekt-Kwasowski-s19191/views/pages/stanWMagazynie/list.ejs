@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="pl-PL">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Księgarnia Dobra Książka</title>
-    <link rel="stylesheet" href="../../../public/css/style.css"/>
-</head>
-<body>
-<header>
-    <h1>Księgarnia Dobra Książka</h1>
-    <img src="../../../public/images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
-</header>
-<nav>
-    <ul>
-        <li><a href="../index.ejs">Strona główna</a></li>
-        <li><a href="../ksiazka/list.ejs">Książki</a></li>
-        <li><a href="../magazyn/list.ejs">Magazyny</a></li>
-        <li><a href="list.ejs" class="active">Stan w magazynach</a></li>
-    </ul>
-</nav>
+<%- include('../../fragments/header.ejs') %>
 <main>
     <h2>Lista magazynów</h2>
     <table class="table-list">
@@ -44,10 +24,10 @@
             <td>
                 <ul class="list-actions">
                     <li>
-                        <a href="details.ejs" class="list-actions-button-details">Szczegóły</a>
+                        <a href="/stanWMagazynie/details/1" class="list-actions-button-details">Szczegóły</a>
                     </li>
                     <li>
-                        <a href="edit.ejs" class="list-actions-button-edit">Edytuj</a>
+                        <a href="/stanWMagazynie/edit/1" class="list-actions-button-edit">Edytuj</a>
                     </li>
                     <li>
                         <a href="" class="list-actions-button-delete">Usuń</a>
@@ -65,10 +45,10 @@
             <td>
                 <ul class="list-actions">
                     <li>
-                        <a href="details.ejs" class="list-actions-button-details">Szczegóły</a>
+                        <a href="/stanWMagazynie/details/1" class="list-actions-button-details">Szczegóły</a>
                     </li>
                     <li>
-                        <a href="edit.ejs" class="list-actions-button-edit">Edytuj</a>
+                        <a href="/stanWMagazynie/edit/1" class="list-actions-button-edit">Edytuj</a>
                     </li>
                     <li>
                         <a href="" class="list-actions-button-delete">Usuń</a>
@@ -86,10 +66,10 @@
             <td>
                 <ul class="list-actions">
                     <li>
-                        <a href="details.ejs" class="list-actions-button-details">Szczegóły</a>
+                        <a href="/stanWMagazynie/details/1" class="list-actions-button-details">Szczegóły</a>
                     </li>
                     <li>
-                        <a href="edit.ejs" class="list-actions-button-edit">Edytuj</a>
+                        <a href="/stanWMagazynie/edit/1" class="list-actions-button-edit">Edytuj</a>
                     </li>
                     <li>
                         <a href="" class="list-actions-button-delete">Usuń</a>
@@ -107,10 +87,10 @@
             <td>
                 <ul class="list-actions">
                     <li>
-                        <a href="details.ejs" class="list-actions-button-details">Szczegóły</a>
+                        <a href="/stanWMagazynie/details/1" class="list-actions-button-details">Szczegóły</a>
                     </li>
                     <li>
-                        <a href="edit.ejs" class="list-actions-button-edit">Edytuj</a>
+                        <a href="/stanWMagazynie/edit/1" class="list-actions-button-edit">Edytuj</a>
                     </li>
                     <li>
                         <a href="" class="list-actions-button-delete">Usuń</a>
@@ -120,10 +100,6 @@
         </tr>
         </tbody>
     </table>
-    <p><a href="form.ejs" class="button-add">Dodaj stan książki w konkretnym magazynie</a></p>
+    <p><a href="/stanWMagazynie/add" class="button-add">Dodaj stan książki w konkretnym magazynie</a></p>
 </main>
-<footer>
-    Jan, Kwasowski, s19191
-</footer>
-</body>
-</html>
+<%- include('../../fragments/footer.ejs') %>

@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="pl-PL">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Księgarnia Dobra Książka</title>
-    <link rel="stylesheet" href="../../../public/css/style.css"/>
-</head>
-<body>
-<header>
-    <h1>Księgarnia Dobra Książka</h1>
-    <img src="../../../public/images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
-</header>
-<nav>
-    <ul>
-        <li><a href="../index.ejs">Strona główna</a></li>
-        <li><a href="list.ejs" class="active">Książki</a></li>
-        <li><a href="../magazyn/list.ejs">Magazyny</a></li>
-        <li><a href="../stanWMagazynie/list.ejs">Stan w magazynach</a></li>
-    </ul>
-</nav>
+<%- include('../../fragments/header.ejs') %>
 <main>
     <h2>Szczegóły książki</h2>
     <form class="form">
@@ -29,7 +9,7 @@
         <label for="dataWydania">Data wydania:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="date" name="dataWydania" value="1950-01-01" id="dataWydania" disabled>
     </form>
-    <p><a href="edit.ejs" class="list-actions-button-edit">Edytuj</a></p>
+    <p><a href="/ksiazka/edit/1" class="list-actions-button-edit">Edytuj</a></p>
     <h2>Szczegóły stanu książki w magazynach</h2>
     <table class="table-list">
         <thead>
@@ -60,10 +40,6 @@
         </div>
         </tbody>
     </table>
-    <p><a href="list.ejs" class="list-actions-button-details">Powrót</a></p>
+    <p><a href="/ksiazka" class="list-actions-button-details">Powrót</a></p>
 </main>
-<footer>
-    Jan, Kwasowski, s19191
-</footer>
-</body>
-</html>
+<%- include('../../fragments/footer.ejs') %>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Księgarnia Dobra Książka</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <script type="application/javascript" src="../../js/validationCommon.js"></script>
+    <script type="application/javascript" src="../../js/validationKsiazkaForm.js"></script>
+</head>
+<body>
+<header>
+    <h1>Księgarnia Dobra Książka</h1>
+    <img src="../../images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
+</header>
+<nav>
+    <ul>
+        <li><a href="/" class="<%= navLocation == 'main' ? 'active' : ''%>">Strona główna</a></li>
+        <li><a href="/ksiazka" class="<%= navLocation == 'ksiazka' ? 'active' : ''%>">Książki</a></li>
+        <li><a href="/magazyn" class="<%= navLocation == 'magazyn' ? 'active' : ''%>">Magazyny</a></li>
+        <li><a href="/stanWMagazynie" class="<%= navLocation == 'stanWMagazynie' ? 'active' : ''%>">Stan w magazynach</a></li>
+    </ul>
+</nav>

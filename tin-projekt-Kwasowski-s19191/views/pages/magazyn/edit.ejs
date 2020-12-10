@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="pl-PL">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Księgarnia Dobra Książka</title>
-    <link rel="stylesheet" href="../../../public/css/style.css"/>
-    <script type="application/javascript" src="../../../public/js/validationCommon.js"></script>
-    <script type="application/javascript" src="../../../public/js/validationMagazynForm.js"></script>
-</head>
-<body>
-<header>
-    <h1>Księgarnia Dobra Książka</h1>
-    <img src="../../../public/images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
-</header>
-<nav>
-    <ul>
-        <li><a href="../index.ejs">Strona główna</a></li>
-        <li><a href="../ksiazka/list.ejs">Książki</a></li>
-        <li><a href="list.ejs" class="active">Magazyny</a></li>
-        <li><a href="../stanWMagazynie/list.ejs">Stan w magazynach</a></li>
-    </ul>
-</nav>
+<%- include('../../fragments/header.ejs') %>
 <main>
     <h2>Edytuj dane o magazynie</h2>
     <form class="form" novalidate onsubmit="return validateForm()">
@@ -33,12 +11,8 @@
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text"></p>
             <input type="submit" class="form-button-submit" value="Dodaj" />
-            <a href="" class="form-button-cancel">Anuluj</a>
+            <a href="/magazyn" class="form-button-cancel">Anuluj</a>
         </div>
     </form>
 </main>
-<footer>
-    Jan, Kwasowski, s19191
-</footer>
-</body>
-</html>
+<%- include('../../fragments/footer.ejs') %>
