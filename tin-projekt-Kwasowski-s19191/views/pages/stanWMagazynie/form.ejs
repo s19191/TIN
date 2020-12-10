@@ -4,49 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Księgarnia Dobra Książka</title>
-    <link rel="stylesheet" href="../../public/css/style.css"/>
-    <script type="application/javascript" src="../../public/js/validationCommon.js"></script>
-    <script type="application/javascript" src="../../public/js/validationStanWMagazynie.js"></script>
+    <link rel="stylesheet" href="../../../public/css/style.css"/>
+    <script type="application/javascript" src="../../../public/js/validationCommon.js"></script>
+    <script type="application/javascript" src="../../../public/js/validationStanWMagazynie.js"></script>
 </head>
 <body>
 <header>
     <h1>Księgarnia Dobra Książka</h1>
-    <img src="../../public/images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
+    <img src="../../../public/images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
 </header>
 <nav>
     <ul>
         <li><a href="../index.ejs">Strona główna</a></li>
-        <li><a href="../ksiazka/ksiazki-list.ejs">Książki</a></li>
-        <li><a href="../magazyn/magazyn-list.ejs">Magazyny</a></li>
-        <li><a href="stanWMagazynie-list.ejs" class="active">Stan w magazynach</a></li>
+        <li><a href="../ksiazka/list.ejs">Książki</a></li>
+        <li><a href="../magazyn/list.ejs">Magazyny</a></li>
+        <li><a href="list.ejs" class="active">Stan w magazynach</a></li>
     </ul>
 </nav>
 <main>
-    <h2>Szczegóły stanu w magazynach</h2>
+    <h2>Dodaj stan książki w konkretnym magazynie</h2>
     <form class="form" novalidate onsubmit="return validateForm()">
         <label for="magazyn">Magazyn:<abbr title="required" aria-label="required">*</abbr></label>
         <select name="magazyn" id="magazyn">
+            <option value="">-- Wybierz magazyn --</option>
             <option value="Magazyn1">Magazyn na górce</option>
             <option value="Magazyn2">Magazyn w dołku</option>
         </select>
         <span id="errorMagazyn" class="errors-text"></span>
         <label for="ksiazka">Książka:<abbr title="required" aria-label="required">*</abbr></label>
         <select name="ksiazka" id="ksiazka">
+            <option value="">-- Wybierz książkę --</option>
             <option value="Ksiazka1">Lew, czarownica i stara szafa</option>
             <option value="Ksiazka2">Książę Kaspian</option>
         </select>
         <span id="errorKsiazka" class="errors-text"></span>
         <label for="iloscNaStanie">Ilość na stanie:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="number" name="iloscNaStanie" value=1000 id="iloscNaStanie">
+        <input type="number" name="iloscNaStanie" id="iloscNaStanie">
         <span id="errorIloscNaStanie" class="errors-text"></span>
         <label for="cenaHurtowa">Cena hurtowa:</label>
-        <input type="number" name="cenaHurtowa" value=20.50 id="cenaHurtowa" step="any">
+        <input type="number" name="cenaHurtowa" id="cenaHurtowa" step="any">
         <span id="errorCenaHurtowa" class="errors-text"></span>
         <label for="minilamnaIloscDoCenyHurtowej">Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej:</label>
-        <input type="number" name="minilamnaIloscDoCenyHurtowej" value=100 id="minilamnaIloscDoCenyHurtowej">
+        <input type="number" name="minilamnaIloscDoCenyHurtowej" id="minilamnaIloscDoCenyHurtowej">
         <span id="errorMinilamnaIloscDoCenyHurtowej" class="errors-text"></span>
         <label for="cenaDetaliczna">Cena detaliczna:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="number" name="cenaDetaliczna" value=30.50 id="cenaDetaliczna" step="any">
+        <input type="number" name="cenaDetaliczna" id="cenaDetaliczna" step="any">
         <span id="errorCenaDetaliczna" class="errors-text"></span>
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text"></p>

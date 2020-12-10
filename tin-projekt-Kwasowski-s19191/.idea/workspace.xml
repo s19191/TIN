@@ -1,33 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="do szablony - wporowadzenie">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="przeniesienie stron oraz zmiana na .ejs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/ksiazka-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/ksiazka/ksiazka-details.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/ksiazka-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/ksiazka/ksiazka-edit.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/ksiazka-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/ksiazka/ksiazka-form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/ksiazki-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/ksiazka/ksiazki-list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/magazyn-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/magazyn/magazyn-details.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/magazyn-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/magazyn/magazyn-edit.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/magazyn-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/magazyn/magazyn-form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/magazyn-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/magazyn/magazyn-list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/stanWMagazynie-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/stanWMagazynie/stanWMagazynie-details.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/stanWMagazynie-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/stanWMagazynie/stanWMagazynie-edit.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/stanWMagazynie-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/stanWMagazynie/stanWMagazynie-form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/stanWMagazynie-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/stanWMagazynie/stanWMagazynie-list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ksiazka/ksiazka-details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ksiazka/ksiazka-edit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/edit.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ksiazka/ksiazka-form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ksiazka/ksiazki-list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/magazyn/magazyn-details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/magazyn/magazyn-edit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/edit.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/magazyn/magazyn-form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/magazyn/magazyn-list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/stanWMagazynie/stanWMagazynie-details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/stanWMagazynie/stanWMagazynie-edit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/edit.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/stanWMagazynie/stanWMagazynie-form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/stanWMagazynie/stanWMagazynie-list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/list.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1lLkZHpyBlfHyaQ9XhkVoEjqvqu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,6 +51,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views\pages" />
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views" />
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views\stanWMagazynie" />
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views\magazyn" />
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views\ksiazka" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -55,7 +75,7 @@
       <workItem from="1607386471866" duration="24000" />
       <workItem from="1607386503783" duration="30000" />
       <workItem from="1607429602531" duration="2376000" />
-      <workItem from="1607607344034" duration="932000" />
+      <workItem from="1607607344034" duration="2627000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -92,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607386510255</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="przeniesienie stron oraz zmiana na .ejs">
+      <created>1607608338655</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607608338655</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +140,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dodatki" />
     <MESSAGE value="do szablony - wporowadzenie" />
-    <option name="LAST_COMMIT_MESSAGE" value="do szablony - wporowadzenie" />
+    <MESSAGE value="przeniesienie stron oraz zmiana na .ejs" />
+    <option name="LAST_COMMIT_MESSAGE" value="przeniesienie stron oraz zmiana na .ejs" />
   </component>
 </project>
