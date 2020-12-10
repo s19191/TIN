@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="route dla ksiazki">
-      <change afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="wszystko działa, bez walidacji">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/ksiazkaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ksiazkaController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/magazynControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/magazynControllers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/validationStanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/ksiazkaRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ksiazkaRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/index.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/details.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/edit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/edit.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/details.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/edit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/edit.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/details.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/edit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/edit.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +65,7 @@
       <workItem from="1607386471866" duration="24000" />
       <workItem from="1607386503783" duration="30000" />
       <workItem from="1607429602531" duration="2376000" />
-      <workItem from="1607607344034" duration="12385000" />
+      <workItem from="1607607344034" duration="15765000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -130,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607610093183</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="wszystko działa, bez walidacji">
+      <created>1607636374558</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607636374558</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +146,7 @@
     <MESSAGE value="do szablony - wporowadzenie" />
     <MESSAGE value="przeniesienie stron oraz zmiana na .ejs" />
     <MESSAGE value="route dla ksiazki" />
-    <option name="LAST_COMMIT_MESSAGE" value="route dla ksiazki" />
+    <MESSAGE value="wszystko działa, bez walidacji" />
+    <option name="LAST_COMMIT_MESSAGE" value="wszystko działa, bez walidacji" />
   </component>
 </project>

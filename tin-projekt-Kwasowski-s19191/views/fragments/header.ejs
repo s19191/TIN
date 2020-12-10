@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Księgarnia Dobra Książka</title>
     <link rel="stylesheet" href="../../css/style.css"/>
-    <script type="application/javascript" src="../../js/validationCommon.js"></script>
-    <script type="application/javascript" src="../../js/validationKsiazkaForm.js"></script>
+    <% if (validation == 'ksiazka') { %>
+        <script src="../../js/validationCommon.js"></script>
+        <script src="../../js/validationKsiazkaForm.js"></script>
+    <% } %>
+    <% if (validation == 'magazyn') { %>
+        <script src="../../js/validationCommon.js"></script>
+        <script src="../../js/validationMagazynForm.js"></script>
+    <% } %>
+    <% if (validation == 'stanWMagazynie') { %>
+        <script src="../../js/validationCommon.js"></script>
+        <script src="../../js/validationStanWMagazynieForm.js"></script>
+    <% } %>
 </head>
 <body>
 <header>
