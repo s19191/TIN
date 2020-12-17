@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="wszystko działa, bez walidacji">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="dodana walidacja">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ksiazkaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ksiazkaController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/magazynControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/magazynControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/validationStanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +61,10 @@
       <workItem from="1607386471866" duration="24000" />
       <workItem from="1607386503783" duration="30000" />
       <workItem from="1607429602531" duration="2376000" />
-      <workItem from="1607607344034" duration="15765000" />
+      <workItem from="1607607344034" duration="17068000" />
+      <workItem from="1607691568058" duration="2405000" />
+      <workItem from="1607895831486" duration="13000" />
+      <workItem from="1608237868311" duration="7216000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -123,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607636374558</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="dodana walidacja">
+      <created>1607642938619</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607642938619</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +153,7 @@
     <MESSAGE value="przeniesienie stron oraz zmiana na .ejs" />
     <MESSAGE value="route dla ksiazki" />
     <MESSAGE value="wszystko działa, bez walidacji" />
-    <option name="LAST_COMMIT_MESSAGE" value="wszystko działa, bez walidacji" />
+    <MESSAGE value="dodana walidacja" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodana walidacja" />
   </component>
 </project>
