@@ -5,9 +5,9 @@ const Magazyn = require('../../model/sequelize/Magazyn');
 const StanWMagazynie = require('../../model/sequelize/StanWMagazynie');
 
 module.exports = () => {
-    Ksiazka.hasMany(StanWMagazynie, {as: 'stanWMagazynie', foreignKey: {name: 'Id_Ksiazka', allowNull: false}, constraints: true, onDelete: 'CASCADE'});
+    Ksiazka.hasMany(StanWMagazynie, {as: 'stanyWMagazynach', foreignKey: {name: 'Id_Ksiazka', allowNull: false}, constraints: true, onDelete: 'CASCADE'});
     StanWMagazynie.belongsTo(Ksiazka, {as: 'ksiazka', foreignKey: {name: 'Id_Ksiazka', allowNull: false} } );
-    Magazyn.hasMany(StanWMagazynie, {as: 'stanWMagazynie', foreignKey: {name: 'Id_Magazyn', allowNull: false}, constraints: true, onDelete: 'CASCADE'});
+    Magazyn.hasMany(StanWMagazynie, {as: 'stanyWMagazynach', foreignKey: {name: 'Id_Magazyn', allowNull: false}, constraints: true, onDelete: 'CASCADE'});
     StanWMagazynie.belongsTo(Magazyn, {as: 'magazyn', foreignKey: {name: 'Id_Magazyn', allowNull: false} });
 
     let allKsiazka, allMagazyn;

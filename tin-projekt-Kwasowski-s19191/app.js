@@ -8,6 +8,11 @@ var indexRouter = require('./routes/index');
 const ksiazkaRouter = require('./routes/ksiazkaRoute');
 const magazynRouter = require('./routes/magazynRoute');
 const stanWMagazynieRouter = require('./routes/stanWMagazynieRoute');
+const sequelizeInit = require('./config/sequelize/init');
+sequelizeInit()
+    .catch(err => {
+      console.log(err);
+    });
 
 var app = express();
 
