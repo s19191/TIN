@@ -19,7 +19,16 @@ exports.getStanyWMagazynach = () => {
 
 
 exports.getStanWMagazynieById = (Id_Ksiazka, Id_Magazyn) => {
-    return StanWMagazynie.findByPk(Id_Ksiazka, Id_Magazyn, {include: [
+    return StanWMagazynie.findByPk(Id_Ksiazka, {include: [
+            {
+                model: Ksiazka,
+                as: 'ksiazka'
+            },
+            {
+                model: Magazyn,
+                as: 'magazyn'
+            }]
+    }).findByPk(Id_Magazyn, {include: [
             {
                 model: Ksiazka,
                 as: 'ksiazka'

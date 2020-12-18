@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="dodane repozytoria">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="nie dziłają REST API dla tabeli asocjacyjnej">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/seqelize/Ksiazka.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/seqelize/Magazyn.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Magazyn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/seqelize/StanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/seqelize/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/sequelize/init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/seqelize/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config/sequelize/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/seqelize/sequelize.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/sequelize/sequelize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/MagazynRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/MagazynRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/ksiazkaRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ksiazkaRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/magazynRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/magazynRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/stanWMagazynieRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/stanWMagazynieRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/StanWMagazynieApiRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/StanWMagazynieApiRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +67,7 @@
       <workItem from="1608237868311" duration="9612000" />
       <workItem from="1608250651319" duration="129000" />
       <workItem from="1608295934126" duration="1029000" />
-      <workItem from="1608297044100" duration="16346000" />
+      <workItem from="1608297044100" duration="21141000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -164,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608250390744</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="nie dziłają REST API dla tabeli asocjacyjnej">
+      <created>1608320061525</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1608320061525</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +187,7 @@
     <MESSAGE value="dodana walidacja" />
     <MESSAGE value="dodany docker, teoretycznie jak baza ma wyglądać, ale nie wiem czy działa. PRzed dodaniem do app.js" />
     <MESSAGE value="dodane repozytoria" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodane repozytoria" />
+    <MESSAGE value="nie dziłają REST API dla tabeli asocjacyjnej" />
+    <option name="LAST_COMMIT_MESSAGE" value="nie dziłają REST API dla tabeli asocjacyjnej" />
   </component>
 </project>
