@@ -5,7 +5,7 @@ const stanWMagazynieController = require("../controllers/stanWMagazynieControlle
 
 router.get('/', stanWMagazynieController.showStanWMagazynieList);
 router.get('/add', stanWMagazynieController.showAddStanWMagazynieForm);
-router.get('/details/:empId', stanWMagazynieController.showStanWMagazynieDetails);
-router.get('/edit/:empId', stanWMagazynieController.showEditStanWMagazynieForm);
+router.get('/details/:Id_Ksiazka', stanWMagazynieController.showStanWMagazynieDetails);
+router.get('/edit/:Id_Ksiazka', stanWMagazynieController.showEditStanWMagazynieForm);
 
 module.exports = router;

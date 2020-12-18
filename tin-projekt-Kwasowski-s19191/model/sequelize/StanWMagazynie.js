@@ -17,7 +17,7 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
         allowNull: false
     },
     CenaHurtowa: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.DOUBLE,
         allowNull: true
     },
     MinimalnaIloscDoCenyHurtowej: {
@@ -25,7 +25,7 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
         allowNull: true
     },
     CenaDetaliczna: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.DOUBLE,
         allowNull: false
     }
 });

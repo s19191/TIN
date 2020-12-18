@@ -30,7 +30,7 @@ exports.createMagazyn = (newMagazynData) => {
 exports.updateMagazyn = (Id_Magazyn, magazynData) => {
     const Adres = magazynData.Adres;
     const Nazwa = magazynData.Nazwa;
-    return Ksiazka.update(magazynData, {where: {Id_Magazyn: Id_Magazyn }});
+    return Magazyn.update(magazynData, {where: {Id_Magazyn: Id_Magazyn }});
 };
 
 exports.deleteMagazyn = (Id_Magazyn) => {

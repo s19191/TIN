@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('tin-example-sequelize', 'root', 'root', {
+const sequelize = new Sequelize('tin-projekt-s19191', 'root', 'root', {
     dialect: 'mysql',
     host: 'localhost'
 });

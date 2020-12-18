@@ -8,6 +8,9 @@ var indexRouter = require('./routes/index');
 const ksiazkaRouter = require('./routes/ksiazkaRoute');
 const magazynRouter = require('./routes/magazynRoute');
 const stanWMagazynieRouter = require('./routes/stanWMagazynieRoute');
+const ksiazkaApiRouter = require('./routes/api/KsiazkaApiRoute');
+const magazynApiRouter = require('./routes/api/MagazynApiRoute');
+const stanWMagazynieApiRouter = require('./routes/api/StanWMagazynieApiRoute');
 const sequelizeInit = require('./config/sequelize/init');
 sequelizeInit()
     .catch(err => {
@@ -30,6 +33,10 @@ app.use('/', indexRouter);
 app.use('/ksiazka', ksiazkaRouter);
 app.use('/magazyn', magazynRouter);
 app.use('/stanWMagazynie', stanWMagazynieRouter);
+app.use('/api/ksiazki', ksiazkaApiRouter);
+app.use('/api/magazyny', magazynApiRouter);
+app.use('/api/stanWMagazynie', stanWMagazynieApiRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
