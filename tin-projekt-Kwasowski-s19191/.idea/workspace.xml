@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="nie dziłają REST API dla tabeli asocjacyjnej">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="nie działa wszystko co musimy wyszukać przez dwa klucze główne">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/StanWMagazynieAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/StanWMagazynieAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/StanWMagazynieApiRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/StanWMagazynieApiRoute.js" afterDir="false" />
     </list>
@@ -67,7 +69,9 @@
       <workItem from="1608237868311" duration="9612000" />
       <workItem from="1608250651319" duration="129000" />
       <workItem from="1608295934126" duration="1029000" />
-      <workItem from="1608297044100" duration="21141000" />
+      <workItem from="1608297044100" duration="21172000" />
+      <workItem from="1608375864830" duration="1451000" />
+      <workItem from="1608406036359" duration="2491000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -160,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608320061525</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="nie działa wszystko co musimy wyszukać przez dwa klucze główne">
+      <created>1608327663016</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1608327663016</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +199,7 @@
     <MESSAGE value="dodany docker, teoretycznie jak baza ma wyglądać, ale nie wiem czy działa. PRzed dodaniem do app.js" />
     <MESSAGE value="dodane repozytoria" />
     <MESSAGE value="nie dziłają REST API dla tabeli asocjacyjnej" />
-    <option name="LAST_COMMIT_MESSAGE" value="nie dziłają REST API dla tabeli asocjacyjnej" />
+    <MESSAGE value="nie działa wszystko co musimy wyszukać przez dwa klucze główne" />
+    <option name="LAST_COMMIT_MESSAGE" value="nie działa wszystko co musimy wyszukać przez dwa klucze główne" />
   </component>
 </project>

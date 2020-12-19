@@ -18,17 +18,8 @@ exports.getStanyWMagazynach = () => {
 };
 
 
-exports.getStanWMagazynieById = (Id_Ksiazka, Id_Magazyn) => {
-    return StanWMagazynie.findByPk(Id_Ksiazka, {include: [
-            {
-                model: Ksiazka,
-                as: 'ksiazka'
-            },
-            {
-                model: Magazyn,
-                as: 'magazyn'
-            }]
-    }).findByPk(Id_Magazyn, {include: [
+exports.getStanWMagazynieById = (Id_StanWMagazynie) => {
+    return StanWMagazynie.findByPk(Id_StanWMagazynie, {include: [
             {
                 model: Ksiazka,
                 as: 'ksiazka'
@@ -53,16 +44,16 @@ exports.createStanWMagazynie = (stanWMagazynieData) => {
     });
 };
 
-exports.updateStanWMagazynie = (Id_Ksiazka, Id_Magazyn, stanWMagazynieData) => {
-    return StanWMagazynie.update(stanWMagazynieData, {where: {Ksiazka_Id_Ksiazka: Id_Ksiazka, Magazyn_Id_Magazyn: Id_Magazyn }});
+exports.updateStanWMagazynie = (Id_StanWMagazynie, stanWMagazynieData) => {
+    return StanWMagazynie.update(stanWMagazynieData, {where: {Id_StanWMagazynie: Id_StanWMagazynie }});
 }
 
-exports.deleteStanWMagazynie = (Id_Ksiazka, Id_Magazyn) => {
+exports.deleteStanWMagazynie = (Id_StanWMagazynie) => {
     return StanWMagazynie.destroy({
-        where: {Ksiazka_Id_Ksiazka: Id_Ksiazka, Magazyn_Id_Magazyn: Id_Magazyn }
+        where: {Id_StanWMagazynie: Id_StanWMagazynie }
     });
 }
 
-exports.deleteManyStanyWMagazynach = (Id_Ksiazek, Id_Magazynow) => {
-    return StanWMagazynie.find({ Ksiazka_Id_Ksiazka: { [Sequelize.Op.in]: Id_Ksiazek }, Magazyn_Id_Magazyn: { [Sequelize.Op.in]: Id_Magazynow }})
+exports.deleteManyStanyWMagazynach = (Id_StanWMagazynie) => {
+    return StanWMagazynie.find({ Id_StanWMagazynie: { [Sequelize.Op.in]: Id_StanWMagazynie }})
 }

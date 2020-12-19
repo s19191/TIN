@@ -4,11 +4,11 @@ const router = express.Router();
 const stanWMagazynieApiController = require('../../api/StanWMagazynieAPI');
 
 router.get('/', stanWMagazynieApiController.getStanyWMagazynach);
-router.get('/:Id_Ksiazka/:Id_Magazyn', stanWMagazynieApiController.getStanWMagazynieById);
+router.get('/:Id_StanWMagazynie', stanWMagazynieApiController.getStanWMagazynieById);
 router.post('/', stanWMagazynieApiController.createStanWMagazynie);
-router.put('/:Id_Ksiazka/:Id_Magazyn', stanWMagazynieApiController.updateStanWMagazynie);
-router.delete('/:Id_Ksiazka/:Id_Magazyn', stanWMagazynieApiController.deleteMagazyn);
-router.delete('/:Id_Ksiazka/:Id_Magazyn', stanWMagazynieApiController.deleteMagazyn);
+router.put('/:Id_StanWMagazynie', stanWMagazynieApiController.updateStanWMagazynie);
+router.delete('/:Id_StanWMagazynie', stanWMagazynieApiController.deleteStanWMagazynie);
+// router.delete('/:Id_StanWMagazynie', stanWMagazynieApiController.deleteStanWMagazynie);
 
 
 module.exports = router;

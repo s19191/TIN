@@ -2,15 +2,19 @@ const Sequelize = require('sequelize');
 const sequelize = require('../../config/sequelize/sequelize');
 
 const StanWMagazynie = sequelize.define('StanWMagazynie', {
+    Id_StanWMagazynie: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        allowNull: false,
+        primaryKey: true
+    },
     Ksiazka_Id_Ksiazka: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        primaryKey: true
     },
     Magazyn_Id_Magazyn: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        primaryKey: true
     },
     IloscNaStanie: {
         type: Sequelize.INTEGER,
