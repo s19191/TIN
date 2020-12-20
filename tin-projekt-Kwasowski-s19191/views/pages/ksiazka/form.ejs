@@ -3,16 +3,16 @@
     <h2><%= pageTitle %></h2>
     <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
         <input type="hidden" name="Id_Ksiazka" value="<%= ks.Id_Ksiazka %>">
-        <label for="tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="tytul" placeholder="2-60 znaków" id="tytul" value="<%= ks.Tytul %>"
+        <label for="Tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="Tytul" placeholder="2-60 znaków" id="Tytul" value="<%= ks.Tytul %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
         <span id="errorTytul" class="errors-text"></span>
-        <label for="autor">Autor:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="autor" placeholder="2-60 znaków" id="autor" value="<%= ks.Autor %>"
+        <label for="Autor">Autor:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="Autor" placeholder="2-60 znaków" id="Autor" value="<%= ks.Autor %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
         <span id="errorAutor" class="errors-text"></span>
-        <label for="dataWydania">Data wydania:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="date" name="dataWydania" placeholder="Data w formacie yyyy-MM-dd" id="dataWydania" value="<%= ks.DataWydania.toISOString().split('T')[0] %>"
+        <label for="DataWydania">Data wydania:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="date" name="DataWydania" placeholder="Data w formacie yyyy-MM-dd" id="DataWydania" value="<%= ks.DataWydania.toISOString().split('T')[0] %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
         <span id="errorDataWydania" class="errors-text"></span>
     </form>
@@ -20,7 +20,7 @@
         <p><a href="/ksiazka/edit/<%= ks.Id_Ksiazka %>" class="list-actions-button-edit">Edytuj</a></p>
     <% } %>
     <% if (formMode == 'showDetails' || formMode == 'edit') { %>
-        <h2>Szczegóły książki</h2>
+        <h2>Szczegóły magazynu</h2>
         <table class="table-list">
             <thead>
             <tr>
@@ -34,7 +34,7 @@
             <tbody>
             <% for (let k of ks.stanyWMagazynach) { %>
                 <tr>
-                    <td><a href="/stanWMagazynie/details/<%= k.magazyn.Id_Magazyn %>"><%= k.magazyn.Nazwa %></a></td>
+                    <td><a href="/magazyn/details/<%= k.magazyn.Id_Magazyn %>"><%= k.magazyn.Nazwa %></a></td>
                     <td><%= k.IloscNaStanie %></td>
                     <td><%= k.CenaHurtowa %></td>
                     <td><%= k.MinimalnaIloscDoCenyHurtowej %></td>

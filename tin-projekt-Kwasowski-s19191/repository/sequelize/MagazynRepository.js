@@ -7,7 +7,7 @@ exports.getMagazyny = () => {
 };
 
 exports.getMagazynById = (Id_Magazyn) => {
-    return Ksiazka.findByPk(Id_Magazyn,
+    return Magazyn.findByPk(Id_Magazyn,
         {
             include: [{
                 model: StanWMagazynie,

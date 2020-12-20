@@ -1,1 +1,3 @@
-cd..&cd..&d:&cd TIN&cd tin-projekt-Kwasowski-s19191
+cd..&cd..&d:&cd TIN&cd tin-projekt-Kwasowski-s19191&cd docker& docker-compose up
+
+cd..&cd..&d:&cd TIN&cd tin-projekt-Kwasowski-s19191& npm start

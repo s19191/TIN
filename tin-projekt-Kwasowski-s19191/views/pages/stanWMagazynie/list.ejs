@@ -15,15 +15,17 @@
         </thead>
         <% for (let swm of stanyWMagazynach) { %>
             <tr>
+                <td><%= swm.ksiazka.Tytul %></td>
+                <td><%= swm.magazyn.Nazwa %></td>
                 <td><%= swm.IloscNaStanie %></td>
-                <td><%= swm.CenaHurtowa %></td>
-                <td><%= swm.MinimalnaIloscDoCenyHurtowej %></td>
+                <td><%= swm.CenaHurtowa ? swm.CenaHurtowa : 0 %></td>
+                <td><%= swm.MinimalnaIloscDoCenyHurtowej ? swm.MinimalnaIloscDoCenyHurtowej : 0 %></td>
                 <td><%= swm.CenaDetaliczna %></td>
                 <td>
                     <ul class="list-actions">
-                        <li><a href="/employees/details/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-details">Szczegóły</a></li>
-                        <li><a href="/employees/edit/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-edit">Edytuj</a></li>
-                        <li><a href="/employees/delete/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-delete">Usuń</a></li>
+                        <li><a href="/stanWMagazynie/details/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-details">Szczegóły</a></li>
+                        <li><a href="/stanWMagazynie/edit/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-edit">Edytuj</a></li>
+                        <li><a href="/stanWMagazynie/delete/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-delete">Usuń</a></li>
                     </ul>
                 </td>
             </tr>

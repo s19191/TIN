@@ -1,19 +1,24 @@
 <%- include('../../fragments/header.ejs') %>
 <main>
-    <h2>Dodaj stan książki w konkretnym magazynie</h2>
-    <form class="form" novalidate onsubmit="return validateForm()">
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+        <input type="hidden" name="Id_StanWMagazynie" value="<%= swm.Id_StanWMagazynie %>">
         <label for="magazyn">Magazyn:<abbr title="required" aria-label="required">*</abbr></label>
-        <select name="magazyn" id="magazyn">
+        <select name="magazyn" id="magazyn" <%= (formMode == 'showDetails') ? 'disabled' : ''%> >
             <option value="">-- Wybierz magazyn --</option>
-            <option value="Magazyn1">Magazyn na górce</option>
-            <option value="Magazyn2">Magazyn w dołku</option>
+            <% for (let i=0; i<allMag.length; i++) { let mag = allMag[i]; %>
+            <option value="<%= mag.Id_Magazyn %>" label="<%= mag.Nazwa %>"
+                    <%= (swm._id && mag.Id_Magazyn.toString() == swm.magazyn.Id_Magazyn.toString()) ? 'selected' : ''%>></option>
+            <% } %>
         </select>
         <span id="errorMagazyn" class="errors-text"></span>
         <label for="ksiazka">Książka:<abbr title="required" aria-label="required">*</abbr></label>
-        <select name="ksiazka" id="ksiazka">
+        <select name="ksiazka" id="ksiazka" <%= (formMode == 'showDetails') ? 'disabled' : ''%> >
             <option value="">-- Wybierz książkę --</option>
-            <option value="Ksiazka1">Lew, czarownica i stara szafa</option>
-            <option value="Ksiazka2">Książę Kaspian</option>
+            <% for (let i=0; i<allKs.length; i++) { let ks = allKs[i]; %>
+            <option value="<%= ks.Id_Ksiazka %>" label="<%= ks.Tytul %>"
+                    <%= (swm._id && ks.Id_Ksiazka.toString() == swm.ksiazka.Id_Ksiazka.toString()) ? 'selected' : ''%>></option>
+            <% } %>
         </select>
         <span id="errorKsiazka" class="errors-text"></span>
         <label for="iloscNaStanie">Ilość na stanie:<abbr title="required" aria-label="required">*</abbr></label>

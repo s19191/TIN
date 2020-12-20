@@ -48,7 +48,7 @@ exports.showEditKsiazkaForm = (req, res, next) => {
                 pageTitle: 'Edycja książki',
                 btnLabel: 'Edytuj książkę',
                 formAction: '/ksiazka/edit',
-                navLocation: 'emp',
+                navLocation: 'ksiazka',
                 validation: 'ksiazka'
             });
         });
