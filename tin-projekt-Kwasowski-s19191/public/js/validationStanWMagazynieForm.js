@@ -2,10 +2,10 @@ function validateForm() {
 
     const magazynInput = document.getElementById('magazyn');
     const ksiazkaInput = document.getElementById('ksiazka');
-    const iloscNaStanieInput = document.getElementById('iloscNaStanie');
-    const cenaHurtowaInput = document.getElementById('cenaHurtowa');
-    const minilamnaIloscDoCenyHurtowejInput = document.getElementById('minilamnaIloscDoCenyHurtowej');
-    const cenaDetalicznaInput = document.getElementById('cenaDetaliczna');
+    const iloscNaStanieInput = document.getElementById('IloscNaStanie');
+    const cenaHurtowaInput = document.getElementById('CenaHurtowa');
+    const minilamnaIloscDoCenyHurtowejInput = document.getElementById('MinimalnaIloscDoCenyHurtowej');
+    const cenaDetalicznaInput = document.getElementById('CenaDetaliczna');
 
     const errorMagazyn = document.getElementById('errorMagazyn');
     const errorKsiazka = document.getElementById('errorKsiazka');

@@ -11,6 +11,13 @@
         <input type="text" name="Adres" placeholder="np. ul. Gorka 15/67" id="Adres" value="<%= mag.Adres %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
         <span id="errorAdress" class="errors-text"></span>
+        <% if (formMode != 'showDetails') { %>
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
+            <input type="submit" class="form-button-submit" value="<%=btnLabel%>"/>
+            <a href="/magazyn" class="form-button-cancel">Anuluj</a>
+            <% } %>
+        </div>
     </form>
     <% if (formMode == 'showDetails') { %>
         <p><a href="/magazyn/edit/<%= mag.Id_Magazyn %>" class="list-actions-button-edit">Edytuj</a></p>
@@ -39,15 +46,7 @@
             <% } %>
             </tbody>
         </table>
+        <p><a href="/magazyn" class="list-actions-button-details">Powrót</a></p>
     <% } %>
-    <div class="form-buttons">
-        <p id="errorsSummary" class="errors-text"></p>
-        <% if (formMode != 'showDetails') { %>
-            <input type="submit" class="form-button-submit" value="Dodaj" />
-            <a href="/magazyn" class="form-button-cancel">Anuluj</a>
-        <% } else { %>
-            <a class="form-button-cancel" href="/magazyn">Powrót</a>
-        <% } %>
-    </div>
 </main>
 <%- include('../../fragments/footer.ejs') %>

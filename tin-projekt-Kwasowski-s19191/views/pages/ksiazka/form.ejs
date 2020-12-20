@@ -12,9 +12,19 @@
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
         <span id="errorAutor" class="errors-text"></span>
         <label for="DataWydania">Data wydania:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="date" name="DataWydania" placeholder="Data w formacie yyyy-MM-dd" id="DataWydania" value="<%= ks.DataWydania.toISOString().split('T')[0] %>"
+        <input type="date" name="DataWydania" placeholder="Data w formacie yyyy-MM-dd" id="DataWydania"
+                <% if (formMode != 'createNew') { %>
+                    value="<%= ks.DataWydania.toISOString().split('T')[0] %>"
+                <% } %>
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
         <span id="errorDataWydania" class="errors-text"></span>
+        <% if (formMode != 'showDetails') { %>
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
+            <input type="submit" class="form-button-submit" value="<%=btnLabel%>" />
+            <a href="/ksiazka" class="form-button-cancel">Anuluj</a>
+        </div>
+        <% } %>
     </form>
     <% if (formMode == 'showDetails') { %>
         <p><a href="/ksiazka/edit/<%= ks.Id_Ksiazka %>" class="list-actions-button-edit">Edytuj</a></p>
@@ -43,15 +53,7 @@
             <% } %>
             </tbody>
         </table>
+    <p><a href="/ksiazka" class="list-actions-button-details">Powrót</a></p>
     <% } %>
-    <div class="form-buttons">
-        <p id="errorsSummary" class="errors-text"></p>
-        <% if (formMode != 'showDetails') { %>
-            <input type="submit" class="form-button-submit" value="Dodaj" />
-            <a href="/ksiazka" class="form-button-cancel">Anuluj</a>
-        <% } else { %>
-            <a class="form-button-cancel" href="/ksiazka">Powrót</a>
-        <% } %>
-    </div>
 </main>
 <%- include('../../fragments/footer.ejs') %>

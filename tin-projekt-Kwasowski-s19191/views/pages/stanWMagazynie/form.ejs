@@ -8,7 +8,7 @@
             <option value="">-- Wybierz magazyn --</option>
             <% for (let i=0; i<allMag.length; i++) { let mag = allMag[i]; %>
             <option value="<%= mag.Id_Magazyn %>" label="<%= mag.Nazwa %>"
-                    <%= (swm._id && mag.Id_Magazyn.toString() == swm.magazyn.Id_Magazyn.toString()) ? 'selected' : ''%>></option>
+                    <%= (swm.Id_StanWMagazynie && mag.Id_Magazyn.toString() == swm.magazyn.Id_Magazyn.toString()) ? 'selected' : ''%>></option>
             <% } %>
         </select>
         <span id="errorMagazyn" class="errors-text"></span>
@@ -17,27 +17,37 @@
             <option value="">-- Wybierz książkę --</option>
             <% for (let i=0; i<allKs.length; i++) { let ks = allKs[i]; %>
             <option value="<%= ks.Id_Ksiazka %>" label="<%= ks.Tytul %>"
-                    <%= (swm._id && ks.Id_Ksiazka.toString() == swm.ksiazka.Id_Ksiazka.toString()) ? 'selected' : ''%>></option>
+                    <%= (swm.Id_StanWMagazynie && ks.Id_Ksiazka.toString() == swm.ksiazka.Id_Ksiazka.toString()) ? 'selected' : ''%>></option>
             <% } %>
         </select>
         <span id="errorKsiazka" class="errors-text"></span>
-        <label for="iloscNaStanie">Ilość na stanie:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="number" name="iloscNaStanie" id="iloscNaStanie">
+        <label for="IloscNaStanie">Ilość na stanie:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="number" name="IloscNaStanie" id="IloscNaStanie" value="<%= swm.IloscNaStanie %>"
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
         <span id="errorIloscNaStanie" class="errors-text"></span>
-        <label for="cenaHurtowa">Cena hurtowa:</label>
-        <input type="number" name="cenaHurtowa" id="cenaHurtowa" step="any">
+        <label for="CenaHurtowa">Cena hurtowa:</label>
+        <input type="number" name="CenaHurtowa" id="CenaHurtowa" step="any" value="<%= swm.CenaHurtowa %>"
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
         <span id="errorCenaHurtowa" class="errors-text"></span>
-        <label for="minilamnaIloscDoCenyHurtowej">Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej:</label>
-        <input type="number" name="minilamnaIloscDoCenyHurtowej" id="minilamnaIloscDoCenyHurtowej">
+        <label for="MinimalnaIloscDoCenyHurtowej">Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej:</label>
+        <input type="number" name="MinimalnaIloscDoCenyHurtowej" id="MinimalnaIloscDoCenyHurtowej" value="<%= swm.MinimalnaIloscDoCenyHurtowej %>"
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
         <span id="errorMinilamnaIloscDoCenyHurtowej" class="errors-text"></span>
-        <label for="cenaDetaliczna">Cena detaliczna:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="number" name="cenaDetaliczna" id="cenaDetaliczna" step="any">
+        <label for="CenaDetaliczna">Cena detaliczna:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="number" name="CenaDetaliczna" id="CenaDetaliczna" step="any" value="<%= swm.CenaDetaliczna %>"
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
         <span id="errorCenaDetaliczna" class="errors-text"></span>
+        <% if (formMode != 'showDetails') { %>
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text"></p>
-            <input type="submit" class="form-button-submit" value="Dodaj" />
+            <input type="submit" class="form-button-submit" value="<%=btnLabel%>"/>
             <a href="/stanWMagazynie" class="form-button-cancel">Anuluj</a>
+            <% } %>
         </div>
     </form>
+    <% if (formMode == 'showDetails') { %>
+        <p><a href="/stanWMagazynie/edit/<%= swm.Id_StanWMagazynie %>" class="list-actions-button-edit">Edytuj</a></p>
+        <p><a href="/magazyn" class="list-actions-button-details">Powrót</a></p>
+    <% } %>
 </main>
 <%- include('../../fragments/footer.ejs') %>

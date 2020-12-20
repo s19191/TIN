@@ -29,7 +29,7 @@ exports.showAddStanWMagazynieForm = (req, res, next) => {
                 allKs: allKs,
                 allMag: allMag,
                 pageTitle: 'Nowy stan książki w konretnym magazynie',
-                btnLabel: 'Dodaj zatrudnienie',
+                btnLabel: 'Dodaj stan w konkretnym magazynie',
                 formAction: '/stanWMagazynie/add',
                 navLocation: 'stanWMagazynie',
                 validation: 'stanWMagazynie'
@@ -39,31 +39,51 @@ exports.showAddStanWMagazynieForm = (req, res, next) => {
 
 exports.showStanWMagazynieDetails = (req, res, next) => {
     const Id_StanWMagazynie = req.params.Id_StanWMagazynie;
-    StanWMagazynieRepository.getStanWMagazynieById(Id_StanWMagazynie)
-        .then(swm => {
-            res.render('pages/stanWMagazynie/form', {
-                swm: swm,
-                formMode: 'showDetails',
-                pageTitle: 'Szczegóły magazynu',
-                formAction: '',
-                navLocation: 'stanWMagazynie',
-                validation: ''
-            });
+    let allKs, allMag;
+    KsiazkaRepository.getKsiazki()
+        .then(ks => {
+            allKs = ks;
+            return MagazynRepository.getMagazyny();
+        })
+        .then(mag => {
+            allMag = mag;
+            return StanWMagazynieRepository.getStanWMagazynieById(Id_StanWMagazynie);
+        }).then(swm => {
+        res.render('pages/stanWMagazynie/form', {
+            swm: swm,
+            formMode: 'showDetails',
+            allKs: allKs,
+            allMag: allMag,
+            pageTitle: 'Szczegóły magazynu',
+            formAction: '',
+            navLocation: 'stanWMagazynie',
+            validation: ''
         });
+    });
 }
 
 exports.showEditStanWMagazynieForm = (req, res, next) => {
     const Id_StanWMagazynie = req.params.Id_StanWMagazynie;
-    StanWMagazynieRepository.getStanWMagazynieById(Id_StanWMagazynie)
-        .then(swm => {
-            res.render('pages/stanWMagazynie/form', {
-                swm: swm,
-                formMode: 'edit',
-                pageTitle: 'Edycja magazynu',
-                btnLabel: 'Edytuj magazyn',
-                formAction: '/stanWMagazynie/edit',
-                navLocation: 'stanWMagazynie',
-                validation: 'stanWMagazynie'
-            });
+    let allKs, allMag;
+    KsiazkaRepository.getKsiazki()
+        .then(ks => {
+            allKs = ks;
+            return MagazynRepository.getMagazyny();
+        })
+        .then(mag => {
+            allMag = mag;
+            return StanWMagazynieRepository.getStanWMagazynieById(Id_StanWMagazynie);
+        }).then(swm => {
+        res.render('pages/stanWMagazynie/form', {
+            swm: swm,
+            formMode: 'edit',
+            allKs: allKs,
+            allMag: allMag,
+            pageTitle: 'Edycja magazynu',
+            formAction: '/stanWMagazynie/edit',
+            btnLabel: 'Edytuj stan w magazynie',
+            navLocation: 'stanWMagazynie',
+            validation: 'stanWMagazynie'
         });
+    });
 }
