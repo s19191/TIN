@@ -11,42 +11,20 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Lew, czarownica i stara szafa</td>
-            <td>C.S. Lewis</td>
-            <td>1950</td>
-            <td>
-                <ul class="list-actions">
-                    <li>
-                        <a href="/ksiazka/details/1" class="list-actions-button-details">Szczegóły</a>
-                    </li>
-                    <li>
-                        <a href="/ksiazka/edit/1" class="list-actions-button-edit">Edytuj</a>
-                    </li>
-                    <li>
-                        <a href="" class="list-actions-button-delete">Usuń</a>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Książę Kaspian</td>
-            <td>C.S. Lewis</td>
-            <td>1951</td>
-            <td>
-                <ul class="list-actions">
-                    <li>
-                        <a href="/ksiazka/details/1" class="list-actions-button-details">Szczegóły</a>
-                    </li>
-                    <li>
-                        <a href="/ksiazka/edit/1" class="list-actions-button-edit">Edytuj</a>
-                    </li>
-                    <li>
-                        <a href="" class="list-actions-button-delete">Usuń</a>
-                    </li>
-                </ul>
-            </td>
-        </tr>
+        <% for (let ks of ksiazki) { %>
+            <tr>
+                <td><%= ks.Tytul %></td>
+                <td><%= ks.Autor %></td>
+                <td><%= ks.DataWydania.toISOString().split('T')[0] %></td>
+                <td>
+                    <ul class="list-actions">
+                        <li><a href="/ksiazka/details/<%=ks.Id_Ksiazka%>" class="list-actions-button-details">Szczegóły</a></li>
+                        <li><a href="/ksiazka/edit/<%=ks.Id_Ksiazka%>" class="list-actions-button-edit">Edytuj</a></li>
+                        <li><a href="/ksiazka/delete/<%=ks.Id_Ksiazka%>" class="list-actions-button-delete">Usuń</a></li>
+                    </ul>
+                </td>
+            </tr>
+        <% } %>
         </tbody>
     </table>
     <p><a href="/ksiazka/add" class="button-add">Dodaj nową książkę</a></p>

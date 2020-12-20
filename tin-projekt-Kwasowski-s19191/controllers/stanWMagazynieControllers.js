@@ -1,5 +1,14 @@
+const StanWMagazynieRepository = require('../repository/sequelize/StanWMagayznieRepository');
+
 exports.showStanWMagazynieList = (req, res, next) => {
-    res.render('pages/stanWMagazynie/list', { navLocation: 'stanWMagazynie', validation: '' });
+    StanWMagazynieRepository.getStanyWMagazynach()
+        .then(stanyWMagazynach => {
+            res.render('pages/stanWMagazynie/list', {
+                stanyWMagazynach: stanyWMagazynach,
+                navLocation: 'stanWMagazynie',
+                validation: ''
+            });
+        });
 }
 
 exports.showAddStanWMagazynieForm = (req, res, next) => {

@@ -1,5 +1,14 @@
+const MagazynRepository = require('../repository/sequelize/MagazynRepository');
+
 exports.showMagazynList = (req, res, next) => {
-    res.render('pages/magazyn/list', { navLocation: 'magazyn', validation: '' });
+    MagazynRepository.getMagazyny()
+        .then(magazyny => {
+            res.render('pages/magazyn/list', {
+                magazyny: magazyny,
+                navLocation: 'magazyn',
+                validation: ''
+            });
+        });
 }
 
 exports.showAddMagazynForm = (req, res, next) => {

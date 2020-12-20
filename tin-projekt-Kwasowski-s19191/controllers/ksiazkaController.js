@@ -1,15 +1,55 @@
+const KsiazkaRepository = require('../repository/sequelize/KsiazkaRepository');
+
 exports.showKsiazkaList = (req, res, next) => {
-    res.render('pages/ksiazka/list', { navLocation: 'ksiazka', validation: '' });
+    KsiazkaRepository.getKsiazki()
+        .then(ksiazki => {
+            res.render('pages/ksiazka/list', {
+                ksiazki: ksiazki,
+                navLocation: 'ksiazka',
+                validation: ''
+            });
+        });
 }
 
 exports.showAddKsiazkaForm = (req, res, next) => {
-    res.render('pages/ksiazka/form', { navLocation: 'ksiazka', validation: 'ksiazka' });
+    res.render('pages/ksiazka/form', {
+        ks: {},
+        pageTitle: 'Nowa ksiazka',
+        formMode: 'createNew',
+        btnLabel: 'Dodaj książkę',
+        formAction: '/ksiazka/add',
+        navLocation: 'ksiazka',
+        validation: 'ksiazka'
+    });
 }
 
 exports.showKsiazkaDetails = (req, res, next) => {
-    res.render('pages/ksiazka/details', { navLocation: 'ksiazka', validation: '' });
+    const Id_Ksiazka = req.params.Id_Ksiazka;
+    KsiazkaRepository.getKsiazkaById(Id_Ksiazka)
+        .then(ks => {
+            res.render('pages/ksiazka/form', {
+                ks: ks,
+                formMode: 'showDetails',
+                pageTitle: 'Szczegóły książki',
+                formAction: '',
+                navLocation: 'ksiazka',
+                validation: ''
+            });
+        });
 }
 
 exports.showEditKsiazkaForm = (req, res, next) => {
-    res.render('pages/ksiazka/edit', { navLocation: 'ksiazka', validation: 'ksiazka' });
+    const Id_Ksiazka = req.params.Id_Ksiazka;
+    KsiazkaRepository.getKsiazkaById(Id_Ksiazka)
+        .then(ks => {
+            res.render('pages/ksiazka/form', {
+                ks: ks,
+                formMode: 'edit',
+                pageTitle: 'Edycja książki',
+                btnLabel: 'Edytuj książkę',
+                formAction: '/ksiazka/edit',
+                navLocation: 'emp',
+                validation: 'ksiazka'
+            });
+        });
 }

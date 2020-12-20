@@ -1,21 +1,57 @@
 <%- include('../../fragments/header.ejs') %>
 <main>
-    <h2>Dodaj książkę</h2>
-    <form class="form" novalidate onsubmit="return validateForm()">
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+        <input type="hidden" name="Id_Ksiazka" value="<%= ks.Id_Ksiazka %>">
         <label for="tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="tytul" placeholder="2-60 znaków" id="tytul">
+        <input type="text" name="tytul" placeholder="2-60 znaków" id="tytul" value="<%= ks.Tytul %>"
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
         <span id="errorTytul" class="errors-text"></span>
         <label for="autor">Autor:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="autor" placeholder="2-60 znaków" id="autor">
+        <input type="text" name="autor" placeholder="2-60 znaków" id="autor" value="<%= ks.Autor %>"
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
         <span id="errorAutor" class="errors-text"></span>
         <label for="dataWydania">Data wydania:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="date" name="dataWydania" placeholder="Data w formacie yyyy-MM-dd" id="dataWydania">
+        <input type="date" name="dataWydania" placeholder="Data w formacie yyyy-MM-dd" id="dataWydania" value="<%= ks.DataWydania.toISOString().split('T')[0] %>"
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
         <span id="errorDataWydania" class="errors-text"></span>
-        <div class="form-buttons">
-            <p id="errorsSummary" class="errors-text"></p>
+    </form>
+    <% if (formMode == 'showDetails') { %>
+        <p><a href="/ksiazka/edit/<%= ks.Id_Ksiazka %>" class="list-actions-button-edit">Edytuj</a></p>
+    <% } %>
+    <% if (formMode == 'showDetails' || formMode == 'edit') { %>
+        <h2>Szczegóły książki</h2>
+        <table class="table-list">
+            <thead>
+            <tr>
+                <th>Nazwa magazynu</th>
+                <th>Ilość na stanie</th>
+                <th>Cena hurtowa</th>
+                <th>Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej</th>
+                <th>Cena detaliczna</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (let k of ks.stanyWMagazynach) { %>
+                <tr>
+                    <td><a href="/stanWMagazynie/details/<%= k.magazyn.Id_Magazyn %>"><%= k.magazyn.Nazwa %></a></td>
+                    <td><%= k.IloscNaStanie %></td>
+                    <td><%= k.CenaHurtowa %></td>
+                    <td><%= k.MinimalnaIloscDoCenyHurtowej %></td>
+                    <td><%= k.CenaDetaliczna %></td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    <% } %>
+    <div class="form-buttons">
+        <p id="errorsSummary" class="errors-text"></p>
+        <% if (formMode != 'showDetails') { %>
             <input type="submit" class="form-button-submit" value="Dodaj" />
             <a href="/ksiazka" class="form-button-cancel">Anuluj</a>
-        </div>
-    </form>
+        <% } else { %>
+            <a class="form-button-cancel" href="/ksiazka">Powrót</a>
+        <% } %>
+    </div>
 </main>
 <%- include('../../fragments/footer.ejs') %>
