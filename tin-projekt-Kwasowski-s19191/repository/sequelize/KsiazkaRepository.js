@@ -39,5 +39,4 @@ exports.deleteKsiazka = (Id_Ksiazka) => {
     return Ksiazka.destroy({
         where: {Id_Ksiazka: Id_Ksiazka }
     });
-
 };

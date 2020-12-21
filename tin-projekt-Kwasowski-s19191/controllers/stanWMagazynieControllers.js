@@ -87,3 +87,28 @@ exports.showEditStanWMagazynieForm = (req, res, next) => {
         });
     });
 }
+
+exports.addStanWMagazynie = (req, res, next) => {
+    const swmData = { ...req.body };
+    StanWMagazynieRepository.createStanWMagazynie(swmData)
+        .then( result => {
+            res.redirect('/stanWMagazynie');
+        });
+};
+
+exports.updateStanWMagazynie = (req, res, next) => {
+    const Id_StanWMagazynie = req.body.Id_StanWMagazynie;
+    const swmData = { ...req.body };
+    StanWMagazynieRepository.updateStanWMagazynie(Id_StanWMagazynie, swmData)
+        .then( result => {
+            res.redirect('/stanWMagazynie');
+        });
+};
+
+exports.deleteStanWMagazynie = (req, res, next) => {
+    const Id_StanWMagazynie = req.params.Id_StanWMagazynie;
+    StanWMagazynieRepository.deleteStanWMagazynie(Id_StanWMagazynie)
+        .then( () => {
+            res.redirect('/stanWMagazynie');
+        });
+};

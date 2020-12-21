@@ -53,3 +53,28 @@ exports.showEditMagazynForm = (req, res, next) => {
             });
         });
 }
+
+exports.addMagazyn = (req, res, next) => {
+    const magData = { ...req.body };
+    MagazynRepository.createMagazyn(magData)
+        .then( result => {
+            res.redirect('/magazyn');
+        });
+};
+
+exports.updateMagazyn = (req, res, next) => {
+    const Id_Magazyn = req.body.Id_Magazyn;
+    const magData = { ...req.body };
+    MagazynRepository.updateMagazyn(Id_Magazyn, magData)
+        .then( result => {
+            res.redirect('/magazyn');
+        });
+};
+
+exports.deleteMagazyn = (req, res, next) => {
+    const Id_Magazyn = req.params.Id_Magazyn;
+    MagazynRepository.deleteMagazyn(Id_Magazyn)
+        .then( () => {
+            res.redirect('/magazyn');
+        });
+};

@@ -37,5 +37,4 @@ exports.deleteMagazyn = (Id_Magazyn) => {
     return Magazyn.destroy({
         where: {Id_Magazyn: Id_Magazyn }
     });
-
 };

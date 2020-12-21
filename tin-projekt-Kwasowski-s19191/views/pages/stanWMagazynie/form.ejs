@@ -3,17 +3,8 @@
     <h2><%= pageTitle %></h2>
     <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
         <input type="hidden" name="Id_StanWMagazynie" value="<%= swm.Id_StanWMagazynie %>">
-        <label for="magazyn">Magazyn:<abbr title="required" aria-label="required">*</abbr></label>
-        <select name="magazyn" id="magazyn" <%= (formMode == 'showDetails') ? 'disabled' : ''%> >
-            <option value="">-- Wybierz magazyn --</option>
-            <% for (let i=0; i<allMag.length; i++) { let mag = allMag[i]; %>
-            <option value="<%= mag.Id_Magazyn %>" label="<%= mag.Nazwa %>"
-                    <%= (swm.Id_StanWMagazynie && mag.Id_Magazyn.toString() == swm.magazyn.Id_Magazyn.toString()) ? 'selected' : ''%>></option>
-            <% } %>
-        </select>
-        <span id="errorMagazyn" class="errors-text"></span>
-        <label for="ksiazka">Książka:<abbr title="required" aria-label="required">*</abbr></label>
-        <select name="ksiazka" id="ksiazka" <%= (formMode == 'showDetails') ? 'disabled' : ''%> >
+        <label for="Ksiazka_Id_Ksiazka">Książka:<abbr title="required" aria-label="required">*</abbr></label>
+        <select name="Ksiazka_Id_Ksiazka" id="Ksiazka_Id_Ksiazka" <%= (formMode == 'showDetails') ? 'disabled' : ''%> >
             <option value="">-- Wybierz książkę --</option>
             <% for (let i=0; i<allKs.length; i++) { let ks = allKs[i]; %>
             <option value="<%= ks.Id_Ksiazka %>" label="<%= ks.Tytul %>"
@@ -21,6 +12,15 @@
             <% } %>
         </select>
         <span id="errorKsiazka" class="errors-text"></span>
+        <label for="Magazyn_Id_Magazyn">Magazyn:<abbr title="required" aria-label="required">*</abbr></label>
+        <select name="Magazyn_Id_Magazyn" id="Magazyn_Id_Magazyn" <%= (formMode == 'showDetails') ? 'disabled' : ''%> >
+            <option value="">-- Wybierz magazyn --</option>
+            <% for (let i=0; i<allMag.length; i++) { let mag = allMag[i]; %>
+            <option value="<%= mag.Id_Magazyn %>" label="<%= mag.Nazwa %>"
+                    <%= (swm.Id_StanWMagazynie && mag.Id_Magazyn.toString() == swm.magazyn.Id_Magazyn.toString()) ? 'selected' : ''%>></option>
+            <% } %>
+        </select>
+        <span id="errorMagazyn" class="errors-text"></span>
         <label for="IloscNaStanie">Ilość na stanie:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="number" name="IloscNaStanie" id="IloscNaStanie" value="<%= swm.IloscNaStanie %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
