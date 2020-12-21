@@ -28,8 +28,8 @@ exports.showAddStanWMagazynieForm = (req, res, next) => {
                 formMode: 'createNew',
                 allKs: allKs,
                 allMag: allMag,
-                pageTitle: 'Nowy stan książki w konretnym magazynie',
-                btnLabel: 'Dodaj stan w konkretnym magazynie',
+                pageTitle: 'Dodawanie stanu książki w konretnym magazynie',
+                btnLabel: 'Dodaj stan książki w konkretnym magazynie',
                 formAction: '/stanWMagazynie/add',
                 navLocation: 'stanWMagazynie',
                 validation: 'stanWMagazynie'
@@ -81,7 +81,7 @@ exports.showEditStanWMagazynieForm = (req, res, next) => {
             allMag: allMag,
             pageTitle: 'Edycja magazynu',
             formAction: '/stanWMagazynie/edit',
-            btnLabel: 'Edytuj stan w magazynie',
+            btnLabel: 'Edytuj stan książki w magazynie',
             navLocation: 'stanWMagazynie',
             validation: 'stanWMagazynie'
         });

@@ -14,7 +14,7 @@ exports.showMagazynList = (req, res, next) => {
 exports.showAddMagazynForm = (req, res, next) => {
     res.render('pages/magazyn/form', {
         mag: {},
-        pageTitle: 'Nowy magazyn',
+        pageTitle: 'Dodawanie magazynu',
         formMode: 'createNew',
         btnLabel: 'Dodaj magazyn',
         formAction: '/magazyn/add',

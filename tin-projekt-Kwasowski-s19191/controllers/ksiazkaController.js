@@ -14,12 +14,24 @@ exports.showKsiazkaList = (req, res, next) => {
 exports.showAddKsiazkaForm = (req, res, next) => {
     res.render('pages/ksiazka/form', {
         ks: {},
-        pageTitle: 'Nowa ksiazka',
+        pageTitle: 'Dodawanie książki',
         formMode: 'createNew',
         btnLabel: 'Dodaj książkę',
         formAction: '/ksiazka/add',
         navLocation: 'ksiazka',
-        validation: 'ksiazka'
+        validation: 'ksiazka',
+        validationErrors: err.details
+    }).catch(err => {
+        res.render('pages/ksiazka/form', {
+            ks: ksData,
+            pageTitle: 'Dodawanie książki',
+            formMode: 'createNew',
+            btnLabel: 'Dodaj książke',
+            formAction: '/ksiazka/add',
+            navLocation: 'ksiazka',
+            validation: 'ksiazka',
+            validationErrors: err.details
+        });
     });
 }
 
@@ -59,6 +71,18 @@ exports.addKsiazka = (req, res, next) => {
     KsiazkaRepository.createKsiazka(ksData)
         .then( result => {
             res.redirect('/ksiazka');
+        })
+        .catch(err => {
+            res.render('pages/ksiazka/form', {
+                ks: ksData,
+                pageTitle: 'Dodawanie książki',
+                formMode: 'createNew',
+                btnLabel: 'Dodaj książke',
+                formAction: '/ksiazka/add',
+                navLocation: 'ksiazka',
+                validation: 'ksiazka',
+                validationErrors: err.details
+            });
         });
 };
 

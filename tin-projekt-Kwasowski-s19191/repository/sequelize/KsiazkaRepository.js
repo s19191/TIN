@@ -1,6 +1,8 @@
 const Ksiazka = require("../../model/sequelize/Ksiazka");
 const StanWMagazynie = require("../../model/sequelize/StanWMagazynie");
 const Magazyn = require("../../model/sequelize/Magazyn");
+const ksSchema = require('../../model/joi/Ksiazka');
+
 
 exports.getKsiazki = () => {
     return Ksiazka.findAll();
@@ -21,6 +23,10 @@ exports.getKsiazkaById = (Id_Ksiazka) => {
 };
 
 exports.createKsiazka = (newKsiazkaData) => {
+    const vRes = ksSchema.validate(newKsiazkaData, { abortEarly: false} );
+    if(error) {
+        return Promise.reject(error);
+    }
     return Ksiazka.create({
         Tytul: newKsiazkaData.Tytul,
         Autor: newKsiazkaData.Autor,
@@ -29,6 +35,10 @@ exports.createKsiazka = (newKsiazkaData) => {
 };
 
 exports.updateKsiazka = (Id_Ksiazka, ksiazkaData) => {
+    const vRes = ksSchema.validate(newKsiazkaData, { abortEarly: false} );
+    if(error) {
+        return Promise.reject(error);
+    }
     const Tytul = ksiazkaData.Tytul;
     const Autor = ksiazkaData.Autor;
     const DataWydania = ksiazkaData.DataWydania;
