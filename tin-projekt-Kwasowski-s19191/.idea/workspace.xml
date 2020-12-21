@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="początek walidacji po stronie servera">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="coś nie działa weryfikacja po stronie servera">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/ksiazkaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ksiazkaController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/magazynControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/magazynControllers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/KsiazkaRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/KsiazkaRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/joi/Ksiazka.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/joi/Ksiazka.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/joi/Magazyn.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/joi/Magazyn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/joi/StanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/joi/StanWMagazynie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +87,8 @@
       <workItem from="1608375864830" duration="1451000" />
       <workItem from="1608406036359" duration="21317000" />
       <workItem from="1608469692251" duration="3388000" />
-      <workItem from="1608483894217" duration="14401000" />
+      <workItem from="1608483894217" duration="15049000" />
+      <workItem from="1608562248224" duration="7940000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -233,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608511071114</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="coś nie działa weryfikacja po stronie servera">
+      <created>1608513114442</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1608513114442</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +280,8 @@
     <MESSAGE value="zrobione szablony" />
     <MESSAGE value="naprawiona validacja" />
     <MESSAGE value="początek walidacji po stronie servera" />
-    <option name="LAST_COMMIT_MESSAGE" value="początek walidacji po stronie servera" />
+    <MESSAGE value="coś nie działa weryfikacja" />
+    <MESSAGE value="coś nie działa weryfikacja po stronie servera" />
+    <option name="LAST_COMMIT_MESSAGE" value="coś nie działa weryfikacja po stronie servera" />
   </component>
 </project>

@@ -37,7 +37,6 @@ const ksSchema = Joi.object({
         .required()
         .error(errMessages),
     DataWydania: Joi.string()
-        .email()
         .required()
         .error(errMessages),
 });

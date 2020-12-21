@@ -19,19 +19,7 @@ exports.showAddKsiazkaForm = (req, res, next) => {
         btnLabel: 'Dodaj książkę',
         formAction: '/ksiazka/add',
         navLocation: 'ksiazka',
-        validation: 'ksiazka',
-        validationErrors: err.details
-    }).catch(err => {
-        res.render('pages/ksiazka/form', {
-            ks: ksData,
-            pageTitle: 'Dodawanie książki',
-            formMode: 'createNew',
-            btnLabel: 'Dodaj książke',
-            formAction: '/ksiazka/add',
-            navLocation: 'ksiazka',
-            validation: 'ksiazka',
-            validationErrors: err.details
-        });
+        validation: 'ksiazka'
     });
 }
 
@@ -41,8 +29,9 @@ exports.showKsiazkaDetails = (req, res, next) => {
         .then(ks => {
             res.render('pages/ksiazka/form', {
                 ks: ks,
-                formMode: 'showDetails',
                 pageTitle: 'Szczegóły książki',
+                formMode: 'showDetails',
+                btnLabel: '',
                 formAction: '',
                 navLocation: 'ksiazka',
                 validation: ''
@@ -56,8 +45,8 @@ exports.showEditKsiazkaForm = (req, res, next) => {
         .then(ks => {
             res.render('pages/ksiazka/form', {
                 ks: ks,
-                formMode: 'edit',
                 pageTitle: 'Edycja książki',
+                formMode: 'edit',
                 btnLabel: 'Edytuj książkę',
                 formAction: '/ksiazka/edit',
                 navLocation: 'ksiazka',

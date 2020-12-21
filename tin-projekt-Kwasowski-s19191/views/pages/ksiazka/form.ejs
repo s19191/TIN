@@ -7,30 +7,18 @@
         <label for="Tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="Tytul" placeholder="2-60 znaków" id="Tytul" value="<%= ks.Tytul %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
-        <span id="errorTytul" class="errors-text">
-            <% if (validationErrors.find(e => e.path.includes('Tytul'))) { %>
-                <%= validationErrors.find(e => e.path.includes('Tytul')).message %>
-            <% } %>
-        </span>
+        <span id="errorTytul" class="errors-text"></span>
         <label for="Autor">Autor:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="Autor" placeholder="2-60 znaków" id="Autor" value="<%= ks.Autor %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
-        <span id="errorAutor" class="errors-text">
-            <% if (validationErrors.find(e => e.path.includes('Autor'))) { %>
-                <%= validationErrors.find(e => e.path.includes('Autor')).message %>
-            <% } %>
-        </span>
+        <span id="errorAutor" class="errors-text"></span>
         <label for="DataWydania">Data wydania:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="date" name="DataWydania" placeholder="Data w formacie yyyy-MM-dd" id="DataWydania"
                 <% if (formMode != 'createNew') { %>
                     value="<%= ks.DataWydania.toISOString().split('T')[0] %>"
                 <% } %>
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
-        <span id="errorDataWydania" class="errors-text">
-            <% if (validationErrors.find(e => e.path.includes('DataWydania'))) { %>
-                <%= validationErrors.find(e => e.path.includes('DataWydania')).message %>
-            <% } %>
-        </span>
+        <span id="errorDataWydania" class="errors-text"></span>
         <% if (formMode != 'showDetails') { %>
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text"></p>

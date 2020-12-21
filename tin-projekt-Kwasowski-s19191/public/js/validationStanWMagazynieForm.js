@@ -45,21 +45,22 @@ function validateForm() {
         errorIloscNaStanie.innerText = "Pole powinno być liczbą dodatnią";
     }
 
-    if (!checkNumber(cenaHurtowaInput.value)) {
+    if (!checkNumber(cenaHurtowaInput.value) && checkRequired(cenaHurtowaInput.value)) {
+        console.log(cenaHurtowaInput.value);
         valid = false;
         cenaHurtowaInput.classList.add("error-input");
         errorCenaHurtowa.innerText = "Pole powinno być liczbą";
-    } else if (!checkNumberRange(cenaHurtowaInput.value, 0)) {
+    } else if (!checkNumberRange(cenaHurtowaInput.value, 0) && checkRequired(cenaHurtowaInput.value)) {
         valid = false;
         cenaHurtowaInput.classList.add("error-input");
         errorCenaHurtowa.innerText = "Pole powinno być liczbą dodatnią";
     }
 
-    if (!checkNumber(minilamnaIloscDoCenyHurtowejInput.value)) {
+    if (!checkNumber(minilamnaIloscDoCenyHurtowejInput.value) && checkRequired(cenaHurtowaInput.value)) {
         valid = false;
         minilamnaIloscDoCenyHurtowejInput.classList.add("error-input");
         errorMinilamnaIloscDoCenyHurtowej.innerText = "Pole powinno być liczbą";
-    } else if (!checkNumberRange(minilamnaIloscDoCenyHurtowejInput.value, 0)) {
+    } else if (!checkNumberRange(minilamnaIloscDoCenyHurtowejInput.value, 0) && checkRequired(cenaHurtowaInput.value)) {
         valid = false;
         minilamnaIloscDoCenyHurtowejInput.classList.add("error-input");
         errorMinilamnaIloscDoCenyHurtowej.innerText = "Pole powinno być liczbą dodatnią";

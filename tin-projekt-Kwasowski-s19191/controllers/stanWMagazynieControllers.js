@@ -25,10 +25,10 @@ exports.showAddStanWMagazynieForm = (req, res, next) => {
             allMag = mag;
             res.render('pages/stanWMagazynie/form', {
                 swm: {},
-                formMode: 'createNew',
                 allKs: allKs,
                 allMag: allMag,
                 pageTitle: 'Dodawanie stanu książki w konretnym magazynie',
+                formMode: 'createNew',
                 btnLabel: 'Dodaj stan książki w konkretnym magazynie',
                 formAction: '/stanWMagazynie/add',
                 navLocation: 'stanWMagazynie',
@@ -51,10 +51,11 @@ exports.showStanWMagazynieDetails = (req, res, next) => {
         }).then(swm => {
         res.render('pages/stanWMagazynie/form', {
             swm: swm,
-            formMode: 'showDetails',
             allKs: allKs,
             allMag: allMag,
             pageTitle: 'Szczegóły magazynu',
+            formMode: 'showDetails',
+            btnLabel: 'Dodaj stan książki w konkretnym magazynie',
             formAction: '',
             navLocation: 'stanWMagazynie',
             validation: ''
@@ -76,12 +77,12 @@ exports.showEditStanWMagazynieForm = (req, res, next) => {
         }).then(swm => {
         res.render('pages/stanWMagazynie/form', {
             swm: swm,
-            formMode: 'edit',
             allKs: allKs,
             allMag: allMag,
             pageTitle: 'Edycja magazynu',
-            formAction: '/stanWMagazynie/edit',
+            formMode: 'edit',
             btnLabel: 'Edytuj stan książki w magazynie',
+            formAction: '/stanWMagazynie/edit',
             navLocation: 'stanWMagazynie',
             validation: 'stanWMagazynie'
         });

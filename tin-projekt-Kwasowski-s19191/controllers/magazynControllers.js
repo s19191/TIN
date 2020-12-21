@@ -29,8 +29,9 @@ exports.showMagazynDetails = (req, res, next) => {
         .then(mag => {
             res.render('pages/magazyn/form', {
                 mag: mag,
-                formMode: 'showDetails',
                 pageTitle: 'Szczegóły magazynu',
+                formMode: 'showDetails',
+                btnLabel: '',
                 formAction: '',
                 navLocation: 'magazyn',
                 validation: ''
@@ -44,8 +45,8 @@ exports.showEditMagazynForm = (req, res, next) => {
         .then(mag => {
             res.render('pages/magazyn/form', {
                 mag: mag,
-                formMode: 'edit',
                 pageTitle: 'Edycja magazynu',
+                formMode: 'edit',
                 btnLabel: 'Edytuj magazyn',
                 formAction: '/magazyn/edit',
                 navLocation: 'magazyn',
