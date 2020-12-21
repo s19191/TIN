@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="zrobione szablony">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="naprawiona validacja">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/validationKsiazkaForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationKsiazkaForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/validationMagazynForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationMagazynForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +81,7 @@
       <workItem from="1608375864830" duration="1451000" />
       <workItem from="1608406036359" duration="21317000" />
       <workItem from="1608469692251" duration="3388000" />
-      <workItem from="1608483894217" duration="11563000" />
+      <workItem from="1608483894217" duration="12386000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -219,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608509669816</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="naprawiona validacja">
+      <created>1608510236060</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1608510236060</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +257,7 @@
     <MESSAGE value="działają selecty w stanWMagazynieform" />
     <MESSAGE value="wszystko ładnie się wyświetla" />
     <MESSAGE value="zrobione szablony" />
-    <option name="LAST_COMMIT_MESSAGE" value="zrobione szablony" />
+    <MESSAGE value="naprawiona validacja" />
+    <option name="LAST_COMMIT_MESSAGE" value="naprawiona validacja" />
   </component>
 </project>
