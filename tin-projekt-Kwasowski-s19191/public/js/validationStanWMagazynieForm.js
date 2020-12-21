@@ -1,34 +1,34 @@
 function validateForm() {
 
-    const magazynInput = document.getElementById('magazyn');
-    const ksiazkaInput = document.getElementById('ksiazka');
+    const ksiazka_Id_KsiazkaInput = document.getElementById('Ksiazka_Id_Ksiazka');
+    const magazyn_Id_MagazynInput = document.getElementById('Magazyn_Id_Magazyn');
     const iloscNaStanieInput = document.getElementById('IloscNaStanie');
     const cenaHurtowaInput = document.getElementById('CenaHurtowa');
     const minilamnaIloscDoCenyHurtowejInput = document.getElementById('MinimalnaIloscDoCenyHurtowej');
     const cenaDetalicznaInput = document.getElementById('CenaDetaliczna');
 
-    const errorMagazyn = document.getElementById('errorMagazyn');
-    const errorKsiazka = document.getElementById('errorKsiazka');
+    const errorKsiazka_Id_Ksiazka = document.getElementById('errorKsiazka_Id_Ksiazka');
+    const errorMagazyn_Id_Magazyn = document.getElementById('errorMagazyn_Id_Magazyn');
     const errorIloscNaStanie = document.getElementById('errorIloscNaStanie');
     const errorCenaHurtowa = document.getElementById('errorCenaHurtowa');
     const errorMinilamnaIloscDoCenyHurtowej = document.getElementById('errorMinilamnaIloscDoCenyHurtowej');
     const errorCenaDetaliczna = document.getElementById('errorCenaDetaliczna');
     const errorsSummary = document.getElementById('errorsSummary');
 
-    resetErrors([magazynInput, ksiazkaInput, iloscNaStanieInput, cenaHurtowaInput, minilamnaIloscDoCenyHurtowejInput, cenaDetalicznaInput], [errorMagazyn, errorKsiazka, errorIloscNaStanie, errorCenaHurtowa, errorMinilamnaIloscDoCenyHurtowej, errorCenaDetaliczna], errorsSummary);
+    resetErrors([magazyn_Id_MagazynInput, ksiazka_Id_KsiazkaInput, iloscNaStanieInput, cenaHurtowaInput, minilamnaIloscDoCenyHurtowejInput, cenaDetalicznaInput], [errorMagazyn_Id_Magazyn, errorKsiazka_Id_Ksiazka, errorIloscNaStanie, errorCenaHurtowa, errorMinilamnaIloscDoCenyHurtowej, errorCenaDetaliczna], errorsSummary);
 
     let valid = true;
 
-    if (!checkRequired(magazynInput.value)) {
+    if (!checkRequired(magazyn_Id_MagazynInput.value)) {
         valid = false;
-        magazynInput.classList.add("error-input");
-        errorMagazyn.innerText = "Pole jest wymagane";
+        magazyn_Id_MagazynInput.classList.add("error-input");
+        errorMagazyn_Id_Magazyn.innerText = "Pole jest wymagane";
     }
 
-    if (!checkRequired(ksiazkaInput.value)) {
+    if (!checkRequired(ksiazka_Id_KsiazkaInput.value)) {
         valid = false;
-        ksiazkaInput.classList.add("error-input");
-        errorKsiazka.innerText = "Pole jest wymagane";
+        ksiazka_Id_KsiazkaInput.classList.add("error-input");
+        errorKsiazka_Id_Ksiazka.innerText = "Pole jest wymagane";
     }
 
     if (!checkRequired(iloscNaStanieInput.value)) {

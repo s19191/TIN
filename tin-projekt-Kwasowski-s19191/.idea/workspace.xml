@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="wszystko ładnie się wyświetla">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="zrobione szablony">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ksiazkaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ksiazkaController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/magazynControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/magazynControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/KsiazkaRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/KsiazkaRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/MagazynRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/MagazynRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/ksiazkaRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ksiazkaRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/magazynRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/magazynRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/stanWMagazynieRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/stanWMagazynieRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/validationKsiazkaForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationKsiazkaForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/validationMagazynForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationMagazynForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/list.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +84,7 @@
       <workItem from="1608375864830" duration="1451000" />
       <workItem from="1608406036359" duration="21317000" />
       <workItem from="1608469692251" duration="3388000" />
-      <workItem from="1608483894217" duration="10901000" />
+      <workItem from="1608483894217" duration="11563000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -218,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608503692585</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="zrobione szablony">
+      <created>1608509669816</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1608509669816</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +252,7 @@
     <MESSAGE value="pobiera dane z bazy danych dla książki" />
     <MESSAGE value="działają selecty w stanWMagazynieform" />
     <MESSAGE value="wszystko ładnie się wyświetla" />
-    <option name="LAST_COMMIT_MESSAGE" value="wszystko ładnie się wyświetla" />
+    <MESSAGE value="zrobione szablony" />
+    <option name="LAST_COMMIT_MESSAGE" value="zrobione szablony" />
   </component>
 </project>

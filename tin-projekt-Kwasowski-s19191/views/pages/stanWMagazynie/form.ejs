@@ -11,7 +11,7 @@
                     <%= (swm.Id_StanWMagazynie && ks.Id_Ksiazka.toString() == swm.ksiazka.Id_Ksiazka.toString()) ? 'selected' : ''%>></option>
             <% } %>
         </select>
-        <span id="errorKsiazka" class="errors-text"></span>
+        <span id="errorKsiazka_Id_Ksiazka" class="errors-text"></span>
         <label for="Magazyn_Id_Magazyn">Magazyn:<abbr title="required" aria-label="required">*</abbr></label>
         <select name="Magazyn_Id_Magazyn" id="Magazyn_Id_Magazyn" <%= (formMode == 'showDetails') ? 'disabled' : ''%> >
             <option value="">-- Wybierz magazyn --</option>
@@ -20,7 +20,7 @@
                     <%= (swm.Id_StanWMagazynie && mag.Id_Magazyn.toString() == swm.magazyn.Id_Magazyn.toString()) ? 'selected' : ''%>></option>
             <% } %>
         </select>
-        <span id="errorMagazyn" class="errors-text"></span>
+        <span id="errorMagazyn_Id_Magazyn" class="errors-text"></span>
         <label for="IloscNaStanie">Ilość na stanie:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="number" name="IloscNaStanie" id="IloscNaStanie" value="<%= swm.IloscNaStanie %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>

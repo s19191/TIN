@@ -1,8 +1,8 @@
 function validateForm() {
 
-    const tytulInput = document.getElementById('tytul');
-    const autorInput = document.getElementById('autor');
-    const dataWydaniaInput = document.getElementById('dataWydania');
+    const tytulInput = document.getElementById('Tytul');
+    const autorInput = document.getElementById('Autor');
+    const dataWydaniaInput = document.getElementById('DataWydania');
 
     const errorTytul = document.getElementById('errorTytul');
     const errorAutor = document.getElementById('errorAutor');

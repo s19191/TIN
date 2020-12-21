@@ -1,33 +1,33 @@
 function validateForm() {
 
-    const nameInput = document.getElementById('name');
-    const adressInput = document.getElementById('adress');
+    const nazwaInput = document.getElementById('Nazwa');
+    const adresInput = document.getElementById('Adres');
 
     const errorName = document.getElementById('errorName');
     const errorAdress = document.getElementById('errorAdress');
     const errorsSummary = document.getElementById('errorsSummary');
 
-    resetErrors([nameInput, adressInput], [errorName, errorAdress], errorsSummary);
+    resetErrors([nazwaInput, adresInput], [errorName, errorAdress], errorsSummary);
 
     let valid = true;
 
-    if (!checkRequired(nameInput.value)) {
+    if (!checkRequired(nazwaInput.value)) {
         valid = false;
-        nameInput.classList.add("error-input");
+        nazwaInput.classList.add("error-input");
         errorName.innerText = "Pole jest wymagane";
-    } else if (!checkTextLengthRange(nameInput.value, 2, 60)) {
+    } else if (!checkTextLengthRange(nazwaInput.value, 2, 60)) {
         valid = false;
-        nameInput.classList.add("error-input");
+        nazwaInput.classList.add("error-input");
         errorName.innerText = "Pole powinno zawierać od 2 do 60 znaków";
     }
 
-    if (!checkRequired(adressInput.value)) {
+    if (!checkRequired(adresInput.value)) {
         valid = false;
-        adressInput.classList.add("error-input");
+        adresInput.classList.add("error-input");
         errorAdress.innerText = "Pole jest wymagane";
-    } else if (!checkAdress(adressInput.value)) {
+    } else if (!checkAdress(adresInput.value)) {
         valid = false;
-        adressInput.classList.add("error-input");
+        adresInput.classList.add("error-input");
         errorAdress.innerText = "Pole powinno zawierać adres w formacie np. ul. Gorka 14C";
     }
 
