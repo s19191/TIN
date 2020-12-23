@@ -54,6 +54,6 @@ exports.deleteStanWMagazynie = (Id_StanWMagazynie) => {
     });
 }
 
-exports.deleteManyStanyWMagazynach = (Id_StanWMagazynie) => {
-    return StanWMagazynie.find({ Id_StanWMagazynie: { [Sequelize.Op.in]: Id_StanWMagazynie }})
+exports.deleteManyStanyWMagazynach = (Ids_StanWMagazynie) => {
+    return StanWMagazynie.find({ Id_StanWMagazynie: { [Sequelize.Op.in]: Ids_StanWMagazynie }})
 }

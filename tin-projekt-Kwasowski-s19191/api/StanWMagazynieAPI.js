@@ -65,3 +65,17 @@ exports.deleteStanWMagazynie = (req, res, next) => {
             next(err);
         });
 };
+
+exports.deleteManyStanyWMagazynach = (req, res, next) => {
+    const Ids_StanWMagazynie = req.params.Ids_StanWMagazynie;
+    StanWMagazynieRepository.deleteManyStanyWMagazynach(Ids_StanWMagazynie)
+        .then(result => {
+            res.status(200).json({message: 'Removed stan w magazynie', StanWMagazynie: result});
+        })
+        .catch(err => {
+            if (!err.statusCode) {
+                err.statusCode = 500;
+            }
+            next(err);
+        });
+};
