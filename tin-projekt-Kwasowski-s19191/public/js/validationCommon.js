@@ -68,7 +68,7 @@ function checkAdress(value) {
     if (!value) {
         return false;
     }
-    const pattern = /((ul\.)|(al\.))\s(.+)\s(\d+[a-zA-Z]?[\/-]?\d+[a-zA-Z]?[\/-]?\d*)/;
+    const pattern = /((ul\.)|(al\.))\s(.+)\s(\d+[a-zA-Z]?[\/-]?\d*[a-zA-Z]?[\/-]?\d*)/;
     return pattern.test(value);
 }
 

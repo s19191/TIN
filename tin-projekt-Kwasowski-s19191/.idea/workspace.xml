@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="cofnięcie się do momentu jak działa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/StanWMagazynieAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/StanWMagazynieAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/validationCommon.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationCommon.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,7 @@
       <workItem from="1608655541594" duration="952000" />
       <workItem from="1608659922911" duration="3257000" />
       <workItem from="1608684776381" duration="2175000" />
-      <workItem from="1608688520110" duration="821000" />
+      <workItem from="1608688520110" duration="1716000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -257,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608688296473</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="cofnięcie się do momentu jak działa">
+      <created>1608689501606</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1608689501606</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
