@@ -11,26 +11,56 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
     Ksiazka_Id_Ksiazka: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        // validate: {
+        //     notEmpty: {
+        //         msg: "Pole jest wymagane"
+        //     }
+        // }
     },
     Magazyn_Id_Magazyn: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        // validate: {
+        //     notEmpty: {
+        //         msg: "Pole jest wymagane"
+        //     }
+        // }
     },
     IloscNaStanie: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        // validate: {
+        //     notEmpty: {
+        //         msg: "Pole jest wymagane"
+        //     }
+        // }
     },
     CenaHurtowa: {
         type: Sequelize.DOUBLE,
-        allowNull: true
+        allowNull: true,
+        // validate: {
+        //     notEmpty: {
+        //         msg: "Pole jest wymagane"
+        //     }
+        // }
     },
     MinimalnaIloscDoCenyHurtowej: {
         type: Sequelize.INTEGER,
-        allowNull: true
+        allowNull: true,
+        // validate: {
+        //     notEmpty: {
+        //         msg: "Pole jest wymagane"
+        //     }
+        // }
     },
     CenaDetaliczna: {
         type: Sequelize.DOUBLE,
-        allowNull: false
+        allowNull: false,
+        // validate: {
+        //     notEmpty: {
+        //         msg: "Pole jest wymagane"
+        //     }
+        // }
     }
 });
 

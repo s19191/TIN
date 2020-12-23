@@ -19,7 +19,7 @@ exports.showAddKsiazkaForm = (req, res, next) => {
         btnLabel: 'Dodaj książkę',
         formAction: '/ksiazka/add',
         navLocation: 'ksiazka',
-        validation: 'ksiazka'
+        validation: 'ksiazka',
     });
 }
 
@@ -61,18 +61,19 @@ exports.addKsiazka = (req, res, next) => {
         .then( result => {
             res.redirect('/ksiazka');
         })
-        .catch(err => {
-            res.render('pages/ksiazka/form', {
-                ks: ksData,
-                pageTitle: 'Dodawanie książki',
-                formMode: 'createNew',
-                btnLabel: 'Dodaj książke',
-                formAction: '/ksiazka/add',
-                navLocation: 'ksiazka',
-                validation: 'ksiazka',
-                validationErrors: err.details
-            });
-        });
+        // .catch(err => {
+        // res.render('pages/ksiazka/form', {
+        //     ks: ksData,
+        //     pageTitle: 'Dodawanie książki',
+        //     formMode: 'createNew',
+        //     btnLabel: 'Dodaj książke',
+        //     formAction: '/ksiazka/add',
+        //     navLocation: 'ksiazka',
+        //     validation: 'ksiazka',
+        //     validationErrors: err.details
+        // });
+    // })
+;
 };
 
 exports.updateKsiazka = (req, res, next) => {
