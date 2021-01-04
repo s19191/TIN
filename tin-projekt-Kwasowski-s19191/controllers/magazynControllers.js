@@ -6,7 +6,7 @@ exports.showMagazynList = (req, res, next) => {
             res.render('pages/magazyn/list', {
                 magazyny: magazyny,
                 navLocation: 'magazyn',
-                validation: ''
+                formMode: ''
             });
         });
 }

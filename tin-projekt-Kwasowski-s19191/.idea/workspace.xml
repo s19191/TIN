@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="naprawiona walidacja adresów">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="nie pamiętam, coś się zmieniło, inne ify do walidacji po stronie strony. Usunięty joi itd.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ksiazkaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ksiazkaController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +93,7 @@
       <workItem from="1609191877063" duration="12000" />
       <workItem from="1609256216746" duration="1927000" />
       <workItem from="1609803246450" duration="125000" />
-      <workItem from="1609803399363" duration="357000" />
+      <workItem from="1609803399363" duration="985000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -282,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608690265405</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="nie pamiętam, coś się zmieniło, inne ify do walidacji po stronie strony. Usunięty joi itd.">
+      <created>1609804047877</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1609804047877</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,6 +325,7 @@
     <MESSAGE value="poporawiona walidacja po stronie strony, walidacja po stronie serwera nadal nie działa" />
     <MESSAGE value="cofnięcie się do momentu jak działa" />
     <MESSAGE value="naprawiona walidacja adresów" />
-    <option name="LAST_COMMIT_MESSAGE" value="naprawiona walidacja adresów" />
+    <MESSAGE value="nie pamiętam, coś się zmieniło, inne ify do walidacji po stronie strony. Usunięty joi itd." />
+    <option name="LAST_COMMIT_MESSAGE" value="nie pamiętam, coś się zmieniło, inne ify do walidacji po stronie strony. Usunięty joi itd." />
   </component>
 </project>

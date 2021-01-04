@@ -9,7 +9,7 @@ exports.showStanWMagazynieList = (req, res, next) => {
             res.render('pages/stanWMagazynie/list', {
                 stanyWMagazynach: stanyWMagazynach,
                 navLocation: 'stanWMagazynie',
-                validation: ''
+                formMode: ''
             });
         });
 }
