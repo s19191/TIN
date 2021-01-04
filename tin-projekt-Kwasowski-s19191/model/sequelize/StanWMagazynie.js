@@ -37,21 +37,11 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
     },
     CenaHurtowa: {
         type: Sequelize.DOUBLE,
-        allowNull: true,
-        // validate: {
-        //     notEmpty: {
-        //         msg: "Pole jest wymagane"
-        //     }
-        // }
+        allowNull: true
     },
     MinimalnaIloscDoCenyHurtowej: {
         type: Sequelize.INTEGER,
-        allowNull: true,
-        // validate: {
-        //     notEmpty: {
-        //         msg: "Pole jest wymagane"
-        //     }
-        // }
+        allowNull: true
     },
     CenaDetaliczna: {
         type: Sequelize.DOUBLE,

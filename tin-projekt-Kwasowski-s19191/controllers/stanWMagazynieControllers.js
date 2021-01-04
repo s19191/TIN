@@ -91,10 +91,43 @@ exports.showEditStanWMagazynieForm = (req, res, next) => {
 
 exports.addStanWMagazynie = (req, res, next) => {
     const swmData = { ...req.body };
-    StanWMagazynieRepository.createStanWMagazynie(swmData)
-        .then( result => {
-            res.redirect('/stanWMagazynie');
-        });
+    const Id_StanWMagazynie = req.body.Id_StanWMagazynie;
+    let allKs, allMag;
+    StanWMagazynieRepository.checkIfEXsists(swmData.Ksiazka_Id_Ksiazka, swmData.Magazyn_Id_Magazyn)
+        .then(result => {
+            if (result.count == 0) {
+                StanWMagazynieRepository.createStanWMagazynie(swmData)
+                    .then( result => {
+                        res.redirect('/stanWMagazynie');
+                    });
+            } else {
+                KsiazkaRepository.getKsiazki()
+                    .then(ks => {
+                        allKs = ks;
+                        return MagazynRepository.getMagazyny();
+                    })
+                    .then(mag => {
+                        allMag = mag;
+                        return StanWMagazynieRepository.getStanWMagazynieById(Id_StanWMagazynie);
+                    }).then(swm => {
+                    res.render('pages/stanWMagazynie/form', {
+                        swm: swm,
+                        allKs: allKs,
+                        allMag: allMag,
+                        pageTitle: 'Szczegóły magazynu',
+                        formMode: 'showDetails',
+                        btnLabel: 'Dodaj stan książki w konkretnym magazynie',
+                        formAction: '',
+                        navLocation: 'stanWMagazynie',
+                        validation: ''
+                    });
+            });
+        }
+    });
+    // StanWMagazynieRepository.createStanWMagazynie(swmData)
+    //     .then( result => {
+    //         res.redirect('/stanWMagazynie');
+    //     });
 };
 
 exports.updateStanWMagazynie = (req, res, next) => {

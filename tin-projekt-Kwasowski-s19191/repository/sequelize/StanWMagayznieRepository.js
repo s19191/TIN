@@ -31,6 +31,15 @@ exports.getStanWMagazynieById = (Id_StanWMagazynie) => {
     });
 };
 
+exports.checkIfEXsists = (Ksiazka_Id_Ksiazka, Magazyn_Id_Magazyn) => {
+    return StanWMagazynie.findAndCountAll({
+        where: {
+            Ksiazka_Id_Ksiazka: Ksiazka_Id_Ksiazka,
+            Magazyn_Id_Magazyn: Magazyn_Id_Magazyn
+        },
+    });
+};
+
 exports.createStanWMagazynie = (stanWMagazynieData) => {
     console.log(JSON.stringify(stanWMagazynieData));
 

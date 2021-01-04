@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Księgarnia Dobra Książka</title>
     <link rel="stylesheet" href="../../css/style.css"/>
-    <% if (validation == 'ksiazka') { %>
+    <% if (navLocation == 'ksiazka' && (formMode == 'edit' || formMode == 'createNew')) { %>
         <script src="../../js/validationCommon.js"></script>
         <script src="../../js/validationKsiazkaForm.js"></script>
     <% } %>
-    <% if (validation == 'magazyn') { %>
+    <% if (navLocation == 'magazyn' && (formMode == 'edit' || formMode == 'createNew')) { %>
         <script src="../../js/validationCommon.js"></script>
         <script src="../../js/validationMagazynForm.js"></script>
     <% } %>
-    <% if (validation == 'stanWMagazynie') { %>
+    <% if (navLocation == 'stanWMagazynie' && (formMode == 'edit' || formMode == 'createNew')) { %>
         <script src="../../js/validationCommon.js"></script>
         <script src="../../js/validationStanWMagazynieForm.js"></script>
     <% } %>
