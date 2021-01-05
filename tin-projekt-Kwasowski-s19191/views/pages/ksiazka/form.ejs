@@ -1,24 +1,42 @@
 <%- include('../../fragments/header.ejs') %>
 <main>
     <h2><%= pageTitle %></h2>
-    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
-<!--    <form class="form" method="post" action="<%=formAction%>" novalidate>-->
+<!--    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">-->
+    <form class="form" method="post" action="<%=formAction%>" novalidate>
         <input type="hidden" name="Id_Ksiazka" value="<%= ks.Id_Ksiazka %>">
         <label for="Tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="Tytul" placeholder="2-60 znaków" id="Tytul" value="<%= ks.Tytul %>"
-                <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
-        <span id="errorTytul" class="errors-text"></span>
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>
+               class="<%= validationErrors.find(e => e.path.includes('Tytul')) ? 'error-input' : '' %>"
+        />
+        <span id="errorTytul" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('Tytul'))) { %>
+                <%= validationErrors.find(e => e.path.includes('Tytul')).message %>
+            <% } %>
+        </span>
         <label for="Autor">Autor:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="Autor" placeholder="2-60 znaków" id="Autor" value="<%= ks.Autor %>"
-                <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
-        <span id="errorAutor" class="errors-text"></span>
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>
+               class="<%= validationErrors.find(e => e.path.includes('Autor')) ? 'error-input' : '' %>"
+        />
+        <span id="errorAutor" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('Autor'))) { %>
+                <%= validationErrors.find(e => e.path.includes('Autor')).message %>
+            <% } %>
+        </span>
         <label for="DataWydania">Data wydania:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="date" name="DataWydania" placeholder="Data w formacie yyyy-MM-dd" id="DataWydania"
                 <% if (formMode != 'createNew') { %>
                     value="<%= ks.DataWydania.toISOString().split('T')[0] %>"
                 <% } %>
-                <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
-        <span id="errorDataWydania" class="errors-text"></span>
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>
+               class="<%= validationErrors.find(e => e.path.includes('DataWydania')) ? 'error-input' : '' %>"
+        />
+        <span id="errorDataWydania" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('DataWydania'))) { %>
+                <%= validationErrors.find(e => e.path.includes('DataWydania')).message %>
+            <% } %>
+        </span>
         <% if (formMode != 'showDetails') { %>
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text"></p>

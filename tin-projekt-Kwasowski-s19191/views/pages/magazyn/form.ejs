@@ -1,17 +1,29 @@
 <%- include('../../fragments/header.ejs') %>
 <main>
     <h2><%= pageTitle %></h2>
-    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
-<!--        <form class="form" method="post" action="<%=formAction%>" novalidate>-->
+<!--    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">-->
+        <form class="form" method="post" action="<%=formAction%>" novalidate>
         <input type="hidden" name="Id_Magazyn" value="<%= mag.Id_Magazyn %>">
         <label for="Nazwa">Nazwa:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="Nazwa" placeholder="2-60 znaków" id="Nazwa" value="<%= mag.Nazwa %>"
-                <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
-        <span id="errorName" class="errors-text"></span>
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>
+               class="<%= validationErrors.find(e => e.path.includes('Nazwa')) ? 'error-input' : '' %>"
+        />
+        <span id="errorName" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('Nazwa'))) { %>
+                <%= validationErrors.find(e => e.path.includes('Nazwa')).message %>
+            <% } %>
+        </span>
         <label for="Adres">Adres:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="Adres" placeholder="np. ul. Gorka 15/67" id="Adres" value="<%= mag.Adres %>"
-                <%= (formMode == 'showDetails') ? 'disabled' : '' %>/>
-        <span id="errorAdress" class="errors-text"></span>
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>
+               class="<%= validationErrors.find(e => e.path.includes('Adres')) ? 'error-input' : '' %>"
+        />
+        <span id="errorAdress" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('Adres'))) { %>
+                <%= validationErrors.find(e => e.path.includes('Adres')).message %>
+            <% } %>
+        </span>
         <% if (formMode != 'showDetails') { %>
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text"></p>

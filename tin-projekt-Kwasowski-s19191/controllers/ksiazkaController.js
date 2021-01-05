@@ -19,7 +19,7 @@ exports.showAddKsiazkaForm = (req, res, next) => {
         btnLabel: 'Dodaj książkę',
         formAction: '/ksiazka/add',
         navLocation: 'ksiazka',
-        validation: 'ksiazka',
+        validationErrors: []
     });
 }
 
@@ -34,7 +34,7 @@ exports.showKsiazkaDetails = (req, res, next) => {
                 btnLabel: '',
                 formAction: '',
                 navLocation: 'ksiazka',
-                validation: ''
+                validationErrors: []
             });
         });
 }
@@ -50,7 +50,7 @@ exports.showEditKsiazkaForm = (req, res, next) => {
                 btnLabel: 'Edytuj książkę',
                 formAction: '/ksiazka/edit',
                 navLocation: 'ksiazka',
-                validation: 'ksiazka'
+                validationErrors: []
             });
         });
 }
@@ -62,17 +62,16 @@ exports.addKsiazka = (req, res, next) => {
             res.redirect('/ksiazka');
         })
         .catch(err => {
-        res.render('pages/ksiazka/form', {
-            ks: ksData,
-            pageTitle: 'Dodawanie książki',
-            formMode: 'createNew',
-            btnLabel: 'Dodaj książke',
-            formAction: '/ksiazka/add',
-            navLocation: 'ksiazka',
-            validation: 'ksiazka',
-            validationErrors: err.errors
+            res.render('pages/ksiazka/form', {
+                ks: ksData,
+                pageTitle: 'Dodawanie książki',
+                formMode: 'createNew',
+                btnLabel: 'Dodaj książke',
+                formAction: '/ksiazka/add',
+                navLocation: 'ksiazka',
+                validationErrors: err.errors
+            });
         });
-    });
 };
 
 exports.updateKsiazka = (req, res, next) => {
@@ -81,6 +80,17 @@ exports.updateKsiazka = (req, res, next) => {
     KsiazkaRepository.updateKsiazka(Id_Ksiazka, ksData)
         .then( result => {
             res.redirect('/ksiazka');
+        })
+        .catch(err => {
+            res.render('pages/ksiazka/form', {
+                ks: ksData,
+                pageTitle: 'Edycja książki',
+                formMode: 'edit',
+                btnLabel: 'Edytuj książkę',
+                formAction: '/ksiazka/edit',
+                navLocation: 'ksiazka',
+                validationErrors: err.errors
+            });
         });
 };
 

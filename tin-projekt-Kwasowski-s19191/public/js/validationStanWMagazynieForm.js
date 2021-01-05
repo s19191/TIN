@@ -46,7 +46,6 @@ function validateForm() {
     }
 
     if (!checkNumber(cenaHurtowaInput.value) && checkRequired(cenaHurtowaInput.value)) {
-        console.log(cenaHurtowaInput.value);
         valid = false;
         cenaHurtowaInput.classList.add("error-input");
         errorCenaHurtowa.innerText = "Pole powinno być liczbą";

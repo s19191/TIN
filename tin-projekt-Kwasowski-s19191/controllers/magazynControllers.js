@@ -19,7 +19,7 @@ exports.showAddMagazynForm = (req, res, next) => {
         btnLabel: 'Dodaj magazyn',
         formAction: '/magazyn/add',
         navLocation: 'magazyn',
-        validation: 'magazyn'
+        validationErrors: []
     });
 }
 
@@ -34,7 +34,7 @@ exports.showMagazynDetails = (req, res, next) => {
                 btnLabel: '',
                 formAction: '',
                 navLocation: 'magazyn',
-                validation: ''
+                validationErrors: []
             });
         });
 }
@@ -50,7 +50,7 @@ exports.showEditMagazynForm = (req, res, next) => {
                 btnLabel: 'Edytuj magazyn',
                 formAction: '/magazyn/edit',
                 navLocation: 'magazyn',
-                validation: 'magazyn'
+                validationErrors: []
             });
         });
 }
@@ -60,6 +60,17 @@ exports.addMagazyn = (req, res, next) => {
     MagazynRepository.createMagazyn(magData)
         .then( result => {
             res.redirect('/magazyn');
+        })
+        .catch(err => {
+            res.render('pages/magazyn/form', {
+                mag: magData,
+                pageTitle: 'Dodawanie magazynu',
+                formMode: 'createNew',
+                btnLabel: 'Dodaj magazyn',
+                formAction: '/magazyn/add',
+                navLocation: 'magazyn',
+                validationErrors: err.errors
+            });
         });
 };
 
@@ -69,6 +80,17 @@ exports.updateMagazyn = (req, res, next) => {
     MagazynRepository.updateMagazyn(Id_Magazyn, magData)
         .then( result => {
             res.redirect('/magazyn');
+        })
+        .catch(err => {
+            res.render('pages/magazyn/form', {
+                mag: magData,
+                pageTitle: 'Edycja magazynu',
+                formMode: 'edit',
+                btnLabel: 'Edytuj magazyn',
+                formAction: '/magazyn/edit',
+                navLocation: 'magazyn',
+                validationErrors: err.errors
+            });
         });
 };
 
