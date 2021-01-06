@@ -44,7 +44,13 @@ const Ksiazka = sequelize.define('Ksiazka', {
             isDate: {
                 msg: "Pole powinno zawierać datę w formacie yyyy-MM-dd (np. 2000-01-01)"
             },
-            isSameOrBefore: Date.now()
+            isSameOrBefore(value){
+                const today = new Date();
+                const date = new Date(value);
+                if (date > today) {
+                    throw new Error("Data nie może być z przyszłości");
+                }
+            }
         }
     }
 });

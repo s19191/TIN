@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="coś z walidacji zrbione, ale asocjacyjna nie, daty nadal źle, a do tego adress nie tak się robi">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="dodana jedna książka">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/ksiazkaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ksiazkaController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +106,8 @@
       <workItem from="1609256216746" duration="1927000" />
       <workItem from="1609803246450" duration="125000" />
       <workItem from="1609803399363" duration="1268000" />
-      <workItem from="1609847946475" duration="12758000" />
+      <workItem from="1609847946475" duration="13608000" />
+      <workItem from="1609952221094" duration="9142000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -309,7 +312,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609890947074</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="nie działają edity">
+      <created>1609894711039</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1609894711039</updated>
+    </task>
+    <task id="LOCAL-00031" summary="dodana jedna książka">
+      <created>1609962564603</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1609962564603</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,8 +345,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dodatki" />
-    <MESSAGE value="do szablony - wporowadzenie" />
     <MESSAGE value="przeniesienie stron oraz zmiana na .ejs" />
     <MESSAGE value="route dla ksiazki" />
     <MESSAGE value="wszystko działa, bez walidacji" />
@@ -353,6 +368,8 @@
     <MESSAGE value="nie pamiętam, coś się zmieniło, inne ify do walidacji po stronie strony. Usunięty joi itd." />
     <MESSAGE value="naprawiona walidacja po stronie strony" />
     <MESSAGE value="coś z walidacji zrbione, ale asocjacyjna nie, daty nadal źle, a do tego adress nie tak się robi" />
-    <option name="LAST_COMMIT_MESSAGE" value="coś z walidacji zrbione, ale asocjacyjna nie, daty nadal źle, a do tego adress nie tak się robi" />
+    <MESSAGE value="nie działają edity" />
+    <MESSAGE value="dodana jedna książka" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodana jedna książka" />
   </component>
 </project>

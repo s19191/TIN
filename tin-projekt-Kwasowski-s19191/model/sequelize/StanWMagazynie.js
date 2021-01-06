@@ -32,6 +32,9 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
         validate: {
             notEmpty: {
                 msg: "Pole jest wymagane"
+            },
+            isNumeric: {
+                msg: "Pole powinno być liczbą"
             }
         }
     },
@@ -39,7 +42,7 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
         type: Sequelize.DOUBLE,
         allowNull: true,
         validate: {
-            isInt: {
+            isNumeric: {
                 msg: "Pole powinno być liczbą"
             }
         }
@@ -59,6 +62,9 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
         validate: {
             notEmpty: {
                 msg: "Pole jest wymagane"
+            },
+            isNumeric: {
+                msg: "Pole powinno być liczbą"
             }
         }
     }

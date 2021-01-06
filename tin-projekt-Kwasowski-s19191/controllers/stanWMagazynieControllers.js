@@ -116,10 +116,10 @@ exports.addStanWMagazynie = (req, res, next) => {
                                 swm: swmData,
                                 allKs: allKs,
                                 allMag: allMag,
-                                pageTitle: 'Edycja magazynu',
-                                formMode: 'edit',
-                                btnLabel: 'Edytuj stan książki w magazynie',
-                                formAction: '/stanWMagazynie/edit',
+                                pageTitle: 'Dodawanie stanu książki w konretnym magazynie',
+                                formMode: 'createNew',
+                                btnLabel: 'Dodaj stan książki w konkretnym magazynie',
+                                formAction: '/stanWMagazynie/add',
                                 navLocation: 'stanWMagazynie',
                                 validationErrors: errors
                             });

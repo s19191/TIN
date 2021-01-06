@@ -2,7 +2,7 @@
 <main>
     <h2><%= pageTitle %></h2>
     <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
-<!--    <form class="form" method="post" action="<%=formAction%>" novalidate>-->
+    <form class="form" method="post" action="<%=formAction%>" novalidate>
         <input type="hidden" name="Id_Ksiazka" value="<%= ks.Id_Ksiazka %>">
         <label for="Tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="Tytul" placeholder="2-60 znaków" id="Tytul" value="<%= ks.Tytul %>"
