@@ -1,7 +1,7 @@
 <%- include('../../fragments/header.ejs') %>
 <main>
     <h2><%= pageTitle %></h2>
-    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+<!--    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">-->
     <form class="form" method="post" action="<%=formAction%>" novalidate>
         <input type="hidden" name="Id_Ksiazka" value="<%= ks.Id_Ksiazka %>">
         <label for="Tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
@@ -26,8 +26,11 @@
         </span>
         <label for="DataWydania">Data wydania:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="date" name="DataWydania" placeholder="Data w formacie yyyy-MM-dd" id="DataWydania"
-                <% if (formMode != 'createNew') { %>
+                <% if (formMode == 'edit' || formMode == 'showDetails') { %>
                     value="<%= ks.DataWydania.toISOString().split('T')[0] %>"
+                <% } else if (formMode == 'createNewErrors' || formMode == 'editErrors'){ %>
+                    value="<%= ks.DataWydania %>"
+               console.log(<%= ks.DataWydania %>);
                 <% } %>
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>
                class="<%= validationErrors.find(e => e.path.includes('DataWydania')) ? 'error-input' : '' %>"
@@ -48,7 +51,7 @@
     <% if (formMode == 'showDetails') { %>
         <p><a href="/ksiazka/edit/<%= ks.Id_Ksiazka %>" class="list-actions-button-edit">Edytuj</a></p>
     <% } %>
-    <% if (formMode == 'showDetails' || formMode == 'edit') { %>
+    <% if (formMode == 'showDetails' || formMode == 'edit' || formMode == 'editErrors') { %>
         <h2>Szczegóły magazynu</h2>
         <table class="table-list">
             <thead>

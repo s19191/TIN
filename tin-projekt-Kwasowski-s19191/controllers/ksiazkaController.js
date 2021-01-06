@@ -58,14 +58,14 @@ exports.showEditKsiazkaForm = (req, res, next) => {
 exports.addKsiazka = (req, res, next) => {
     const ksData = { ...req.body };
     KsiazkaRepository.createKsiazka(ksData)
-        .then( result => {
+        .then( () => {
             res.redirect('/ksiazka');
         })
         .catch(err => {
             res.render('pages/ksiazka/form', {
                 ks: ksData,
                 pageTitle: 'Dodawanie książki',
-                formMode: 'createNew',
+                formMode: 'createNewErrors',
                 btnLabel: 'Dodaj książke',
                 formAction: '/ksiazka/add',
                 navLocation: 'ksiazka',
@@ -75,22 +75,52 @@ exports.addKsiazka = (req, res, next) => {
 };
 
 exports.updateKsiazka = (req, res, next) => {
+//     const Id_Ksiazka = req.body.Id_Ksiazka;
+//     const ksData = { ...req.body };
+//     let kss;
+//     KsiazkaRepository.getKsiazkaById(Id_Ksiazka)
+//         .then(ks => {
+//             kss = ks;
+//             return KsiazkaRepository.updateKsiazka(Id_Ksiazka, ksData);
+//         })
+//         .then( () => {
+//             res.redirect('/ksiazka');
+//         })
+//         .catch(err => {
+//             ksData.stanyWMagazynach = kss.stanyWMagazynach;
+//             res.render('pages/ksiazka/form', {
+//                 ks: ksData,
+//                 pageTitle: 'Edycja książki',
+//                 formMode: 'editErrors',
+//                 btnLabel: 'Edytuj książkę',
+//                 formAction: '/ksiazka/edit',
+//                 navLocation: 'ksiazka',
+//                 validationErrors: err.errors
+//             });
+//         });
+// };
+
     const Id_Ksiazka = req.body.Id_Ksiazka;
     const ksData = { ...req.body };
+    let errors;
     KsiazkaRepository.updateKsiazka(Id_Ksiazka, ksData)
-        .then( result => {
+        .then( () => {
             res.redirect('/ksiazka');
         })
         .catch(err => {
-            console.log(ksData.accessKey);
-            res.render('pages/ksiazka/form', {
-                ks: req.body,
+            errors = err.errors;
+            return KsiazkaRepository.getKsiazkaById(Id_Ksiazka);
+        })
+        .then(ks => {
+                ksData.stanyWMagazynach = ks.stanyWMagazynach;
+                res.render('pages/ksiazka/form', {
+                ks: ksData,
                 pageTitle: 'Edycja książki',
-                formMode: 'edit',
+                formMode: 'editErrors',
                 btnLabel: 'Edytuj książkę',
                 formAction: '/ksiazka/edit',
                 navLocation: 'ksiazka',
-                validationErrors: err.errors
+                validationErrors: errors
             });
         });
 };

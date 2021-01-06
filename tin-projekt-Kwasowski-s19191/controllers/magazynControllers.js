@@ -58,7 +58,7 @@ exports.showEditMagazynForm = (req, res, next) => {
 exports.addMagazyn = (req, res, next) => {
     const magData = { ...req.body };
     MagazynRepository.createMagazyn(magData)
-        .then( result => {
+        .then( () => {
             res.redirect('/magazyn');
         })
         .catch(err => {
@@ -78,7 +78,7 @@ exports.updateMagazyn = (req, res, next) => {
     const Id_Magazyn = req.body.Id_Magazyn;
     const magData = { ...req.body };
     MagazynRepository.updateMagazyn(Id_Magazyn, magData)
-        .then( result => {
+        .then( () => {
             res.redirect('/magazyn');
         })
         .catch(err => {
