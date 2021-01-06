@@ -81,17 +81,18 @@ exports.updateKsiazka = (req, res, next) => {
         .then( result => {
             res.redirect('/ksiazka');
         })
-        .catch(err => {
-            res.render('pages/ksiazka/form', {
-                ks: ksData,
-                pageTitle: 'Edycja książki',
-                formMode: 'edit',
-                btnLabel: 'Edytuj książkę',
-                formAction: '/ksiazka/edit',
-                navLocation: 'ksiazka',
-                validationErrors: err.errors
-            });
-        });
+        // .catch(err => {
+        //     res.render(alert('pages/ksiazka/edit/' + Id_Ksiazka), {
+        //         ks: ksData,
+        //         pageTitle: 'Edycja książki',
+        //         formMode: 'edit',
+        //         btnLabel: 'Edytuj książkę',
+        //         formAction: '/ksiazka/edit',
+        //         navLocation: 'ksiazka',
+        //         validationErrors: err.errors
+        //     });
+        // })
+;
 };
 
 exports.deleteKsiazka = (req, res, next) => {

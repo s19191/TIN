@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="naprawiona walidacja po stronie strony">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="coś z walidacji zrbione, ale asocjacyjna nie, daty nadal źle, a do tego adress nie tak się robi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/ksiazkaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ksiazkaController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/magazynControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/magazynControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/Magazyn.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Magazyn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +104,7 @@
       <workItem from="1609256216746" duration="1927000" />
       <workItem from="1609803246450" duration="125000" />
       <workItem from="1609803399363" duration="1268000" />
-      <workItem from="1609847946475" duration="10258000" />
+      <workItem from="1609847946475" duration="12758000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -308,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609804459230</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="coś z walidacji zrbione, ale asocjacyjna nie, daty nadal źle, a do tego adress nie tak się robi">
+      <created>1609890947074</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1609890947074</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,6 +352,7 @@
     <MESSAGE value="naprawiona walidacja adresów" />
     <MESSAGE value="nie pamiętam, coś się zmieniło, inne ify do walidacji po stronie strony. Usunięty joi itd." />
     <MESSAGE value="naprawiona walidacja po stronie strony" />
-    <option name="LAST_COMMIT_MESSAGE" value="naprawiona walidacja po stronie strony" />
+    <MESSAGE value="coś z walidacji zrbione, ale asocjacyjna nie, daty nadal źle, a do tego adress nie tak się robi" />
+    <option name="LAST_COMMIT_MESSAGE" value="coś z walidacji zrbione, ale asocjacyjna nie, daty nadal źle, a do tego adress nie tak się robi" />
   </component>
 </project>
