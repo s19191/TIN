@@ -21,7 +21,8 @@ module.exports = () => {
                 return Ksiazka.bulkCreate([
                     {Tytul: 'Lew, czarownica i stara szafa', Autor: 'C.S. Lewis', DataWydania: '1950-01-01'},
                     {Tytul: 'Książę Kaspian', Autor: 'C.S. Lewis', DataWydania: '1951-01-01'},
-                    {Tytul: 'Podróż „Wędrowca do Świtu”', Autor: 'C.S. Lewis', DataWydania: '1952-01-01'}
+                    {Tytul: 'Podróż „Wędrowca do Świtu”', Autor: 'C.S. Lewis', DataWydania: '1952-01-01'},
+                    {Tytul: 'Srebrne krzesło', Autor: 'C.S. Lewis', DataWydania: '1953-01-01'}
                 ])
                     .then( () => {
                         return Ksiazka.findAll();
