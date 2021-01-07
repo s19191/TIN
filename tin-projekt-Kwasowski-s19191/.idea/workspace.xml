@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="działa książka w pełni">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="nadal nie działają stany w magazynie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/ksiazkaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ksiazkaController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/magazynControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/magazynControllers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +105,7 @@
       <workItem from="1609803246450" duration="125000" />
       <workItem from="1609803399363" duration="1268000" />
       <workItem from="1609847946475" duration="13608000" />
-      <workItem from="1609952221094" duration="21028000" />
+      <workItem from="1609952221094" duration="22059000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -340,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609976218359</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="nadal nie działają stany w magazynie">
+      <created>1609979165146</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1609979165146</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +364,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="wszystko działa, bez walidacji" />
     <MESSAGE value="dodana walidacja" />
     <MESSAGE value="dodany docker, teoretycznie jak baza ma wyglądać, ale nie wiem czy działa. PRzed dodaniem do app.js" />
     <MESSAGE value="dodane repozytoria" />
@@ -384,6 +388,7 @@
     <MESSAGE value="dodana jedna książka" />
     <MESSAGE value="działają add, ale nie edit. W add nie działa stanWMagazynie" />
     <MESSAGE value="działa książka w pełni" />
-    <option name="LAST_COMMIT_MESSAGE" value="działa książka w pełni" />
+    <MESSAGE value="nadal nie działają stany w magazynie" />
+    <option name="LAST_COMMIT_MESSAGE" value="nadal nie działają stany w magazynie" />
   </component>
 </project>

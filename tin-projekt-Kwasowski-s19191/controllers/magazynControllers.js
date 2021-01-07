@@ -9,7 +9,7 @@ exports.showMagazynList = (req, res, next) => {
                 formMode: ''
             });
         });
-}
+};
 
 exports.showAddMagazynForm = (req, res, next) => {
     res.render('pages/magazyn/form', {
@@ -21,7 +21,7 @@ exports.showAddMagazynForm = (req, res, next) => {
         navLocation: 'magazyn',
         validationErrors: []
     });
-}
+};
 
 exports.showMagazynDetails = (req, res, next) => {
     const Id_Magazyn = req.params.Id_Magazyn;
@@ -37,7 +37,7 @@ exports.showMagazynDetails = (req, res, next) => {
                 validationErrors: []
             });
         });
-}
+};
 
 exports.showEditMagazynForm = (req, res, next) => {
     const Id_Magazyn = req.params.Id_Magazyn;
@@ -53,7 +53,7 @@ exports.showEditMagazynForm = (req, res, next) => {
                 validationErrors: []
             });
         });
-}
+};
 
 exports.addMagazyn = (req, res, next) => {
     const magData = { ...req.body };

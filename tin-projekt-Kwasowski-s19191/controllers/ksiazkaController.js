@@ -9,7 +9,7 @@ exports.showKsiazkaList = (req, res, next) => {
                 formMode: ''
             });
         });
-}
+};
 
 exports.showAddKsiazkaForm = (req, res, next) => {
     res.render('pages/ksiazka/form', {
@@ -21,7 +21,7 @@ exports.showAddKsiazkaForm = (req, res, next) => {
         navLocation: 'ksiazka',
         validationErrors: []
     });
-}
+};
 
 exports.showKsiazkaDetails = (req, res, next) => {
     const Id_Ksiazka = req.params.Id_Ksiazka;
@@ -37,7 +37,7 @@ exports.showKsiazkaDetails = (req, res, next) => {
                 validationErrors: []
             });
         });
-}
+};
 
 exports.showEditKsiazkaForm = (req, res, next) => {
     const Id_Ksiazka = req.params.Id_Ksiazka;
@@ -53,7 +53,7 @@ exports.showEditKsiazkaForm = (req, res, next) => {
                 validationErrors: []
             });
         });
-}
+};
 
 exports.addKsiazka = (req, res, next) => {
     const ksData = { ...req.body };
