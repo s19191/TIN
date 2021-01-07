@@ -33,8 +33,14 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
             notEmpty: {
                 msg: "Pole jest wymagane"
             },
-            isNumeric: {
+            isNumber: {
                 msg: "Pole powinno być liczbą"
+            },
+            isNumberPlus(value) {
+                console.log(value.isNumeric)
+                if (value < 0) {
+                    throw new Error('Pole powinno być liczbą dodatnią');
+                }
             }
         }
     },
@@ -42,11 +48,15 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
         type: Sequelize.DOUBLE,
         allowNull: true,
         validate: {
-            isNumberPlus(value){
-                const today = new Date();
-                const date = new Date(value);
-                if (date > today) {
-                    throw new Error("Data nie może być z przyszłości");
+            isNumber(value) {
+                if (!value.isNumeric && value.notEmpty) {
+                    throw new Error('Pole powinno być liczbą');
+                }
+            },
+            isNumberPlus(value) {
+                console.log(value.isNumeric)
+                if (value < 0) {
+                    throw new Error('Pole powinno być liczbą dodatnią');
                 }
             }
         }
@@ -55,8 +65,16 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
         type: Sequelize.INTEGER,
         allowNull: true,
         validate: {
-            isInt: {
-                msg: "Pole powinno być liczbą"
+            isNumber(value) {
+                if (!value.isNumeric && value.notEmpty) {
+                    throw new Error('Pole powinno być liczbą');
+                }
+            },
+            isNumberPlus(value) {
+                console.log(value.isNumeric)
+                if (value < 0) {
+                    throw new Error('Pole powinno być liczbą dodatnią');
+                }
             }
         }
     },
@@ -67,8 +85,14 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
             notEmpty: {
                 msg: "Pole jest wymagane"
             },
-            isNumeric: {
+            isNumber: {
                 msg: "Pole powinno być liczbą"
+            },
+            isNumberPlus(value) {
+                console.log(value.isNumeric)
+                if (value < 0) {
+                    throw new Error('Pole powinno być liczbą dodatnią');
+                }
             }
         }
     }

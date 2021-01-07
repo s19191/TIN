@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="nadal nie działają stany w magazynie">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="chyba działa, ale walidację trzeba poprawić, sprawdzała na pewno to co trzeba">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Magazyn.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Magazyn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +109,7 @@
       <workItem from="1609803399363" duration="1268000" />
       <workItem from="1609847946475" duration="13608000" />
       <workItem from="1609952221094" duration="22083000" />
-      <workItem from="1610022436385" duration="3478000" />
+      <workItem from="1610022436385" duration="12724000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -352,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609979914022</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="chyba działa, ale walidację trzeba poprawić, sprawdzała na pewno to co trzeba">
+      <created>1610026629235</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1610026629235</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +382,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dodana walidacja" />
     <MESSAGE value="dodany docker, teoretycznie jak baza ma wyglądać, ale nie wiem czy działa. PRzed dodaniem do app.js" />
     <MESSAGE value="dodane repozytoria" />
     <MESSAGE value="nie dziłają REST API dla tabeli asocjacyjnej" />
@@ -396,6 +406,7 @@
     <MESSAGE value="działają add, ale nie edit. W add nie działa stanWMagazynie" />
     <MESSAGE value="działa książka w pełni" />
     <MESSAGE value="nadal nie działają stany w magazynie" />
-    <option name="LAST_COMMIT_MESSAGE" value="nadal nie działają stany w magazynie" />
+    <MESSAGE value="chyba działa, ale walidację trzeba poprawić, sprawdzała na pewno to co trzeba" />
+    <option name="LAST_COMMIT_MESSAGE" value="chyba działa, ale walidację trzeba poprawić, sprawdzała na pewno to co trzeba" />
   </component>
 </project>

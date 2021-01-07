@@ -2,28 +2,42 @@
 <main>
     <h2><%= pageTitle %></h2>
 <!--    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">-->
-                <form class="form" method="post" action="<%=formAction%>" novalidate>
+        <form class="form" method="post" action="<%=formAction%>" novalidate>
         <input type="hidden" name="Id_StanWMagazynie" value="<%= swm.Id_StanWMagazynie %>">
         <label for="Ksiazka_Id_Ksiazka">Książka:<abbr title="required" aria-label="required">*</abbr></label>
-        <select name="Ksiazka_Id_Ksiazka" id="Ksiazka_Id_Ksiazka" <%= (formMode == 'showDetails') ? 'disabled' : ''%> >
-            class="<%= validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka')) ? 'error-input' : '' %>"
+        <select name="Ksiazka_Id_Ksiazka" id="Ksiazka_Id_Ksiazka" <%= (formMode == 'showDetails') ? 'disabled' : ''%>
+            class="<%= validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka')) ? 'error-input' : '' %>" >
             <option value="">-- Wybierz książkę --</option>
             <% for (let i=0; i<allKs.length; i++) { let ks = allKs[i]; %>
             <option value="<%= ks.Id_Ksiazka %>" label="<%= ks.Tytul %>"
-                    <%= (swm.Id_StanWMagazynie && ks.Id_Ksiazka.toString() == swm.ksiazka.Id_Ksiazka.toString()) ? 'selected' : ''%>></option>
+            <% if (formMode != 'createNew' && swm.ksiazka != null) { %>
+                <%= (ks.Id_Ksiazka.toString() == swm.ksiazka.Id_Ksiazka.toString()) ? 'selected' : ''%>
+            <% } %>
+            ></option>
             <% } %>
         </select>
-        <span id="errorKsiazka_Id_Ksiazka" class="errors-text"></span>
+        <span id="errorKsiazka_Id_Ksiazka" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka'))) { %>
+                <%= validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka')).message %>
+            <% } %>
+        </span>
         <label for="Magazyn_Id_Magazyn">Magazyn:<abbr title="required" aria-label="required">*</abbr></label>
-        <select name="Magazyn_Id_Magazyn" id="Magazyn_Id_Magazyn" <%= (formMode == 'showDetails') ? 'disabled' : ''%> >
-            class="<%= validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn')) ? 'error-input' : '' %>"
+        <select name="Magazyn_Id_Magazyn" id="Magazyn_Id_Magazyn" <%= (formMode == 'showDetails') ? 'disabled' : ''%>
+            class="<%= validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn')) ? 'error-input' : '' %>" >
             <option value="">-- Wybierz magazyn --</option>
             <% for (let i=0; i<allMag.length; i++) { let mag = allMag[i]; %>
             <option value="<%= mag.Id_Magazyn %>" label="<%= mag.Nazwa %>"
-                    <%= (swm.Id_StanWMagazynie && mag.Id_Magazyn.toString() == swm.magazyn.Id_Magazyn.toString()) ? 'selected' : ''%>></option>
+            <% if (formMode != 'createNew' && swm.magazyn != null) { %>
+                    <%= (mag.Id_Magazyn.toString() == swm.magazyn.Id_Magazyn.toString()) ? 'selected' : ''%>
+            <% } %>
+            ></option>
             <% } %>
         </select>
-        <span id="errorMagazyn_Id_Magazyn" class="errors-text"></span>
+        <span id="errorMagazyn_Id_Magazyn" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn'))) { %>
+                <%= validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn')).message %>
+            <% } %>
+        </span>
         <label for="IloscNaStanie">Ilość na stanie:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="number" name="IloscNaStanie" id="IloscNaStanie" value="<%= swm.IloscNaStanie %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>
@@ -66,7 +80,13 @@
         </span>
         <% if (formMode != 'showDetails') { %>
         <div class="form-buttons">
-            <p id="errorsSummary" class="errors-text"></p>
+            <% if (formMode == 'createNewErrors' || formMode == 'editErrors') { %>
+                <p class="errors-text">Formularz zawiera błędy</p>
+            <% } else if (formMode == 'idsError') { %>
+                    <p class="errors-text">Wybrana książka jest już w tym magazynie!</p>
+            <% } else { %>
+                <p id="errorsSummary" class="errors-text"></p>
+            <% } %>
             <input type="submit" class="form-button-submit" value="<%=btnLabel%>"/>
             <a href="/stanWMagazynie" class="form-button-cancel">Anuluj</a>
             <% } %>

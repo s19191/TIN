@@ -1,8 +1,8 @@
 <%- include('../../fragments/header.ejs') %>
 <main>
     <h2><%= pageTitle %></h2>
-<!--    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">-->
-    <form class="form" method="post" action="<%=formAction%>" novalidate>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+<!--    <form class="form" method="post" action="<%=formAction%>" novalidate>-->
         <input type="hidden" name="Id_Ksiazka" value="<%= ks.Id_Ksiazka %>">
         <label for="Tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="Tytul" placeholder="2-60 znaków" id="Tytul" value="<%= ks.Tytul %>"
@@ -28,9 +28,8 @@
         <input type="date" name="DataWydania" placeholder="Data w formacie yyyy-MM-dd" id="DataWydania"
                 <% if (formMode == 'edit' || formMode == 'showDetails') { %>
                     value="<%= ks.DataWydania.toISOString().split('T')[0] %>"
-                <% } else if (formMode == 'createNewErrors' || formMode == 'editErrors'){ %>
+                <% } else if (formMode == 'createNewErrors' || formMode == 'editErrors') { %>
                     value="<%= ks.DataWydania %>"
-               console.log(<%= ks.DataWydania %>);
                 <% } %>
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>
                class="<%= validationErrors.find(e => e.path.includes('DataWydania')) ? 'error-input' : '' %>"
@@ -42,7 +41,11 @@
         </span>
         <% if (formMode != 'showDetails') { %>
         <div class="form-buttons">
+            <% if (formMode == 'createNewErrors' || formMode == 'editErrors') { %>
+                <p class="errors-text">Formularz zawiera błędy</p>
+            <% } else { %>
             <p id="errorsSummary" class="errors-text"></p>
+            <% } %>
             <input type="submit" class="form-button-submit" value="<%=btnLabel%>" />
             <a href="/ksiazka" class="form-button-cancel">Anuluj</a>
         </div>

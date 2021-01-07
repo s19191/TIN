@@ -26,7 +26,11 @@
         </span>
         <% if (formMode != 'showDetails') { %>
         <div class="form-buttons">
-            <p id="errorsSummary" class="errors-text"></p>
+            <% if (formMode == 'createNewErrors' || formMode == 'editErrors') { %>
+                <p class="errors-text">Formularz zawiera błędy</p>
+            <% } else { %>
+                <p id="errorsSummary" class="errors-text"></p>
+            <% } %>
             <input type="submit" class="form-button-submit" value="<%=btnLabel%>"/>
             <a href="/magazyn" class="form-button-cancel">Anuluj</a>
             <% } %>

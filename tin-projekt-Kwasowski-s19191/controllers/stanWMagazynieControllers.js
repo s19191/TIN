@@ -119,7 +119,6 @@ exports.addStanWMagazynie = (req, res, next) => {
                         mag = m;
                         swmData.ksiazka = ks;
                         swmData.magazyn = mag;
-                        swmData.Id_StanWMagazynie = -1;
                         res.render('pages/stanWMagazynie/form', {
                                 swm: swmData,
                                 allKs: allKs,
@@ -150,13 +149,12 @@ exports.addStanWMagazynie = (req, res, next) => {
                         mag = m;
                         swmData.ksiazka = ks;
                         swmData.magazyn = mag;
-                        swmData.Id_StanWMagazynie = -1;
                         res.render('pages/stanWMagazynie/form', {
                             swm: swmData,
                             allKs: allKs,
                             allMag: allMag,
                             pageTitle: 'Dodawanie stanu książki w konretnym magazynie',
-                            formMode: 'createNewErrors',
+                            formMode: 'idsError',
                             btnLabel: 'Dodaj stan książki w konkretnym magazynie',
                             formAction: '/stanWMagazynie/add',
                             navLocation: 'stanWMagazynie',
@@ -190,6 +188,7 @@ exports.updateStanWMagazynie = (req, res, next) => {
                     .then(mag => {
                         allMag = mag;
                         return StanWMagazynieRepository.getStanWMagazynieById(Id_StanWMagazynie);
+                        // TODO: do zmiany wyszukiwanie po Ksiazka_Id_Ksiazka itd.
                     })
                     .then(swm => {
                         console.log(typeof swm + 'aaaaaas');
@@ -225,7 +224,7 @@ exports.updateStanWMagazynie = (req, res, next) => {
                             allKs: allKs,
                             allMag: allMag,
                             pageTitle: 'Edycja magazynu',
-                            formMode: 'edit',
+                            formMode: 'idsError',
                             btnLabel: 'Edytuj stan książki w magazynie',
                             formAction: '/stanWMagazynie/edit',
                             navLocation: 'stanWMagazynie',
