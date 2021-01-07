@@ -169,7 +169,7 @@ exports.addStanWMagazynie = (req, res, next) => {
 exports.updateStanWMagazynie = (req, res, next) => {
     const Id_StanWMagazynie = req.body.Id_StanWMagazynie;
     const swmData = { ...req.body };
-    let allKs, allMag, editSwm, errors;
+    let allKs, allMag, ks, mag, errors;
     StanWMagazynieRepository.checkIfExsists(swmData.Ksiazka_Id_Ksiazka, swmData.Magazyn_Id_Magazyn)
         .then(result => {
             if (result.count < 2) {
@@ -187,13 +187,16 @@ exports.updateStanWMagazynie = (req, res, next) => {
                     })
                     .then(mag => {
                         allMag = mag;
-                        return StanWMagazynieRepository.getStanWMagazynieById(Id_StanWMagazynie);
-                        // TODO: do zmiany wyszukiwanie po Ksiazka_Id_Ksiazka itd.
+                        return KsiazkaRepository.getKsiazkaById(swmData.Ksiazka_Id_Ksiazka);
                     })
-                    .then(swm => {
-                        console.log(typeof swm + 'aaaaaas');
-                        swmData.ksiazka = swm.ksiazka;
-                        swmData.magazyn = swm.magazyn;
+                    .then(k => {
+                        ks = k;
+                        return MagazynRepository.getMagazynById(swmData.Magazyn_Id_Magazyn);
+                    })
+                    .then(m => {
+                        mag = m;
+                        swmData.ksiazka = ks;
+                        swmData.magazyn = mag;
                         res.render('pages/stanWMagazynie/form', {
                             swm: swmData,
                             allKs: allKs,
@@ -214,11 +217,16 @@ exports.updateStanWMagazynie = (req, res, next) => {
                     })
                     .then(mag => {
                         allMag = mag;
-                        StanWMagazynieRepository.getStanWMagazynieById(Id_StanWMagazynie);
+                        return KsiazkaRepository.getKsiazkaById(swmData.Ksiazka_Id_Ksiazka);
                     })
-                    .then(swm => {
-                        swmData.ksiazka = swm.ksiazka;
-                        swmData.magazyn = swm.magazyn;
+                    .then(k => {
+                        ks = k;
+                        return MagazynRepository.getMagazynById(swmData.Magazyn_Id_Magazyn);
+                    })
+                    .then(m => {
+                        mag = m;
+                        swmData.ksiazka = ks;
+                        swmData.magazyn = mag;
                         res.render('pages/stanWMagazynie/form', {
                             swm: swmData,
                             allKs: allKs,
