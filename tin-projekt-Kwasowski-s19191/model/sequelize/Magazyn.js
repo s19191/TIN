@@ -15,11 +15,9 @@ const Magazyn = sequelize.define('Magazyn', {
             notEmpty: {
                 msg: "Pole jest wymagane"
             },
-            isAdress(value) {
-                const pattern = /((ul\.)|(al\.))\s(.+)\s(\d+[a-zA-Z]?[\/-]?\d*[a-zA-Z]?[\/-]?\d*)/;
-                if (!pattern.test(value) && value.notEmpty) {
-                    throw new Error('Pole powinno zawierać adres w formacie np. ul. Gorka 14C');
-                }
+            is: {
+                args: /((ul\.)|(al\.))\s(.+)\s(\d+[a-zA-Z]?[\/-]?\d*[a-zA-Z]?[\/-]?\d*)/,
+                msg: "Pole powinno zawierać adres w formacie np. ul. Gorka 14C"
             }
         }
     },
