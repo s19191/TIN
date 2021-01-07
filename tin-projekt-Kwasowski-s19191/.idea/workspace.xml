@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="zmiany dockera">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/Magazyn.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Magazyn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/validationCommon.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationCommon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" afterDir="false" />
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="naprawiona walidacja adresu, nie do końca prawidłowa walidacaj liczb całkowitych w stan w magazynach">
+      <change beforePath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +103,7 @@
       <workItem from="1609803399363" duration="1268000" />
       <workItem from="1609847946475" duration="13608000" />
       <workItem from="1609952221094" duration="22083000" />
-      <workItem from="1610022436385" duration="19263000" />
+      <workItem from="1610022436385" duration="19614000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -382,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610044995194</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="naprawiona walidacja adresu, nie do końca prawidłowa walidacaj liczb całkowitych w stan w magazynach">
+      <created>1610052379768</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1610052379768</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +404,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="nie działa wszystko co musimy wyszukać przez dwa klucze główne" />
     <MESSAGE value="wszystko, oprócz usuwania kaskadowego" />
     <MESSAGE value="pobiera dane z bazy danych dla książki" />
     <MESSAGE value="działają selecty w stanWMagazynieform" />
@@ -426,6 +428,7 @@
     <MESSAGE value="chyba skończone" />
     <MESSAGE value="chyba skończone, poprawki co do kontrollera stanów w magazynie oraz usunięte console.log..." />
     <MESSAGE value="zmiany dockera" />
-    <option name="LAST_COMMIT_MESSAGE" value="zmiany dockera" />
+    <MESSAGE value="naprawiona walidacja adresu, nie do końca prawidłowa walidacaj liczb całkowitych w stan w magazynach" />
+    <option name="LAST_COMMIT_MESSAGE" value="naprawiona walidacja adresu, nie do końca prawidłowa walidacaj liczb całkowitych w stan w magazynach" />
   </component>
 </project>
