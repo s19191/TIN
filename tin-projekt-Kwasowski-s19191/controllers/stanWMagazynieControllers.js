@@ -91,12 +91,12 @@ exports.showEditStanWMagazynieForm = (req, res, next) => {
 
 exports.addStanWMagazynie = (req, res, next) => {
     const swmData = { ...req.body };
-    let allKs, allMag, errors;
+    let allKs, allMag, ks, mag, errors;
     StanWMagazynieRepository.checkIfExsists(swmData.Ksiazka_Id_Ksiazka, swmData.Magazyn_Id_Magazyn)
         .then(result => {
             if (result.count == 0) {
                 StanWMagazynieRepository.createStanWMagazynie(swmData)
-                    .then( result => {
+                    .then( () => {
                         res.redirect('/stanWMagazynie');
                     })
                     .catch(err => {
@@ -109,6 +109,17 @@ exports.addStanWMagazynie = (req, res, next) => {
                     })
                     .then(mag => {
                         allMag = mag;
+                        return KsiazkaRepository.getKsiazkaById(swmData.Ksiazka_Id_Ksiazka);
+                    })
+                    .then(k => {
+                        ks = k;
+                        return MagazynRepository.getMagazynById(swmData.Magazyn_Id_Magazyn);
+                    })
+                    .then(m => {
+                        mag = m;
+                        swmData.ksiazka = ks;
+                        swmData.magazyn = mag;
+                        swmData.Id_StanWMagazynie = -1;
                         res.render('pages/stanWMagazynie/form', {
                                 swm: swmData,
                                 allKs: allKs,
@@ -129,6 +140,17 @@ exports.addStanWMagazynie = (req, res, next) => {
                     })
                     .then(mag => {
                         allMag = mag;
+                        return KsiazkaRepository.getKsiazkaById(swmData.Ksiazka_Id_Ksiazka);
+                    })
+                    .then(k => {
+                        ks = k;
+                        return MagazynRepository.getMagazynById(swmData.Magazyn_Id_Magazyn);
+                    })
+                    .then(m => {
+                        mag = m;
+                        swmData.ksiazka = ks;
+                        swmData.magazyn = mag;
+                        swmData.Id_StanWMagazynie = -1;
                         res.render('pages/stanWMagazynie/form', {
                             swm: swmData,
                             allKs: allKs,
@@ -153,8 +175,8 @@ exports.updateStanWMagazynie = (req, res, next) => {
     StanWMagazynieRepository.checkIfExsists(swmData.Ksiazka_Id_Ksiazka, swmData.Magazyn_Id_Magazyn)
         .then(result => {
             if (result.count < 2) {
-                StanWMagazynieRepository.createStanWMagazynie(swmData)
-                    .then( result => {
+                StanWMagazynieRepository.updateStanWMagazynie(Id_StanWMagazynie, swmData)
+                    .then( () => {
                         res.redirect('/stanWMagazynie');
                     })
                     .catch(err => {
@@ -167,9 +189,10 @@ exports.updateStanWMagazynie = (req, res, next) => {
                     })
                     .then(mag => {
                         allMag = mag;
-                        StanWMagazynieRepository.getStanWMagazynieById(Id_StanWMagazynie);
+                        return StanWMagazynieRepository.getStanWMagazynieById(Id_StanWMagazynie);
                     })
                     .then(swm => {
+                        console.log(typeof swm + 'aaaaaas');
                         swmData.ksiazka = swm.ksiazka;
                         swmData.magazyn = swm.magazyn;
                         res.render('pages/stanWMagazynie/form', {

@@ -42,8 +42,12 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
         type: Sequelize.DOUBLE,
         allowNull: true,
         validate: {
-            isNumeric: {
-                msg: "Pole powinno być liczbą"
+            isNumberPlus(value){
+                const today = new Date();
+                const date = new Date(value);
+                if (date > today) {
+                    throw new Error("Data nie może być z przyszłości");
+                }
             }
         }
     },
