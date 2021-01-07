@@ -35,7 +35,7 @@
     <% if (formMode == 'showDetails') { %>
         <p><a href="/magazyn/edit/<%= mag.Id_Magazyn %>" class="list-actions-button-edit">Edytuj</a></p>
     <% } %>
-    <% if (formMode == 'showDetails' || formMode == 'edit') { %>
+    <% if (formMode == 'showDetails' || formMode == 'edit' || formMode == 'editErrors') { %>
         <h2>Szczegóły książek</h2>
         <table class="table-list">
             <thead>

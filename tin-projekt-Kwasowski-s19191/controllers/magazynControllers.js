@@ -65,7 +65,7 @@ exports.addMagazyn = (req, res, next) => {
             res.render('pages/magazyn/form', {
                 mag: magData,
                 pageTitle: 'Dodawanie magazynu',
-                formMode: 'createNew',
+                formMode: 'createNewErrors',
                 btnLabel: 'Dodaj magazyn',
                 formAction: '/magazyn/add',
                 navLocation: 'magazyn',
@@ -77,19 +77,25 @@ exports.addMagazyn = (req, res, next) => {
 exports.updateMagazyn = (req, res, next) => {
     const Id_Magazyn = req.body.Id_Magazyn;
     const magData = { ...req.body };
+    let errors;
     MagazynRepository.updateMagazyn(Id_Magazyn, magData)
         .then( () => {
             res.redirect('/magazyn');
         })
         .catch(err => {
+            errors = err.errors;
+            return MagazynRepository.getMagazynById(Id_Magazyn);
+        })
+        .then(mag => {
+            magData.stanyWMagazynach = mag.stanyWMagazynach;
             res.render('pages/magazyn/form', {
                 mag: magData,
                 pageTitle: 'Edycja magazynu',
-                formMode: 'edit',
+                formMode: 'editErrors',
                 btnLabel: 'Edytuj magazyn',
                 formAction: '/magazyn/edit',
                 navLocation: 'magazyn',
-                validationErrors: err.errors
+                validationErrors: errors
             });
         });
 };
