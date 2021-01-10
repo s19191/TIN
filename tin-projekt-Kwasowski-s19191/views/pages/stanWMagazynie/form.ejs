@@ -6,7 +6,7 @@
         <input type="hidden" name="Id_StanWMagazynie" value="<%= swm.Id_StanWMagazynie %>">
         <label for="Ksiazka_Id_Ksiazka">Książka:<abbr title="required" aria-label="required">*</abbr></label>
         <select name="Ksiazka_Id_Ksiazka" id="Ksiazka_Id_Ksiazka" <%= (formMode == 'showDetails') ? 'disabled' : ''%>
-            class="<%= validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka')) ? 'error-input' : '' %>" >
+            class="<%= validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka')) || formMode == 'idsError' ? 'error-input' : '' %>" >
             <option value="">-- Wybierz książkę --</option>
             <% for (let i=0; i<allKs.length; i++) { let ks = allKs[i]; %>
             <option value="<%= ks.Id_Ksiazka %>" label="<%= ks.Tytul %>"
@@ -20,10 +20,13 @@
             <% if (validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka'))) { %>
                 <%= validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka')).message %>
             <% } %>
+                <% if (formMode == 'idsError') { %>
+                    Wybrana książka jest już w tym magazynie!
+                <% } %>
         </span>
         <label for="Magazyn_Id_Magazyn">Magazyn:<abbr title="required" aria-label="required">*</abbr></label>
         <select name="Magazyn_Id_Magazyn" id="Magazyn_Id_Magazyn" <%= (formMode == 'showDetails') ? 'disabled' : ''%>
-            class="<%= validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn')) ? 'error-input' : '' %>" >
+            class="<%= validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn')) || formMode == 'idsError' ? 'error-input' : '' %>" >
             <option value="">-- Wybierz magazyn --</option>
             <% for (let i=0; i<allMag.length; i++) { let mag = allMag[i]; %>
             <option value="<%= mag.Id_Magazyn %>" label="<%= mag.Nazwa %>"
@@ -37,6 +40,9 @@
             <% if (validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn'))) { %>
                 <%= validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn')).message %>
             <% } %>
+                <% if (formMode == 'idsError') { %>
+                    W wybranym magazynie jest już ta książka!
+                <% } %>
         </span>
         <label for="IloscNaStanie">Ilość na stanie:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="number" name="IloscNaStanie" id="IloscNaStanie" min=0 value="<%= swm.IloscNaStanie %>"
@@ -80,10 +86,8 @@
         </span>
         <% if (formMode != 'showDetails') { %>
         <div class="form-buttons">
-            <% if (formMode == 'createNewErrors' || formMode == 'editErrors') { %>
+            <% if (formMode == 'createNewErrors' || formMode == 'editErrors' || formMode == 'idsError') { %>
                 <p class="errors-text">Formularz zawiera błędy</p>
-            <% } else if (formMode == 'idsError') { %>
-                    <p class="errors-text">Wybrana książka jest już w tym magazynie!</p>
             <% } else { %>
                 <p id="errorsSummary" class="errors-text"></p>
             <% } %>

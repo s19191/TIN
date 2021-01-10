@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="ładniejsze sprawdzanie czy mniejsze niż 0 w stan w magazynie">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="naprawiona walidacja">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +109,7 @@
       <workItem from="1610057404676" duration="2582000" />
       <workItem from="1610060299445" duration="10656000" />
       <workItem from="1610109840694" duration="3824000" />
-      <workItem from="1610300305360" duration="4426000" />
+      <workItem from="1610300305360" duration="5087000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -402,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610052712318</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="naprawiona walidacja">
+      <created>1610304785973</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1610304785973</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +424,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="pobiera dane z bazy danych dla książki" />
     <MESSAGE value="działają selecty w stanWMagazynieform" />
     <MESSAGE value="wszystko ładnie się wyświetla" />
     <MESSAGE value="zrobione szablony" />
@@ -446,6 +448,7 @@
     <MESSAGE value="zmiany dockera" />
     <MESSAGE value="naprawiona walidacja adresu, nie do końca prawidłowa walidacaj liczb całkowitych w stan w magazynach" />
     <MESSAGE value="ładniejsze sprawdzanie czy mniejsze niż 0 w stan w magazynie" />
-    <option name="LAST_COMMIT_MESSAGE" value="ładniejsze sprawdzanie czy mniejsze niż 0 w stan w magazynie" />
+    <MESSAGE value="naprawiona walidacja" />
+    <option name="LAST_COMMIT_MESSAGE" value="naprawiona walidacja" />
   </component>
 </project>

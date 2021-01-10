@@ -93,18 +93,17 @@ exports.addStanWMagazynie = (req, res, next) => {
     const swmData = { ...req.body };
     if (swmData.CenaHurtowa == '') {
         swmData.CenaHurtowa = null;
-    }
+    };
     if (swmData.MinimalnaIloscDoCenyHurtowej == '') {
         swmData.MinimalnaIloscDoCenyHurtowej = null;
-    }
+    };
     let allKs, allMag, ks, mag, errors;
     StanWMagazynieRepository.checkIfExsists(swmData.Ksiazka_Id_Ksiazka, swmData.Magazyn_Id_Magazyn)
         .then(result => {
             if (result.count == 0) {
                 StanWMagazynieRepository.createStanWMagazynie(swmData)
-                    .then( (result) => {
-                        res.redirect('/stanWMagazynie');
-                        return;
+                    .then( () => {
+                        return res.redirect('/stanWMagazynie');
                     })
                     .catch(err => {
                         errors = err.errors;
@@ -126,7 +125,7 @@ exports.addStanWMagazynie = (req, res, next) => {
                         mag = m;
                         swmData.ksiazka = ks;
                         swmData.magazyn = mag;
-                        res.render('pages/stanWMagazynie/form', {
+                        return res.render('pages/stanWMagazynie/form', {
                                 swm: swmData,
                                 allKs: allKs,
                                 allMag: allMag,
@@ -138,7 +137,6 @@ exports.addStanWMagazynie = (req, res, next) => {
                                 validationErrors: errors
                         });
                     });
-                return;
             } else {
                 KsiazkaRepository.getKsiazki()
                     .then(ks => {
@@ -157,7 +155,7 @@ exports.addStanWMagazynie = (req, res, next) => {
                         mag = m;
                         swmData.ksiazka = ks;
                         swmData.magazyn = mag;
-                        res.render('pages/stanWMagazynie/form', {
+                        return res.render('pages/stanWMagazynie/form', {
                             swm: swmData,
                             allKs: allKs,
                             allMag: allMag,
@@ -169,7 +167,7 @@ exports.addStanWMagazynie = (req, res, next) => {
                             validationErrors: []
                         });
                     });
-            }
+            };
         });
 };
 
@@ -178,17 +176,17 @@ exports.updateStanWMagazynie = (req, res, next) => {
     const swmData = { ...req.body };
     if (swmData.CenaHurtowa == '') {
         swmData.CenaHurtowa = null;
-    }
+    };
     if (swmData.MinimalnaIloscDoCenyHurtowej == '') {
         swmData.MinimalnaIloscDoCenyHurtowej = null;
-    }
+    };
     let allKs, allMag, ks, mag, errors;
     StanWMagazynieRepository.checkIfExsists(swmData.Ksiazka_Id_Ksiazka, swmData.Magazyn_Id_Magazyn)
         .then(result => {
             if (result.count == 0 || (result.count == 1 && result.rows[0].Id_StanWMagazynie == Id_StanWMagazynie)) {
                 StanWMagazynieRepository.updateStanWMagazynie(Id_StanWMagazynie, swmData)
                     .then( () => {
-                        res.redirect('/stanWMagazynie');
+                        return res.redirect('/stanWMagazynie');
                     })
                     .catch(err => {
                         errors = err.errors;
@@ -210,7 +208,7 @@ exports.updateStanWMagazynie = (req, res, next) => {
                         mag = m;
                         swmData.ksiazka = ks;
                         swmData.magazyn = mag;
-                        res.render('pages/stanWMagazynie/form', {
+                        return res.render('pages/stanWMagazynie/form', {
                             swm: swmData,
                             allKs: allKs,
                             allMag: allMag,
@@ -240,7 +238,7 @@ exports.updateStanWMagazynie = (req, res, next) => {
                         mag = m;
                         swmData.ksiazka = ks;
                         swmData.magazyn = mag;
-                        res.render('pages/stanWMagazynie/form', {
+                        return res.render('pages/stanWMagazynie/form', {
                             swm: swmData,
                             allKs: allKs,
                             allMag: allMag,
