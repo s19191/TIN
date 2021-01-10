@@ -2,7 +2,7 @@
 <main>
     <h2><%= pageTitle %></h2>
     <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
-<!--        <form class="form" method="post" action="<%=formAction%>" novalidate>-->
+<!--    <form class="form" method="post" action="<%=formAction%>" novalidate>-->
         <input type="hidden" name="Id_StanWMagazynie" value="<%= swm.Id_StanWMagazynie %>">
         <label for="Ksiazka_Id_Ksiazka">Książka:<abbr title="required" aria-label="required">*</abbr></label>
         <select name="Ksiazka_Id_Ksiazka" id="Ksiazka_Id_Ksiazka" <%= (formMode == 'showDetails') ? 'disabled' : ''%>

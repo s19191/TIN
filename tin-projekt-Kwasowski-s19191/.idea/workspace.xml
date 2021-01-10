@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="naprawiona walidacja adresu, nie do końca prawidłowa walidacaj liczb całkowitych w stan w magazynach">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="ładniejsze sprawdzanie czy mniejsze niż 0 w stan w magazynie">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +109,11 @@
       <workItem from="1609803399363" duration="1268000" />
       <workItem from="1609847946475" duration="13608000" />
       <workItem from="1609952221094" duration="22083000" />
-      <workItem from="1610022436385" duration="19614000" />
+      <workItem from="1610022436385" duration="24203000" />
+      <workItem from="1610057404676" duration="2582000" />
+      <workItem from="1610060299445" duration="10656000" />
+      <workItem from="1610109840694" duration="3824000" />
+      <workItem from="1610300305360" duration="4426000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -385,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610052379768</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="ładniejsze sprawdzanie czy mniejsze niż 0 w stan w magazynie">
+      <created>1610052712318</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1610052712318</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +421,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="wszystko, oprócz usuwania kaskadowego" />
     <MESSAGE value="pobiera dane z bazy danych dla książki" />
     <MESSAGE value="działają selecty w stanWMagazynieform" />
     <MESSAGE value="wszystko ładnie się wyświetla" />
@@ -429,6 +445,7 @@
     <MESSAGE value="chyba skończone, poprawki co do kontrollera stanów w magazynie oraz usunięte console.log..." />
     <MESSAGE value="zmiany dockera" />
     <MESSAGE value="naprawiona walidacja adresu, nie do końca prawidłowa walidacaj liczb całkowitych w stan w magazynach" />
-    <option name="LAST_COMMIT_MESSAGE" value="naprawiona walidacja adresu, nie do końca prawidłowa walidacaj liczb całkowitych w stan w magazynach" />
+    <MESSAGE value="ładniejsze sprawdzanie czy mniejsze niż 0 w stan w magazynie" />
+    <option name="LAST_COMMIT_MESSAGE" value="ładniejsze sprawdzanie czy mniejsze niż 0 w stan w magazynie" />
   </component>
 </project>

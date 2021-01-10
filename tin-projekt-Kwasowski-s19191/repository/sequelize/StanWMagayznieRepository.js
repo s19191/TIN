@@ -36,13 +36,11 @@ exports.checkIfExsists = (Ksiazka_Id_Ksiazka, Magazyn_Id_Magazyn) => {
         where: {
             Ksiazka_Id_Ksiazka: Ksiazka_Id_Ksiazka,
             Magazyn_Id_Magazyn: Magazyn_Id_Magazyn
-        },
+        }
     });
 };
 
 exports.createStanWMagazynie = (stanWMagazynieData) => {
-    console.log(JSON.stringify(stanWMagazynieData));
-
     return StanWMagazynie.create({
         Ksiazka_Id_Ksiazka: stanWMagazynieData.Ksiazka_Id_Ksiazka,
         Magazyn_Id_Magazyn: stanWMagazynieData.Magazyn_Id_Magazyn,

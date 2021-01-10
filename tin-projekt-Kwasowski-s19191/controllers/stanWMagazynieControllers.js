@@ -91,13 +91,20 @@ exports.showEditStanWMagazynieForm = (req, res, next) => {
 
 exports.addStanWMagazynie = (req, res, next) => {
     const swmData = { ...req.body };
+    if (swmData.CenaHurtowa == '') {
+        swmData.CenaHurtowa = null;
+    }
+    if (swmData.MinimalnaIloscDoCenyHurtowej == '') {
+        swmData.MinimalnaIloscDoCenyHurtowej = null;
+    }
     let allKs, allMag, ks, mag, errors;
     StanWMagazynieRepository.checkIfExsists(swmData.Ksiazka_Id_Ksiazka, swmData.Magazyn_Id_Magazyn)
         .then(result => {
             if (result.count == 0) {
                 StanWMagazynieRepository.createStanWMagazynie(swmData)
-                    .then( () => {
+                    .then( (result) => {
                         res.redirect('/stanWMagazynie');
+                        return;
                     })
                     .catch(err => {
                         errors = err.errors;
@@ -131,6 +138,7 @@ exports.addStanWMagazynie = (req, res, next) => {
                                 validationErrors: errors
                         });
                     });
+                return;
             } else {
                 KsiazkaRepository.getKsiazki()
                     .then(ks => {
@@ -158,7 +166,6 @@ exports.addStanWMagazynie = (req, res, next) => {
                             btnLabel: 'Dodaj stan książki w konkretnym magazynie',
                             formAction: '/stanWMagazynie/add',
                             navLocation: 'stanWMagazynie',
-                            // validationErrors: [errorsSummary = 'Stan wybranej książki istnieje w wybranym magazynie']
                             validationErrors: []
                         });
                     });
@@ -169,10 +176,16 @@ exports.addStanWMagazynie = (req, res, next) => {
 exports.updateStanWMagazynie = (req, res, next) => {
     const Id_StanWMagazynie = req.body.Id_StanWMagazynie;
     const swmData = { ...req.body };
+    if (swmData.CenaHurtowa == '') {
+        swmData.CenaHurtowa = null;
+    }
+    if (swmData.MinimalnaIloscDoCenyHurtowej == '') {
+        swmData.MinimalnaIloscDoCenyHurtowej = null;
+    }
     let allKs, allMag, ks, mag, errors;
     StanWMagazynieRepository.checkIfExsists(swmData.Ksiazka_Id_Ksiazka, swmData.Magazyn_Id_Magazyn)
         .then(result => {
-            if (result.count < 2) {
+            if (result.count == 0 || (result.count == 1 && result.rows[0].Id_StanWMagazynie == Id_StanWMagazynie)) {
                 StanWMagazynieRepository.updateStanWMagazynie(Id_StanWMagazynie, swmData)
                     .then( () => {
                         res.redirect('/stanWMagazynie');
@@ -236,7 +249,6 @@ exports.updateStanWMagazynie = (req, res, next) => {
                             btnLabel: 'Edytuj stan książki w magazynie',
                             formAction: '/stanWMagazynie/edit',
                             navLocation: 'stanWMagazynie',
-                            // validationErrors: [errorsSummary = 'Stan wybranej książki istnieje w wybranym magazynie']
                             validationErrors: []
                         });
                     })

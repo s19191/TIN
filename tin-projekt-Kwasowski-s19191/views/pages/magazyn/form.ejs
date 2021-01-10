@@ -1,8 +1,8 @@
 <%- include('../../fragments/header.ejs') %>
 <main>
     <h2><%= pageTitle %></h2>
-<!--    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">-->
-        <form class="form" method="post" action="<%=formAction%>" novalidate>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+<!--    <form class="form" method="post" action="<%=formAction%>" novalidate>-->
         <input type="hidden" name="Id_Magazyn" value="<%= mag.Id_Magazyn %>">
         <label for="Nazwa">Nazwa:<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="Nazwa" placeholder="2-60 znaków" id="Nazwa" value="<%= mag.Nazwa %>"

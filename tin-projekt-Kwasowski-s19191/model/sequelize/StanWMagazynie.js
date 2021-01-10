@@ -33,12 +33,13 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
             notEmpty: {
                 msg: "Pole jest wymagane"
             },
-            isNumber: {
+            isInt: {
                 msg: "Pole powinno być liczbą"
             },
-            min: {
-                args: 0,
-                msg: "Pole powinno być liczbą dodatnią"
+            isNumberPlus(value) {
+                if (value < 0) {
+                    throw new Error('Pole powinno być liczbą dodatnią');
+                }
             }
         }
     },
@@ -46,14 +47,13 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
         type: Sequelize.DOUBLE,
         allowNull: true,
         validate: {
-            isNumber(value) {
-                if (!value.isDecimal && value.notEmpty) {
-                    throw new Error('Pole powinno być liczbą');
-                }
+            isDecimal: {
+                msg: "Pole powinno być liczbą"
             },
-            min: {
-                args: 0,
-                msg: "Pole powinno być liczbą dodatnią"
+            isNumberPlus(value) {
+                if (value < 0) {
+                    throw new Error('Pole powinno być liczbą dodatnią');
+                }
             }
         }
     },
@@ -61,14 +61,13 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
         type: Sequelize.INTEGER,
         allowNull: true,
         validate: {
-            isNumber(value) {
-                if (!value.isNumeric && value.notEmpty) {
-                    throw new Error('Pole powinno być liczbą');
-                }
+            isInt: {
+                msg: "Pole powinno być liczbą"
             },
-            min: {
-                args: 0,
-                msg: "Pole powinno być liczbą dodatnią"
+            isNumberPlus(value) {
+                if (value < 0) {
+                    throw new Error('Pole powinno być liczbą dodatnią');
+                }
             }
         }
     },
@@ -82,9 +81,10 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
             isDecimal: {
                 msg: "Pole powinno być liczbą"
             },
-            min: {
-                args: 0,
-                msg: "Pole powinno być liczbą dodatnią"
+            isNumberPlus(value) {
+                if (value < 0) {
+                    throw new Error('Pole powinno być liczbą dodatnią');
+                }
             }
         }
     }
