@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="drobne poprawki, lepsze wyświetlanie błędów z walidacji">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="poprawki dockera, wszystko w kontenerze uruchamiało się automatycznie przy włączeniu dockera">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +56,17 @@
       <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views\magazyn" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="stanWMagazynieRoute.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/routes/stanWMagazynieRoute.js" working-dir="$PROJECT_DIR$/routes">
+  <component name="RunManager" selected="Attach to Node.js/Chrome.Unnamed">
+    <configuration name="Unnamed" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" nameIsGenerated="true" port="9229" restartOnDisconnect="true">
       <method v="2" />
     </configuration>
+    <configuration name="stanWMagazynieRoute.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="stanWMagazynieRoute.js" working-dir="$PROJECT_DIR$/routes">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Node.js/Chrome.Unnamed" />
+      <item itemvalue="Node.js.stanWMagazynieRoute.js" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.stanWMagazynieRoute.js" />
@@ -110,7 +119,7 @@
       <workItem from="1610109840694" duration="3824000" />
       <workItem from="1610300305360" duration="5342000" />
       <workItem from="1610371622792" duration="601000" />
-      <workItem from="1610465588170" duration="318000" />
+      <workItem from="1610465588170" duration="3724000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -413,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610305539404</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="poprawki dockera, wszystko w kontenerze uruchamiało się automatycznie przy włączeniu dockera">
+      <created>1610466065326</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1610466065326</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +448,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="wszystko ładnie się wyświetla" />
     <MESSAGE value="zrobione szablony" />
     <MESSAGE value="naprawiona validacja" />
     <MESSAGE value="początek walidacji po stronie servera" />
@@ -457,6 +472,7 @@
     <MESSAGE value="ładniejsze sprawdzanie czy mniejsze niż 0 w stan w magazynie" />
     <MESSAGE value="naprawiona walidacja" />
     <MESSAGE value="drobne poprawki, lepsze wyświetlanie błędów z walidacji" />
-    <option name="LAST_COMMIT_MESSAGE" value="drobne poprawki, lepsze wyświetlanie błędów z walidacji" />
+    <MESSAGE value="poprawki dockera, wszystko w kontenerze uruchamiało się automatycznie przy włączeniu dockera" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawki dockera, wszystko w kontenerze uruchamiało się automatycznie przy włączeniu dockera" />
   </component>
 </project>
