@@ -10,6 +10,7 @@ services:
       MYSQL_PASSWORD: user
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: default_schema
+    restart: always
     volumes:
       - "mysqldata:/var/lib/mysql"
 

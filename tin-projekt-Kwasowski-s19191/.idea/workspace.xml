@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="naprawiona walidacja">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="drobne poprawki, lepsze wyświetlanie błędów z walidacji">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +108,9 @@
       <workItem from="1610057404676" duration="2582000" />
       <workItem from="1610060299445" duration="10656000" />
       <workItem from="1610109840694" duration="3824000" />
-      <workItem from="1610300305360" duration="5087000" />
+      <workItem from="1610300305360" duration="5342000" />
+      <workItem from="1610371622792" duration="601000" />
+      <workItem from="1610465588170" duration="318000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -405,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610304785973</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="drobne poprawki, lepsze wyświetlanie błędów z walidacji">
+      <created>1610305539404</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1610305539404</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,7 +432,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="działają selecty w stanWMagazynieform" />
     <MESSAGE value="wszystko ładnie się wyświetla" />
     <MESSAGE value="zrobione szablony" />
     <MESSAGE value="naprawiona validacja" />
@@ -449,6 +456,7 @@
     <MESSAGE value="naprawiona walidacja adresu, nie do końca prawidłowa walidacaj liczb całkowitych w stan w magazynach" />
     <MESSAGE value="ładniejsze sprawdzanie czy mniejsze niż 0 w stan w magazynie" />
     <MESSAGE value="naprawiona walidacja" />
-    <option name="LAST_COMMIT_MESSAGE" value="naprawiona walidacja" />
+    <MESSAGE value="drobne poprawki, lepsze wyświetlanie błędów z walidacji" />
+    <option name="LAST_COMMIT_MESSAGE" value="drobne poprawki, lepsze wyświetlanie błędów z walidacji" />
   </component>
 </project>
