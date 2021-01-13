@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="poprawki dockera, wszystko w kontenerze uruchamiało się automatycznie przy włączeniu dockera">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="dodanie początku logowania">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sequelize/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/sequelize/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/sequelize/KsiazkaRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/KsiazkaRepository.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +119,10 @@
       <workItem from="1610300305360" duration="5342000" />
       <workItem from="1610371622792" duration="601000" />
       <workItem from="1610465588170" duration="3724000" />
+      <workItem from="1610490064057" duration="743000" />
+      <workItem from="1610565371430" duration="9000" />
+      <workItem from="1610567536327" duration="14000" />
+      <workItem from="1610567551826" duration="2145000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -429,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610466065326</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="dodanie początku logowania">
+      <created>1610490132733</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1610490132734</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,7 +458,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="zrobione szablony" />
     <MESSAGE value="naprawiona validacja" />
     <MESSAGE value="początek walidacji po stronie servera" />
     <MESSAGE value="coś nie działa weryfikacja" />
@@ -473,6 +482,7 @@
     <MESSAGE value="naprawiona walidacja" />
     <MESSAGE value="drobne poprawki, lepsze wyświetlanie błędów z walidacji" />
     <MESSAGE value="poprawki dockera, wszystko w kontenerze uruchamiało się automatycznie przy włączeniu dockera" />
-    <option name="LAST_COMMIT_MESSAGE" value="poprawki dockera, wszystko w kontenerze uruchamiało się automatycznie przy włączeniu dockera" />
+    <MESSAGE value="dodanie początku logowania" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodanie początku logowania" />
   </component>
 </project>

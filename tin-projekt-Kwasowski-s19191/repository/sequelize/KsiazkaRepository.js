@@ -2,7 +2,6 @@ const Ksiazka = require("../../model/sequelize/Ksiazka");
 const StanWMagazynie = require("../../model/sequelize/StanWMagazynie");
 const Magazyn = require("../../model/sequelize/Magazyn");
 
-
 exports.getKsiazki = () => {
     return Ksiazka.findAll();
 };

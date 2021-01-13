@@ -3,6 +3,7 @@ const sequelize = require('./sequelize');
 const Ksiazka = require('../../model/sequelize/Ksiazka');
 const Magazyn = require('../../model/sequelize/Magazyn');
 const StanWMagazynie = require('../../model/sequelize/StanWMagazynie');
+const User = require('../../model/sequelize/User');
 
 module.exports = () => {
     Ksiazka.hasMany(StanWMagazynie, {as: 'stanyWMagazynach', foreignKey: {name: 'Ksiazka_Id_Ksiazka', allowNull: false}, constraints: true, onDelete: 'CASCADE'});
@@ -64,6 +65,23 @@ module.exports = () => {
                 ]);
             } else {
                 return swm;
+            }
+        })
+        .then(() => {
+            return User.findAll();
+        })
+        .then(us => {
+            if(!us || us.length == 0) {
+                return User.bulkCreate([
+                    {Name: 'Jan', Surname: 'Kwasowski', Email: 's19191@pjwstk.edu.pl', Password: '19191'},
+                    {Name: 'Adam', Surname: 'Marian', Email: 'adam@adam.pl', Password: '12345'},
+                    {Name: 'Agata', Surname: 'Maria', Email: 'agata@agata.pl', Password: 'qwert'}
+                ])
+                    .then( () => {
+                        return User.findAll();
+                    });
+            } else {
+                return us;
             }
         });
 };
