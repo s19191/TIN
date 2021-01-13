@@ -5,6 +5,11 @@ const Magazyn = require('../../model/sequelize/Magazyn');
 const StanWMagazynie = require('../../model/sequelize/StanWMagazynie');
 const User = require('../../model/sequelize/User');
 
+const authUtil = require('../../util/authUtils');
+const passHash01 = authUtil.hashPassword('s19191');
+const passHash02 = authUtil.hashPassword('12345');
+const passHash03 = authUtil.hashPassword('qwert');
+
 module.exports = () => {
     Ksiazka.hasMany(StanWMagazynie, {as: 'stanyWMagazynach', foreignKey: {name: 'Ksiazka_Id_Ksiazka', allowNull: false}, constraints: true, onDelete: 'CASCADE'});
     StanWMagazynie.belongsTo(Ksiazka, {as: 'ksiazka', foreignKey: {name: 'Ksiazka_Id_Ksiazka', allowNull: false} } );
@@ -73,9 +78,9 @@ module.exports = () => {
         .then(us => {
             if(!us || us.length == 0) {
                 return User.bulkCreate([
-                    {Name: 'Jan', Surname: 'Kwasowski', Email: 's19191@pjwstk.edu.pl', Password: '19191'},
-                    {Name: 'Adam', Surname: 'Marian', Email: 'adam@adam.pl', Password: '12345'},
-                    {Name: 'Agata', Surname: 'Maria', Email: 'agata@agata.pl', Password: 'qwert'}
+                    {Name: 'Jan', Surname: 'Kwasowski', Email: 's19191@pjwstk.edu.pl', Password: passHash01},
+                    {Name: 'Adam', Surname: 'Marian', Email: 'adam@adam.pl', Password: passHash02},
+                    {Name: 'Agata', Surname: 'Maria', Email: 'agata@agata.pl', Password: passHash03}
                 ])
                     .then( () => {
                         return User.findAll();

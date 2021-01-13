@@ -23,11 +23,18 @@
     <h1>Księgarnia Dobra Książka</h1>
     <img src="../../images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
 </header>
+<%- include('authentication.ejs') %>
 <nav>
     <ul>
         <li><a href="/" class="<%= navLocation == 'main' ? 'active' : ''%>">Strona główna</a></li>
+        <% if(loggedUser) { %>
         <li><a href="/ksiazka" class="<%= navLocation == 'ksiazka' ? 'active' : ''%>">Książki</a></li>
+        <% } %>
+        <% if(loggedUser) { %>
         <li><a href="/magazyn" class="<%= navLocation == 'magazyn' ? 'active' : ''%>">Magazyny</a></li>
+        <% } %>
+        <% if(loggedUser) { %>
         <li><a href="/stanWMagazynie" class="<%= navLocation == 'stanWMagazynie' ? 'active' : ''%>">Stan w magazynach</a></li>
+        <% } %>
     </ul>
 </nav>

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="dodanie początku logowania">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="dodany nie wiem czy odpowiedni model użytkownika, kontroler do logowania, repozytorium do niego oraz dane do inita">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/sequelize/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/sequelize/init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/KsiazkaRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/KsiazkaRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +45,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/fragments" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views\fragments" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\model\sequelize" />
       <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views" />
@@ -122,7 +128,7 @@
       <workItem from="1610490064057" duration="743000" />
       <workItem from="1610565371430" duration="9000" />
       <workItem from="1610567536327" duration="14000" />
-      <workItem from="1610567551826" duration="2145000" />
+      <workItem from="1610567551826" duration="7397000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -439,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610490132734</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="dodany nie wiem czy odpowiedni model użytkownika, kontroler do logowania, repozytorium do niego oraz dane do inita">
+      <created>1610569774644</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1610569774644</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +471,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="naprawiona validacja" />
     <MESSAGE value="początek walidacji po stronie servera" />
     <MESSAGE value="coś nie działa weryfikacja" />
     <MESSAGE value="coś nie działa weryfikacja po stronie servera" />
@@ -483,6 +495,7 @@
     <MESSAGE value="drobne poprawki, lepsze wyświetlanie błędów z walidacji" />
     <MESSAGE value="poprawki dockera, wszystko w kontenerze uruchamiało się automatycznie przy włączeniu dockera" />
     <MESSAGE value="dodanie początku logowania" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie początku logowania" />
+    <MESSAGE value="dodany nie wiem czy odpowiedni model użytkownika, kontroler do logowania, repozytorium do niego oraz dane do inita" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodany nie wiem czy odpowiedni model użytkownika, kontroler do logowania, repozytorium do niego oraz dane do inita" />
   </component>
 </project>

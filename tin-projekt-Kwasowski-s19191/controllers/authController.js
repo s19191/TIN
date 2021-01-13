@@ -1,21 +1,26 @@
 const UserRepository = require('../repository/sequelize/UserRepository');
+const authUtil = require('../util/authUtils');
 
 exports.login = (req, res, next) => {
     const email = req.body.Email;
     const password = req.body.Password;
+    console.log(password);
     UserRepository.findByEmail(email)
         .then(us => {
+            console.log()
             if(!us) {
                 res.render('index', {
                     navLocation: '',
+                    formMode: '',
                     loginError: "Nieprawidłowy adres email lub hasło"
                 })
-            } else if(us.password === password) {
+            } else if(authUtil.comparePasswords(password, us.Password) === true) {
                 req.session.loggedUser = us;
                 res.redirect('/');
             } else {
                 res.render('index', {
                     navLocation: '',
+                    formMode: '',
                     loginError: "Nieprawidłowy adres email lub hasło"
                 })
             }
