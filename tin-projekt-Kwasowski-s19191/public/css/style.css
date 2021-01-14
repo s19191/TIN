@@ -365,6 +365,12 @@ abbr[title='required'] {
     .form-buttons {
         grid-column: 1 / span 1;
     }
+
+    .logging {
+        grid-template-columns: 1fr;
+        row-gap:unset;
+        margin-left: unset;
+    }
 }
 
 @media all and (max-width: 400px) {

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="zrobione logowanie, potrzebne poprawki wizualne kodu -- mało czytelny">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="zmiany wizualne, nie działa na użądzeniach mobilnych">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ksiazkaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ksiazkaController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/magazynControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/magazynControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/fragments/authentication.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/authentication.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +128,8 @@
       <workItem from="1610490064057" duration="743000" />
       <workItem from="1610565371430" duration="9000" />
       <workItem from="1610567536327" duration="14000" />
-      <workItem from="1610567551826" duration="11599000" />
+      <workItem from="1610567551826" duration="11657000" />
+      <workItem from="1610614981177" duration="7594000" />
     </task>
     <task id="LOCAL-00001" summary="do szablony - wporowadzenie">
       <created>1607385412691</created>
@@ -457,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610579953286</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="zmiany wizualne, nie działa na użądzeniach mobilnych">
+      <created>1610583971973</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1610583971973</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +486,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="coś nie działa weryfikacja" />
     <MESSAGE value="coś nie działa weryfikacja po stronie servera" />
     <MESSAGE value="poporawiona walidacja po stronie strony, walidacja po stronie serwera nadal nie działa" />
     <MESSAGE value="cofnięcie się do momentu jak działa" />
@@ -501,6 +510,7 @@
     <MESSAGE value="dodanie początku logowania" />
     <MESSAGE value="dodany nie wiem czy odpowiedni model użytkownika, kontroler do logowania, repozytorium do niego oraz dane do inita" />
     <MESSAGE value="zrobione logowanie, potrzebne poprawki wizualne kodu -- mało czytelny" />
-    <option name="LAST_COMMIT_MESSAGE" value="zrobione logowanie, potrzebne poprawki wizualne kodu -- mało czytelny" />
+    <MESSAGE value="zmiany wizualne, nie działa na użądzeniach mobilnych" />
+    <option name="LAST_COMMIT_MESSAGE" value="zmiany wizualne, nie działa na użądzeniach mobilnych" />
   </component>
 </project>

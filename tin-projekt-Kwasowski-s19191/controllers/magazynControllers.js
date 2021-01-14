@@ -76,17 +76,17 @@ exports.addMagazyn = (req, res, next) => {
 
 exports.updateMagazyn = (req, res, next) => {
     const Id_Magazyn = req.body.Id_Magazyn;
-    const magData = { ...req.body };
-    let errors;
-    MagazynRepository.updateMagazyn(Id_Magazyn, magData)
-        .then( () => {
+    const magData = {...req.body};
+    let mag;
+    MagazynRepository.getMagazynById(Id_Magazyn)
+        .then(m => {
+            mag = m;
+            return MagazynRepository.updateMagazyn(Id_Magazyn, magData);
+        })
+        .then(() => {
             res.redirect('/magazyn');
         })
         .catch(err => {
-            errors = err.errors;
-            return MagazynRepository.getMagazynById(Id_Magazyn);
-        })
-        .then(mag => {
             magData.stanyWMagazynach = mag.stanyWMagazynach;
             res.render('pages/magazyn/form', {
                 mag: magData,
@@ -95,7 +95,7 @@ exports.updateMagazyn = (req, res, next) => {
                 btnLabel: 'Edytuj magazyn',
                 formAction: '/magazyn/edit',
                 navLocation: 'magazyn',
-                validationErrors: errors
+                validationErrors: err.errors
             });
         });
 };

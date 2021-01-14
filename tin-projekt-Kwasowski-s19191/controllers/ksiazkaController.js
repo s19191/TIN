@@ -76,27 +76,27 @@ exports.addKsiazka = (req, res, next) => {
 
 exports.updateKsiazka = (req, res, next) => {
     const Id_Ksiazka = req.body.Id_Ksiazka;
-    const ksData = { ...req.body };
-    let errors;
-    KsiazkaRepository.updateKsiazka(Id_Ksiazka, ksData)
+    const ksData = {...req.body};
+    let ks;
+    KsiazkaRepository.getKsiazkaById(Id_Ksiazka)
+        .then(k => {
+            ks = k;
+            return KsiazkaRepository.updateKsiazka(Id_Ksiazka, ksData);
+        })
         .then( () => {
             res.redirect('/ksiazka');
         })
         .catch(err => {
-            errors = err.errors;
-            return KsiazkaRepository.getKsiazkaById(Id_Ksiazka);
-        })
-        .then(ks => {
-                ksData.stanyWMagazynach = ks.stanyWMagazynach;
-                res.render('pages/ksiazka/form', {
-                    ks: ksData,
-                    pageTitle: 'Edycja książki',
-                    formMode: 'editErrors',
-                    btnLabel: 'Edytuj książkę',
-                    formAction: '/ksiazka/edit',
-                    navLocation: 'ksiazka',
-                    validationErrors: errors
-                });
+            ksData.stanyWMagazynach = ks.stanyWMagazynach;
+            res.render('pages/ksiazka/form', {
+                ks: ksData,
+                pageTitle: 'Edycja książki',
+                formMode: 'editErrors',
+                btnLabel: 'Edytuj książkę',
+                formAction: '/ksiazka/edit',
+                navLocation: 'ksiazka',
+                validationErrors: err.errors
+            });
         });
 };
 
