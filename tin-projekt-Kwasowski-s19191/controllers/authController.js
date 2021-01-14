@@ -4,7 +4,6 @@ const authUtil = require('../util/authUtils');
 exports.login = (req, res, next) => {
     const email = req.body.Email;
     const password = req.body.Password;
-    console.log(password);
     UserRepository.findByEmail(email)
         .then(us => {
             console.log()

@@ -1,18 +1,20 @@
 <% if(!loggedUser) { %>
-    <div id="login">
-        <h5>Logowanie</h5>
-        <form method="post" action="/login" novalidate>
+    <div id="login" class="logInDiv">
+        <h2>Logowanie</h2>
+        <form class="logging" method="post" action="/login" novalidate>
             <label for="loginEmail">Email:</label>
             <input type="email" id="loginEmail" name="Email">
 
             <label for="loginPassword">Hasło:</label>
             <input type="password" id="loginPassword" name="Password">
 
-            <input type="submit" value="Zaloguj się">
+            <input type="submit" class="logIn-button" value="Zaloguj się">
             <span id="loginErrors"><%= loginError ? loginError : ''%></span>
         </form>
     </div>
 <% } else { %>
-<span>Jesteś zalogowany jako: <%=loggedUser.Name + " " + loggedUser.Surname%></span>
-<a href="/logout">Wyloguj się</a>
+<div id="login" class="logInDiv">
+    <span class="errors-text">Jesteś zalogowany jako: <%=loggedUser.Name + " " + loggedUser.Surname%></span>
+    <a class="list-actions-button-delete" href="/logout">Wyloguj się</a>
+</div>
 <% } %>
