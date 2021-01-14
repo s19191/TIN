@@ -9,7 +9,7 @@ exports.login = (req, res, next) => {
             console.log()
             if(!us) {
                 res.render('index', {
-                    navLocation: '',
+                    navLocation: 'main',
                     formMode: '',
                     loginError: "Nieprawidłowy adres email lub hasło"
                 })
@@ -18,7 +18,7 @@ exports.login = (req, res, next) => {
                 res.redirect('/');
             } else {
                 res.render('index', {
-                    navLocation: '',
+                    navLocation: 'main',
                     formMode: '',
                     loginError: "Nieprawidłowy adres email lub hasło"
                 })
