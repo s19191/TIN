@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="nav pasek naprawiony">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package.json" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -40,12 +46,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/fragments" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/locales" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\locales" />
       <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views\fragments" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -124,14 +131,9 @@
       <workItem from="1610565371430" duration="9000" />
       <workItem from="1610567536327" duration="14000" />
       <workItem from="1610567551826" duration="11657000" />
-      <workItem from="1610614981177" duration="9189000" />
-    </task>
-    <task id="LOCAL-00002" summary="do szablony - wporowadzenie">
-      <created>1607385874982</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1607385874982</updated>
+      <workItem from="1610614981177" duration="9205000" />
+      <workItem from="1610631370775" duration="2545000" />
+      <workItem from="1610651733123" duration="6391000" />
     </task>
     <task id="LOCAL-00003" summary="dodatki">
       <created>1607386454280</created>
@@ -469,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610628279883</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="nav pasek naprawiony">
+      <created>1610630508659</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1610630508659</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

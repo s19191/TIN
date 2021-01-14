@@ -1,0 +1,58 @@
+{
+  "main-page": {
+    "content": "Strona główna"
+  },
+  "nav": {
+    "main-page": "Strona główna",
+    "ksiazki": "Książki",
+    "magazyny": "Magazyny",
+    "stanyWMgazynach": "Stan w magazynach"
+  },
+  "list": {
+    "actions": {
+      "title": "Akcje",
+      "details": "Szczegóły",
+      "edit": "Edytuj",
+      "delete": "Usuń"
+    }
+  },
+  "form": {
+    "actions": {
+      "return": "Powrót",
+      "edit": "Edytuj",
+      "cancel": "Anuluj"
+    }
+  },
+  "ks": {
+    "fields": {
+      "Tytul": "Tytuł",
+      "Autor": "Autor",
+      "DataWydania": "Data wydania"
+    },
+    "list": {
+      "title": "Książki",
+      "addNew": "Dodaj nową książkę",
+      "noData": "Brak książek w bazie",
+      "pageTitle": "Lista książek"
+    },
+    "form": {
+      "employment": "Historia zatrudnienia",
+      "add": {
+        "pageTitle": "Dodawanie pracownika",
+        "btnLabel": "Dodaj pracownika",
+        "confirm": {
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie dodano pracownika"
+        }
+      },
+      "edit": {
+        "pageTitle": "Edycja pracownika",
+        "btnLabel": "Zapisz zmiany",
+        "confirm": {
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie zaktualizowano pracownika"
+        }
+      }
+    }
+  }
+}

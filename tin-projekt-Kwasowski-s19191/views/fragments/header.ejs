@@ -26,7 +26,7 @@
 <%- include('authentication.ejs') %>
 <nav>
     <ul>
-        <li><a href="/" class="<%= navLocation == 'main' ? 'active' : ''%>">Strona główna</a></li>
+        <li><a href="/" class="<%= navLocation == 'main' ? 'active' : ''%>"><%= __('nav.page') %></a></li>
         <% if(loggedUser) { %>
         <li><a href="/ksiazka" class="<%= navLocation == 'ksiazka' ? 'active' : ''%>">Książki</a></li>
         <% } %>
@@ -36,5 +36,7 @@
         <% if(loggedUser) { %>
         <li><a href="/stanWMagazynie" class="<%= navLocation == 'stanWMagazynie' ? 'active' : ''%>">Stan w magazynach</a></li>
         <% } %>
+        <li><a href="/changeLang/pl" class="<%= lang == 'pl' ? 'active' : ''%>">PL</a></li>
+        <li><a href="/changeLang/en" class="<%= lang == 'en' ? 'active' : ''%>">EN</a></li>
     </ul>
 </nav>
