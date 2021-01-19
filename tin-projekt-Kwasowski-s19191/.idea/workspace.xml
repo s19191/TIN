@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="dodana wersja po angielsku, niestety pojawiły się błędy w walidacji po stronie klienta">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/validationKsiazkaForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationKsiazkaForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1lLkZHpyBlfHyaQ9XhkVoEjqvqu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TIN_1.0/tin-projekt-Kwasowski-s19191" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\locales" />
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views\fragments" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\model\sequelize" />
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views" />
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views\pages" />
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views\stanWMagazynie" />
+      <recent name="D:\TIN\tin-projekt-Kwasowski-s19191\views\magazyn" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Attach to Node.js/Chrome.Unnamed">
+    <configuration name="Unnamed" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" nameIsGenerated="true" port="9229" restartOnDisconnect="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="stanWMagazynieRoute.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="stanWMagazynieRoute.js" working-dir="$PROJECT_DIR$/routes">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Node.js/Chrome.Unnamed" />
+      <item itemvalue="Node.js.stanWMagazynieRoute.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.stanWMagazynieRoute.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="" />
+      <created>1607383812923</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607383812923</updated>
+      <workItem from="1607383814179" duration="206000" />
+      <workItem from="1607384542125" duration="1860000" />
+      <workItem from="1607386441421" duration="22000" />
+      <workItem from="1607386471866" duration="24000" />
+      <workItem from="1607386503783" duration="30000" />
+      <workItem from="1607429602531" duration="2376000" />
+      <workItem from="1607607344034" duration="17068000" />
+      <workItem from="1607691568058" duration="2405000" />
+      <workItem from="1607895831486" duration="13000" />
+      <workItem from="1608237868311" duration="9612000" />
+      <workItem from="1608250651319" duration="129000" />
+      <workItem from="1608295934126" duration="1029000" />
+      <workItem from="1608297044100" duration="21172000" />
+      <workItem from="1608375864830" duration="1451000" />
+      <workItem from="1608406036359" duration="21317000" />
+      <workItem from="1608469692251" duration="3388000" />
+      <workItem from="1608483894217" duration="15049000" />
+      <workItem from="1608562248224" duration="9083000" />
+      <workItem from="1608648707443" duration="407000" />
+      <workItem from="1608655541594" duration="952000" />
+      <workItem from="1608659922911" duration="3257000" />
+      <workItem from="1608684776381" duration="2175000" />
+      <workItem from="1608688520110" duration="1772000" />
+      <workItem from="1608721886962" duration="4819000" />
+      <workItem from="1608806986724" duration="1904000" />
+      <workItem from="1609191513962" duration="26000" />
+      <workItem from="1609191877063" duration="12000" />
+      <workItem from="1609256216746" duration="1927000" />
+      <workItem from="1609803246450" duration="125000" />
+      <workItem from="1609803399363" duration="1268000" />
+      <workItem from="1609847946475" duration="13608000" />
+      <workItem from="1609952221094" duration="22083000" />
+      <workItem from="1610022436385" duration="24203000" />
+      <workItem from="1610057404676" duration="2582000" />
+      <workItem from="1610060299445" duration="10656000" />
+      <workItem from="1610109840694" duration="3824000" />
+      <workItem from="1610300305360" duration="5342000" />
+      <workItem from="1610371622792" duration="601000" />
+      <workItem from="1610465588170" duration="3724000" />
+      <workItem from="1610490064057" duration="743000" />
+      <workItem from="1610565371430" duration="9000" />
+      <workItem from="1610567536327" duration="14000" />
+      <workItem from="1610567551826" duration="11657000" />
+      <workItem from="1610614981177" duration="9205000" />
+      <workItem from="1610631370775" duration="2545000" />
+      <workItem from="1610651733123" duration="7374000" />
+      <workItem from="1610715588185" duration="4307000" />
+      <workItem from="1610824354876" duration="721000" />
+      <workItem from="1610973822614" duration="10000" />
+      <workItem from="1610973833699" duration="627000" />
+      <workItem from="1611003690510" duration="619000" />
+      <workItem from="1611007052623" duration="13453000" />
+      <workItem from="1611064137150" duration="12763000" />
+    </task>
+    <task id="LOCAL-00008" summary="wszystko działa, bez walidacji">
+      <created>1607636374558</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607636374558</updated>
+    </task>
+    <task id="LOCAL-00009" summary="dodana walidacja">
+      <created>1607642938619</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607642938619</updated>
+    </task>
+    <task id="LOCAL-00010" summary="dodany docker, teoretycznie jak baza ma wyglądać, ale nie wiem czy działa. PRzed dodaniem do app.js">
+      <created>1608248304026</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608248304026</updated>
+    </task>
+    <task id="LOCAL-00011" summary="dodany docker, teoretycznie jak baza ma wyglądać, ale nie wiem czy działa. PRzed dodaniem do app.js">
+      <created>1608248645790</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608248645790</updated>
+    </task>
+    <task id="LOCAL-00012" summary="dodane repozytoria">
+      <created>1608250390744</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1608250390744</updated>
+    </task>
+    <task id="LOCAL-00013" summary="nie dziłają REST API dla tabeli asocjacyjnej">
+      <created>1608320061525</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1608320061525</updated>
+    </task>
+    <task id="LOCAL-00014" summary="nie działa wszystko co musimy wyszukać przez dwa klucze główne">
+      <created>1608327663016</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1608327663016</updated>
+    </task>
+    <task id="LOCAL-00015" summary="wszystko, oprócz usuwania kaskadowego">
+      <created>1608408814125</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1608408814125</updated>
+    </task>
+    <task id="LOCAL-00016" summary="pobiera dane z bazy danych dla książki">
+      <created>1608426219337</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1608426219337</updated>
+    </task>
+    <task id="LOCAL-00017" summary="działają selecty w stanWMagazynieform">
+      <created>1608484494050</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1608484494050</updated>
+    </task>
+    <task id="LOCAL-00018" summary="wszystko ładnie się wyświetla">
+      <created>1608503692585</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1608503692585</updated>
+    </task>
+    <task id="LOCAL-00019" summary="zrobione szablony">
+      <created>1608509669816</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1608509669816</updated>
+    </task>
+    <task id="LOCAL-00020" summary="naprawiona validacja">
+      <created>1608510236060</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1608510236060</updated>
+    </task>
+    <task id="LOCAL-00021" summary="początek walidacji po stronie servera">
+      <created>1608511071114</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1608511071114</updated>
+    </task>
+    <task id="LOCAL-00022" summary="coś nie działa weryfikacja po stronie servera">
+      <created>1608513114442</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1608513114442</updated>
+    </task>
+    <task id="LOCAL-00023" summary="poporawiona walidacja po stronie strony, walidacja po stronie serwera nadal nie działa">
+      <created>1608583617409</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1608583617410</updated>
+    </task>
+    <task id="LOCAL-00024" summary="cofnięcie się do momentu jak działa">
+      <created>1608688296472</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1608688296473</updated>
+    </task>
+    <task id="LOCAL-00025" summary="cofnięcie się do momentu jak działa">
+      <created>1608689501606</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1608689501606</updated>
+    </task>
+    <task id="LOCAL-00026" summary="naprawiona walidacja adresów">
+      <created>1608690265405</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1608690265405</updated>
+    </task>
+    <task id="LOCAL-00027" summary="nie pamiętam, coś się zmieniło, inne ify do walidacji po stronie strony. Usunięty joi itd.">
+      <created>1609804047877</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1609804047877</updated>
+    </task>
+    <task id="LOCAL-00028" summary="naprawiona walidacja po stronie strony">
+      <created>1609804459230</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1609804459230</updated>
+    </task>
+    <task id="LOCAL-00029" summary="coś z walidacji zrbione, ale asocjacyjna nie, daty nadal źle, a do tego adress nie tak się robi">
+      <created>1609890947074</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1609890947074</updated>
+    </task>
+    <task id="LOCAL-00030" summary="nie działają edity">
+      <created>1609894711039</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1609894711039</updated>
+    </task>
+    <task id="LOCAL-00031" summary="dodana jedna książka">
+      <created>1609962564603</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1609962564603</updated>
+    </task>
+    <task id="LOCAL-00032" summary="działają add, ale nie edit. W add nie działa stanWMagazynie">
+      <created>1609967032024</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1609967032024</updated>
+    </task>
+    <task id="LOCAL-00033" summary="działa książka w pełni">
+      <created>1609976218359</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1609976218359</updated>
+    </task>
+    <task id="LOCAL-00034" summary="nadal nie działają stany w magazynie">
+      <created>1609979165146</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1609979165146</updated>
+    </task>
+    <task id="LOCAL-00035" summary="nadal nie działają stany w magazynie">
+      <created>1609979914022</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1609979914022</updated>
+    </task>
+    <task id="LOCAL-00036" summary="chyba działa, ale walidację trzeba poprawić, sprawdzała na pewno to co trzeba">
+      <created>1610026629235</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1610026629235</updated>
+    </task>
+    <task id="LOCAL-00037" summary="chyba skończone">
+      <created>1610040139627</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1610040139627</updated>
+    </task>
+    <task id="LOCAL-00038" summary="chyba skończone, poprawki co do kontrollera stanów w magazynie oraz usunięte console.log...">
+      <created>1610040488614</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1610040488614</updated>
+    </task>
+    <task id="LOCAL-00039" summary="zmiany dockera">
+      <created>1610044995194</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1610044995194</updated>
+    </task>
+    <task id="LOCAL-00040" summary="naprawiona walidacja adresu, nie do końca prawidłowa walidacaj liczb całkowitych w stan w magazynach">
+      <created>1610052379768</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1610052379768</updated>
+    </task>
+    <task id="LOCAL-00041" summary="ładniejsze sprawdzanie czy mniejsze niż 0 w stan w magazynie">
+      <created>1610052712318</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1610052712318</updated>
+    </task>
+    <task id="LOCAL-00042" summary="naprawiona walidacja">
+      <created>1610304785973</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1610304785973</updated>
+    </task>
+    <task id="LOCAL-00043" summary="drobne poprawki, lepsze wyświetlanie błędów z walidacji">
+      <created>1610305539404</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1610305539404</updated>
+    </task>
+    <task id="LOCAL-00044" summary="poprawki dockera, wszystko w kontenerze uruchamiało się automatycznie przy włączeniu dockera">
+      <created>1610466065326</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1610466065326</updated>
+    </task>
+    <task id="LOCAL-00045" summary="dodanie początku logowania">
+      <created>1610490132733</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1610490132734</updated>
+    </task>
+    <task id="LOCAL-00046" summary="dodany nie wiem czy odpowiedni model użytkownika, kontroler do logowania, repozytorium do niego oraz dane do inita">
+      <created>1610569774644</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1610569774644</updated>
+    </task>
+    <task id="LOCAL-00047" summary="zrobione logowanie, potrzebne poprawki wizualne kodu -- mało czytelny">
+      <created>1610579953286</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1610579953286</updated>
+    </task>
+    <task id="LOCAL-00048" summary="zmiany wizualne, nie działa na użądzeniach mobilnych">
+      <created>1610583971973</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1610583971973</updated>
+    </task>
+    <task id="LOCAL-00049" summary="naprawiony bład http">
+      <created>1610628255780</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1610628255780</updated>
+    </task>
+    <task id="LOCAL-00050" summary="nav pasek naprawiony">
+      <created>1610628279882</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1610628279883</updated>
+    </task>
+    <task id="LOCAL-00051" summary="nav pasek naprawiony">
+      <created>1610630508659</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1610630508659</updated>
+    </task>
+    <task id="LOCAL-00052" summary="niby dodana Internacjonalizacja, ale nie działa">
+      <created>1610663050335</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1610663050335</updated>
+    </task>
+    <task id="LOCAL-00053" summary="zrobiona książka po polsku, chyba">
+      <created>1611014560622</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1611014560622</updated>
+    </task>
+    <task id="LOCAL-00054" summary="chyba zrobiony magazyn, ale coś walidacja nie działa">
+      <created>1611016869783</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1611016869783</updated>
+    </task>
+    <task id="LOCAL-00055" summary="po poslu stany w magazynie">
+      <created>1611020412863</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1611020412863</updated>
+    </task>
+    <task id="LOCAL-00056" summary="dodana wersja po angielsku, niestety pojawiły się błędy w walidacji po stronie klienta">
+      <created>1611072855192</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1611072855192</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="nie działają edity" />
+    <MESSAGE value="dodana jedna książka" />
+    <MESSAGE value="działają add, ale nie edit. W add nie działa stanWMagazynie" />
+    <MESSAGE value="działa książka w pełni" />
+    <MESSAGE value="nadal nie działają stany w magazynie" />
+    <MESSAGE value="chyba działa, ale walidację trzeba poprawić, sprawdzała na pewno to co trzeba" />
+    <MESSAGE value="chyba skończone" />
+    <MESSAGE value="chyba skończone, poprawki co do kontrollera stanów w magazynie oraz usunięte console.log..." />
+    <MESSAGE value="zmiany dockera" />
+    <MESSAGE value="naprawiona walidacja adresu, nie do końca prawidłowa walidacaj liczb całkowitych w stan w magazynach" />
+    <MESSAGE value="ładniejsze sprawdzanie czy mniejsze niż 0 w stan w magazynie" />
+    <MESSAGE value="naprawiona walidacja" />
+    <MESSAGE value="drobne poprawki, lepsze wyświetlanie błędów z walidacji" />
+    <MESSAGE value="poprawki dockera, wszystko w kontenerze uruchamiało się automatycznie przy włączeniu dockera" />
+    <MESSAGE value="dodanie początku logowania" />
+    <MESSAGE value="dodany nie wiem czy odpowiedni model użytkownika, kontroler do logowania, repozytorium do niego oraz dane do inita" />
+    <MESSAGE value="zrobione logowanie, potrzebne poprawki wizualne kodu -- mało czytelny" />
+    <MESSAGE value="zmiany wizualne, nie działa na użądzeniach mobilnych" />
+    <MESSAGE value="naprawiony bład http" />
+    <MESSAGE value="nav pasek naprawiony" />
+    <MESSAGE value="niby dodana Internacjonalizacja, ale nie działa" />
+    <MESSAGE value="zrobiona książka po polsku, chyba" />
+    <MESSAGE value="chyba zrobiony magazyn, ale coś walidacja nie działa" />
+    <MESSAGE value="po poslu stany w magazynie" />
+    <MESSAGE value="dodana wersja po angielsku, niestety pojawiły się błędy w walidacji po stronie klienta" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodana wersja po angielsku, niestety pojawiły się błędy w walidacji po stronie klienta" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/ksiazkaController.js</url>
+          <line>58</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/ksiazkaController.js</url>
+          <line>59</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/ksiazkaController.js</url>
+          <line>61</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

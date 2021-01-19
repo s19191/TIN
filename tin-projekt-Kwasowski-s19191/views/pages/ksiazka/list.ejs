@@ -1,0 +1,32 @@
+<%- include('../../fragments/header.ejs') %>
+<main>
+    <h2><%= __('ks.list.pageTitle') %></h2>
+    <table class="table-list">
+        <thead>
+        <tr>
+            <th><%= __('ks.list.fields.Tytul') %></th>
+            <th><%= __('ks.list.fields.Autor') %></th>
+            <th><%= __('ks.list.fields.DataWydania') %></th>
+            <th class="list-actions"><%= __('list.actions.title') %></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for (let ks of ksiazki) { %>
+            <tr>
+                <td><%= ks.Tytul %></td>
+                <td><%= ks.Autor %></td>
+                <td><%= ks.DataWydania.toISOString().split('T')[0] %></td>
+                <td>
+                    <ul class="list-actions">
+                        <li><a href="/ksiazka/details/<%=ks.Id_Ksiazka%>" class="list-actions-button-details"><%= __('list.actions.details') %></a></li>
+                        <li><a href="/ksiazka/edit/<%=ks.Id_Ksiazka%>" class="list-actions-button-edit"><%= __('list.actions.edit') %></a></li>
+                        <li><a href="/ksiazka/delete/<%=ks.Id_Ksiazka%>" class="list-actions-button-delete"><%= __('list.actions.delete') %></a></li>
+                    </ul>
+                </td>
+            </tr>
+        <% } %>
+        </tbody>
+    </table>
+    <p><a href="/ksiazka/add" class="button-add"><%= __('ks.list.addNew') %></a></p>
+</main>
+<%- include('../../fragments/footer.ejs') %>

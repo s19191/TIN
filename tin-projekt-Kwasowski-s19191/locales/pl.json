@@ -1,0 +1,213 @@
+{
+	"general": {
+		"title": "Księgarnia Dobra Książka"
+	},
+	"main-page": {
+		"title": "Strona główna",
+		"content": "Księgarnia Dobra Księgarnia jest na rynku już 24 lata. Jesteśmy cenioną i renomowaną warszawską księgarnią. Strona pomaga na znajdywanie konkretych pozycji w wpółpracującyh magazynach. Wszystkie ksiażki można zobaczyć w dziale \"Książki\", natomiast w dziale \"Magazyny\" można zobaczyć listę magazynów wraz z ich podstawowymi informacjami. Zakładka \"Stan w magazynach\" pokazuje dostępność książek w wszystkich magazynach. W każdej ze stron można dodawać nowe pozycje, edytować istniejące oraz wyświetlać ich szczegóły."
+	},
+	"authentication": {
+		"title": "Logowanie",
+		"email": "Email:",
+		"password": "Hasło:",
+		"loginError": "Nieprawidłowy adres email lub hasło",
+		"logOutInformation": "Jesteś zalogowany jako: ",
+		"actions": {
+			"logIn": "Zaloguj się",
+			"logOut": "Wyloguj się"
+		}
+	},
+	"nav": {
+		"main-page": "Strona główna",
+		"ksiazki": "Książki",
+		"magazyny": "Magazyny",
+		"stanyWMgazynach": "Stan w magazynach"
+	},
+	"list": {
+		"actions": {
+			"title": "Akcje",
+			"details": "Szczegóły",
+			"edit": "Edytuj",
+			"delete": "Usuń"
+		}
+	},
+	"form": {
+		"actions": {
+			"return": "Powrót",
+			"edit": "Edytuj",
+			"cancel": "Anuluj"
+		}
+	},
+	"ks": {
+		"list": {
+			"fields": {
+				"Tytul": "Tytuł",
+				"Autor": "Autor",
+				"DataWydania": "Data wydania"
+			},
+			"addNew": "Dodaj nową książkę",
+			"noData": "Brak książek w bazie",
+			"pageTitle": "Lista książek"
+		},
+		"form": {
+			"fields": {
+				"Tytul": "Tytuł:",
+				"Autor": "Autor:",
+				"DataWydania": "Data wydania:"
+			},
+			"placeholders": {
+				"Tytul": "2-60 znaków",
+				"Autor": "2-60 znaków",
+				"DataWydania": "Data w formacie yyyy-MM-dd"
+			},
+			"add": {
+				"pageTitle": "Dodawanie książki",
+				"btnLabel": "Dodaj książkę",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie dodano książkę"
+				}
+			},
+			"edit": {
+				"pageTitle": "Edycja książki",
+				"btnLabel": "Zapisz zmiany",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie zaktualizowano książkę"
+				}
+			},
+			"details": {
+				"pageTitle": "Szczegóły książki",
+				"subtitle": "Szczegóły stanu książki w magazynach",
+				"fields": {
+					"Magazyn": "Nazwa magazynu",
+					"IloscNaStanie": "Ilość na stanie",
+					"CenaHurtowa": "Cena hurtowa",
+					"MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",
+					"CenaDetaliczna": "Cena detaliczna"
+				}
+			},
+			"errors": {
+				"createNewOrEditErrors": "Formularz zawiera błędy"
+			}
+		}
+	},
+	"mag": {
+		"list": {
+			"fields": {
+				"Nazwa": "Nazwa",
+				"Autor": "Adres"
+			},
+			"addNew": "Dodaj nowy magazyn",
+			"noData": "Brak magazynów w bazie",
+			"pageTitle": "Lista magazynów"
+		},
+		"form": {
+			"fields": {
+				"Nazwa": "Nazwa:",
+				"Adres": "Adres:"
+			},
+			"placeholders": {
+				"Nazwa": "2-60 znaków",
+				"Adres": "np. ul. Gorka 15/67"
+			},
+			"add": {
+				"pageTitle": "Dodawanie magazynu",
+				"btnLabel": "Dodaj magazyn",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie dodano książkę"
+				}
+			},
+			"edit": {
+				"pageTitle": "Edycja magazynu",
+				"btnLabel": "Zapisz zmiany",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie zaktualizowano książkę"
+				}
+			},
+			"details": {
+				"pageTitle": "Szczegóły magazynu",
+				"subtitle": "Szczegóły książek znajdujących się w magazynie",
+				"fields": {
+					"Ksiazka": "Nazwa książki",
+					"IloscNaStanie": "Ilość na stanie",
+					"CenaHurtowa": "Cena hurtowa",
+					"MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",
+					"CenaDetaliczna": "Cena detaliczna"
+				}
+			},
+			"errors": {
+				"createNewOrEditErrors": "Formularz zawiera błędy"
+			}
+		}
+	},
+	"swm": {
+		"list": {
+			"fields": {
+				"Ksiazka": "Książka",
+				"Magazyn": "Magazyn",
+				"IloscNaStanie": "Ilość na stanie",
+				"CenaHurtowa": "Cena hurtowa",
+				"MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",
+				"CenaDetaliczna": "Cena detaliczna"
+			},
+			"addNew": "Dodaj nowy stan książki w konkretnym magazynie",
+			"noData": "Brak stanów książek w magazynach w bazie",
+			"pageTitle": "Lista stanów książek w magazynach"
+		},
+		"form": {
+			"fields": {
+				"Ksiazka": {
+					"label": "Książka:",
+					"select": "-- Wybierz książkę --"
+				},
+				"Magazyn": {
+					"label": "Magazyn:",
+					"select": "-- Wybierz magazyn --"
+				},
+				"IloscNaStanie": "Ilość na stanie:",
+				"CenaHurtowa": "Cena hurtowa:",
+				"MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej:",
+				"CenaDetaliczna": "Cena detaliczna:"
+			},
+			"add": {
+				"pageTitle": "Dodawanie stanu książki w konretnym magazynie",
+				"btnLabel": "Dodaj stan książki w konkretnym magazynie",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie dodano książkę"
+				}
+			},
+			"edit": {
+				"pageTitle": "Edycja stanu książki w konretnym magazynie",
+				"btnLabel": "Zapisz zmiany",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie zaktualizowano książkę"
+				}
+			},
+			"details": {
+				"pageTitle": "Szczegóły stanu książki w konretnym magazynie"
+			},
+			"errors": {
+				"createNewOrEditErrors": "Formularz zawiera błędy",
+				"idsError": {
+					"ksiazka": "Wybrana książka jest już w tym magazynie!",
+					"magazyn": "W wybranym magazynie jest już ta książka!"
+				}
+			}
+		}
+	},
+	"validationMessage": {
+		"Errors": "Formularz zawiera błędy",
+		"Required": "Pole jest wymagane",
+		"Between2and60": "Pole powinno zawierać od 2 do 60 znaków",
+		"CorrectDateFormat": "Pole powinno zawierać datę w formacie yyyy-MM-dd (np. 2000-01-01)",
+		"NotFutureDate": "Data nie może być z przyszłości",
+		"CorrectAdress": "Pole powinno zawierać adres w formacie np. ul. Gorka 14C",
+		"IsNumber": "Pole powinno być liczbą",
+		"IsNumberPlus": "Pole powinno być liczbą dodatnią"
+	}
+}

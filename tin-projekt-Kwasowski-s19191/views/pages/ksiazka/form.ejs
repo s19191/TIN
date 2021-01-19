@@ -1,0 +1,91 @@
+<%- include('../../fragments/header.ejs') %>
+<main>
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+<!--    <form class="form" method="post" action="<%=formAction%>" novalidate>-->
+        <input type="hidden" name="Id_Ksiazka" value="<%= ks.Id_Ksiazka %>">
+        <label for="Tytul"><%= __('ks.form.fields.Tytul') %><abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="Tytul" placeholder="<%= __('ks.form.placeholders.Tytul') %>" id="Tytul" value="<%= ks.Tytul %>"
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>
+               class="<%= validationErrors.find(e => e.path.includes('Tytul')) ? 'error-input' : '' %>"
+        />
+        <span id="errorTytul" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('Tytul'))) { %>
+                <%= validationErrors.find(e => e.path.includes('Tytul')).message %>
+            <% } %>
+        </span>
+        <label for="Autor"><%= __('ks.form.fields.Autor') %><abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="Autor" placeholder="<%= __('ks.form.placeholders.Autor') %>" id="Autor" value="<%= ks.Autor %>"
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>
+               class="<%= validationErrors.find(e => e.path.includes('Autor')) ? 'error-input' : '' %>"
+        />
+        <span id="errorAutor" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('Autor'))) { %>
+                <%= validationErrors.find(e => e.path.includes('Autor')).message %>
+            <% } %>
+        </span>
+        <label for="DataWydania"><%= __('ks.form.fields.DataWydania') %><abbr title="required" aria-label="required">*</abbr></label>
+        <input type="date" name="DataWydania" placeholder="<%= __('ks.form.placeholders.DataWydania') %>" id="DataWydania"
+                <% if (formMode == 'edit' || formMode == 'showDetails') { %>
+                    value="<%= ks.DataWydania.toISOString().split('T')[0] %>"
+                <% } else if (formMode == 'createNewErrors' || formMode == 'editErrors') { %>
+                    value="<%= ks.DataWydania %>"
+                <% } %>
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>
+               class="<%= validationErrors.find(e => e.path.includes('DataWydania')) ? 'error-input' : '' %>"
+        />
+        <span id="errorDataWydania" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('DataWydania'))) { %>
+                <%= validationErrors.find(e => e.path.includes('DataWydania')).message %>
+            <% } %>
+        </span>
+        <% if (formMode != 'showDetails') { %>
+        <div class="form-buttons">
+            <% if (formMode == 'createNewErrors' || formMode == 'editErrors') { %>
+                <p class="errors-text"><%= __('ks.form.errors.createNewOrEditErrors') %></p>
+            <% } else { %>
+            <p id="errorsSummary" class="errors-text"></p>
+            <% } %>
+            <input type="submit" class="form-button-submit" value="<%=btnLabel%>" />
+            <a href="/ksiazka" class="form-button-cancel"><%= __('form.actions.cancel') %></a>
+        </div>
+        <% } %>
+    </form>
+    <div style="display: none">
+        <span id="errorMessage-Errors"><%= __('validationMessage.Errors') %></span>
+        <span id="errorMessage-required"><%= __('validationMessage.Required') %></span>
+        <span id="errorMessage-between2and60"><%= __('validationMessage.Between2and60') %></span>
+        <span id="errorMessage-correctDateFormat"><%= __('validationMessage.CorrectDateFormat') %></span>
+        <span id="errorMessage-notFutureDate"><%= __('validationMessage.NotFutureDate') %></span>
+    </div>
+    <% if (formMode == 'showDetails') { %>
+        <p><a href="/ksiazka/edit/<%= ks.Id_Ksiazka %>" class="list-actions-button-edit"><%= __('form.actions.edit') %></a></p>
+    <% } %>
+    <% if (formMode == 'showDetails' || formMode == 'edit' || formMode == 'editErrors') { %>
+        <h2><%= __('ks.form.details.subtitle') %></h2>
+        <table class="table-list">
+            <thead>
+            <tr>
+                <th><%= __('ks.form.details.fields.Magazyn') %></th>
+                <th><%= __('ks.form.details.fields.IloscNaStanie') %></th>
+                <th><%= __('ks.form.details.fields.CenaHurtowa') %></th>
+                <th><%= __('ks.form.details.fields.MinimalnaIloscDoCenyHurtowej') %></th>
+                <th><%= __('ks.form.details.fields.CenaDetaliczna') %></th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (let k of ks.stanyWMagazynach) { %>
+                <tr>
+                    <td><a href="/magazyn/details/<%= k.magazyn.Id_Magazyn %>"><%= k.magazyn.Nazwa %></a></td>
+                    <td><%= k.IloscNaStanie %></td>
+                    <td><%= k.CenaHurtowa %></td>
+                    <td><%= k.MinimalnaIloscDoCenyHurtowej %></td>
+                    <td><%= k.CenaDetaliczna %></td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    <p><a href="/ksiazka" class="list-actions-button-details"><%= __('form.actions.return') %></a></p>
+    <% } %>
+</main>
+<%- include('../../fragments/footer.ejs') %>

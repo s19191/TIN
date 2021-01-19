@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= __('general.title') %></title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <% if (navLocation == 'ksiazka' && (formMode == 'edit' || formMode == 'createNew' || formMode == 'createNewErrors' || formMode == 'editErrors')) { %>
+        <script src="../../js/validationCommon.js"></script>
+        <script src="../../js/validationKsiazkaForm.js"></script>
+    <% } %>
+    <% if (navLocation == 'magazyn' && (formMode == 'edit' || formMode == 'createNew'|| formMode == 'createNewErrors' || formMode == 'editErrors')) { %>
+        <script src="../../js/validationCommon.js"></script>
+        <script src="../../js/validationMagazynForm.js"></script>
+    <% } %>
+    <% if (navLocation == 'stanWMagazynie' && (formMode == 'edit' || formMode == 'createNew'|| formMode == 'createNewErrors' || formMode == 'editErrors')) { %>
+        <script src="../../js/validationCommon.js"></script>
+        <script src="../../js/validationStanWMagazynieForm.js"></script>
+    <% } %>
+</head>
+<body>
+<header>
+    <h1><%= __('general.title') %></h1>
+    <img src="../../images/logo.jpg" alt="Księgarnia Dobra Książka Logo">
+</header>
+<%- include('authentication.ejs') %>
+<nav>
+    <ul>
+        <li><a href="/" class="<%= navLocation == 'main' ? 'active' : ''%>"><%= __('nav.main-page') %></a></li>
+        <% if(loggedUser) { %>
+        <li><a href="/ksiazka" class="<%= navLocation == 'ksiazka' ? 'active' : ''%>"><%= __('nav.ksiazki') %></a></li>
+        <% } %>
+        <% if(loggedUser) { %>
+        <li><a href="/magazyn" class="<%= navLocation == 'magazyn' ? 'active' : ''%>"><%= __('nav.magazyny') %></a></li>
+        <% } %>
+        <% if(loggedUser) { %>
+        <li><a href="/stanWMagazynie" class="<%= navLocation == 'stanWMagazynie' ? 'active' : ''%>"><%= __('nav.stanyWMgazynach') %></a></li>
+        <% } %>
+        <li><a href="/changeLang/pl" class="<%= lang == 'pl' ? 'active' : ''%>">PL</a></li>
+        <li><a href="/changeLang/en" class="<%= lang == 'en' ? 'active' : ''%>">EN</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,110 @@
+<%- include('../../fragments/header.ejs') %>
+<main>
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+<!--    <form class="form" method="post" action="<%=formAction%>" novalidate>-->
+        <input type="hidden" name="Id_StanWMagazynie" value="<%= swm.Id_StanWMagazynie %>">
+        <label for="Ksiazka_Id_Ksiazka"><%= __('swm.form.fields.Ksiazka.label') %><abbr title="required" aria-label="required">*</abbr></label>
+        <select name="Ksiazka_Id_Ksiazka" id="Ksiazka_Id_Ksiazka" <%= (formMode == 'showDetails') ? 'disabled' : ''%>
+            class="<%= validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka')) || formMode == 'idsError' ? 'error-input' : '' %>" >
+            <option value=""><%= __('swm.form.fields.Ksiazka.select') %></option>
+            <% for (let i=0; i<allKs.length; i++) { let ks = allKs[i]; %>
+            <option value="<%= ks.Id_Ksiazka %>" label="<%= ks.Tytul %>"
+            <% if (formMode != 'createNew' && swm.ksiazka != null) { %>
+                <%= (ks.Id_Ksiazka.toString() == swm.ksiazka.Id_Ksiazka.toString()) ? 'selected' : ''%>
+            <% } %>
+            ></option>
+            <% } %>
+        </select>
+        <span id="errorKsiazka_Id_Ksiazka" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka'))) { %>
+                <%= validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka')).message %>
+            <% } %>
+                <% if (formMode == 'idsError') { %>
+                    <%= __('swm.form.errors.idsError.ksiazka') %>
+                <% } %>
+        </span>
+        <label for="Magazyn_Id_Magazyn"><%= __('swm.form.fields.Magazyn.label') %><abbr title="required" aria-label="required">*</abbr></label>
+        <select name="Magazyn_Id_Magazyn" id="Magazyn_Id_Magazyn" <%= (formMode == 'showDetails') ? 'disabled' : ''%>
+            class="<%= validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn')) || formMode == 'idsError' ? 'error-input' : '' %>" >
+            <option value=""><%= __('swm.form.fields.Magazyn.select') %></option>
+            <% for (let i=0; i<allMag.length; i++) { let mag = allMag[i]; %>
+            <option value="<%= mag.Id_Magazyn %>" label="<%= mag.Nazwa %>"
+            <% if (formMode != 'createNew' && swm.magazyn != null) { %>
+                    <%= (mag.Id_Magazyn.toString() == swm.magazyn.Id_Magazyn.toString()) ? 'selected' : ''%>
+            <% } %>
+            ></option>
+            <% } %>
+        </select>
+        <span id="errorMagazyn_Id_Magazyn" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn'))) { %>
+                <%= validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn')).message %>
+            <% } %>
+                <% if (formMode == 'idsError') { %>
+                    <%= __('swm.form.errors.idsError.magazyn') %>
+                <% } %>
+        </span>
+        <label for="IloscNaStanie"><%= __('swm.form.fields.IloscNaStanie') %><abbr title="required" aria-label="required">*</abbr></label>
+        <input type="number" name="IloscNaStanie" id="IloscNaStanie" min=0 value="<%= swm.IloscNaStanie %>"
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>
+               class="<%= validationErrors.find(e => e.path.includes('IloscNaStanie')) ? 'error-input' : '' %>"
+        />
+        <span id="errorIloscNaStanie" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('IloscNaStanie'))) { %>
+                <%= validationErrors.find(e => e.path.includes('IloscNaStanie')).message %>
+            <% } %>
+        </span>
+        <label for="CenaHurtowa"><%= __('swm.form.fields.CenaHurtowa') %></label>
+        <input type="number" name="CenaHurtowa" id="CenaHurtowa" min=0 step=0.1 value="<%= swm.CenaHurtowa %>"
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>
+               class="<%= validationErrors.find(e => e.path.includes('CenaHurtowa')) ? 'error-input' : '' %>"
+        />
+        <span id="errorCenaHurtowa" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('CenaHurtowa'))) { %>
+                <%= validationErrors.find(e => e.path.includes('CenaHurtowa')).message %>
+            <% } %>
+        </span>
+        <label for="MinimalnaIloscDoCenyHurtowej"><%= __('swm.form.fields.MinimalnaIloscDoCenyHurtowej') %></label>
+        <input type="number" name="MinimalnaIloscDoCenyHurtowej" id="MinimalnaIloscDoCenyHurtowej" min=0 value="<%= swm.MinimalnaIloscDoCenyHurtowej %>"
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>
+               class="<%= validationErrors.find(e => e.path.includes('MinimalnaIloscDoCenyHurtowej')) ? 'error-input' : '' %>"
+        />
+        <span id="errorMinilamnaIloscDoCenyHurtowej" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('MinimalnaIloscDoCenyHurtowej'))) { %>
+                <%= validationErrors.find(e => e.path.includes('MinimalnaIloscDoCenyHurtowej')).message %>
+            <% } %>
+        </span>
+        <label for="CenaDetaliczna"><%= __('swm.form.fields.CenaDetaliczna') %><abbr title="required" aria-label="required">*</abbr></label>
+        <input type="number" name="CenaDetaliczna" id="CenaDetaliczna" min=0 step=0.1 value="<%= swm.CenaDetaliczna %>"
+                <%= (formMode == 'showDetails') ? 'disabled' : '' %>
+               class="<%= validationErrors.find(e => e.path.includes('CenaDetaliczna')) ? 'error-input' : '' %>"
+        />
+        <span id="errorCenaDetaliczna" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('CenaDetaliczna'))) { %>
+                <%= validationErrors.find(e => e.path.includes('CenaDetaliczna')).message %>
+            <% } %>
+        </span>
+        <% if (formMode != 'showDetails') { %>
+        <div class="form-buttons">
+            <% if (formMode == 'createNewErrors' || formMode == 'editErrors' || formMode == 'idsError') { %>
+                <p class="errors-text"><%= __('swm.form.errors.createNewOrEditErrors') %></p>
+            <% } else { %>
+                <p id="errorsSummary" class="errors-text"></p>
+            <% } %>
+            <input type="submit" class="form-button-submit" value="<%=btnLabel%>"/>
+            <a href="/stanWMagazynie" class="form-button-cancel"><%= __('form.actions.cancel') %></a>
+            <% } %>
+        </div>
+    </form>
+    <div style="display: none">
+        <span id="errorMessage-Errors"><%= __('validationMessage.Errors') %></span>
+        <span id="errorMessage-required"><%= __('validationMessage.Required') %></span>
+        <span id="errorMessage-isNumber"><%= __('validationMessage.IsNumber') %></span>
+        <span id="errorMessage-isNumberPlus"><%= __('validationMessage.IsNumberPlus') %></span>
+    </div>
+    <% if (formMode == 'showDetails') { %>
+        <p><a href="/stanWMagazynie/edit/<%= swm.Id_StanWMagazynie %>" class="list-actions-button-edit">Edytuj</a></p>
+        <p><a href="/magazyn" class="list-actions-button-details"><%= __('form.actions.return') %></a></p>
+    <% } %>
+</main>
+<%- include('../../fragments/footer.ejs') %>
