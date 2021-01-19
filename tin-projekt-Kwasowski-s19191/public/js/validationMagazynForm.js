@@ -12,23 +12,29 @@ function validateForm() {
     let valid = true;
 
     if (!checkRequired(nazwaInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-required').innerText;
         valid = false;
         nazwaInput.classList.add("error-input");
-        errorName.innerText = "Pole jest wymagane";
+        errorName.innerText = reqMessage;
     } else if (!checkTextLengthRange(nazwaInput.value, 2, 60)) {
+        const reqMessage = document.getElementById('errorMessage-between2and60').innerText;
         valid = false;
         nazwaInput.classList.add("error-input");
-        errorName.innerText = "Pole powinno zawierać od 2 do 60 znaków";
+        errorName.innerText = reqMessage;
     }
 
     if (!checkRequired(adresInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-required').innerText;
         valid = false;
         adresInput.classList.add("error-input");
-        errorAdress.innerText = "Pole jest wymagane";
+        errorAdress.innerText = reqMessage;
     } else if (!checkAdress(adresInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-between2and60').innerText;
         valid = false;
         adresInput.classList.add("error-input");
-        errorAdress.innerText = "Pole powinno zawierać adres w formacie np. ul. Gorka 14C";
+        errorAdress.innerText = reqMessage;
+        // TODO: coś tu nie działa
+        // errorAdress.innerText = "Pole powinno zawierać adres w formacie np. ul. Gorka 14C";
     }
 
     if (!valid) {

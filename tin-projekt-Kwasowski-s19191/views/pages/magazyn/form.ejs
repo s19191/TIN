@@ -4,8 +4,8 @@
     <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
 <!--    <form class="form" method="post" action="<%=formAction%>" novalidate>-->
         <input type="hidden" name="Id_Magazyn" value="<%= mag.Id_Magazyn %>">
-        <label for="Nazwa">Nazwa:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="Nazwa" placeholder="2-60 znaków" id="Nazwa" value="<%= mag.Nazwa %>"
+        <label for="Nazwa"><%= __('mag.form.fields.Nazwa') %><abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="Nazwa" placeholder="<%= __('mag.form.placeholders.Nazwa') %>" id="Nazwa" value="<%= mag.Nazwa %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>
                class="<%= validationErrors.find(e => e.path.includes('Nazwa')) ? 'error-input' : '' %>"
         />
@@ -14,8 +14,8 @@
                 <%= validationErrors.find(e => e.path.includes('Nazwa')).message %>
             <% } %>
         </span>
-        <label for="Adres">Adres:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="Adres" placeholder="np. ul. Gorka 15/67" id="Adres" value="<%= mag.Adres %>"
+        <label for="Adres"><%= __('mag.form.fields.Adres') %><abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="Adres" placeholder="<%= __('mag.form.placeholders.Adres') %>" id="Adres" value="<%= mag.Adres %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>
                class="<%= validationErrors.find(e => e.path.includes('Adres')) ? 'error-input' : '' %>"
         />
@@ -27,7 +27,7 @@
         <% if (formMode != 'showDetails') { %>
         <div class="form-buttons">
             <% if (formMode == 'createNewErrors' || formMode == 'editErrors') { %>
-                <p class="errors-text">Formularz zawiera błędy</p>
+                <p class="errors-text"><%= __('mag.form.errors.createNewOrEditErrors') %></p>
             <% } else { %>
                 <p id="errorsSummary" class="errors-text"></p>
             <% } %>
@@ -37,18 +37,18 @@
         </div>
     </form>
     <% if (formMode == 'showDetails') { %>
-        <p><a href="/magazyn/edit/<%= mag.Id_Magazyn %>" class="list-actions-button-edit">Edytuj</a></p>
+        <p><a href="/magazyn/edit/<%= mag.Id_Magazyn %>" class="list-actions-button-edit"><%= __('form.actions.edit') %></a></p>
     <% } %>
     <% if (formMode == 'showDetails' || formMode == 'edit' || formMode == 'editErrors') { %>
-        <h2>Szczegóły książek</h2>
+        <h2><%= __('mag.form.details.subtitle') %></h2>
         <table class="table-list">
             <thead>
             <tr>
-                <th>Tytuł książki</th>
-                <th>Ilość na stanie</th>
-                <th>Cena hurtowa</th>
-                <th>Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej</th>
-                <th>Cena detaliczna</th>
+                <th><%= __('mag.form.details.fields.Ksiazka') %></th>
+                <th><%= __('mag.form.details.fields.IloscNaStanie') %></th>
+                <th><%= __('mag.form.details.fields.CenaHurtowa') %></th>
+                <th><%= __('mag.form.details.fields.MinimalnaIloscDoCenyHurtowej') %></th>
+                <th><%= __('mag.form.details.fields.CenaDetaliczna') %></th>
             </tr>
             </thead>
             <tbody>
@@ -63,7 +63,7 @@
             <% } %>
             </tbody>
         </table>
-        <p><a href="/magazyn" class="list-actions-button-details">Powrót</a></p>
+        <p><a href="/magazyn" class="list-actions-button-details"><%= __('form.actions.return') %></a></p>
     <% } %>
 </main>
 <%- include('../../fragments/footer.ejs') %>

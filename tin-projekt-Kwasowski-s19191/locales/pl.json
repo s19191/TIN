@@ -51,9 +51,9 @@
 		},
 		"form": {
 			"fields": {
-				"Tytul": "Tytuł",
-				"Autor": "Autor",
-				"DataWydania": "Data wydania"
+				"Tytul": "Tytuł:",
+				"Autor": "Autor:",
+				"DataWydania": "Data wydania:"
 			},
 			"placeholders": {
 				"Tytul": "2-60 znaków",
@@ -78,9 +78,60 @@
 			},
 			"details": {
 				"pageTitle": "Szczegóły książki",
-				"subtitle": "Szczegóły magazynu",
+				"subtitle": "Szczegóły magazynów",
 				"fields": {
 					"Magazyn": "Nazwa magazynu",
+					"IloscNaStanie": "Ilość na stanie",
+					"CenaHurtowa": "Cena hurtowa",
+					"MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",
+					"CenaDetaliczna": "Cena detaliczna"
+				}
+			},
+			"errors": {
+				"createNewOrEditErrors": "Formularz zawiera błędy"
+			}
+		}
+	},
+	"mag": {
+		"list": {
+			"fields": {
+				"Nazwa": "Nazwa",
+				"Autor": "Adres"
+			},
+			"addNew": "Dodaj nowy magazyn",
+			"noData": "Brak magazynów w bazie",
+			"pageTitle": "Lista magazynów"
+		},
+		"form": {
+			"fields": {
+				"Nazwa": "Nazwa:",
+				"Adres": "Adres:"
+			},
+			"placeholders": {
+				"Nazwa": "2-60 znaków",
+				"Adres": "np. ul. Gorka 15/67"
+			},
+			"add": {
+				"pageTitle": "Dodawanie magazynu",
+				"btnLabel": "Dodaj magazyn",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie dodano książkę"
+				}
+			},
+			"edit": {
+				"pageTitle": "Edycja magazynu",
+				"btnLabel": "Zapisz zmiany",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie zaktualizowano książkę"
+				}
+			},
+			"details": {
+				"pageTitle": "Szczegóły magazynu",
+				"subtitle": "Szczegóły książek",
+				"fields": {
+					"Ksiazka": "Nazwa książki",
 					"IloscNaStanie": "Ilość na stanie",
 					"CenaHurtowa": "Cena hurtowa",
 					"MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",

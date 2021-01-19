@@ -14,9 +14,9 @@ exports.showMagazynList = (req, res, next) => {
 exports.showAddMagazynForm = (req, res, next) => {
     res.render('pages/magazyn/form', {
         mag: {},
-        pageTitle: 'Dodawanie magazynu',
+        pageTitle: req.__('ks.form.add.pageTitle'),
         formMode: 'createNew',
-        btnLabel: 'Dodaj magazyn',
+        btnLabel: req.__('ks.form.add.btnLabel'),
         formAction: '/magazyn/add',
         navLocation: 'magazyn',
         validationErrors: []
@@ -29,7 +29,7 @@ exports.showMagazynDetails = (req, res, next) => {
         .then(mag => {
             res.render('pages/magazyn/form', {
                 mag: mag,
-                pageTitle: 'Szczegóły magazynu',
+                pageTitle: req.__('ks.form.details.pageTitle'),
                 formMode: 'showDetails',
                 btnLabel: '',
                 formAction: '',
@@ -45,9 +45,9 @@ exports.showEditMagazynForm = (req, res, next) => {
         .then(mag => {
             res.render('pages/magazyn/form', {
                 mag: mag,
-                pageTitle: 'Edycja magazynu',
+                pageTitle: req.__('ks.form.edit.pageTitle'),
                 formMode: 'edit',
-                btnLabel: 'Edytuj magazyn',
+                pageTitle: req.__('ks.form.edit.btnLabel'),
                 formAction: '/magazyn/edit',
                 navLocation: 'magazyn',
                 validationErrors: []
@@ -64,9 +64,9 @@ exports.addMagazyn = (req, res, next) => {
         .catch(err => {
             res.render('pages/magazyn/form', {
                 mag: magData,
-                pageTitle: 'Dodawanie magazynu',
+                pageTitle: req.__('ks.form.add.pageTitle'),
                 formMode: 'createNewErrors',
-                btnLabel: 'Dodaj magazyn',
+                btnLabel: req.__('ks.form.add.btnLabel'),
                 formAction: '/magazyn/add',
                 navLocation: 'magazyn',
                 validationErrors: err.errors
@@ -90,9 +90,9 @@ exports.updateMagazyn = (req, res, next) => {
             magData.stanyWMagazynach = mag.stanyWMagazynach;
             res.render('pages/magazyn/form', {
                 mag: magData,
-                pageTitle: 'Edycja magazynu',
+                pageTitle: req.__('ks.form.edit.pageTitle'),
                 formMode: 'editErrors',
-                btnLabel: 'Edytuj magazyn',
+                pageTitle: req.__('ks.form.edit.btnLabel'),
                 formAction: '/magazyn/edit',
                 navLocation: 'magazyn',
                 validationErrors: err.errors
