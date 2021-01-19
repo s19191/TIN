@@ -20,67 +20,80 @@ function validateForm() {
     let valid = true;
 
     if (!checkRequired(magazyn_Id_MagazynInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-required').innerText;
         valid = false;
         magazyn_Id_MagazynInput.classList.add("error-input");
-        errorMagazyn_Id_Magazyn.innerText = "Pole jest wymagane";
+        errorMagazyn_Id_Magazyn.innerText = reqMessage;
     }
 
     if (!checkRequired(ksiazka_Id_KsiazkaInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-required').innerText;
         valid = false;
         ksiazka_Id_KsiazkaInput.classList.add("error-input");
-        errorKsiazka_Id_Ksiazka.innerText = "Pole jest wymagane";
+        errorKsiazka_Id_Ksiazka.innerText = reqMessage;
     }
 
     if (!checkRequired(iloscNaStanieInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-required').innerText;
         valid = false;
         iloscNaStanieInput.classList.add("error-input");
-        errorIloscNaStanie.innerText = "Pole jest wymagane";
+        errorIloscNaStanie.innerText = reqMessage;
     } else if (!checkNumber(iloscNaStanieInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-isNumber').innerText;
         valid = false;
         iloscNaStanieInput.classList.add("error-input");
-        errorIloscNaStanie.innerText = "Pole powinno być liczbą";
+        errorIloscNaStanie.innerText = reqMessage;
     } else if (!checkNumberRange(iloscNaStanieInput.value, 0)) {
+        const reqMessage = document.getElementById('errorMessage-isNumberPlus').innerText;
         valid = false;
         iloscNaStanieInput.classList.add("error-input");
-        errorIloscNaStanie.innerText = "Pole powinno być liczbą dodatnią";
+        errorIloscNaStanie.innerText = reqMessage;
     }
 
     if (!checkNumber(cenaHurtowaInput.value) && checkRequired(cenaHurtowaInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-isNumber').innerText;
         valid = false;
         cenaHurtowaInput.classList.add("error-input");
-        errorCenaHurtowa.innerText = "Pole powinno być liczbą";
+        errorCenaHurtowa.innerText = reqMessage;
     } else if (!checkNumberRange(cenaHurtowaInput.value, 0) && checkRequired(cenaHurtowaInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-isNumberPlus').innerText;
         valid = false;
         cenaHurtowaInput.classList.add("error-input");
-        errorCenaHurtowa.innerText = "Pole powinno być liczbą dodatnią";
+        errorCenaHurtowa.innerText = reqMessage;
     }
 
     if (!checkNumber(minilamnaIloscDoCenyHurtowejInput.value) && checkRequired(cenaHurtowaInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-isNumber').innerText;
         valid = false;
         minilamnaIloscDoCenyHurtowejInput.classList.add("error-input");
-        errorMinilamnaIloscDoCenyHurtowej.innerText = "Pole powinno być liczbą";
+        errorMinilamnaIloscDoCenyHurtowej.innerText = reqMessage;
     } else if (!checkNumberRange(minilamnaIloscDoCenyHurtowejInput.value, 0) && checkRequired(cenaHurtowaInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-isNumberPlus').innerText;
         valid = false;
         minilamnaIloscDoCenyHurtowejInput.classList.add("error-input");
-        errorMinilamnaIloscDoCenyHurtowej.innerText = "Pole powinno być liczbą dodatnią";
+        errorMinilamnaIloscDoCenyHurtowej.innerText = reqMessage;
     }
 
     if (!checkRequired(cenaDetalicznaInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-required').innerText;
         valid = false;
         cenaDetalicznaInput.classList.add("error-input");
-        errorCenaDetaliczna.innerText = "Pole jest wymagane";
+        errorCenaDetaliczna.innerText = reqMessage;
     } else if (!checkNumber(cenaDetalicznaInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-isNumber').innerText;
         valid = false;
         cenaDetalicznaInput.classList.add("error-input");
-        errorCenaDetaliczna.innerText = "Pole powinno być liczbą";
+        errorCenaDetaliczna.innerText = reqMessage;
     } else if (!checkNumberRange(cenaDetalicznaInput.value, 0)) {
+        const reqMessage = document.getElementById('errorMessage-isNumberPlus').innerText;
         valid = false;
         cenaDetalicznaInput.classList.add("error-input");
-        errorCenaDetaliczna.innerText = "Pole powinno być liczbą dodatnią";
+        errorCenaDetaliczna.innerText = reqMessage;
     }
 
     if (!valid) {
-        errorsSummary.innerText = "Formularz zawiera błędy";
+        const reqMessage = document.getElementById('errorMessage-formsErrors').innerText;
+        errorsSummary.innerText = reqMessage;
     }
 
     return valid;

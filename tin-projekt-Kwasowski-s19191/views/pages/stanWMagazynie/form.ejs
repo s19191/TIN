@@ -4,10 +4,10 @@
     <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
 <!--    <form class="form" method="post" action="<%=formAction%>" novalidate>-->
         <input type="hidden" name="Id_StanWMagazynie" value="<%= swm.Id_StanWMagazynie %>">
-        <label for="Ksiazka_Id_Ksiazka">Książka:<abbr title="required" aria-label="required">*</abbr></label>
+        <label for="Ksiazka_Id_Ksiazka"><%= __('swm.form.fields.Ksiazka.label') %><abbr title="required" aria-label="required">*</abbr></label>
         <select name="Ksiazka_Id_Ksiazka" id="Ksiazka_Id_Ksiazka" <%= (formMode == 'showDetails') ? 'disabled' : ''%>
             class="<%= validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka')) || formMode == 'idsError' ? 'error-input' : '' %>" >
-            <option value="">-- Wybierz książkę --</option>
+            <option value=""><%= __('swm.form.fields.Ksiazka.select') %></option>
             <% for (let i=0; i<allKs.length; i++) { let ks = allKs[i]; %>
             <option value="<%= ks.Id_Ksiazka %>" label="<%= ks.Tytul %>"
             <% if (formMode != 'createNew' && swm.ksiazka != null) { %>
@@ -21,13 +21,13 @@
                 <%= validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka')).message %>
             <% } %>
                 <% if (formMode == 'idsError') { %>
-                    Wybrana książka jest już w tym magazynie!
+                    <%= __('swm.form.errors.idsError.ksiazka') %>
                 <% } %>
         </span>
-        <label for="Magazyn_Id_Magazyn">Magazyn:<abbr title="required" aria-label="required">*</abbr></label>
+        <label for="Magazyn_Id_Magazyn"><%= __('swm.form.fields.Magazyn.label') %><abbr title="required" aria-label="required">*</abbr></label>
         <select name="Magazyn_Id_Magazyn" id="Magazyn_Id_Magazyn" <%= (formMode == 'showDetails') ? 'disabled' : ''%>
             class="<%= validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn')) || formMode == 'idsError' ? 'error-input' : '' %>" >
-            <option value="">-- Wybierz magazyn --</option>
+            <option value=""><%= __('swm.form.fields.Magazyn.select') %></option>
             <% for (let i=0; i<allMag.length; i++) { let mag = allMag[i]; %>
             <option value="<%= mag.Id_Magazyn %>" label="<%= mag.Nazwa %>"
             <% if (formMode != 'createNew' && swm.magazyn != null) { %>
@@ -41,10 +41,10 @@
                 <%= validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn')).message %>
             <% } %>
                 <% if (formMode == 'idsError') { %>
-                    W wybranym magazynie jest już ta książka!
+                    <%= __('swm.form.errors.idsError.magazyn') %>
                 <% } %>
         </span>
-        <label for="IloscNaStanie">Ilość na stanie:<abbr title="required" aria-label="required">*</abbr></label>
+        <label for="IloscNaStanie"><%= __('swm.form.fields.IloscNaStanie') %><abbr title="required" aria-label="required">*</abbr></label>
         <input type="number" name="IloscNaStanie" id="IloscNaStanie" min=0 value="<%= swm.IloscNaStanie %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>
                class="<%= validationErrors.find(e => e.path.includes('IloscNaStanie')) ? 'error-input' : '' %>"
@@ -54,7 +54,7 @@
                 <%= validationErrors.find(e => e.path.includes('IloscNaStanie')).message %>
             <% } %>
         </span>
-        <label for="CenaHurtowa">Cena hurtowa:</label>
+        <label for="CenaHurtowa"><%= __('swm.form.fields.CenaHurtowa') %></label>
         <input type="number" name="CenaHurtowa" id="CenaHurtowa" min=0 step=0.1 value="<%= swm.CenaHurtowa %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>
                class="<%= validationErrors.find(e => e.path.includes('CenaHurtowa')) ? 'error-input' : '' %>"
@@ -64,7 +64,7 @@
                 <%= validationErrors.find(e => e.path.includes('CenaHurtowa')).message %>
             <% } %>
         </span>
-        <label for="MinimalnaIloscDoCenyHurtowej">Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej:</label>
+        <label for="MinimalnaIloscDoCenyHurtowej"><%= __('swm.form.fields.MinimalnaIloscDoCenyHurtowej') %></label>
         <input type="number" name="MinimalnaIloscDoCenyHurtowej" id="MinimalnaIloscDoCenyHurtowej" min=0 value="<%= swm.MinimalnaIloscDoCenyHurtowej %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>
                class="<%= validationErrors.find(e => e.path.includes('MinimalnaIloscDoCenyHurtowej')) ? 'error-input' : '' %>"
@@ -74,7 +74,7 @@
                 <%= validationErrors.find(e => e.path.includes('MinimalnaIloscDoCenyHurtowej')).message %>
             <% } %>
         </span>
-        <label for="CenaDetaliczna">Cena detaliczna:<abbr title="required" aria-label="required">*</abbr></label>
+        <label for="CenaDetaliczna"><%= __('swm.form.fields.CenaDetaliczna') %><abbr title="required" aria-label="required">*</abbr></label>
         <input type="number" name="CenaDetaliczna" id="CenaDetaliczna" min=0 step=0.1 value="<%= swm.CenaDetaliczna %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>
                class="<%= validationErrors.find(e => e.path.includes('CenaDetaliczna')) ? 'error-input' : '' %>"
@@ -87,18 +87,18 @@
         <% if (formMode != 'showDetails') { %>
         <div class="form-buttons">
             <% if (formMode == 'createNewErrors' || formMode == 'editErrors' || formMode == 'idsError') { %>
-                <p class="errors-text">Formularz zawiera błędy</p>
+                <p class="errors-text"><%= __('swm.form.errors.createNewOrEditErrors') %></p>
             <% } else { %>
                 <p id="errorsSummary" class="errors-text"></p>
             <% } %>
             <input type="submit" class="form-button-submit" value="<%=btnLabel%>"/>
-            <a href="/stanWMagazynie" class="form-button-cancel">Anuluj</a>
+            <a href="/stanWMagazynie" class="form-button-cancel"><%= __('form.actions.cancel') %></a>
             <% } %>
         </div>
     </form>
     <% if (formMode == 'showDetails') { %>
         <p><a href="/stanWMagazynie/edit/<%= swm.Id_StanWMagazynie %>" class="list-actions-button-edit">Edytuj</a></p>
-        <p><a href="/magazyn" class="list-actions-button-details">Powrót</a></p>
+        <p><a href="/magazyn" class="list-actions-button-details"><%= __('form.actions.return') %></a></p>
     <% } %>
 </main>
 <%- include('../../fragments/footer.ejs') %>

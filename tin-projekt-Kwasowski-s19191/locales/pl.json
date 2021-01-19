@@ -142,5 +142,62 @@
 				"createNewOrEditErrors": "Formularz zawiera błędy"
 			}
 		}
+	},
+	"swm": {
+		"list": {
+			"fields": {
+				"Ksiazka": "Książka",
+				"Magazyn": "Magazyn",
+				"IloscNaStanie": "Ilość na stanie",
+				"CenaHurtowa": "Cena hurtowa",
+				"MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",
+				"CenaDetaliczna": "Cena detaliczna"
+			},
+			"addNew": "Dodaj nowy stan książki w konkretnym magazynie",
+			"noData": "Brak stanów książek w magazynach w bazie",
+			"pageTitle": "Lista stanów książek w magazynach"
+		},
+		"form": {
+			"fields": {
+				"Ksiazka": {
+					"label": "Książka:",
+					"select": "-- Wybierz książkę --"
+				},
+				"Magazyn": {
+					"label": "Magazyn:",
+					"select": "-- Wybierz magazyn --"
+				},
+				"IloscNaStanie": "Ilość na stanie:",
+				"CenaHurtowa": "Cena hurtowa:",
+				"MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej:",
+				"CenaDetaliczna": "Cena detaliczna:"
+			},
+			"add": {
+				"pageTitle": "Dodawanie stanu książki w konretnym magazynie",
+				"btnLabel": "Dodaj stan książki w konkretnym magazynie",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie dodano książkę"
+				}
+			},
+			"edit": {
+				"pageTitle": "Edycja stanu książki w konretnym magazynie",
+				"btnLabel": "Zapisz zmiany",
+				"confirm": {
+					"header": "Potwierdzenie operacji",
+					"text": "Pomyślnie zaktualizowano książkę"
+				}
+			},
+			"details": {
+				"pageTitle": "Szczegóły stanu książki w konretnym magazynie"
+			},
+			"errors": {
+				"createNewOrEditErrors": "Formularz zawiera błędy",
+				"idsError": {
+					"ksiazka": "Wybrana książka jest już w tym magazynie!",
+					"magazyn": "W wybranym magazynie jest już ta książka!"
+				}
+			}
+		}
 	}
 }

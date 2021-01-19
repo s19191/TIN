@@ -67,7 +67,8 @@ function validateForm() {
     }
 
     if (!valid) {
-        errorsSummary.innerText = "Formularz zawiera błędy";
+        const reqMessage = document.getElementById('errorMessage-formsErrors').innerText;
+        errorsSummary.innerText = reqMessage;
     }
 
     return valid;

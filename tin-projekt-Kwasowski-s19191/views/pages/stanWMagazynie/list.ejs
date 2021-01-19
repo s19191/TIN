@@ -1,16 +1,16 @@
 <%- include('../../fragments/header.ejs') %>
 <main>
-    <h2>Lista magazynów</h2>
+    <h2><%= __('swm.list.pageTitle') %></h2>
     <table class="table-list">
         <thead>
         <tr>
-            <th>Książka</th>
-            <th>Magazyn</th>
-            <th>Ilość na stanie</th>
-            <th>Cena hurtowa</th>
-            <th>Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej</th>
-            <th>Cena detaliczna</th>
-            <th class="list-actions">Akcje</th>
+            <th><%= __('swm.list.fields.Ksiazka') %></th>
+            <th><%= __('swm.list.fields.Magazyn') %></th>
+            <th><%= __('swm.list.fields.IloscNaStanie') %></th>
+            <th><%= __('swm.list.fields.CenaHurtowa') %></th>
+            <th><%= __('swm.list.fields.MinimalnaIloscDoCenyHurtowej') %></th>
+            <th><%= __('swm.list.fields.CenaDetaliczna') %></th>
+            <th class="list-actions"><%= __('list.actions.title') %></th>
         </tr>
         </thead>
         <tbody>
@@ -24,15 +24,15 @@
                 <td><%= swm.CenaDetaliczna %></td>
                 <td>
                     <ul class="list-actions">
-                        <li><a href="/stanWMagazynie/details/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-details">Szczegóły</a></li>
-                        <li><a href="/stanWMagazynie/edit/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-edit">Edytuj</a></li>
-                        <li><a href="/stanWMagazynie/delete/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-delete">Usuń</a></li>
+                        <li><a href="/stanWMagazynie/details/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-details"><%= __('list.actions.details') %></a></li>
+                        <li><a href="/stanWMagazynie/edit/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-edit"><%= __('list.actions.edit') %></a></li>
+                        <li><a href="/stanWMagazynie/delete/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-delete"><%= __('list.actions.delete') %></a></li>
                     </ul>
                 </td>
             </tr>
         <% } %>
         </tbody>
     </table>
-    <p><a href="/stanWMagazynie/add" class="button-add">Dodaj stan książki w konkretnym magazynie</a></p>
+    <p><a href="/stanWMagazynie/add" class="button-add"><%= __('swm.list.addNew') %></a></p>
 </main>
 <%- include('../../fragments/footer.ejs') %>
