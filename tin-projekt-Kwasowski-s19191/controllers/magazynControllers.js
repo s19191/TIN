@@ -47,7 +47,7 @@ exports.showEditMagazynForm = (req, res, next) => {
                 mag: mag,
                 pageTitle: req.__('ks.form.edit.pageTitle'),
                 formMode: 'edit',
-                pageTitle: req.__('ks.form.edit.btnLabel'),
+                btnLabel: req.__('ks.form.edit.btnLabel'),
                 formAction: '/magazyn/edit',
                 navLocation: 'magazyn',
                 validationErrors: []
@@ -92,7 +92,7 @@ exports.updateMagazyn = (req, res, next) => {
                 mag: magData,
                 pageTitle: req.__('ks.form.edit.pageTitle'),
                 formMode: 'editErrors',
-                pageTitle: req.__('ks.form.edit.btnLabel'),
+                btnLabel: req.__('ks.form.edit.btnLabel'),
                 formAction: '/magazyn/edit',
                 navLocation: 'magazyn',
                 validationErrors: err.errors

@@ -1,58 +1,213 @@
 {
-  "main-page": {
-    "content": "Strona główna"
-  },
-  "nav": {
-    "main-page": "Strona główna",
-    "ksiazki": "Książki",
-    "magazyny": "Magazyny",
-    "stanyWMgazynach": "Stan w magazynach"
-  },
-  "list": {
-    "actions": {
-      "title": "Akcje",
-      "details": "Szczegóły",
-      "edit": "Edytuj",
-      "delete": "Usuń"
-    }
-  },
-  "form": {
-    "actions": {
-      "return": "Powrót",
-      "edit": "Edytuj",
-      "cancel": "Anuluj"
-    }
-  },
-  "ks": {
-    "fields": {
-      "Tytul": "Tytuł",
-      "Autor": "Autor",
-      "DataWydania": "Data wydania"
-    },
-    "list": {
-      "title": "Książki",
-      "addNew": "Dodaj nową książkę",
-      "noData": "Brak książek w bazie",
-      "pageTitle": "Lista książek"
-    },
-    "form": {
-      "employment": "Historia zatrudnienia",
-      "add": {
-        "pageTitle": "Dodawanie pracownika",
-        "btnLabel": "Dodaj pracownika",
-        "confirm": {
-          "header": "Potwierdzenie operacji",
-          "text": "Pomyślnie dodano pracownika"
-        }
-      },
-      "edit": {
-        "pageTitle": "Edycja pracownika",
-        "btnLabel": "Zapisz zmiany",
-        "confirm": {
-          "header": "Potwierdzenie operacji",
-          "text": "Pomyślnie zaktualizowano pracownika"
-        }
-      }
-    }
-  }
+	"general": {
+		"title": "Bookstore Dobra Książka"
+	},
+	"main-page": {
+		"title": "Main page",
+		"content": "\nDobra Księgarnia has been on the market for 24 years. We are a valued and reputable Warsaw bookstore. The website helps to find specific items in cooperating warehouses. All books can be viewed in the \"Books\" section, while in the \"Warehouses\" section you can see a list of warehouses with their basic information. The \"Stock in stocks\" tab shows the availability of books in all warehouses. On each page, you can add new items, edit existing ones and view their details."
+	},
+	"authentication": {
+		"title": "Login",
+		"email": "Email:",
+		"password": "Password:",
+		"loginError": "Invalid email address or password",
+		"logOutInformation": "You are logged in as: ",
+		"actions": {
+			"logIn": "Sign In",
+			"logOut": "Log out"
+		}
+	},
+	"nav": {
+		"main-page": "Main page",
+		"ksiazki": "Books",
+		"magazyny": "Warehouses",
+		"stanyWMgazynach": "Condition in warehouses"
+	},
+	"list": {
+		"actions": {
+			"title": "Actions",
+			"details": "Details",
+			"edit": "Edit",
+			"delete": "Delete"
+		}
+	},
+	"form": {
+		"actions": {
+			"return": "Return",
+			"edit": "Edit",
+			"cancel": "Cancel"
+		}
+	},
+	"ks": {
+		"list": {
+			"fields": {
+				"Tytul": "Title",
+				"Autor": "Author",
+				"DataWydania": "Release date"
+			},
+			"addNew": "Add a new book",
+			"noData": "No books in the database",
+			"pageTitle": "List of books"
+		},
+		"form": {
+			"fields": {
+				"Tytul": "Title:",
+				"Autor": "Author:",
+				"DataWydania": "Release date:"
+			},
+			"placeholders": {
+				"Tytul": "2-60 characters",
+				"Autor": "2-60 characters",
+				"DataWydania": "Date in format yyyy-MM-dd"
+			},
+			"add": {
+				"pageTitle": "Adding a book",
+				"btnLabel": "Add a book",
+				"confirm": {
+					"header": "Operation confirmation",
+					"text": "Book added successfully"
+				}
+			},
+			"edit": {
+				"pageTitle": "Editing a book",
+				"btnLabel": "Save changes",
+				"confirm": {
+					"header": "Operation confirmation",
+					"text": "Book added successfully"
+				}
+			},
+			"details": {
+				"pageTitle": "Book details",
+				"subtitle": "Details of the book's condition in warehouses",
+				"fields": {
+					"Magazyn": "The name of the warehouse",
+					"IloscNaStanie": "Stock quantity",
+					"CenaHurtowa": "Wholesale price",
+					"MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
+					"CenaDetaliczna": "Retail price"
+				}
+			},
+			"errors": {
+				"createNewOrEditErrors": "The form contains errors"
+			}
+		}
+	},
+	"mag": {
+		"list": {
+			"fields": {
+				"Nazwa": "Name",
+				"Autor": "Address"
+			},
+			"addNew": "Add a new warehouse",
+			"noData": "No warehouses in the database",
+			"pageTitle": "List of warehouses"
+		},
+		"form": {
+			"fields": {
+				"Nazwa": "Name:",
+				"Adres": "Address:"
+			},
+			"placeholders": {
+				"Nazwa": "2-60 characters",
+				"Adres": "e.g. ul. Gorka 15/67"
+			},
+			"add": {
+				"pageTitle": "Adding a warehouse",
+				"btnLabel": "Add a warehouse",
+				"confirm": {
+					"header": "Operation confirmation",
+					"text": "Book added successfully"
+				}
+			},
+			"edit": {
+				"pageTitle": "Editing the warehouse",
+				"btnLabel": "Save changes",
+				"confirm": {
+					"header": "Operation confirmation",
+					"text": "Book added successfully"
+				}
+			},
+			"details": {
+				"pageTitle": "Warehouse details",
+				"subtitle": "Details of the books in stock",
+				"fields": {
+					"Ksiazka": "The name of the book",
+					"IloscNaStanie": "Stock quantity",
+					"CenaHurtowa": "Wholesale price",
+					"MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
+					"CenaDetaliczna": "Retail price"
+				}
+			},
+			"errors": {
+				"createNewOrEditErrors": "The form contains errors"
+			}
+		}
+	},
+	"swm": {
+		"list": {
+			"fields": {
+				"Ksiazka": "Book",
+				"Magazyn": "Warehouse",
+				"IloscNaStanie": "Stock quantity",
+				"CenaHurtowa": "Wholesale price",
+				"MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
+				"CenaDetaliczna": "Retail price"
+			},
+			"addNew": "Add a new book condition in a specific warehouse",
+			"noData": "No stock of books in warehouses in the database",
+			"pageTitle": "List of book stocks in warehouses"
+		},
+		"form": {
+			"fields": {
+				"Ksiazka": {
+					"label": "Book:",
+					"select": "-- Choose a book --"
+				},
+				"Magazyn": {
+					"label": "Warehouse:",
+					"select": "-- Choose a warehouse --"
+				},
+				"IloscNaStanie": "Stock quantity:",
+				"CenaHurtowa": "Wholesale price:",
+				"MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price:",
+				"CenaDetaliczna": "Retail price:"
+			},
+			"add": {
+				"pageTitle": "Adding the book status in a specific warehouse",
+				"btnLabel": "Add book status in a specific warehouse",
+				"confirm": {
+					"header": "Operation confirmation",
+					"text": "Book added successfully"
+				}
+			},
+			"edit": {
+				"pageTitle": "Editing the book status in a specific warehouse",
+				"btnLabel": "Save changes",
+				"confirm": {
+					"header": "Operation confirmation",
+					"text": "Book added successfully"
+				}
+			},
+			"details": {
+				"pageTitle": "Details of the book's condition in a specific warehouse"
+			},
+			"errors": {
+				"createNewOrEditErrors": "The form contains errors",
+				"idsError": {
+					"ksiazka": "The selected book is already in this warehouse!",
+					"magazyn": "This book is already in the selected warehouse!"
+				}
+			}
+		}
+	},
+	"validationMessage": {
+		"Errors": "The form contains errors",
+		"Required": "The field is required",
+		"Between2and60": "The field should contain from 2 to 60 characters",
+		"CorrectDateFormat": "The field should contain the date in the yyyy-MM-dd format (e.g. 2000-01-01)",
+		"NotFutureDate": "The date cannot be from the future",
+		"CorrectAdress": "The field should contain the address in the format, e.g. ul. Gorka 14C",
+		"IsNumber": "The field should be a number",
+		"IsNumberPlus": "The field should be a positive number"
+	}
 }

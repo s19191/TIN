@@ -49,7 +49,7 @@ function validateForm() {
     const nowString = [year, month, day].join('-');
 
     if (!checkRequired(dataWydaniaInput.value)) {
-        const reqMessage = document.getElementById('errorMessage-between2and60').innerText;
+        const reqMessage = document.getElementById('errorMessage-required').innerText;
         valid = false;
         dataWydaniaInput.classList.add("error-input");
         errorDataWydania.innerText = reqMessage;

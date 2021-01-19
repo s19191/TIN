@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= __('general.title') %></title>
     <link rel="stylesheet" href="../../css/style.css"/>
-    <% if (navLocation == 'ksiazka' && (formMode == 'edit' || formMode == 'createNew')) { %>
+    <% if (navLocation == 'ksiazka' && (formMode == 'edit' || formMode == 'createNew' || formMode == 'createNewErrors' || formMode == 'editErrors')) { %>
         <script src="../../js/validationCommon.js"></script>
         <script src="../../js/validationKsiazkaForm.js"></script>
     <% } %>
-    <% if (navLocation == 'magazyn' && (formMode == 'edit' || formMode == 'createNew')) { %>
+    <% if (navLocation == 'magazyn' && (formMode == 'edit' || formMode == 'createNew'|| formMode == 'createNewErrors' || formMode == 'editErrors')) { %>
         <script src="../../js/validationCommon.js"></script>
         <script src="../../js/validationMagazynForm.js"></script>
     <% } %>
-    <% if (navLocation == 'stanWMagazynie' && (formMode == 'edit' || formMode == 'createNew')) { %>
+    <% if (navLocation == 'stanWMagazynie' && (formMode == 'edit' || formMode == 'createNew'|| formMode == 'createNewErrors' || formMode == 'editErrors')) { %>
         <script src="../../js/validationCommon.js"></script>
         <script src="../../js/validationStanWMagazynieForm.js"></script>
     <% } %>

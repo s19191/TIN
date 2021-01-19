@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="chyba zrobiony magazyn, ale coś walidacja nie działa">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="po poslu stany w magazynie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/LangController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/LangController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/magazynControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/magazynControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locales/pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/pl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/validationKsiazkaForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationKsiazkaForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/validationMagazynForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationMagazynForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/list.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/list.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,14 +146,8 @@
       <workItem from="1610973822614" duration="10000" />
       <workItem from="1610973833699" duration="627000" />
       <workItem from="1611003690510" duration="619000" />
-      <workItem from="1611007052623" duration="11911000" />
-    </task>
-    <task id="LOCAL-00006" summary="przeniesienie stron oraz zmiana na .ejs">
-      <created>1607608338655</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1607608338655</updated>
+      <workItem from="1611007052623" duration="13453000" />
+      <workItem from="1611064137150" duration="7546000" />
     </task>
     <task id="LOCAL-00007" summary="route dla ksiazki">
       <created>1607610093183</created>
@@ -486,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611016869783</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="po poslu stany w magazynie">
+      <created>1611020412863</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1611020412863</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,7 +511,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="naprawiona walidacja po stronie strony" />
     <MESSAGE value="coś z walidacji zrbione, ale asocjacyjna nie, daty nadal źle, a do tego adress nie tak się robi" />
     <MESSAGE value="nie działają edity" />
     <MESSAGE value="dodana jedna książka" />
@@ -530,6 +535,25 @@
     <MESSAGE value="niby dodana Internacjonalizacja, ale nie działa" />
     <MESSAGE value="zrobiona książka po polsku, chyba" />
     <MESSAGE value="chyba zrobiony magazyn, ale coś walidacja nie działa" />
-    <option name="LAST_COMMIT_MESSAGE" value="chyba zrobiony magazyn, ale coś walidacja nie działa" />
+    <MESSAGE value="po poslu stany w magazynie" />
+    <option name="LAST_COMMIT_MESSAGE" value="po poslu stany w magazynie" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/ksiazkaController.js</url>
+          <line>59</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/ksiazkaController.js</url>
+          <line>58</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

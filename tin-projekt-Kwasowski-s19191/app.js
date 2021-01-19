@@ -52,7 +52,7 @@ app.use((req, res, next) => {
 
 app.use((req, res, next) => {
     if(!res.locals.lang) {
-        const currentLang = req.cookies['acme-hr-lang'];
+        const currentLang = req.cookies['tin-ksiegarnia-lang'];
         res.locals.lang = currentLang;
     }
     next();

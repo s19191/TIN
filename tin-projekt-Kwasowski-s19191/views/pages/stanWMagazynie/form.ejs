@@ -96,6 +96,12 @@
             <% } %>
         </div>
     </form>
+    <div style="display: none">
+        <span id="errorMessage-Errors"><%= __('validationMessage.Errors') %></span>
+        <span id="errorMessage-required"><%= __('validationMessage.Required') %></span>
+        <span id="errorMessage-isNumber"><%= __('validationMessage.IsNumber') %></span>
+        <span id="errorMessage-isNumberPlus"><%= __('validationMessage.IsNumberPlus') %></span>
+    </div>
     <% if (formMode == 'showDetails') { %>
         <p><a href="/stanWMagazynie/edit/<%= swm.Id_StanWMagazynie %>" class="list-actions-button-edit">Edytuj</a></p>
         <p><a href="/magazyn" class="list-actions-button-details"><%= __('form.actions.return') %></a></p>

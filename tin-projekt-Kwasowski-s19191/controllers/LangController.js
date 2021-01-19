@@ -4,7 +4,7 @@ exports.changeLang = (req, res, next) => {
     const newLang = req.params.lang;
 
     if(['pl','en'].includes(newLang)) {
-        res.cookie('acme-hr-lang', newLang);
+        res.cookie('tin-ksiegarnia-lang', newLang);
     };
     res.redirect('/');
 }

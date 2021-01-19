@@ -11,15 +11,15 @@ const Ksiazka = sequelize.define('Ksiazka', {
     Tytul: {
         type: Sequelize.STRING,
         allowNull: false,
-        validate: {
-            notEmpty: {
-                msg: "Pole jest wymagane"
-            },
-            len: {
-                args: [2,60],
-                msg: "Pole powinno zawierać od 2 do 60 znaków"
-            }
-        }
+        // validate: {
+        //     notEmpty: {
+        //         msg: "Pole jest wymagane"
+        //     },
+        //     len: {
+        //         args: [2,60],
+        //         msg: "Pole powinno zawierać od 2 do 60 znaków"
+        //     }
+        // }
     },
     Autor: {
         type: Sequelize.STRING,

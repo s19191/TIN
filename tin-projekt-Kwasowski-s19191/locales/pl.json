@@ -78,7 +78,7 @@
 			},
 			"details": {
 				"pageTitle": "Szczegóły książki",
-				"subtitle": "Szczegóły magazynów",
+				"subtitle": "Szczegóły stanu książki w magazynach",
 				"fields": {
 					"Magazyn": "Nazwa magazynu",
 					"IloscNaStanie": "Ilość na stanie",
@@ -129,7 +129,7 @@
 			},
 			"details": {
 				"pageTitle": "Szczegóły magazynu",
-				"subtitle": "Szczegóły książek",
+				"subtitle": "Szczegóły książek znajdujących się w magazynie",
 				"fields": {
 					"Ksiazka": "Nazwa książki",
 					"IloscNaStanie": "Ilość na stanie",
@@ -199,5 +199,15 @@
 				}
 			}
 		}
+	},
+	"validationMessage": {
+		"Errors": "Formularz zawiera błędy",
+		"Required": "Pole jest wymagane",
+		"Between2and60": "Pole powinno zawierać od 2 do 60 znaków",
+		"CorrectDateFormat": "Pole powinno zawierać datę w formacie yyyy-MM-dd (np. 2000-01-01)",
+		"NotFutureDate": "Data nie może być z przyszłości",
+		"CorrectAdress": "Pole powinno zawierać adres w formacie np. ul. Gorka 14C",
+		"IsNumber": "Pole powinno być liczbą",
+		"IsNumberPlus": "Pole powinno być liczbą dodatnią"
 	}
 }

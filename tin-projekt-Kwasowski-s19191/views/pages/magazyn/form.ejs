@@ -36,6 +36,12 @@
             <% } %>
         </div>
     </form>
+    <div style="display: none">
+        <span id="errorMessage-required"><%= __('validationMessage.Required') %></span>
+        <span id="errorMessage-between2and60"><%= __('validationMessage.Between2and60') %></span>
+        <span id="errorMessage-correctAdress"><%= __('validationMessage.CorrectAdress') %></span>
+        <span id="errorMessage-Errors"><%= __('validationMessage.Errors') %></span>
+    </div>
     <% if (formMode == 'showDetails') { %>
         <p><a href="/magazyn/edit/<%= mag.Id_Magazyn %>" class="list-actions-button-edit"><%= __('form.actions.edit') %></a></p>
     <% } %>

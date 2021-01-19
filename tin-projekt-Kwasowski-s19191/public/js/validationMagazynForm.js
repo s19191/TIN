@@ -29,16 +29,14 @@ function validateForm() {
         adresInput.classList.add("error-input");
         errorAdress.innerText = reqMessage;
     } else if (!checkAdress(adresInput.value)) {
-        const reqMessage = document.getElementById('errorMessage-between2and60').innerText;
+        const reqMessage = document.getElementById('errorMessage-correctAdress').innerText;
         valid = false;
         adresInput.classList.add("error-input");
         errorAdress.innerText = reqMessage;
-        // TODO: coś tu nie działa
-        // errorAdress.innerText = "Pole powinno zawierać adres w formacie np. ul. Gorka 14C";
     }
 
     if (!valid) {
-        const reqMessage = document.getElementById('errorMessage-formsErrors').innerText;
+        const reqMessage = document.getElementById('errorMessage-Errors').innerText;
         errorsSummary.innerText = reqMessage;
     }
 
