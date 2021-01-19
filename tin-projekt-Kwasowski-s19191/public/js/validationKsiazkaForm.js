@@ -58,7 +58,6 @@ function validateForm() {
         valid = false;
         dataWydaniaInput.classList.add("error-input");
         errorDataWydania.innerText = reqMessage;
-        // errorDataWydania.innerText = "Pole powinno zawierać datę w formacie yyyy-MM-dd (np. 2000-01-01)";
     } else if (checkDateIfAfter(dataWydaniaInput.value, nowString)) {
         const reqMessage = document.getElementById('errorMessage-notFutureDate').innerText;
         valid = false;
@@ -67,7 +66,7 @@ function validateForm() {
     }
 
     if (!valid) {
-        const reqMessage = document.getElementById('errorMessage-formsErrors').innerText;
+        const reqMessage = document.getElementById('errorMessage-Errors').innerText;
         errorsSummary.innerText = reqMessage;
     }
 
