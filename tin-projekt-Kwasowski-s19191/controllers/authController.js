@@ -11,7 +11,7 @@ exports.login = (req, res, next) => {
                 res.render('index', {
                     navLocation: 'main',
                     formMode: '',
-                    loginError: "Nieprawidłowy adres email lub hasło"
+                    loginError: req.__('authentication.loginError')
                 })
             } else if(authUtil.comparePasswords(password, us.Password) === true) {
                 req.session.loggedUser = us;

@@ -4,8 +4,8 @@
     <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
 <!--    <form class="form" method="post" action="<%=formAction%>" novalidate>-->
         <input type="hidden" name="Id_Ksiazka" value="<%= ks.Id_Ksiazka %>">
-        <label for="Tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="Tytul" placeholder="2-60 znaków" id="Tytul" value="<%= ks.Tytul %>"
+        <label for="Tytul"><%= __('ks.form.fields.Tytul') %><abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="Tytul" placeholder="<%= __('ks.form.placeholders.Tytul') %>" id="Tytul" value="<%= ks.Tytul %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>
                class="<%= validationErrors.find(e => e.path.includes('Tytul')) ? 'error-input' : '' %>"
         />
@@ -14,8 +14,8 @@
                 <%= validationErrors.find(e => e.path.includes('Tytul')).message %>
             <% } %>
         </span>
-        <label for="Autor">Autor:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="Autor" placeholder="2-60 znaków" id="Autor" value="<%= ks.Autor %>"
+        <label for="Autor"><%= __('ks.form.fields.Autor') %><abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="Autor" placeholder="<%= __('ks.form.placeholders.Autor') %>" id="Autor" value="<%= ks.Autor %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>
                class="<%= validationErrors.find(e => e.path.includes('Autor')) ? 'error-input' : '' %>"
         />
@@ -24,8 +24,8 @@
                 <%= validationErrors.find(e => e.path.includes('Autor')).message %>
             <% } %>
         </span>
-        <label for="DataWydania">Data wydania:<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="date" name="DataWydania" placeholder="Data w formacie yyyy-MM-dd" id="DataWydania"
+        <label for="DataWydania"><%= __('ks.form.fields.DataWydania') %><abbr title="required" aria-label="required">*</abbr></label>
+        <input type="date" name="DataWydania" placeholder="<%= __('ks.form.placeholders.DataWydania') %>" id="DataWydania"
                 <% if (formMode == 'edit' || formMode == 'showDetails') { %>
                     value="<%= ks.DataWydania.toISOString().split('T')[0] %>"
                 <% } else if (formMode == 'createNewErrors' || formMode == 'editErrors') { %>
@@ -42,28 +42,28 @@
         <% if (formMode != 'showDetails') { %>
         <div class="form-buttons">
             <% if (formMode == 'createNewErrors' || formMode == 'editErrors') { %>
-                <p class="errors-text">Formularz zawiera błędy</p>
+                <p class="errors-text"><%= __('ks.form.errors.createNewOrEditErrors') %></p>
             <% } else { %>
             <p id="errorsSummary" class="errors-text"></p>
             <% } %>
             <input type="submit" class="form-button-submit" value="<%=btnLabel%>" />
-            <a href="/ksiazka" class="form-button-cancel">Anuluj</a>
+            <a href="/ksiazka" class="form-button-cancel"><%= __('form.actions.cancel') %></a>
         </div>
         <% } %>
     </form>
     <% if (formMode == 'showDetails') { %>
-        <p><a href="/ksiazka/edit/<%= ks.Id_Ksiazka %>" class="list-actions-button-edit">Edytuj</a></p>
+        <p><a href="/ksiazka/edit/<%= ks.Id_Ksiazka %>" class="list-actions-button-edit"><%= __('form.actions.edit') %></a></p>
     <% } %>
     <% if (formMode == 'showDetails' || formMode == 'edit' || formMode == 'editErrors') { %>
-        <h2>Szczegóły magazynu</h2>
+        <h2><%= __('ks.form.details.subtitle') %></h2>
         <table class="table-list">
             <thead>
             <tr>
-                <th>Nazwa magazynu</th>
-                <th>Ilość na stanie</th>
-                <th>Cena hurtowa</th>
-                <th>Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej</th>
-                <th>Cena detaliczna</th>
+                <th><%= __('ks.form.details.fields.Magazyn') %></th>
+                <th><%= __('ks.form.details.fields.IloscNaStanie') %></th>
+                <th><%= __('ks.form.details.fields.CenaHurtowa') %></th>
+                <th><%= __('ks.form.details.fields.MinimalnaIloscDoCenyHurtowej') %></th>
+                <th><%= __('ks.form.details.fields.CenaDetaliczna') %></th>
             </tr>
             </thead>
             <tbody>
@@ -78,7 +78,7 @@
             <% } %>
             </tbody>
         </table>
-    <p><a href="/ksiazka" class="list-actions-button-details">Powrót</a></p>
+    <p><a href="/ksiazka" class="list-actions-button-details"><%= __('form.actions.return') %></a></p>
     <% } %>
 </main>
 <%- include('../../fragments/footer.ejs') %>

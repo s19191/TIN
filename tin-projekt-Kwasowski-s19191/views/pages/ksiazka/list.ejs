@@ -4,10 +4,10 @@
     <table class="table-list">
         <thead>
         <tr>
-            <th>Tytuł</th>
-            <th>Autor</th>
-            <th>Data wydania</th>
-            <th class="list-actions">Akcje</th>
+            <th><%= __('ks.list.fields.Tytul') %></th>
+            <th><%= __('ks.list.fields.Autor') %></th>
+            <th><%= __('ks.list.fields.DataWydania') %></th>
+            <th class="list-actions"><%= __('list.actions.title') %></th>
         </tr>
         </thead>
         <tbody>
@@ -18,15 +18,15 @@
                 <td><%= ks.DataWydania.toISOString().split('T')[0] %></td>
                 <td>
                     <ul class="list-actions">
-                        <li><a href="/ksiazka/details/<%=ks.Id_Ksiazka%>" class="list-actions-button-details">Szczegóły</a></li>
-                        <li><a href="/ksiazka/edit/<%=ks.Id_Ksiazka%>" class="list-actions-button-edit">Edytuj</a></li>
-                        <li><a href="/ksiazka/delete/<%=ks.Id_Ksiazka%>" class="list-actions-button-delete">Usuń</a></li>
+                        <li><a href="/ksiazka/details/<%=ks.Id_Ksiazka%>" class="list-actions-button-details"><%= __('list.actions.details') %></a></li>
+                        <li><a href="/ksiazka/edit/<%=ks.Id_Ksiazka%>" class="list-actions-button-edit"><%= __('list.actions.edit') %></a></li>
+                        <li><a href="/ksiazka/delete/<%=ks.Id_Ksiazka%>" class="list-actions-button-delete"><%= __('list.actions.delete') %></a></li>
                     </ul>
                 </td>
             </tr>
         <% } %>
         </tbody>
     </table>
-    <p><a href="/ksiazka/add" class="button-add">Dodaj nową książkę</a></p>
+    <p><a href="/ksiazka/add" class="button-add"><%= __('ks.list.addNew') %></a></p>
 </main>
 <%- include('../../fragments/footer.ejs') %>

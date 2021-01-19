@@ -14,23 +14,27 @@ function validateForm() {
     let valid = true;
 
     if (!checkRequired(tytulInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-required').innerText;
         valid = false;
         tytulInput.classList.add("error-input");
-        errorTytul.innerText = "Pole jest wymagane";
+        errorTytul.innerText = reqMessage;
     } else if (!checkTextLengthRange(tytulInput.value, 2, 60)) {
+        const reqMessage = document.getElementById('errorMessage-between2and60').innerText;
         valid = false;
         tytulInput.classList.add("error-input");
-        errorTytul.innerText = "Pole powinno zawierać od 2 do 60 znaków";
+        errorTytul.innerText = reqMessage;
     }
 
     if (!checkRequired(autorInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-required').innerText;
         valid = false;
         autorInput.classList.add("error-input");
-        errorAutor.innerText = "Pole jest wymagane";
+        errorAutor.innerText = reqMessage;
     } else if (!checkTextLengthRange(autorInput.value, 2, 60)) {
+        const reqMessage = document.getElementById('errorMessage-between2and60').innerText;
         valid = false;
         autorInput.classList.add("error-input");
-        errorAutor.innerText = "Pole powinno zawierać od 2 do 60 znaków";
+        errorAutor.innerText = reqMessage;
     }
 
     let nowDate = new Date(),
@@ -45,17 +49,21 @@ function validateForm() {
     const nowString = [year, month, day].join('-');
 
     if (!checkRequired(dataWydaniaInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-between2and60').innerText;
         valid = false;
         dataWydaniaInput.classList.add("error-input");
-        errorDataWydania.innerText = "Pole jest wymagane";
+        errorDataWydania.innerText = reqMessage;
     } else if (!checkDate(dataWydaniaInput.value)) {
+        const reqMessage = document.getElementById('errorMessage-correctDateFormat').innerText;
         valid = false;
         dataWydaniaInput.classList.add("error-input");
-        errorDataWydania.innerText = "Pole powinno zawierać datę w formacie yyyy-MM-dd (np. 2000-01-01)";
+        errorDataWydania.innerText = reqMessage;
+        // errorDataWydania.innerText = "Pole powinno zawierać datę w formacie yyyy-MM-dd (np. 2000-01-01)";
     } else if (checkDateIfAfter(dataWydaniaInput.value, nowString)) {
+        const reqMessage = document.getElementById('errorMessage-notFutureDate').innerText;
         valid = false;
         dataWydaniaInput.classList.add("error-input");
-        errorDataWydania.innerText = "Data nie może być z przyszłości";
+        errorDataWydania.innerText = reqMessage;
     }
 
     if (!valid) {

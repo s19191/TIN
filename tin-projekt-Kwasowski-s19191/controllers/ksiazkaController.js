@@ -14,9 +14,9 @@ exports.showKsiazkaList = (req, res, next) => {
 exports.showAddKsiazkaForm = (req, res, next) => {
     res.render('pages/ksiazka/form', {
         ks: {},
-        pageTitle: 'Dodawanie książki',
+        pageTitle: req.__('ks.form.add.pageTitle'),
         formMode: 'createNew',
-        btnLabel: 'Dodaj książkę',
+        btnLabel: req.__('ks.form.add.btnLabel'),
         formAction: '/ksiazka/add',
         navLocation: 'ksiazka',
         validationErrors: []
@@ -29,7 +29,7 @@ exports.showKsiazkaDetails = (req, res, next) => {
         .then(ks => {
             res.render('pages/ksiazka/form', {
                 ks: ks,
-                pageTitle: 'Szczegóły książki',
+                pageTitle: req.__('ks.form.details.pageTitle'),
                 formMode: 'showDetails',
                 btnLabel: '',
                 formAction: '',
@@ -45,9 +45,9 @@ exports.showEditKsiazkaForm = (req, res, next) => {
         .then(ks => {
             res.render('pages/ksiazka/form', {
                 ks: ks,
-                pageTitle: 'Edycja książki',
+                pageTitle: req.__('ks.form.edit.pageTitle'),
                 formMode: 'edit',
-                btnLabel: 'Edytuj książkę',
+                btnLabel: req.__('ks.form.edit.btnLabel'),
                 formAction: '/ksiazka/edit',
                 navLocation: 'ksiazka',
                 validationErrors: []
@@ -64,9 +64,9 @@ exports.addKsiazka = (req, res, next) => {
         .catch(err => {
             res.render('pages/ksiazka/form', {
                 ks: ksData,
-                pageTitle: 'Dodawanie książki',
+                pageTitle: req.__('ks.form.add.pageTitle'),
                 formMode: 'createNewErrors',
-                btnLabel: 'Dodaj książke',
+                btnLabel: req.__('ks.form.add.btnLabel'),
                 formAction: '/ksiazka/add',
                 navLocation: 'ksiazka',
                 validationErrors: err.errors
@@ -90,9 +90,9 @@ exports.updateKsiazka = (req, res, next) => {
             ksData.stanyWMagazynach = ks.stanyWMagazynach;
             res.render('pages/ksiazka/form', {
                 ks: ksData,
-                pageTitle: 'Edycja książki',
+                pageTitle: req.__('ks.form.edit.pageTitle'),
                 formMode: 'editErrors',
-                btnLabel: 'Edytuj książkę',
+                btnLabel: req.__('ks.form.edit.btnLabel'),
                 formAction: '/ksiazka/edit',
                 navLocation: 'ksiazka',
                 validationErrors: err.errors

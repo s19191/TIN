@@ -58,6 +58,8 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use(i18n.init);
+
 app.use('/', indexRouter);
 app.use('/ksiazka', authUtil.permitAuthenticatedUser, ksiazkaRouter);
 app.use('/magazyn', authUtil.permitAuthenticatedUser, magazynRouter);
