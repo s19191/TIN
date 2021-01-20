@@ -96,7 +96,7 @@
 		"list": {
 			"fields": {
 				"Nazwa": "Name",
-				"Autor": "Address"
+				"Adres": "Address"
 			},
 			"addNew": "Add a new warehouse",
 			"noData": "No warehouses in the database",
@@ -131,7 +131,7 @@
 				"pageTitle": "Warehouse details",
 				"subtitle": "Details of the books in stock",
 				"fields": {
-					"Ksiazka": "The name of the book",
+					"Ksiazka": "Book's title",
 					"IloscNaStanie": "Stock quantity",
 					"CenaHurtowa": "Wholesale price",
 					"MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",

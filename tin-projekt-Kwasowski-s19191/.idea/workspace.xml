@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="języki zrobione">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/pl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/list.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/bookApiMockData.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/bookApiMockData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/conditionInwarehouseApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/conditionInwarehouseApiCalls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/conditionInwarehouseApiMockData.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/conditionInwarehouseApiMockData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/warehouseApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/warehouseApiCalls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/fragments/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/fragments/Navigation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +153,7 @@
       <workItem from="1611007052623" duration="13453000" />
       <workItem from="1611064137150" duration="19681000" />
       <workItem from="1611134280126" duration="2281000" />
-      <workItem from="1611161563582" duration="1821000" />
+      <workItem from="1611161563582" duration="5409000" />
     </task>
     <task id="LOCAL-00009" summary="dodana walidacja">
       <created>1607642938619</created>

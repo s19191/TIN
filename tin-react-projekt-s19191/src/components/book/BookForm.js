@@ -1,5 +1,5 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
 
 class BookForm extends React.Component {
     render() {
@@ -18,7 +18,7 @@ class BookForm extends React.Component {
                     <span id="errorDataWydania" className="errors-text"></span>
                     <div className="form-buttons">
                         <p id="errorsSummary" className="errors-text"></p>
-                        <input className="form-button-submit" type="submit" value="Dodaj" />
+                        <input className="form-button-submit" type="submit" value="Dodaj książkę" />
                         <Link to="/books" className="form-button-cancel">Anuluj</Link>
                     </div>
                 </form>

@@ -1,24 +1,22 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { getBookByIdApiCall } from '../../apiCalls/bookApiCalls';
-import { getFormattedDate } from '../../helpers/dateHelper';
+import { getWarehouseByIdApiCall } from '../../apiCalls/warehouseApiCalls';
 
-function BookDetails() {
-    let { ksId } = useParams();
-    ksId = parseInt(ksId);
-    const ks = getBookByIdApiCall(ksId);
+function WarehouseDetails() {
+    let { magId } = useParams();
+    magId = parseInt(magId);
+    const mag = getWarehouseByIdApiCall(magId);
 
     return (
         <main>
-            <h2>Szczegóły książki</h2>
-            <p>Tytuł: {ks.Tytul}</p>
-            <p>Autor: {ks.Autor} </p>
-            <p>Data wydania: {ks.DataWydania ? getFormattedDate(ks.DataWydania) : ""} </p>
-            <h2>Szczegóły stanów książki w magazynach</h2>
+            <h2>Szczegóły magazynu</h2>
+            <p>Nazwa: {mag.Nazwa}</p>
+            <p>Adres: {mag.Adres} </p>
+            <h2>SSzczegóły książek znajdujących się w magazynie</h2>
             <table className="table-list">
                 <thead>
                 <tr>
-                    <th>Nazwa magazynu</th>
+                    <th>Tytuł książki</th>
                     <th>Ilość na stanie</th>
                     <th>Cena hurtowa</th>
                     <th>Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej</th>
@@ -26,10 +24,10 @@ function BookDetails() {
                 </tr>
                 </thead>
                 <tbody>
-                {ks.stanyWMagazynach.map(
+                {mag.stanyWMagazynach.map(
                     swm =>
                         <tr key={swm.Id_StanWMagazynie}>
-                            <td>{swm.magazyn.Nazwa}</td>
+                            <td>{swm.ksiazka.Tytul}</td>
                             <td>{swm.IloscNaStanie}</td>
                             <td>{swm.CenaHurtowa ? swm.CenaHurtowa : 0}</td>
                             <td>{swm.MinimalnaIloscDoCenyHurtowej ? swm.MinimalnaIloscDoCenyHurtowej : 0}</td>
@@ -39,9 +37,9 @@ function BookDetails() {
                 </tbody>
             </table>
             <div className="section-buttons">
-                <Link to="/books" className="list-actions-button-details">Powrót</Link>
+                <Link to="/warehouse" className="list-actions-button-details">Powrót</Link>
             </div>
         </main>
     )
 }
-export default BookDetails
+export default WarehouseDetails
