@@ -23,4 +23,4 @@ function ConditionInwarehouseDetails() {
     )
 }
 
-export default ConditionInwarehouseDetails
+export default ConditionInwarehouseDetails;

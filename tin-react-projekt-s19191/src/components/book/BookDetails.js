@@ -44,4 +44,4 @@ function BookDetails() {
         </main>
     )
 }
-export default BookDetails
+export default BookDetails;

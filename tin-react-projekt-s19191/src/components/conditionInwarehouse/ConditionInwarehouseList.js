@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from 'react-router-dom'
-import { getConditionsInwarehousesApiCall } from '../../apiCalls/conditionInwarehouseApiCalls'
+import React from "react";
+import { Link } from 'react-router-dom';
+import { getConditionsInwarehousesApiCall } from '../../apiCalls/conditionInwarehouseApiCalls';
 
 function ConditionInwarehouseList() {
-    const conditionInwarehouseList = getConditionsInwarehousesApiCall()
+    const conditionInwarehouseList = getConditionsInwarehousesApiCall();
 
     return (
         <main>
@@ -47,4 +47,4 @@ function ConditionInwarehouseList() {
     )
 }
 
-export default ConditionInwarehouseList
+export default ConditionInwarehouseList;

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { getFormattedDate } from '../../helpers/dateHelper';
 
 function BookList() {
-    const bookList = getBooksApiCall()
+    const bookList = getBooksApiCall();
     return (
         <main>
             <h2>Lista książek</h2>
@@ -39,4 +39,4 @@ function BookList() {
     )
 }
 
-export default BookList
+export default BookList;

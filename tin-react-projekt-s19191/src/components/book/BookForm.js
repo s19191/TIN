@@ -5,7 +5,7 @@ class BookForm extends React.Component {
     render() {
         return (
             <main>
-                <h2>Nowy pracownik</h2>
+                <h2>Dodawanie książki</h2>
                 <form className="form">
                     <label htmlFor="Tytul">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
                     <input type="text" name="Tytul" id="Tytul" placeholder="2-60 znaków" value="" />
@@ -27,4 +27,4 @@ class BookForm extends React.Component {
     }
 }
 
-export default BookForm
+export default BookForm;

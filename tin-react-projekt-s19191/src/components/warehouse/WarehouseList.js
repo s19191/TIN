@@ -3,7 +3,7 @@ import { getWarehousesApiCall } from '../../apiCalls/warehouseApiCalls';
 import { Link } from 'react-router-dom';
 
 function WarehouseList() {
-    const warehouseList = getWarehousesApiCall()
+    const warehouseList = getWarehousesApiCall();
     return (
         <main>
             <h2>Lista magazynów</h2>
@@ -36,4 +36,4 @@ function WarehouseList() {
     )
 }
 
-export default WarehouseList
+export default WarehouseList;

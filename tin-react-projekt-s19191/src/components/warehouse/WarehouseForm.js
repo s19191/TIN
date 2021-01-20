@@ -24,4 +24,4 @@ class WarehouseForm extends React.Component {
     }
 }
 
-export default WarehouseForm
+export default WarehouseForm;

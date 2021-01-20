@@ -1,12 +1,12 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { getBooksApiCall } from '../../apiCalls/bookApiCalls'
-import { getWarehousesApiCall } from '../../apiCalls/warehouseApiCalls'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { getBooksApiCall } from '../../apiCalls/bookApiCalls';
+import { getWarehousesApiCall } from '../../apiCalls/warehouseApiCalls';
 
 class ConditionInwarehouseForm extends React.Component {
     render() {
-        const allKs = getBooksApiCall()
-        const allMag = getWarehousesApiCall()
+        const allKs = getBooksApiCall();
+        const allMag = getWarehousesApiCall();
 
         return (
             <main>
@@ -51,4 +51,4 @@ class ConditionInwarehouseForm extends React.Component {
     }
 }
 
-export default ConditionInwarehouseForm
+export default ConditionInwarehouseForm;

@@ -12,7 +12,7 @@ function WarehouseDetails() {
             <h2>Szczegóły magazynu</h2>
             <p>Nazwa: {mag.Nazwa}</p>
             <p>Adres: {mag.Adres} </p>
-            <h2>SSzczegóły książek znajdujących się w magazynie</h2>
+            <h2>Szczegóły książek znajdujących się w magazynie</h2>
             <table className="table-list">
                 <thead>
                 <tr>
@@ -42,4 +42,4 @@ function WarehouseDetails() {
         </main>
     )
 }
-export default WarehouseDetails
+export default WarehouseDetails;
