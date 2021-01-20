@@ -3,19 +3,19 @@ export const bookList = [
         "Id_Ksiazka": 1,
         "Tytul": "Lew, czarownica i stara szafa",
         "Autor": "C.S. Lewis",
-        "DataWydania": "1950-01-01",
+        "DataWydania": "1950-01-01"
     },
     {
         "Id_Ksiazka": 2,
         "Tytul": "Książę Kaspian",
         "Autor": "C.S. Lewis",
-        "DataWydania": "1951-01-01",
+        "DataWydania": "1951-01-01"
     },
     {
         "Id_Ksiazka": 3,
         "Tytul": "Podróż „Wędrowca do Świtu”",
         "Autor": "C.S. Lewis",
-        "DataWydania": "1952-01-01",
+        "DataWydania": "1952-01-01"
     }
 ]
 
@@ -37,7 +37,7 @@ export const bookDetailsList = [
                 "magazyn": {
                     "Id_Magazyn": 1,
                     "Adres": "ul. Górka 15/67",
-                    "Nazwa": "Magazyn na górce",
+                    "Nazwa": "Magazyn na górce"
                 }
             },
             {
@@ -51,7 +51,7 @@ export const bookDetailsList = [
                 "magazyn": {
                     "Id_Magazyn": 2,
                     "Adres": "ul. Dołek 9",
-                    "Nazwa": "Magazyn w dołku",
+                    "Nazwa": "Magazyn w dołku"
                 }
             }
         ]
@@ -73,7 +73,7 @@ export const bookDetailsList = [
                 "magazyn": {
                     "Id_Magazyn": 1,
                     "Adres": "ul. Górka 15/67",
-                    "Nazwa": "Magazyn na górce",
+                    "Nazwa": "Magazyn na górce"
                 }
             }
         ]

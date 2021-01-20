@@ -39,7 +39,7 @@ function BookDetails() {
                 </tbody>
             </table>
             <div className="section-buttons">
-                <Link to="/books" className="button-back">Powrót</Link>
+                <Link to="/books" className="list-actions-button-details">Powrót</Link>
             </div>
         </main>
     )
