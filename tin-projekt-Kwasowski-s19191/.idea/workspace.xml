@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="języki zrobione">
-      <change beforePath="$PROJECT_DIR$/../cd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cd.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="MP2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -136,7 +147,7 @@
       <workItem from="1610973833699" duration="627000" />
       <workItem from="1611003690510" duration="619000" />
       <workItem from="1611007052623" duration="13453000" />
-      <workItem from="1611064137150" duration="16597000" />
+      <workItem from="1611064137150" duration="19681000" />
     </task>
     <task id="LOCAL-00009" summary="dodana walidacja">
       <created>1607642938619</created>
