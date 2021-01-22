@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="języki zrobione">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationStanWMagazynieForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/package.json" afterDir="false" />
     </list>
@@ -150,7 +152,7 @@
       <workItem from="1611260407984" duration="402000" />
       <workItem from="1611265057162" duration="710000" />
       <workItem from="1611319288808" duration="597000" />
-      <workItem from="1611320083127" duration="1119000" />
+      <workItem from="1611320083127" duration="5583000" />
     </task>
     <task id="LOCAL-00009" summary="dodana walidacja">
       <created>1607642938619</created>

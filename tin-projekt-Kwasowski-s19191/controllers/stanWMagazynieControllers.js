@@ -137,6 +137,8 @@ exports.addStanWMagazynie = (req, res, next) => {
                         });
                     });
             } else {
+                swmData.ksiazka = ks;
+                swmData.magazyn = mag;
                 res.render('pages/stanWMagazynie/form', {
                     swm: swmData,
                     allKs: allKs,

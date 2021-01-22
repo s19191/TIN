@@ -92,7 +92,7 @@ function validateForm() {
     }
 
     if (!valid) {
-        const reqMessage = document.getElementById('errorMessage-formsErrors').innerText;
+        const reqMessage = document.getElementById('errorMessage-Errors').innerText;
         errorsSummary.innerText = reqMessage;
     }
 
