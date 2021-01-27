@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../../config/sequelize/sequelize');
+const i18n = require('i18n')
+
 
 const Ksiazka = sequelize.define('Ksiazka', {
     Id_Ksiazka: {
@@ -13,6 +15,8 @@ const Ksiazka = sequelize.define('Ksiazka', {
         allowNull: false,
         validate: {
             notEmpty: {
+                // msg: i18n.getLocale(__('validationMessage.Errors'))
+                // msg: __('validationMessage.Errors')
                 msg: "Pole jest wymagane"
             },
             len: {

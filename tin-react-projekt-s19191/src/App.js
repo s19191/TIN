@@ -26,14 +26,17 @@ function App() {
               <Navigation />
               <Switch>
                   <Route exact path="/" component={MainContent} />
+
                   <Route exact path="/books" component={BookList} />
                   <Route exact path="/books/details/:ksId" component={BookDetails} />
                   <Route exact path="/books/add" component={BookForm} />
                   <Route exact path="/books/edit/:ksId" component={BookForm} />
+
                   <Route exact path="/warehouse" component={WarehouseList} />
                   <Route exact path="/warehouse/details/:magId" component={WarehouseDetails} />
                   <Route exact path="/warehouse/add" component={WarehouseForm} />
                   <Route exact path="/warehouse/edit/:magId" component={WarehouseForm} />
+
                   <Route exact path="/conditionInwarehouse" component={ConditionInwarehouseList} />
                   <Route exact path="/conditionInwarehouse/details/:swmId" component={ConditionInwarehouseDetails} />
                   <Route exact path="/conditionInwarehouse/add" component={ConditionInwarehouseForm} />
@@ -43,6 +46,6 @@ function App() {
           </div>
       </Router>
   );
-}
+};
 
 export default App;

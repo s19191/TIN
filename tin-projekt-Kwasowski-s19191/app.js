@@ -4,9 +4,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
-const sequelizeInit = require('./config/sequelize/init');
 const authUtil = require('./util/authUtils');
 const i18n = require('i18n');
+var cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const ksiazkaRouter = require('./routes/ksiazkaRoute');
@@ -22,6 +22,7 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -33,6 +34,8 @@ i18n.configure({
     objectNotation: true, // umożliwia korzstanie z zagnieżdżonych kluczy w notacji obiektowej
     cookie: 'tin-ksiegarnia-lang', //nazwa cookies, które nasza aplikacja będzie wykorzystywać do przechowania informacji o języku aktualnie wybranym przez użytkownika
 });
+
+app.use(i18n.init);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -58,8 +61,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(i18n.init);
-
 app.use('/', indexRouter);
 app.use('/ksiazka', authUtil.permitAuthenticatedUser, ksiazkaRouter);
 app.use('/magazyn', authUtil.permitAuthenticatedUser, magazynRouter);
@@ -83,6 +84,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+const sequelizeInit = require('./config/sequelize/init');
 
 sequelizeInit()
     .catch(err => {

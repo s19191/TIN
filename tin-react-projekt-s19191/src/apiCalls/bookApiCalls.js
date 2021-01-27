@@ -1,7 +1,9 @@
-import { bookList, bookDetailsList } from './bookApiMockData';
+import { bookDetailsList } from './bookApiMockData';
+const booksBaseUrl = 'http://localhost:3000/api/ksiazki';
 
 export function getBooksApiCall() {
-    return bookList;
+    const promise = fetch(booksBaseUrl)
+    return promise;
 }
 
 export function getBookByIdApiCall(ksId) {
