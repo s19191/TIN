@@ -1,7 +1,9 @@
-import { warehouseList, warehouseDetailsList } from './warehouseApiMockData'
+import { warehouseDetailsList } from './warehouseApiMockData';
+const booksBaseUrl = 'http://localhost:3000/api/magazyny';
 
 export function getWarehousesApiCall() {
-    return warehouseList;
+    const promise = fetch(booksBaseUrl)
+    return promise;
 }
 
 export function getWarehouseByIdApiCall(magId) {

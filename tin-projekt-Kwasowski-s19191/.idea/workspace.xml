@@ -3,23 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="poprawiona literówka w walidacji po stronie klienta w stan w magazynie oraz to, żeby się pokazywało odpowiednio po błędzie w serwerze add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/docker/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/model/sequelize/Ksiazka.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/model/sequelize/Magazyn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/model/sequelize/StanWMagazynie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/model/sequelize/User.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/repository/sequelize/KsiazkaRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/repository/sequelize/MagazynRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/repository/sequelize/StanWMagayznieRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/repository/sequelize/UserRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/bookApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/bookApiCalls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/warehouseApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/warehouseApiCalls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/warehouse/WarehouseList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/warehouse/WarehouseList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +157,7 @@
       <workItem from="1611600485579" duration="3940000" />
       <workItem from="1611775811777" duration="35000" />
       <workItem from="1611775878277" duration="50000" />
-      <workItem from="1611776722092" duration="3088000" />
+      <workItem from="1611776722092" duration="3747000" />
     </task>
     <task id="LOCAL-00010" summary="dodany docker, teoretycznie jak baza ma wyglądać, ale nie wiem czy działa. PRzed dodaniem do app.js">
       <created>1608248304026</created>
