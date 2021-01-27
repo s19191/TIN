@@ -9,7 +9,7 @@ function WarehouseListTable(props) {
             <tr>
                 <th>Nazwa</th>
                 <th>Autor</th>
-                <th className="list-actions">Akcje</th>
+                <th>Akcje</th>
             </tr>
             </thead>
             <tbody>

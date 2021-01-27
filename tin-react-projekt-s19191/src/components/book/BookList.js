@@ -52,11 +52,10 @@ class BookList extends React.Component {
             <main>
                 <h2>Lista książek</h2>
                 {content}
-                <p><Link to="/books/add" className="button-add">Dodaj nową książkę</Link></p>
+                <p><Link to="/book/add" className="button-add">Dodaj nową książkę</Link></p>
             </main>
         )
     };
-
 }
 
 export default BookList;

@@ -1,7 +1,9 @@
-import { conditionInwarehouseList, conditionInwarehouseDetailsList } from './conditionInwarehouseApiMockData'
+import { conditionInwarehouseDetailsList } from './conditionInwarehouseApiMockData';
+const booksBaseUrl = 'http://localhost:3000/api/stanWMagazynie';
 
 export function getConditionsInwarehousesApiCall() {
-    return conditionInwarehouseList;
+    const promise = fetch(booksBaseUrl)
+    return promise;
 }
 
 export function getConditionInwarehouseByIdApiCall(swmId) {

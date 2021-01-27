@@ -9,9 +9,9 @@ import BookForm from './components/book/BookForm';
 import WarehouseList from './components/warehouse/WarehouseList';
 import WarehouseDetails from './components/warehouse/WarehouseDetails';
 import WarehouseForm from './components/warehouse/WarehouseForm';
-import ConditionInwarehouseList from './components/conditionInwarehouse/ConditionInwarehouseList';
-import ConditionInwarehouseDetails from './components/conditionInwarehouse/ConditionInwarehouseDetails';
-import ConditionInwarehouseForm from './components/conditionInwarehouse/ConditionInwarehouseForm';
+import ConditionInWarehouseList from './components/conditionInWarehouse/ConditionInWarehouseList';
+import ConditionInWarehouseDetails from './components/conditionInWarehouse/ConditionInWarehouseDetails';
+import ConditionInWarehouseForm from './components/conditionInWarehouse/ConditionInWarehouseForm';
 import {
     BrowserRouter as Router,
     Switch,
@@ -27,20 +27,20 @@ function App() {
               <Switch>
                   <Route exact path="/" component={MainContent} />
 
-                  <Route exact path="/books" component={BookList} />
-                  <Route exact path="/books/details/:ksId" component={BookDetails} />
-                  <Route exact path="/books/add" component={BookForm} />
-                  <Route exact path="/books/edit/:ksId" component={BookForm} />
+                  <Route exact path="/book" component={BookList} />
+                  <Route exact path="/book/details/:ksId" component={BookDetails} />
+                  <Route exact path="/book/add" component={BookForm} />
+                  <Route exact path="/book/edit/:ksId" component={BookForm} />
 
                   <Route exact path="/warehouse" component={WarehouseList} />
                   <Route exact path="/warehouse/details/:magId" component={WarehouseDetails} />
                   <Route exact path="/warehouse/add" component={WarehouseForm} />
                   <Route exact path="/warehouse/edit/:magId" component={WarehouseForm} />
 
-                  <Route exact path="/conditionInwarehouse" component={ConditionInwarehouseList} />
-                  <Route exact path="/conditionInwarehouse/details/:swmId" component={ConditionInwarehouseDetails} />
-                  <Route exact path="/conditionInwarehouse/add" component={ConditionInwarehouseForm} />
-                  <Route exact path="/conditionInwarehouse/edit/:swmId" component={ConditionInwarehouseForm} />
+                  <Route exact path="/conditionInWarehouse" component={ConditionInWarehouseList} />
+                  <Route exact path="/conditionInWarehouse/details/:swmId" component={ConditionInWarehouseDetails} />
+                  <Route exact path="/conditionInWarehouse/add" component={ConditionInWarehouseForm} />
+                  <Route exact path="/conditionInWarehouse/edit/:swmId" component={ConditionInWarehouseForm} />
               </Switch>
               <Footer />
           </div>

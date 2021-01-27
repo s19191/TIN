@@ -10,7 +10,7 @@ function BookListTable(props) {
                 <th>Tytul</th>
                 <th>Autor</th>
                 <th>Data wydania</th>
-                <th className="list-actions">Akcje</th>
+                <th>Akcje</th>
             </tr>
             </thead>
             <tbody>

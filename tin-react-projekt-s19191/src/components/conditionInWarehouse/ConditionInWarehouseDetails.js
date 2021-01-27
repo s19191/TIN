@@ -2,7 +2,7 @@ import React from 'react';
 import {Link, useParams} from 'react-router-dom';
 import { getConditionInwarehouseByIdApiCall } from '../../apiCalls/conditionInwarehouseApiCalls';
 
-function ConditionInwarehouseDetails() {
+function ConditionInWarehouseDetails() {
     let { swmId } = useParams();
     swmId = parseInt(swmId);
     const swm = getConditionInwarehouseByIdApiCall(swmId);
@@ -17,10 +17,10 @@ function ConditionInwarehouseDetails() {
             <p>Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej: {swm.MinimalnaIloscDoCenyHurtowej ? swm.MinimalnaIloscDoCenyHurtowej : 0} </p>
             <p>Cena detaliczna: {swm.CenaDetaliczna} </p>
             <div className="section-buttons">
-                <Link to="/conditionInwarehouse" className="button-back">Powrót</Link>
+                <Link to="/conditionInWarehouse" className="button-back">Powrót</Link>
             </div>
         </main>
     )
 }
 
-export default ConditionInwarehouseDetails;
+export default ConditionInWarehouseDetails;

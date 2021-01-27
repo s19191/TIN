@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getBooksApiCall } from '../../apiCalls/bookApiCalls';
 import { getWarehousesApiCall } from '../../apiCalls/warehouseApiCalls';
 
-class ConditionInwarehouseForm extends React.Component {
+class ConditionInWarehouseForm extends React.Component {
     render() {
         const allKs = getBooksApiCall();
         const allMag = getWarehousesApiCall();
@@ -43,7 +43,7 @@ class ConditionInwarehouseForm extends React.Component {
                     <div className="form-buttons">
                         <p id="errorsSummary" className="errors-text"></p>
                         <input className="form-button-submit" type="submit" value="Dodaj stan książki w konkretnym magazynie" />
-                        <Link to="/conditionInwarehouse" className="form-button-cancel">Anuluj</Link>
+                        <Link to="/conditionInWarehouse" className="form-button-cancel">Anuluj</Link>
                     </div>
                 </form>
             </main>
@@ -51,4 +51,4 @@ class ConditionInwarehouseForm extends React.Component {
     }
 }
 
-export default ConditionInwarehouseForm;
+export default ConditionInWarehouseForm;
