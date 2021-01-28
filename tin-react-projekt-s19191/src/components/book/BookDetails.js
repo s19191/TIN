@@ -66,7 +66,7 @@ class BookDetails extends React.Component {
                 <h2>Szczegóły książki</h2>
                 {content}
                 <div className="section-buttons">
-                    <Link to="/book" className="button-back">Powrót</Link>
+                    <Link to="/book" className="list-actions-button-details">Powrót</Link>
                 </div>
             </main>
         )

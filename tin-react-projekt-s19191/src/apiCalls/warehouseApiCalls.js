@@ -7,6 +7,7 @@ export function getWarehousesApiCall() {
 }
 
 export function getWarehouseByIdApiCall(magId) {
-    const mag = warehouseDetailsList.find(warehouse => warehouse.Id_Magazyn === magId)
-    return mag;
+    const url = `${booksBaseUrl}/${magId}`;
+    const promise = fetch(url);
+    return promise;
 }
