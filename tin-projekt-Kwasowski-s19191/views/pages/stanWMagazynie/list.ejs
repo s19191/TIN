@@ -26,10 +26,14 @@
                     <ul class="list-actions">
                         <li><a href="/stanWMagazynie/details/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-details"><%= __('list.actions.details') %></a></li>
                         <% if(loggedUser) { %>
-                        <li><a href="/stanWMagazynie/edit/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-edit"><%= __('list.actions.edit') %></a></li>
+                            <% if(swm.user.Id_User == loggedUser.Id_User || loggedUser.role.Name == 'Admin') { %>
+                            <li><a href="/stanWMagazynie/edit/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-edit"><%= __('list.actions.edit') %></a></li>
+                            <% } %>
                         <% } %>
                         <% if(loggedUser) { %>
-                        <li><a href="/stanWMagazynie/delete/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-delete"><%= __('list.actions.delete') %></a></li>
+                            <% if(swm.user.Id_User == loggedUser.Id_User || loggedUser.role.Name == 'Admin') { %>
+                            <li><a href="/stanWMagazynie/delete/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-delete"><%= __('list.actions.delete') %></a></li>
+                            <% } %>
                         <% } %>
                     </ul>
                 </td>

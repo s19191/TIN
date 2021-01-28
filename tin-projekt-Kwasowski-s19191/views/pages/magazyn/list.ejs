@@ -18,10 +18,14 @@
                     <ul class="list-actions">
                         <li><a href="/magazyn/details/<%=mag.Id_Magazyn%>" class="list-actions-button-details"><%= __('list.actions.details') %></a></li>
                         <% if(loggedUser) { %>
-                        <li><a href="/magazyn/edit/<%=mag.Id_Magazyn%>" class="list-actions-button-edit"><%= __('list.actions.edit') %></a></li>
+                            <% if(mag.user.Id_User == loggedUser.Id_User || loggedUser.role.Name == 'Admin') { %>
+                            <li><a href="/magazyn/edit/<%=mag.Id_Magazyn%>" class="list-actions-button-edit"><%= __('list.actions.edit') %></a></li>
+                            <% } %>
                         <% } %>
                         <% if(loggedUser) { %>
-                        <li><a href="/magazyn/delete/<%=mag.Id_Magazyn%>" class="list-actions-button-delete"><%= __('list.actions.delete') %></a></li>
+                            <% if(mag.user.Id_User == loggedUser.Id_User || loggedUser.role.Name == 'Admin') { %>
+                            <li><a href="/magazyn/delete/<%=mag.Id_Magazyn%>" class="list-actions-button-delete"><%= __('list.actions.delete') %></a></li>
+                            <% } %>
                         <% } %>
                     </ul>
                 </td>

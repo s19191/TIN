@@ -32,9 +32,11 @@
             class="<%= validationErrors.find(e => e.path.includes('Magazyn_Id_Magazyn')) || formMode == 'idsError' ? 'error-input' : '' %>" >
             <option value=""><%= __('swm.form.fields.Magazyn.select') %></option>
             <% for (let i=0; i<allMag.length; i++) { let mag = allMag[i]; %>
-            <option value="<%= mag.Id_Magazyn %>" label="<%= mag.Nazwa %>"
-            <% if (formMode != 'createNew' && swm.magazyn != null) { %>
+            <% if(loggedUser.Id_User == mag.user.Id_User|| loggedUser.role.Name == 'Admin') { %>
+                <option value="<%= mag.Id_Magazyn %>" label="<%= mag.Nazwa %>"
+                    <% if (formMode != 'createNew' && swm.magazyn != null) { %>
                     <%= (mag.Id_Magazyn.toString() == swm.magazyn.Id_Magazyn.toString()) ? 'selected' : ''%>
+                    <% } %>
             <% } %>
             ></option>
             <% } %>
@@ -106,10 +108,12 @@
         <span id="errorMessage-isNumberPlus"><%= __('validationMessage.IsNumberPlus') %></span>
     </div>
     <% if (formMode == 'showDetails') { %>
-        <% if(loggedUser) { %>
-        <p><a href="/stanWMagazynie/edit/<%= swm.Id_StanWMagazynie %>" class="list-actions-button-edit"><%= __('form.actions.edit') %></a></p>
+        <% if (loggedUser) { %>
+            <% if(swm.user.Id_User == loggedUser.Id_User || loggedUser.role.Name == 'Admin') { %>
+                <p><a href="/stanWMagazynie/edit/<%= swm.Id_StanWMagazynie %>" class="list-actions-button-edit"><%= __('form.actions.edit') %></a></p>
             <% } %>
-        <p><a href="/magazyn" class="list-actions-button-details"><%= __('form.actions.return') %></a></p>
+        <% } %>
+        <p><a href="/stanWMagazynie" class="list-actions-button-details"><%= __('form.actions.return') %></a></p>
     <% } %>
 </main>
 <%- include('../../fragments/footer.ejs') %>

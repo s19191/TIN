@@ -46,7 +46,9 @@
         <span id="errorMessage-correctAdress"><%= __('validationMessage.CorrectAdress') %></span>
     </div>
     <% if (formMode == 'showDetails' && loggedUser) { %>
-        <p><a href="/magazyn/edit/<%= mag.Id_Magazyn %>" class="list-actions-button-edit"><%= __('form.actions.edit') %></a></p>
+        <% if (mag.user.Id_User == loggedUser.Id_User || loggedUser.role.Name == 'Admin') { %>
+            <p><a href="/magazyn/edit/<%= mag.Id_Magazyn %>" class="list-actions-button-edit"><%= __('form.actions.edit') %></a></p>
+        <% } %>
     <% } %>
     <% if (formMode == 'showDetails' || formMode == 'edit' || formMode == 'editErrors') { %>
         <h2><%= __('mag.form.details.subtitle') %></h2>
