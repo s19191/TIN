@@ -25,4 +25,4 @@ function ConditionInWarehouseListTable(props) {
     )
 };
 
-export default ConditionInWarehouseListTable
+export default ConditionInWarehouseListTable;

@@ -21,4 +21,4 @@ function WarehouseListTable(props) {
     )
 };
 
-export default WarehouseListTable
+export default WarehouseListTable;

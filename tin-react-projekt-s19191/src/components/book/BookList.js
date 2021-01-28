@@ -56,6 +56,6 @@ class BookList extends React.Component {
             </main>
         )
     };
-}
+};
 
 export default BookList;

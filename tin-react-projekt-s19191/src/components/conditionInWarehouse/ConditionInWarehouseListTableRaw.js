@@ -22,4 +22,4 @@ function ConditionInWarehouseListTableRaw(props) {
     )
 };
 
-export default ConditionInWarehouseListTableRaw
+export default ConditionInWarehouseListTableRaw;

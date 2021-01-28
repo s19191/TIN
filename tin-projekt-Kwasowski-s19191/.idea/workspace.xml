@@ -4,18 +4,10 @@
     <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="poprawiona literówka w walidacji po stronie klienta w stan w magazynie oraz to, żeby się pokazywało odpowiednio po błędzie w serwerze add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/bookApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/bookApiCalls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/conditionInwarehouseApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/conditionInwarehouseApiCalls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookListTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookListTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookListTableRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookListTableRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/conditionInwarehouse/ConditionInwarehouseDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/conditionInWarehouse/ConditionInWarehouseDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/conditionInwarehouse/ConditionInwarehouseForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/conditionInWarehouse/ConditionInWarehouseForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/conditionInwarehouse/ConditionInwarehouseList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/conditionInWarehouse/ConditionInWarehouseList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/fragments/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/fragments/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/warehouse/WarehouseListTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/warehouse/WarehouseListTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/warehouse/WarehouseListTableRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/warehouse/WarehouseListTableRow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/warehouseApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/warehouseApiCalls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookDetails.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +160,7 @@
       <workItem from="1611775811777" duration="35000" />
       <workItem from="1611775878277" duration="50000" />
       <workItem from="1611776722092" duration="4679000" />
-      <workItem from="1611788419452" duration="378000" />
+      <workItem from="1611788419452" duration="668000" />
     </task>
     <task id="LOCAL-00010" summary="dodany docker, teoretycznie jak baza ma wyglądać, ale nie wiem czy działa. PRzed dodaniem do app.js">
       <created>1608248304026</created>

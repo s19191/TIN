@@ -1,47 +1,76 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getBookByIdApiCall } from '../../apiCalls/bookApiCalls';
-import { getFormattedDate } from '../../helpers/dateHelper';
+import BookDetailsData from "./BookDetailsData";
 
-function BookDetails() {
-    let { ksId } = useParams();
-    ksId = parseInt(ksId);
-    const ks = getBookByIdApiCall(ksId);
+class BookDetails extends React.Component {
+    constructor(props) {
+        super(props)
+        let { ksId } = props.match.params
+        this.state = {
+            ksId: ksId,
+            book: null,
+            error: null,
+            isLoaded: false,
+            message: null
+        }
+    };
 
-    return (
-        <main>
-            <h2>Szczegóły książki</h2>
-            <p>Tytuł: {ks.Tytul}</p>
-            <p>Autor: {ks.Autor} </p>
-            <p>Data wydania: {ks.DataWydania ? getFormattedDate(ks.DataWydania) : ""} </p>
-            <h2>Szczegóły stanów książki w magazynach</h2>
-            <table className="table-list">
-                <thead>
-                <tr>
-                    <th>Nazwa magazynu</th>
-                    <th>Ilość na stanie</th>
-                    <th>Cena hurtowa</th>
-                    <th>Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej</th>
-                    <th>Cena detaliczna</th>
-                </tr>
-                </thead>
-                <tbody>
-                {ks.stanyWMagazynach.map(
-                    swm =>
-                        <tr key={swm.Id_StanWMagazynie}>
-                            <td>{swm.magazyn.Nazwa}</td>
-                            <td>{swm.IloscNaStanie}</td>
-                            <td>{swm.CenaHurtowa ? swm.CenaHurtowa : 0}</td>
-                            <td>{swm.MinimalnaIloscDoCenyHurtowej ? swm.MinimalnaIloscDoCenyHurtowej : 0}</td>
-                            <td>{swm.CenaDetaliczna}</td>
-                        </tr>
-                )}
-                </tbody>
-            </table>
-            <div className="section-buttons">
-                <Link to="/books" className="list-actions-button-details">Powrót</Link>
-            </div>
-        </main>
-    )
-}
+    componentDidMount() {
+        this.fetchBookDetails();
+    };
+
+    fetchBookDetails = () => {
+        getBookByIdApiCall(this.state.ksId)
+            .then(res => res.json())
+            .then(
+                (data) => {
+                    if (data.message) {
+                        this.setState({
+                            book: null,
+                            message: data.message
+                        })
+                    } else {
+                        this.setState({
+                            book: data,
+                            message: null
+                        })
+                    }
+                    this.setState({
+                        isLoaded: true,
+                    })
+                },
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    })
+                })
+    };
+
+    render() {
+        const { book, error, isLoaded, message } = this.state
+        let content;
+
+        if (error) {
+            content = <p>Błąd: {error.message}</p>
+        } else if (!isLoaded) {
+            content = <p>Ładowanie danych książki...</p>
+        } else if (message) {
+            content = <p>{message}</p>
+        } else {
+            content = <BookDetailsData bookData={book} />
+        }
+        return (
+            <main>
+                <h2>Szczegóły książki</h2>
+                {content}
+                <div className="section-buttons">
+                    <Link to="/book" className="button-back">Powrót</Link>
+                </div>
+            </main>
+        )
+    };
+};
+
 export default BookDetails;

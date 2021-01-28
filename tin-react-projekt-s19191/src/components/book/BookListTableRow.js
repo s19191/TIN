@@ -20,4 +20,4 @@ function BookListTableRow(props) {
     )
 };
 
-export default BookListTableRow
+export default BookListTableRow;

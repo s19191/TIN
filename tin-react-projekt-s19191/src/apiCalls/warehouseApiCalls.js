@@ -2,7 +2,7 @@ import { warehouseDetailsList } from './warehouseApiMockData';
 const booksBaseUrl = 'http://localhost:3000/api/magazyny';
 
 export function getWarehousesApiCall() {
-    const promise = fetch(booksBaseUrl)
+    const promise = fetch(booksBaseUrl);
     return promise;
 }
 
