@@ -1,4 +1,3 @@
-import { bookDetailsList } from './bookApiMockData';
 const booksBaseUrl = 'http://localhost:3000/api/ksiazki';
 
 export function getBooksApiCall() {

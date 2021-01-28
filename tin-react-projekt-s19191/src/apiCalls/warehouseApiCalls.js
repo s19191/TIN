@@ -1,4 +1,3 @@
-import { warehouseDetailsList } from './warehouseApiMockData';
 const booksBaseUrl = 'http://localhost:3000/api/magazyny';
 
 export function getWarehousesApiCall() {
