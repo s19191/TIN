@@ -4,7 +4,6 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
-const authUtil = require('./util/authUtils');
 const i18n = require('i18n');
 var cors = require('cors');
 
@@ -62,9 +61,9 @@ app.use((req, res, next) => {
 });
 
 app.use('/', indexRouter);
-app.use('/ksiazka', authUtil.permitAuthenticatedUser, ksiazkaRouter);
-app.use('/magazyn', authUtil.permitAuthenticatedUser, magazynRouter);
-app.use('/stanWMagazynie', authUtil.permitAuthenticatedUser, stanWMagazynieRouter);
+app.use('/ksiazka', ksiazkaRouter);
+app.use('/magazyn', magazynRouter);
+app.use('/stanWMagazynie', stanWMagazynieRouter);
 app.use('/api/ksiazki', ksiazkaApiRouter);
 app.use('/api/magazyny', magazynApiRouter);
 app.use('/api/stanWMagazynie', stanWMagazynieApiRouter);

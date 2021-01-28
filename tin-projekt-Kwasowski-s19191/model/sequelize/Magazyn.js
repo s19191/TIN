@@ -8,6 +8,10 @@ const Magazyn = sequelize.define('Magazyn', {
         allowNull: false,
         primaryKey: true
     },
+    User_Id_User: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
     Adres: {
         type: Sequelize.STRING,
         allowNull: false,

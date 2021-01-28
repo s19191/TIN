@@ -4,6 +4,9 @@
     <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
 <!--    <form class="form" method="post" action="<%=formAction%>" novalidate>-->
         <input type="hidden" name="Id_StanWMagazynie" value="<%= swm.Id_StanWMagazynie %>">
+        <% if(loggedUser) { %>
+        <input type="hidden" name="User_Id_User" value="<%= loggedUser.Id_User %>">
+        <% } %>
         <label for="Ksiazka_Id_Ksiazka"><%= __('swm.form.fields.Ksiazka.label') %><abbr title="required" aria-label="required">*</abbr></label>
         <select name="Ksiazka_Id_Ksiazka" id="Ksiazka_Id_Ksiazka" <%= (formMode == 'showDetails') ? 'disabled' : ''%>
             class="<%= validationErrors.find(e => e.path.includes('Ksiazka_Id_Ksiazka')) || formMode == 'idsError' ? 'error-input' : '' %>" >
@@ -103,7 +106,9 @@
         <span id="errorMessage-isNumberPlus"><%= __('validationMessage.IsNumberPlus') %></span>
     </div>
     <% if (formMode == 'showDetails') { %>
-        <p><a href="/stanWMagazynie/edit/<%= swm.Id_StanWMagazynie %>" class="list-actions-button-edit">Edytuj</a></p>
+        <% if(loggedUser) { %>
+        <p><a href="/stanWMagazynie/edit/<%= swm.Id_StanWMagazynie %>" class="list-actions-button-edit"><%= __('form.actions.edit') %></a></p>
+            <% } %>
         <p><a href="/magazyn" class="list-actions-button-details"><%= __('form.actions.return') %></a></p>
     <% } %>
 </main>

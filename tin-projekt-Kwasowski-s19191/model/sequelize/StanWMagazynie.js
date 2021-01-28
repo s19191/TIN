@@ -26,6 +26,10 @@ const StanWMagazynie = sequelize.define('StanWMagazynie', {
             }
         }
     },
+    User_Id_User: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
     IloscNaStanie: {
         type: Sequelize.INTEGER,
         allowNull: false,

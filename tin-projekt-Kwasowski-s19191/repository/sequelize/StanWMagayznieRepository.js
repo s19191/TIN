@@ -3,30 +3,46 @@ const Sequelize = require('sequelize');
 const StanWMagazynie = require('../../model/sequelize/StanWMagazynie');
 const Ksiazka = require('../../model/sequelize/Ksiazka');
 const Magazyn = require('../../model/sequelize/Magazyn');
+const User = require('../../model/sequelize/User');
+const Role = require('../../model/sequelize/Role');
 
 exports.getStanyWMagazynach = () => {
-    return StanWMagazynie.findAll({include: [
-            {
+    return StanWMagazynie.findAll(
+        {
+            include: [{
                 model: Ksiazka,
                 as: 'ksiazka'
-            },
-            {
+            }, {
                 model: Magazyn,
                 as: 'magazyn'
+            }, {
+                model: User,
+                as: 'user',
+                include: [{
+                    model: Role,
+                    as: 'role'
+                }]
             }]
     });
 };
 
 
 exports.getStanWMagazynieById = (Id_StanWMagazynie) => {
-    return StanWMagazynie.findByPk(Id_StanWMagazynie, {include: [
-            {
+    return StanWMagazynie.findByPk(Id_StanWMagazynie,
+        {
+            include: [{
                 model: Ksiazka,
                 as: 'ksiazka'
-            },
-            {
+            }, {
                 model: Magazyn,
                 as: 'magazyn'
+            }, {
+                model: User,
+                as: 'user',
+                include: [{
+                    model: Role,
+                    as: 'role'
+                }]
             }]
     });
 };
@@ -44,6 +60,7 @@ exports.createStanWMagazynie = (stanWMagazynieData) => {
     return StanWMagazynie.create({
         Ksiazka_Id_Ksiazka: stanWMagazynieData.Ksiazka_Id_Ksiazka,
         Magazyn_Id_Magazyn: stanWMagazynieData.Magazyn_Id_Magazyn,
+        User_Id_User: stanWMagazynieData.User_Id_User,
         IloscNaStanie: stanWMagazynieData.IloscNaStanie,
         CenaHurtowa: stanWMagazynieData.CenaHurtowa,
         MinimalnaIloscDoCenyHurtowej: stanWMagazynieData.MinimalnaIloscDoCenyHurtowej,

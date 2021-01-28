@@ -97,6 +97,7 @@ exports.addStanWMagazynie = (req, res, next) => {
     if (swmData.MinimalnaIloscDoCenyHurtowej == '') {
         swmData.MinimalnaIloscDoCenyHurtowej = null;
     };
+    console.log(swmData.User_Id_User)
     let allKs, allMag, ks, mag;
     KsiazkaRepository.getKsiazki()
         .then(ks => {

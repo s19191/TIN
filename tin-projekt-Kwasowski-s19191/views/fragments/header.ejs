@@ -27,15 +27,9 @@
 <nav>
     <ul>
         <li><a href="/" class="<%= navLocation == 'main' ? 'active' : ''%>"><%= __('nav.main-page') %></a></li>
-        <% if(loggedUser) { %>
         <li><a href="/ksiazka" class="<%= navLocation == 'ksiazka' ? 'active' : ''%>"><%= __('nav.ksiazki') %></a></li>
-        <% } %>
-        <% if(loggedUser) { %>
         <li><a href="/magazyn" class="<%= navLocation == 'magazyn' ? 'active' : ''%>"><%= __('nav.magazyny') %></a></li>
-        <% } %>
-        <% if(loggedUser) { %>
         <li><a href="/stanWMagazynie" class="<%= navLocation == 'stanWMagazynie' ? 'active' : ''%>"><%= __('nav.stanyWMgazynach') %></a></li>
-        <% } %>
         <li><a href="/changeLang/pl" class="<%= lang == 'pl' ? 'active' : ''%>">PL</a></li>
         <li><a href="/changeLang/en" class="<%= lang == 'en' ? 'active' : ''%>">EN</a></li>
     </ul>

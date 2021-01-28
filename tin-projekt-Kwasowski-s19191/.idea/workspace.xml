@@ -3,7 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="poprawiona literówka w walidacji po stronie klienta w stan w magazynie oraz to, żeby się pokazywało odpowiednio po błędzie w serwerze add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sequelize/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/sequelize/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/stanWMagazynieControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Magazyn.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Magazyn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/sequelize/KsiazkaRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/KsiazkaRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/sequelize/MagazynRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/MagazynRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/StanWMagayznieRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/ksiazkaRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ksiazkaRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/magazynRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/magazynRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/stanWMagazynieRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/stanWMagazynieRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/ksiazka/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ksiazka/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/list.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/debug.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +68,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tin-react-projekt-s19191" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -159,6 +180,9 @@
       <workItem from="1611788419452" duration="678000" />
       <workItem from="1611818773753" duration="3000" />
       <workItem from="1611828899652" duration="614000" />
+      <workItem from="1611834276731" duration="513000" />
+      <workItem from="1611852769506" duration="3805000" />
+      <workItem from="1611863460807" duration="3534000" />
     </task>
     <task id="LOCAL-00010" summary="dodany docker, teoretycznie jak baza ma wyglądać, ale nie wiem czy działa. PRzed dodaniem do app.js">
       <created>1608248304026</created>

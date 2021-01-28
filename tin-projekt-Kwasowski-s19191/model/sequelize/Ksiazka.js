@@ -10,6 +10,10 @@ const Ksiazka = sequelize.define('Ksiazka', {
         allowNull: false,
         primaryKey: true
     },
+    User_Id_User: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
     Tytul: {
         type: Sequelize.STRING,
         allowNull: false,
