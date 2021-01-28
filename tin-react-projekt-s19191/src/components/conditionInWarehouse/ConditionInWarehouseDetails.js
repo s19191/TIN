@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, useParams} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getConditionInwarehouseByIdApiCall } from '../../apiCalls/conditionInwarehouseApiCalls';
 import ConditionInWarehouseDetailsData from "../conditionInWarehouse/ConditionInWarehouseDetailsData";
 
