@@ -10,3 +10,30 @@ export function getBookByIdApiCall(ksId) {
     const promise = fetch(url);
     return promise;
 }
+
+export function addBookApiCall(ks) {
+    const ksString = JSON.stringify(ks)
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: ksString
+    }
+    const promise = fetch(booksBaseUrl, options);
+    return promise;
+}
+
+export function updateBookApiCall(ksId, ks) {
+    const url = `${booksBaseUrl}/${ksId}`
+    const ksString = JSON.stringify(ks)
+    const options = {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: ksString
+    }
+    const promise = fetch(url, options);
+    return promise;
+}

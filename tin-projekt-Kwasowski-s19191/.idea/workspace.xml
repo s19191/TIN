@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="dodane role użytkowników oraz niezalogowany może tylko oglądać nie może edytować">
+    <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="dodane role, które są funkcjonalne">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/UserRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/UserRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/magazynRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/magazynRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/stanWMagazynieRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/stanWMagazynieRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/authUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/authUtils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/magazyn/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/magazyn/list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/stanWMagazynie/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/stanWMagazynie/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/bookApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/bookApiCalls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tin-react-projekt-s19191" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -168,14 +164,9 @@
       <workItem from="1611828899652" duration="614000" />
       <workItem from="1611834276731" duration="513000" />
       <workItem from="1611852769506" duration="3805000" />
-      <workItem from="1611863460807" duration="8860000" />
-    </task>
-    <task id="LOCAL-00011" summary="dodany docker, teoretycznie jak baza ma wyglądać, ale nie wiem czy działa. PRzed dodaniem do app.js">
-      <created>1608248645790</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1608248645790</updated>
+      <workItem from="1611863460807" duration="9352000" />
+      <workItem from="1611925170111" duration="713000" />
+      <workItem from="1611936927523" duration="3855000" />
     </task>
     <task id="LOCAL-00012" summary="dodane repozytoria">
       <created>1608250390744</created>
@@ -513,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611867311679</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="dodane role, które są funkcjonalne">
+      <created>1611872467549</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1611872467549</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +530,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="działa książka w pełni" />
     <MESSAGE value="nadal nie działają stany w magazynie" />
     <MESSAGE value="chyba działa, ale walidację trzeba poprawić, sprawdzała na pewno to co trzeba" />
     <MESSAGE value="chyba skończone" />
@@ -557,6 +554,7 @@
     <MESSAGE value="języki zrobione" />
     <MESSAGE value="poprawiona literówka w walidacji po stronie klienta w stan w magazynie oraz to, żeby się pokazywało odpowiednio po błędzie w serwerze add" />
     <MESSAGE value="dodane role użytkowników oraz niezalogowany może tylko oglądać nie może edytować" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodane role użytkowników oraz niezalogowany może tylko oglądać nie może edytować" />
+    <MESSAGE value="dodane role, które są funkcjonalne" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodane role, które są funkcjonalne" />
   </component>
 </project>
