@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getConditionInwarehouseByIdApiCall } from '../../apiCalls/conditionInwarehouseApiCalls';
+import { getConditionInWarehouseByIdApiCall } from '../../apiCalls/conditionInWarehouseApiCalls';
 import ConditionInWarehouseDetailsData from "../conditionInWarehouse/ConditionInWarehouseDetailsData";
 
 class ConditionInWarehouseDetails extends React.Component {
@@ -21,7 +21,7 @@ class ConditionInWarehouseDetails extends React.Component {
     };
 
     fetchConditionInWarehouseDetails = () => {
-        getConditionInwarehouseByIdApiCall(this.state.swmId)
+        getConditionInWarehouseByIdApiCall(this.state.swmId)
             .then(res => res.json())
             .then(
                 (data) => {

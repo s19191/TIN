@@ -182,7 +182,7 @@ class WarehouseForm extends React.Component {
         const { redirect } = this.state
         if (redirect) {
             const currentFormMode = this.state.formMode
-            const notice = currentFormMode === formMode.NEW ? 'Pomyślnie dodano nową książkę' : 'Pomyślnie zaktualizowano nową książkę'
+            const notice = currentFormMode === formMode.NEW ? 'Pomyślnie dodano nowy magazyn' : 'Pomyślnie zaktualizowano magazyn'
             return (
                 <Redirect to={{
                     pathname: "/warehouse/",
@@ -195,7 +195,7 @@ class WarehouseForm extends React.Component {
 
         const errorsSummary = this.hasErrors() ? 'Formularz zawiera błędy' : ''
         const fetchError = this.state.error ? `Błąd: ${this.state.error.message}` : ''
-        const pageTitle = this.state.formMode === formMode.NEW ? 'Nowa książka' : 'Edycja książki'
+        const pageTitle = this.state.formMode === formMode.NEW ? 'Nowy magazyn' : 'Edycja magazynu'
 
         const globalErrorMessage = errorsSummary || fetchError || this.state.message
 

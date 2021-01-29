@@ -203,7 +203,7 @@ class BookForm extends React.Component {
         const { redirect } = this.state
         if (redirect) {
             const currentFormMode = this.state.formMode
-            const notice = currentFormMode === formMode.NEW ? 'Pomyślnie dodano nową książkę' : 'Pomyślnie zaktualizowano nową książkę'
+            const notice = currentFormMode === formMode.NEW ? 'Pomyślnie dodano nową książkę' : 'Pomyślnie zaktualizowano książkę'
             return (
                 <Redirect to={{
                     pathname: "/book/",

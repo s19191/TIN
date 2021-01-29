@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import { getConditionsInwarehousesApiCall } from '../../apiCalls/conditionInwarehouseApiCalls';
+import { getConditionsInWarehousesApiCall } from '../../apiCalls/conditionInWarehouseApiCalls';
 import ConditionInwarehouseListTable from ".//ConditionInWarehouseListTable";
 
 class ConditionInWarehouseList extends React.Component
@@ -20,7 +20,7 @@ class ConditionInWarehouseList extends React.Component
     };
 
     fetchConditionInwarehouseList = () => {
-        getConditionsInwarehousesApiCall()
+        getConditionsInWarehousesApiCall()
             .then(res => res.json())
             .then(
                 (data) => {
