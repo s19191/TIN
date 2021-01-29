@@ -134,7 +134,6 @@ class BookForm extends React.Component {
                 promise = addBookApiCall(ks)
 
             } else if (currentFormMode === formMode.EDIT) {
-                console.log(ks)
                 const ksId = this.state.ksId
                 promise = updateBookApiCall(ksId, ks)
             }
@@ -204,7 +203,7 @@ class BookForm extends React.Component {
         const { redirect } = this.state
         if (redirect) {
             const currentFormMode = this.state.formMode
-            const notice = currentFormMode === formMode.NEW ? 'Pomyślnie dodano nowego pracownika' : 'Pomyślnie zaktualizowano nowego pracownika'
+            const notice = currentFormMode === formMode.NEW ? 'Pomyślnie dodano nową książkę' : 'Pomyślnie zaktualizowano nową książkę'
             return (
                 <Redirect to={{
                     pathname: "/book/",
@@ -217,7 +216,7 @@ class BookForm extends React.Component {
 
         const errorsSummary = this.hasErrors() ? 'Formularz zawiera błędy' : ''
         const fetchError = this.state.error ? `Błąd: ${this.state.error.message}` : ''
-        const pageTitle = this.state.formMode === formMode.NEW ? 'Nowy pracownik' : 'Edycja pracownika'
+        const pageTitle = this.state.formMode === formMode.NEW ? 'Nowa książka' : 'Edycja książki'
 
         const globalErrorMessage = errorsSummary || fetchError || this.state.message
 
@@ -227,7 +226,7 @@ class BookForm extends React.Component {
                 <form className="form" onSubmit={this.handleSubmit}>
                     <FormInput
                         type="text"
-                        label="Imię"
+                        label="Tytuł"
                         required
                         error={this.state.errors.Tytul}
                         name="Tytul"
@@ -237,7 +236,7 @@ class BookForm extends React.Component {
                     />
                     <FormInput
                         type="text"
-                        label="Nazwisko"
+                        label="Autor"
                         required
                         error={this.state.errors.Autor}
                         name="Autor"
@@ -247,7 +246,7 @@ class BookForm extends React.Component {
                     />
                     <FormInput
                         type="date"
-                        label="Email"
+                        label="Data wydania"
                         required
                         error={this.state.errors.DataWydania}
                         name="DataWydania"
@@ -264,6 +263,6 @@ class BookForm extends React.Component {
             </main >
         )
     }
-}
+};
 
 export default BookForm;
