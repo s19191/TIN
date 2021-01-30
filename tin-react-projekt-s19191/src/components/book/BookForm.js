@@ -216,7 +216,7 @@ class BookForm extends React.Component {
 
         const errorsSummary = this.hasErrors() ? 'Formularz zawiera błędy' : ''
         const fetchError = this.state.error ? `Błąd: ${this.state.error.message}` : ''
-        const pageTitle = this.state.formMode === formMode.NEW ? 'Nowa książka' : 'Edycja książki'
+        const pageTitle = this.state.formMode === formMode.NEW ? 'Dodawanie książki' : 'Edycja książki'
 
         const globalErrorMessage = errorsSummary || fetchError || this.state.message
 

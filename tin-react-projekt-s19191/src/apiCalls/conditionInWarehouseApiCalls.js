@@ -1,38 +1,38 @@
-const booksBaseUrl = 'http://localhost:3000/api/stanWMagazynie';
+const conditionInWarehouseBaseUrl = 'http://localhost:3000/api/stanWMagazynie';
 
 export function getConditionsInWarehousesApiCall() {
-    const promise = fetch(booksBaseUrl);
+    const promise = fetch(conditionInWarehouseBaseUrl);
     return promise;
 }
 
 export function getConditionInWarehouseByIdApiCall(swmId) {
-    const url = `${booksBaseUrl}/${swmId}`;
+    const url = `${conditionInWarehouseBaseUrl}/${swmId}`;
     const promise = fetch(url);
     return promise;
 }
 
-export function addBookApiCall(ks) {
-    const ksString = JSON.stringify(ks)
+export function addConditionInWarehouseApiCall(swm) {
+    const swmString = JSON.stringify(swm)
     const options = {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: ksString
+        body: swmString
     }
-    const promise = fetch(booksBaseUrl, options);
+    const promise = fetch(conditionInWarehouseBaseUrl, options);
     return promise;
 }
 
-export function updateBookApiCall(ksId, ks) {
-    const url = `${booksBaseUrl}/${ksId}`
-    const ksString = JSON.stringify(ks)
+export function updateConditionInWarehouseApiCall(swmId, swm) {
+    const url = `${conditionInWarehouseBaseUrl}/${swmId}`
+    const swmString = JSON.stringify(swm)
     const options = {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: ksString
+        body: swmString
     }
     const promise = fetch(url, options);
     return promise;

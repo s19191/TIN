@@ -1,12 +1,12 @@
-const booksBaseUrl = 'http://localhost:3000/api/magazyny';
+const warehouseBaseUrl = 'http://localhost:3000/api/magazyny';
 
 export function getWarehousesApiCall() {
-    const promise = fetch(booksBaseUrl);
+    const promise = fetch(warehouseBaseUrl);
     return promise;
 }
 
 export function getWarehouseByIdApiCall(magId) {
-    const url = `${booksBaseUrl}/${magId}`;
+    const url = `${warehouseBaseUrl}/${magId}`;
     const promise = fetch(url);
     return promise;
 }
@@ -20,12 +20,12 @@ export function addWarehouseApiCall(mag) {
         },
         body: magString
     }
-    const promise = fetch(booksBaseUrl, options);
+    const promise = fetch(warehouseBaseUrl, options);
     return promise;
 }
 
 export function updateWarehouseApiCall(magId, mag) {
-    const url = `${booksBaseUrl}/${magId}`
+    const url = `${warehouseBaseUrl}/${magId}`
     const magString = JSON.stringify(mag)
     const options = {
         method: 'PUT',

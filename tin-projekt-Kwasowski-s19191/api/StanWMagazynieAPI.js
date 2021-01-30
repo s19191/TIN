@@ -25,7 +25,14 @@ exports.getStanWMagazynieById = (req, res, next) => {
 };
 
 exports.createStanWMagazynie = (req, res, next) => {
-    StanWMagazynieRepository.createStanWMagazynie(req.body)
+    const swmData = {...req.body};
+    if (swmData.CenaHurtowa == '') {
+        swmData.CenaHurtowa = null;
+    };
+    if (swmData.MinimalnaIloscDoCenyHurtowej == '') {
+        swmData.MinimalnaIloscDoCenyHurtowej = null;
+    };
+    StanWMagazynieRepository.createStanWMagazynie(swmData)
         .then(newObj => {
             res.status(201).json(newObj);
         })
@@ -38,8 +45,15 @@ exports.createStanWMagazynie = (req, res, next) => {
 };
 
 exports.updateStanWMagazynie = (req, res, next) => {
+    const swmData = {...req.body};
+    if (swmData.CenaHurtowa == '') {
+        swmData.CenaHurtowa = null;
+    };
+    if (swmData.MinimalnaIloscDoCenyHurtowej == '') {
+        swmData.MinimalnaIloscDoCenyHurtowej = null;
+    };
     const Id_StanWMagazynie = req.params.Id_StanWMagazynie;
-    StanWMagazynieRepository.updateStanWMagazynie(Id_StanWMagazynie, req.body)
+    StanWMagazynieRepository.updateStanWMagazynie(Id_StanWMagazynie, swmData)
         .then(result => {
             res.status(200).json({message: 'Stan w magazynie updated!', StanWMagazynie: result});
         })
