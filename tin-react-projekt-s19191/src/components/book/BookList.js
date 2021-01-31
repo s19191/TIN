@@ -2,6 +2,7 @@ import React from 'react';
 import { getBooksApiCall } from '../../apiCalls/bookApiCalls';
 import { Link } from 'react-router-dom';
 import BookListTable from "./BookListTable";
+import { withTranslation } from 'react-i18next';
 
 class BookList extends React.Component {
     constructor(props) {
@@ -39,25 +40,26 @@ class BookList extends React.Component {
     };
 
     render() {
-        const {error, isLoaded, books} = this.state
+        const {error, isLoaded, books} = this.state;
         let content;
+        const { t } = this.props;
 
         if (error) {
-            content = <p>Błąd: {error.message}</p>
+            content = <p>{t('errors.error')} {error.message}</p>
         } else if (!isLoaded) {
-            content = <p>Ładowanie danych książek...</p>
+            content = <p>{t('ks.list.loading')}</p>
         } else {
             content = <BookListTable booksList={books}/>
         }
 
         return (
             <main>
-                <h2>Lista książek</h2>
+                <h2>{t('ks.list.pageTitle')}</h2>
                 {content}
-                <p><Link to="/book/add" className="button-add">Dodaj nową książkę</Link></p>
+                <p><Link to="/book/add" className="button-add">{t('ks.list.addNew')}</Link></p>
             </main>
         )
     };
 };
 
-export default BookList;
+export default withTranslation()(BookList);

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { getConditionsInWarehousesApiCall } from '../../apiCalls/conditionInWarehouseApiCalls';
 import ConditionInwarehouseListTable from ".//ConditionInWarehouseListTable";
+import { withTranslation } from 'react-i18next';
 
 class ConditionInWarehouseList extends React.Component
 {
@@ -11,7 +12,7 @@ class ConditionInWarehouseList extends React.Component
         this.state = {
             error: null,
             isLoaded: false,
-            conditionsInwarehouses: []
+            conditionsInWarehouses: []
         }
     };
 
@@ -26,7 +27,7 @@ class ConditionInWarehouseList extends React.Component
                 (data) => {
                     this.setState({
                         isLoaded: true,
-                        conditionsInwarehouses: data
+                        conditionsInWarehouses: data
                     });
                 },
                 (error) => {
@@ -39,25 +40,26 @@ class ConditionInWarehouseList extends React.Component
     };
 
     render() {
-        const {error, isLoaded, conditionsInwarehouses} = this.state
+        const {error, isLoaded, conditionsInWarehouses} = this.state;
         let content;
+        const { t } = this.props;
 
         if (error) {
-            content = <p>Błąd: {error.message}</p>
+            content = <p>{t('errors.error')} {error.message}</p>
         } else if (!isLoaded) {
-            content = <p>Ładowanie danych stanów książek w magazynach...</p>
+            content = <p>{t('swm.list.loading')}</p>
         } else {
-            content = <ConditionInwarehouseListTable conditionsInwarehousesList={conditionsInwarehouses}/>
+            content = <ConditionInwarehouseListTable conditionsInWarehousesList={conditionsInWarehouses}/>
         }
 
         return (
             <main>
-                <h2>Lista stanów książek w magazynach</h2>
+                <h2>{t('swm.list.pageTitle')}</h2>
                 {content}
-                <p><Link to="/conditionInWarehouse/add" className="button-add">Dodaj nową książkę</Link></p>
+                <p><Link to="/conditionInWarehouse/add" className="button-add">{t('swm.list.addNew')}</Link></p>
             </main>
         )
     };
 }
 
-export default ConditionInWarehouseList;
+export default withTranslation()(ConditionInWarehouseList);

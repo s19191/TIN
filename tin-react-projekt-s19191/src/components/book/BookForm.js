@@ -217,7 +217,7 @@ class BookForm extends React.Component {
         }
 
         const errorsSummary = this.hasErrors() ? t('validationMessage.Errors') : ''
-        const fetchError = this.state.error ? `Błąd: ${this.state.error.message}` : ''
+        const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : ''
         const pageTitle = this.state.formMode === formMode.NEW ? t('ks.form.add.pageTitle') : t('ks.form.edit.pageTitle')
 
         const globalErrorMessage = errorsSummary || fetchError || this.state.message
@@ -262,6 +262,7 @@ class BookForm extends React.Component {
                         cancelPath="/book"
                     />
                 </form>
+                <p className="success">{this.state.notice}</p>
             </main >
         )
     }

@@ -1,16 +1,17 @@
 import React from 'react';
-import { getFormattedDate } from '../../helpers/dateHelper';
+import {useTranslation} from "react-i18next";
 
 function ConditionInWarehouseDetailsData(props) {
-    const swm = props.conditionInWarehouseData
+    const swm = props.conditionInWarehouseData;
+    const { t } = useTranslation();
     return (
         <React.Fragment>
-            <p>Ksiazka: {swm.ksiazka.Tytul}</p>
-            <p>Magazyn: {swm.magazyn.Nazwa} </p>
-            <p>Ilość na stanie: {swm.IloscNaStanie} </p>
-            <p>Cena hurtowa: {swm.CenaHurtowa ? swm.CenaHurtowa : 0} </p>
-            <p>Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej: {swm.MinimalnaIloscDoCenyHurtowej ? swm.MinimalnaIloscDoCenyHurtowej : 0} </p>
-            <p>Cena detaliczna: {swm.CenaDetaliczna} </p>
+            <p>{t('swm.details.form.fields.Ksiazka.label')} {swm.ksiazka.Tytul}</p>
+            <p>{t('swm.details.form.fields.Magazyn.label')} {swm.magazyn.Nazwa} </p>
+            <p>{t('swm.details.form.fields.IloscNaStanie')} {swm.IloscNaStanie} </p>
+            <p>{t('swm.details.form.fields.CenaHurtowa')} {swm.CenaHurtowa ? swm.CenaHurtowa : 0} </p>
+            <p>{t('swm.details.form.fields.MinimalnaIloscDoCenyHurtowej')} {swm.MinimalnaIloscDoCenyHurtowej ? swm.MinimalnaIloscDoCenyHurtowej : 0} </p>
+            <p>{t('swm.details.form.fields.CenaDetaliczna')} {swm.CenaDetaliczna} </p>
         </React.Fragment>
     )
 }

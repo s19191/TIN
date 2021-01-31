@@ -55,7 +55,7 @@ class BookDetails extends React.Component {
         let content;
 
         if (error) {
-            content = <p>{t('ks.details.loadingError')} {error.message}</p>
+            content = <p>{t('errors.error')} {error.message}</p>
         } else if (!isLoaded) {
             content = <p>{t('ks.details.loading')}</p>
         } else if (message) {

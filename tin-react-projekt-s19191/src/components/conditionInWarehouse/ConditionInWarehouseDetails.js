@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getConditionInWarehouseByIdApiCall } from '../../apiCalls/conditionInWarehouseApiCalls';
 import ConditionInWarehouseDetailsData from "../conditionInWarehouse/ConditionInWarehouseDetailsData";
+import { withTranslation } from 'react-i18next';
 
 class ConditionInWarehouseDetails extends React.Component {
     constructor(props) {
@@ -51,11 +52,12 @@ class ConditionInWarehouseDetails extends React.Component {
     render() {
         const { conditionInWarehouse, error, isLoaded, message } = this.state
         let content;
+        const { t } = this.props;
 
         if (error) {
-            content = <p>Błąd: {error.message}</p>
+            content = <p>{t('errors.error')} {error.message}</p>
         } else if (!isLoaded) {
-            content = <p>Ładowanie danych stanu książki w magazynie...</p>
+            content = <p>{t('swm.details.loading')}</p>
         } else if (message) {
             content = <p>{message}</p>
         } else {
@@ -63,14 +65,14 @@ class ConditionInWarehouseDetails extends React.Component {
         }
         return (
             <main>
-                <h2>Szczegóły stanu książki w konretnym magazynie</h2>
+                <h2>{t('swm.details.pageTitle')}</h2>
                 {content}
                 <div className="section-buttons">
-                    <Link to="/conditionInWarehouse" className="list-actions-button-details">Powrót</Link>
+                    <Link to="/conditionInWarehouse" className="list-actions-button-details">{t('list.actions.details')}</Link>
                 </div>
             </main>
         )
     };
 };
 
-export default ConditionInWarehouseDetails;
+export default withTranslation()(ConditionInWarehouseDetails);

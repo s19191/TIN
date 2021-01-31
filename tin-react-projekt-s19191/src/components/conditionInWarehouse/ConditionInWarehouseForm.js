@@ -5,6 +5,7 @@ import { checkRequired, checkNumber, checkNumberRange } from '../../helpers/vali
 import { getConditionInWarehouseByIdApiCall, addConditionInWarehouseApiCall, updateConditionInWarehouseApiCall } from '../../apiCalls/conditionInWarehouseApiCalls';
 import FormInput from "../form/FormInput";
 import FormButtons from "../form/FormButtons";
+import { withTranslation } from 'react-i18next';
 
 class ConditionsInWarehouseForm extends React.Component {
     constructor(props) {
@@ -217,10 +218,11 @@ class ConditionsInWarehouseForm extends React.Component {
     }
 
     render() {
-        const { redirect } = this.state
+        const { redirect } = this.state;
+        const { t } = this.props;
         if (redirect) {
             const currentFormMode = this.state.formMode
-            const notice = currentFormMode === formMode.NEW ? 'Pomyślnie dodano nowy stan książki w magazynie' : 'Pomyślnie zaktualizowano stan książki w magazynie'
+            const notice = currentFormMode === formMode.NEW ? t('swm.form.add.confirm.text') : t('swm.form.add.confirm.text')
             return (
                 <Redirect to={{
                     pathname: "/conditionInWarehouse/",
@@ -231,9 +233,9 @@ class ConditionsInWarehouseForm extends React.Component {
             )
         }
 
-        const errorsSummary = this.hasErrors() ? 'Formularz zawiera błędy' : ''
-        const fetchError = this.state.error ? `Błąd: ${this.state.error.message}` : ''
-        const pageTitle = this.state.formMode === formMode.NEW ? 'Dodawanie stanu książki w konretnym magazynie' : 'Edycja stanu książki w konretnym magazynie'
+        const errorsSummary = this.hasErrors() ? t('validationMessage.Errors') : ''
+        const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : ''
+        const pageTitle = this.state.formMode === formMode.NEW ? t('swm.form.add.pageTitle') : t('swm.form.edit.pageTitle')
 
         const globalErrorMessage = errorsSummary || fetchError || this.state.message
 
@@ -244,7 +246,7 @@ class ConditionsInWarehouseForm extends React.Component {
                     {/*TODO: Dodać selecta Książki i Magazynu*/}
                     <FormInput
                         type="number"
-                        label="Ilość na stanie:"
+                        label={t('swm.form.fields.IloscNaStanie')}
                         required
                         error={this.state.errors.IloscNaStanie}
                         name="IloscNaStanie"
@@ -253,7 +255,7 @@ class ConditionsInWarehouseForm extends React.Component {
                     />
                     <FormInput
                         type="number"
-                        label="Cena hurtowa:"
+                        label={t('swm.form.fields.CenaHurtowa')}
                         required
                         error={this.state.errors.CenaHurtowa}
                         name="CenaHurtowa"
@@ -262,7 +264,7 @@ class ConditionsInWarehouseForm extends React.Component {
                     />
                     <FormInput
                         type="number"
-                        label="Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej:"
+                        label={t('swm.form.fields.MinimalnaIloscDoCenyHurtowej')}
                         required
                         error={this.state.errors.MinimalnaIloscDoCenyHurtowej}
                         name="MinimalnaIloscDoCenyHurtowej"
@@ -271,7 +273,7 @@ class ConditionsInWarehouseForm extends React.Component {
                     />
                     <FormInput
                         type="number"
-                        label="Cena detaliczna:"
+                        label={t('swm.form.fields.CenaDetaliczna')}
                         required
                         error={this.state.errors.CenaDetaliczna}
                         name="CenaDetaliczna"
@@ -290,4 +292,4 @@ class ConditionsInWarehouseForm extends React.Component {
     }
 };
 
-export default ConditionsInWarehouseForm;
+export default withTranslation()(ConditionsInWarehouseForm);

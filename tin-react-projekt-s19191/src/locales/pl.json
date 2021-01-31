@@ -18,10 +18,10 @@
     }
   },
   "nav": {
-    "main-page": "Main page",
-    "ksiazki": "Books",
-    "magazyny": "Warehouses",
-    "stanyWMgazynach": "Condition in warehouses"
+    "main-page": "Strona główna",
+    "ksiazki": "Książki",
+    "magazyny": "Magazyny",
+    "stanyWMgazynach": "Stan w magazynach"
   },
   "list": {
     "actions": {
@@ -33,10 +33,14 @@
   },
   "form": {
     "actions": {
+      "add": "Add",
       "return": "Return",
       "edit": "Edit",
       "cancel": "Cancel"
     }
+  },
+  "errors": {
+    "error": "Error: "
   },
   "ks": {
     "list": {
@@ -47,12 +51,12 @@
       },
       "addNew": "Add a new book",
       "noData": "No books in the database",
-      "pageTitle": "List of books"
+      "pageTitle": "List of books",
+      "loading": "Loading book data..."
     },
     "details": {
       "pageTitle": "Book details",
       "subtitle": "Details of the book's condition in warehouses",
-      "loadingError": "Error: ",
       "loading": "Loading book data...",
       "form": {
         "fields": {
@@ -164,7 +168,28 @@
       },
       "addNew": "Add a new book condition in a specific warehouse",
       "noData": "No stock of books in warehouses in the database",
-      "pageTitle": "List of book stocks in warehouses"
+      "pageTitle": "List of book stocks in warehouses",
+      "loading": "Loading of book stock data in warehouses..."
+    },
+    "details": {
+      "pageTitle": "Details of the book's condition in a specific warehouse",
+      "loading": "Loading book status data in stock...",
+      "form": {
+        "fields": {
+          "Ksiazka": {
+            "label": "Book:",
+            "select": "-- Choose a book --"
+          },
+          "Magazyn": {
+            "label": "Warehouse:",
+            "select": "-- Choose a warehouse --"
+          },
+          "IloscNaStanie": "Stock quantity:",
+          "CenaHurtowa": "Wholesale price:",
+          "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price:",
+          "CenaDetaliczna": "Retail price:"
+        }
+      }
     },
     "form": {
       "fields": {
@@ -196,9 +221,6 @@
           "header": "Operation confirmation",
           "text": "Book added successfully"
         }
-      },
-      "details": {
-        "pageTitle": "Details of the book's condition in a specific warehouse"
       },
       "errors": {
         "createNewOrEditErrors": "The form contains errors",

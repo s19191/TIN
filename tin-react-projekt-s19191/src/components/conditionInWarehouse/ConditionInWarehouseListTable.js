@@ -1,23 +1,25 @@
 import React from 'react';
 import ConditionInWarehouseListTableRaw from './ConditionInWarehouseListTableRaw';
+import {useTranslation} from "react-i18next";
 
 function ConditionInWarehouseListTable(props) {
-    const conditionsInwarehouses = props.conditionsInwarehousesList;
+    const conditionsInWarehouses = props.conditionsInWarehousesList;
+    const { t } = useTranslation();
     return (
         <table className="table-list" >
             <thead>
             <tr>
-                <th>Książka</th>
-                <th>Magazyn</th>
-                <th>Ilość na stanie</th>
-                <th>Cena hurtowa</th>
-                <th>Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej</th>
-                <th>Cena detaliczna</th>
-                <th>Akcje</th>
+                <th>{t('swm.list.fields.Ksiazka')}</th>
+                <th>{t('swm.list.fields.Magazyn')}</th>
+                <th>{t('swm.list.fields.IloscNaStanie')}</th>
+                <th>{t('swm.list.fields.CenaHurtowa')}</th>
+                <th>{t('swm.list.fields.MinimalnaIloscDoCenyHurtowej')}</th>
+                <th>{t('swm.list.fields.CenaDetaliczna')}</th>
+                <th>{t('list.actions.title')}</th>
             </tr>
             </thead>
             <tbody>
-            {conditionsInwarehouses.map(swm =>
+            {conditionsInWarehouses.map(swm =>
                 <ConditionInWarehouseListTableRaw conditionInwarehouseData={swm} key={swm.Id_StanWMagazynie} />
             )}
             </tbody>

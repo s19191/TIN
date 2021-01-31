@@ -18,10 +18,10 @@
     }
   },
   "nav": {
-    "main-page": "Strona główna",
-    "ksiazki": "Książki",
-    "magazyny": "Magazyny",
-    "stanyWMgazynach": "Stan w magazynach"
+    "main-page": "Main page",
+    "ksiazki": "Books",
+    "magazyny": "Warehouses",
+    "stanyWMgazynach": "Condition in warehouses"
   },
   "list": {
     "actions": {
