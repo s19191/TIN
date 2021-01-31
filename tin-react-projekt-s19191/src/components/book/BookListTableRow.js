@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { getFormattedDate } from '../../helpers/dateHelper';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 function BookListTableRow(props) {
     const ks = props.bookData;

@@ -1,20 +1,22 @@
 import React from 'react';
+import {useTranslation} from "react-i18next";
 
 function WarehouseDetailsData(props) {
     const mag = props.warehouseData;
+    const { t } = useTranslation();
     return (
         <React.Fragment>
-            <p>Nazwa: {mag.Nazwa}</p>
-            <p>Adres: {mag.Adres} </p>
-            <h2>Szczegóły książek znajdujących się w magazynie</h2>
+            <p>{t('mag.details.form.fields.Nazwa')} {mag.Nazwa}</p>
+            <p>{t('mag.details.form.fields.Adres')} {mag.Adres} </p>
+            <h2>{t('mag.details.subtitle')}</h2>
             <table className="table-list">
                 <thead>
                 <tr>
-                    <th>Tytuł książki</th>
-                    <th>Ilość na stanie</th>
-                    <th>Cena hurtowa</th>
-                    <th>Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej</th>
-                    <th>Cena detaliczna</th>
+                    <th>{t('mag.details.table.Ksiazka')}</th>
+                    <th>{t('mag.details.table.IloscNaStanie')}</th>
+                    <th>{t('mag.details.table.CenaHurtowa')}</th>
+                    <th>{t('mag.details.table.MinimalnaIloscDoCenyHurtowej')}</th>
+                    <th>{t('mag.details.table.CenaDetaliczna')}</th>
                 </tr>
                 </thead>
                 <tbody>

@@ -5,6 +5,7 @@ import { checkRequired, checkTextLengthRange, checkAdress } from '../../helpers/
 import { getWarehouseByIdApiCall, addWarehouseApiCall, updateWarehouseApiCall } from '../../apiCalls/warehouseApiCalls';
 import FormInput from "../form/FormInput";
 import FormButtons from "../form/FormButtons";
+import { withTranslation } from 'react-i18next';
 
 class WarehouseForm extends React.Component {
     constructor(props) {
@@ -179,7 +180,8 @@ class WarehouseForm extends React.Component {
     }
 
     render() {
-        const { redirect } = this.state
+        const { redirect } = this.state;
+        const { t } = this.props;
         if (redirect) {
             const currentFormMode = this.state.formMode
             const notice = currentFormMode === formMode.NEW ? 'Pomyślnie dodano nowy magazyn' : 'Pomyślnie zaktualizowano magazyn'
@@ -193,9 +195,9 @@ class WarehouseForm extends React.Component {
             )
         }
 
-        const errorsSummary = this.hasErrors() ? 'Formularz zawiera błędy' : ''
-        const fetchError = this.state.error ? `Błąd: ${this.state.error.message}` : ''
-        const pageTitle = this.state.formMode === formMode.NEW ? 'Dodawanie magazynu' : 'Edycja magazynu'
+        const errorsSummary = this.hasErrors() ? t('validationMessage.Errors') : ''
+        const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : ''
+        const pageTitle = this.state.formMode === formMode.NEW ? t('mag.form.add.pageTitle') : t('mag.form.edit.pageTitle')
 
         const globalErrorMessage = errorsSummary || fetchError || this.state.message
 
@@ -205,21 +207,21 @@ class WarehouseForm extends React.Component {
                 <form className="form" onSubmit={this.handleSubmit}>
                     <FormInput
                         type="text"
-                        label="Nazwa"
+                        label={t('mag.form.fields.Nazwa')}
                         required
                         error={this.state.errors.Nazwa}
                         name="Nazwa"
-                        placeholder="2-60 znaków"
+                        placeholder={t('mag.form.placeholders.Nazwa')}
                         onChange={this.handleChange}
                         value={this.state.mag.Nazwa}
                     />
                     <FormInput
                         type="text"
-                        label="Adres"
+                        label={t('mag.form.fields.Adres')}
                         required
                         error={this.state.errors.Adres}
                         name="Adres"
-                        placeholder="np. ul. Gorka 15/67"
+                        placeholder={t('mag.form.placeholders.Adres')}
                         onChange={this.handleChange}
                         value={this.state.mag.Adres}
                     />
@@ -234,4 +236,4 @@ class WarehouseForm extends React.Component {
     }
 };
 
-export default WarehouseForm;
+export default withTranslation()(WarehouseForm);

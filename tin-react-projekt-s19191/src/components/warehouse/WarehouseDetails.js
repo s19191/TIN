@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getWarehouseByIdApiCall } from '../../apiCalls/warehouseApiCalls';
 import WarehouseDetailsData from "../warehouse/WarehouseDetailsData";
+import { withTranslation } from 'react-i18next';
 
 class WarehouseDetails extends React.Component {
     constructor(props) {
@@ -49,13 +50,14 @@ class WarehouseDetails extends React.Component {
     };
 
     render() {
+        const { t } = this.props;
         const { warehouse, error, isLoaded, message } = this.state
         let content;
 
         if (error) {
-            content = <p>Błąd: {error.message}</p>
+            content = <p>{t('errors.error')} {error.message}</p>
         } else if (!isLoaded) {
-            content = <p>Ładowanie danych magazynu...</p>
+            content = <p>{t('mag.details.loading')}</p>
         } else if (message) {
             content = <p>{message}</p>
         } else {
@@ -63,14 +65,14 @@ class WarehouseDetails extends React.Component {
         }
         return (
             <main>
-                <h2>Szczegóły magazynu</h2>
+                <h2>{t('mag.details.pageTitle')}</h2>
                 {content}
                 <div className="section-buttons">
-                    <Link to="/warehouse" className="list-actions-button-details">Powrót</Link>
+                    <Link to="/warehouse" className="list-actions-button-details">{t('form.actions.return')}</Link>
                 </div>
             </main>
         )
     };
 };
 
-export default WarehouseDetails;
+export default withTranslation()(WarehouseDetails);

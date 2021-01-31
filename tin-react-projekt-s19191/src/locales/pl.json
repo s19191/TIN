@@ -113,7 +113,26 @@
       },
       "addNew": "Add a new warehouse",
       "noData": "No warehouses in the database",
-      "pageTitle": "List of warehouses"
+      "pageTitle": "List of warehouses",
+      "loading": "Loading warehouses data..."
+    },
+    "details": {
+      "pageTitle": "Warehouse details",
+      "subtitle": "Details of the books in stock",
+      "loading": "Loading warehouse data...",
+      "form": {
+        "fields": {
+          "Nazwa": "Name:",
+          "Adres": "Address:"
+        }
+      },
+      "table": {
+        "Ksiazka": "Book's title",
+        "IloscNaStanie": "Stock quantity",
+        "CenaHurtowa": "Wholesale price",
+        "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
+        "CenaDetaliczna": "Retail price"
+      }
     },
     "form": {
       "fields": {
@@ -138,17 +157,6 @@
         "confirm": {
           "header": "Operation confirmation",
           "text": "Book added successfully"
-        }
-      },
-      "details": {
-        "pageTitle": "Warehouse details",
-        "subtitle": "Details of the books in stock",
-        "fields": {
-          "Ksiazka": "Book's title",
-          "IloscNaStanie": "Stock quantity",
-          "CenaHurtowa": "Wholesale price",
-          "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
-          "CenaDetaliczna": "Retail price"
         }
       },
       "errors": {
