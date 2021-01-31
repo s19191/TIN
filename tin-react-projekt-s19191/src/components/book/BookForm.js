@@ -5,6 +5,7 @@ import { checkRequired, checkTextLengthRange, checkDate, checkDateIfAfter } from
 import { getBookByIdApiCall, addBookApiCall, updateBookApiCall } from '../../apiCalls/bookApiCalls';
 import FormInput from "../form/FormInput";
 import FormButtons from "../form/FormButtons";
+import { withTranslation } from 'react-i18next';
 
 class BookForm extends React.Component {
     constructor(props) {
@@ -200,10 +201,11 @@ class BookForm extends React.Component {
     }
 
     render() {
-        const { redirect } = this.state
+        const { redirect } = this.state;
+        const { t } = this.props;
         if (redirect) {
             const currentFormMode = this.state.formMode
-            const notice = currentFormMode === formMode.NEW ? 'Pomyślnie dodano nową książkę' : 'Pomyślnie zaktualizowano książkę'
+            const notice = currentFormMode === formMode.NEW ? t('ks.form.add.confirm.text') : t('ks.form.edit.confirm.text')
             return (
                 <Redirect to={{
                     pathname: "/book/",
@@ -214,9 +216,9 @@ class BookForm extends React.Component {
             )
         }
 
-        const errorsSummary = this.hasErrors() ? 'Formularz zawiera błędy' : ''
+        const errorsSummary = this.hasErrors() ? t('validationMessage.Errors') : ''
         const fetchError = this.state.error ? `Błąd: ${this.state.error.message}` : ''
-        const pageTitle = this.state.formMode === formMode.NEW ? 'Dodawanie książki' : 'Edycja książki'
+        const pageTitle = this.state.formMode === formMode.NEW ? t('ks.form.add.pageTitle') : t('ks.form.edit.pageTitle')
 
         const globalErrorMessage = errorsSummary || fetchError || this.state.message
 
@@ -226,31 +228,31 @@ class BookForm extends React.Component {
                 <form className="form" onSubmit={this.handleSubmit}>
                     <FormInput
                         type="text"
-                        label="Tytuł"
+                        label={t('ks.form.fields.Tytul')}
                         required
                         error={this.state.errors.Tytul}
                         name="Tytul"
-                        placeholder="2-60 znaków"
+                        placeholder={t('ks.form.placeholders.Tytul')}
                         onChange={this.handleChange}
                         value={this.state.ks.Tytul}
                     />
                     <FormInput
                         type="text"
-                        label="Autor"
+                        label={t('ks.form.fields.Autor')}
                         required
                         error={this.state.errors.Autor}
                         name="Autor"
-                        placeholder="2-60 znaków"
+                        placeholder={t('ks.form.placeholders.Autor')}
                         onChange={this.handleChange}
                         value={this.state.ks.Autor}
                     />
                     <FormInput
                         type="date"
-                        label="Data wydania"
+                        label={t('ks.form.fields.DataWydania')}
                         required
                         error={this.state.errors.DataWydania}
                         name="DataWydania"
-                        placeholder="Data w formacie yyyy-MM-dd"
+                        placeholder={t('ks.form.placeholders.DataWydania')}
                         onChange={this.handleChange}
                         value={this.state.ks.DataWydania}
                     />
@@ -265,4 +267,4 @@ class BookForm extends React.Component {
     }
 };
 
-export default BookForm;
+export default withTranslation()(BookForm);

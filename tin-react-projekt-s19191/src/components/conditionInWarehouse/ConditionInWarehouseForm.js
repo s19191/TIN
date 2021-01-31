@@ -284,6 +284,7 @@ class ConditionsInWarehouseForm extends React.Component {
                         cancelPath="/conditionInWarehouse"
                     />
                 </form>
+                <p className="success">{this.state.notice}</p>
             </main >
         )
     }

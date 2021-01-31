@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getBookByIdApiCall } from '../../apiCalls/bookApiCalls';
 import BookDetailsData from "./BookDetailsData";
+import { withTranslation } from 'react-i18next';
 
 class BookDetails extends React.Component {
     constructor(props) {
@@ -49,13 +50,14 @@ class BookDetails extends React.Component {
     };
 
     render() {
+        const { t } = this.props;
         const { book, error, isLoaded, message } = this.state
         let content;
 
         if (error) {
-            content = <p>Błąd: {error.message}</p>
+            content = <p>{t('ks.details.loadingError')} {error.message}</p>
         } else if (!isLoaded) {
-            content = <p>Ładowanie danych książki...</p>
+            content = <p>{t('ks.details.loading')}</p>
         } else if (message) {
             content = <p>{message}</p>
         } else {
@@ -63,14 +65,14 @@ class BookDetails extends React.Component {
         }
         return (
             <main>
-                <h2>Szczegóły książki</h2>
+                <h2>{t('ks.details.pageTitle')}</h2>
                 {content}
                 <div className="section-buttons">
-                    <Link to="/book" className="list-actions-button-details">Powrót</Link>
+                    <Link to="/book" className="list-actions-button-details">{t('form.actions.return')}</Link>
                 </div>
             </main>
         )
     };
 };
 
-export default BookDetails;
+export default withTranslation()(BookDetails);
