@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect } from 'react-router-dom';
 import formMode from '../../helpers/formHelper';
+import { formValidationKeys } from '../../helpers/formHelper';
 import { checkRequired, checkTextLengthRange, checkAdress } from '../../helpers/validationCommon';
 import { getWarehouseByIdApiCall, addWarehouseApiCall, updateWarehouseApiCall } from '../../apiCalls/warehouseApiCalls';
 import FormInput from "../form/FormInput";
@@ -85,16 +86,16 @@ class WarehouseForm extends React.Component {
         let errorMessage = '';
         if (fieldName === 'Nazwa') {
             if (!checkRequired(fieldValue)) {
-                errorMessage = 'Pole jest wymagane'
+                errorMessage = formValidationKeys.notEmpty;
             } else if (!checkTextLengthRange(fieldValue, 2, 60)) {
-                errorMessage = 'Pole powinno zawierać od 2 do 60 znaków'
+                errorMessage = formValidationKeys.len_2_60;
             }
         }
         if (fieldName === 'Adres') {
             if (!checkRequired(fieldValue)) {
-                errorMessage = 'Pole jest wymagane'
+                errorMessage = formValidationKeys.notEmpty;
             } else if (!checkAdress(fieldValue)) {
-                errorMessage = 'Pole powinno zawierać adres w formacie np. ul. Gorka 14C'
+                errorMessage = formValidationKeys.isCorrectAdress;
             }
         }
         return errorMessage
@@ -195,7 +196,7 @@ class WarehouseForm extends React.Component {
             )
         }
 
-        const errorsSummary = this.hasErrors() ? t('validationMessage.Errors') : ''
+        const errorsSummary = this.hasErrors() ? t('validationMessage.formErrors') : ''
         const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : ''
         const pageTitle = this.state.formMode === formMode.NEW ? t('mag.form.add.pageTitle') : t('mag.form.edit.pageTitle')
 

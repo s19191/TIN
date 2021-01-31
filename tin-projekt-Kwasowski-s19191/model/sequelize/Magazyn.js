@@ -12,29 +12,29 @@ const Magazyn = sequelize.define('Magazyn', {
         type: Sequelize.INTEGER,
         allowNull: false
     },
-    Adres: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        validate: {
-            notEmpty: {
-                msg: "Pole jest wymagane"
-            },
-            is: {
-                args: /((ul\.)|(al\.))\s(.+)\s(\d+[a-zA-Z]?[\/-]?\d*[a-zA-Z]?[\/-]?\d*)/,
-                msg: "Pole powinno zawierać adres w formacie np. ul. Gorka 14C"
-            }
-        }
-    },
     Nazwa: {
         type: Sequelize.STRING,
         allowNull: false,
         validate: {
             notEmpty: {
-                msg: "Pole jest wymagane"
+                msg: "notEmpty"
             },
             len: {
                 args: [2,60],
-                msg: "Pole powinno zawierać od 2 do 60 znaków"
+                msg: "len_2_60"
+            }
+        }
+    },
+    Adres: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "notEmpty"
+            },
+            is: {
+                args: /((ul\.)|(al\.))\s(.+)\s(\d+[a-zA-Z]?[\/-]?\d*[a-zA-Z]?[\/-]?\d*)/,
+                msg: "isCorrectAdress"
             }
         }
     }

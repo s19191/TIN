@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect } from 'react-router-dom';
 import formMode from '../../helpers/formHelper';
+import { formValidationKeys } from '../../helpers/formHelper';
 import { checkRequired, checkNumber, checkNumberRange } from '../../helpers/validationCommon';
 import { getConditionInWarehouseByIdApiCall, addConditionInWarehouseApiCall, updateConditionInWarehouseApiCall } from '../../apiCalls/conditionInWarehouseApiCalls';
 import FormInput from "../form/FormInput";
@@ -95,44 +96,44 @@ class ConditionsInWarehouseForm extends React.Component {
         let errorMessage = '';
         if (fieldName === 'Ksiazka_Id_Ksiazka') {
             if (!checkRequired(fieldValue)) {
-                errorMessage = 'Pole jest wymagane';
+                errorMessage = formValidationKeys.notEmpty;
             }
         }
         if (fieldName === 'Magazyn_Id_Magazyn') {
             if (!checkRequired(fieldValue)) {
-                errorMessage = 'Pole jest wymagane';
+                errorMessage = formValidationKeys.notEmpty;
             }
         }
         if (fieldName === 'IloscNaStanie') {
             if (!checkRequired(fieldValue)) {
-                errorMessage = "Pole jest wymagane";
+                errorMessage = formValidationKeys.notEmpty;
             } else if (!checkNumber(fieldValue)) {
-                errorMessage = "Pole powinno być liczbą";
+                errorMessage = formValidationKeys.isNumber;
             } else if (!checkNumberRange(fieldValue, 0)) {
-                errorMessage = "Pole powinno być liczbą dodatnią";
+                errorMessage = formValidationKeys.isNumberPlus;
             }
         }
         if (fieldName === 'CenaHurtowa') {
             if (!checkNumber(fieldValue) && checkRequired(fieldValue)) {
-                errorMessage = "Pole powinno być liczbą";
+                errorMessage = formValidationKeys.isNumber;
             } else if (!checkNumberRange(fieldValue, 0) && checkRequired(fieldValue)) {
-                errorMessage = "Pole powinno być liczbą dodatnią";
+                errorMessage = formValidationKeys.isNumberPlus;
             }
         }
         if (fieldName === 'MinimalnaIloscDoCenyHurtowej') {
             if (!checkNumber(fieldValue) && checkRequired(fieldValue)) {
-                errorMessage = "Pole powinno być liczbą";
+                errorMessage = formValidationKeys.isNumber;
             } else if (!checkNumberRange(fieldValue, 0) && checkRequired(fieldValue)) {
-                errorMessage = "Pole powinno być liczbą dodatnią";
+                errorMessage = formValidationKeys.isNumberPlus;
             }
         }
         if (fieldName === 'CenaDetaliczna') {
             if (!checkRequired(fieldValue)) {
-                errorMessage = "Pole jest wymagane";
+                errorMessage = formValidationKeys.notEmpty;
             } else if (!checkNumber(fieldValue)) {
-                errorMessage = "Pole powinno być liczbą";
+                errorMessage = formValidationKeys.isNumber;
             } else if (!checkNumberRange(fieldValue, 0)) {
-                errorMessage = "Pole powinno być liczbą dodatnią";
+                errorMessage = formValidationKeys.isNumberPlus;
             }
         }
         return errorMessage
@@ -233,7 +234,7 @@ class ConditionsInWarehouseForm extends React.Component {
             )
         }
 
-        const errorsSummary = this.hasErrors() ? t('validationMessage.Errors') : ''
+        const errorsSummary = this.hasErrors() ? t('validationMessage.formErrors') : ''
         const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : ''
         const pageTitle = this.state.formMode === formMode.NEW ? t('swm.form.add.pageTitle') : t('swm.form.edit.pageTitle')
 

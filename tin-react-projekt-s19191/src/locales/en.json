@@ -33,10 +33,14 @@
   },
   "form": {
     "actions": {
+      "add": "Add",
       "return": "Return",
       "edit": "Edit",
       "cancel": "Cancel"
     }
+  },
+  "errors": {
+    "error": "Error: "
   },
   "ks": {
     "list": {
@@ -47,13 +51,33 @@
       },
       "addNew": "Add a new book",
       "noData": "No books in the database",
-      "pageTitle": "List of books"
+      "pageTitle": "List of books",
+      "loading": "Loading book data..."
+    },
+    "details": {
+      "pageTitle": "Book details",
+      "subtitle": "Details of the book's condition in warehouses",
+      "loading": "Loading book data...",
+      "form": {
+        "fields": {
+          "Tytul": "Title:",
+          "Autor": "Author:",
+          "DataWydania": "Release date:"
+        }
+      },
+      "table": {
+        "Magazyn": "The name of the warehouse",
+        "IloscNaStanie": "Stock quantity",
+        "CenaHurtowa": "Wholesale price",
+        "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
+        "CenaDetaliczna": "Retail price"
+      }
     },
     "form": {
       "fields": {
-        "Tytul": "Title:",
-        "Autor": "Author:",
-        "DataWydania": "Release date:"
+        "Tytul": "Title",
+        "Autor": "Author",
+        "DataWydania": "Release date"
       },
       "placeholders": {
         "Tytul": "2-60 characters",
@@ -73,18 +97,7 @@
         "btnLabel": "Save changes",
         "confirm": {
           "header": "Operation confirmation",
-          "text": "Book added successfully"
-        }
-      },
-      "details": {
-        "pageTitle": "Book details",
-        "subtitle": "Details of the book's condition in warehouses",
-        "fields": {
-          "Magazyn": "The name of the warehouse",
-          "IloscNaStanie": "Stock quantity",
-          "CenaHurtowa": "Wholesale price",
-          "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
-          "CenaDetaliczna": "Retail price"
+          "text": "Book edited successfully"
         }
       },
       "errors": {
@@ -100,7 +113,26 @@
       },
       "addNew": "Add a new warehouse",
       "noData": "No warehouses in the database",
-      "pageTitle": "List of warehouses"
+      "pageTitle": "List of warehouses",
+      "loading": "Loading warehouses data..."
+    },
+    "details": {
+      "pageTitle": "Warehouse details",
+      "subtitle": "Details of the books in stock",
+      "loading": "Loading warehouse data...",
+      "form": {
+        "fields": {
+          "Nazwa": "Name:",
+          "Adres": "Address:"
+        }
+      },
+      "table": {
+        "Ksiazka": "Book's title",
+        "IloscNaStanie": "Stock quantity",
+        "CenaHurtowa": "Wholesale price",
+        "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
+        "CenaDetaliczna": "Retail price"
+      }
     },
     "form": {
       "fields": {
@@ -116,7 +148,7 @@
         "btnLabel": "Add a warehouse",
         "confirm": {
           "header": "Operation confirmation",
-          "text": "Book added successfully"
+          "text": "Warehouse added successfully"
         }
       },
       "edit": {
@@ -124,18 +156,7 @@
         "btnLabel": "Save changes",
         "confirm": {
           "header": "Operation confirmation",
-          "text": "Book added successfully"
-        }
-      },
-      "details": {
-        "pageTitle": "Warehouse details",
-        "subtitle": "Details of the books in stock",
-        "fields": {
-          "Ksiazka": "Book's title",
-          "IloscNaStanie": "Stock quantity",
-          "CenaHurtowa": "Wholesale price",
-          "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
-          "CenaDetaliczna": "Retail price"
+          "text": "Warehouse edited successfully"
         }
       },
       "errors": {
@@ -155,7 +176,28 @@
       },
       "addNew": "Add a new book condition in a specific warehouse",
       "noData": "No stock of books in warehouses in the database",
-      "pageTitle": "List of book stocks in warehouses"
+      "pageTitle": "List of book stocks in warehouses",
+      "loading": "Loading of book stock data in warehouses..."
+    },
+    "details": {
+      "pageTitle": "Details of the book's condition in a specific warehouse",
+      "loading": "Loading book status data in stock...",
+      "form": {
+        "fields": {
+          "Ksiazka": {
+            "label": "Book:",
+            "select": "-- Choose a book --"
+          },
+          "Magazyn": {
+            "label": "Warehouse:",
+            "select": "-- Choose a warehouse --"
+          },
+          "IloscNaStanie": "Stock quantity:",
+          "CenaHurtowa": "Wholesale price:",
+          "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price:",
+          "CenaDetaliczna": "Retail price:"
+        }
+      }
     },
     "form": {
       "fields": {
@@ -177,7 +219,7 @@
         "btnLabel": "Add book status in a specific warehouse",
         "confirm": {
           "header": "Operation confirmation",
-          "text": "Book added successfully"
+          "text": "Book condition in warehouse successfully added"
         }
       },
       "edit": {
@@ -185,11 +227,8 @@
         "btnLabel": "Save changes",
         "confirm": {
           "header": "Operation confirmation",
-          "text": "Book added successfully"
+          "text": "Book condition in warehouse successfully edited"
         }
-      },
-      "details": {
-        "pageTitle": "Details of the book's condition in a specific warehouse"
       },
       "errors": {
         "createNewOrEditErrors": "The form contains errors",
@@ -201,13 +240,13 @@
     }
   },
   "validationMessage": {
-    "Errors": "The form contains errors",
-    "Required": "The field is required",
-    "Between2and60": "The field should contain from 2 to 60 characters",
-    "CorrectDateFormat": "The field should contain the date in the yyyy-MM-dd format (e.g. 2000-01-01)",
-    "NotFutureDate": "The date cannot be from the future",
-    "CorrectAdress": "The field should contain the address in the format, e.g. ul. Gorka 14C",
-    "IsNumber": "The field should be a number",
-    "IsNumberPlus": "The field should be a positive number"
+    "formErrors": "The form contains errors",
+    "notEmpty": "The field is required",
+    "len_2_60": "The field should contain from 2 to 60 characters",
+    "isDate": "The field should contain the date in the yyyy-MM-dd format (e.g. 2000-01-01)",
+    "isNotFutureDate": "The date cannot be from the future",
+    "isCorrectAdress": "The field should contain the address in the format, e.g. ul. Gorka 14C",
+    "isNumber": "The field should be a number",
+    "isNumberPlus": "The field should be a positive number"
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect } from 'react-router-dom';
 import formMode from '../../helpers/formHelper';
+import { formValidationKeys } from '../../helpers/formHelper';
 import { checkRequired, checkTextLengthRange, checkDate, checkDateIfAfter } from '../../helpers/validationCommon';
 import { getBookByIdApiCall, addBookApiCall, updateBookApiCall } from '../../apiCalls/bookApiCalls';
 import FormInput from "../form/FormInput";
@@ -87,16 +88,16 @@ class BookForm extends React.Component {
         let errorMessage = '';
         if (fieldName === 'Tytul') {
             if (!checkRequired(fieldValue)) {
-                errorMessage = 'Pole jest wymagane'
+                errorMessage = formValidationKeys.notEmpty;
             } else if (!checkTextLengthRange(fieldValue, 2, 60)) {
-                errorMessage = 'Pole powinno zawierać od 2 do 60 znaków'
+                errorMessage = formValidationKeys.len_2_60;
             }
         }
         if (fieldName === 'Autor') {
             if (!checkRequired(fieldValue)) {
-                errorMessage = 'Pole jest wymagane'
+                errorMessage = formValidationKeys.notEmpty;
             } else if (!checkTextLengthRange(fieldValue, 2, 60)) {
-                errorMessage = 'Pole powinno zawierać od 2 do 60 znaków'
+                errorMessage = formValidationKeys.len_2_60;
             }
         }
         if (fieldName === 'DataWydania') {
@@ -111,11 +112,11 @@ class BookForm extends React.Component {
                 day = '0' + day;
             const nowString = [year, month, day].join('-');
             if (!checkRequired(fieldValue)) {
-                errorMessage = "Pole jest wymagane";
+                errorMessage = formValidationKeys.notEmpty;
             } else if (!checkDate(fieldValue)) {
-                errorMessage = "Pole powinno zawierać datę w formacie yyyy-MM-dd (np. 2000-01-01)";
+                errorMessage = formValidationKeys.isDate;
             } else if (checkDateIfAfter(fieldValue, nowString)) {
-                errorMessage = "Data nie może być z przyszłości";
+                errorMessage = formValidationKeys.isNotFutureDate;
             }
         }
         return errorMessage
@@ -216,7 +217,7 @@ class BookForm extends React.Component {
             )
         }
 
-        const errorsSummary = this.hasErrors() ? t('validationMessage.Errors') : ''
+        const errorsSummary = this.hasErrors() ? t('validationMessage.formErrors') : ''
         const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : ''
         const pageTitle = this.state.formMode === formMode.NEW ? t('ks.form.add.pageTitle') : t('ks.form.edit.pageTitle')
 

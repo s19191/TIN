@@ -1,6 +1,5 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../../config/sequelize/sequelize');
-const i18n = require('i18n')
 
 
 const Ksiazka = sequelize.define('Ksiazka', {
@@ -19,13 +18,11 @@ const Ksiazka = sequelize.define('Ksiazka', {
         allowNull: false,
         validate: {
             notEmpty: {
-                // msg: i18n.getLocale(__('validationMessage.Errors'))
-                // msg: __('validationMessage.Errors')
-                msg: "Pole jest wymagane"
+                msg: "notEmpty"
             },
             len: {
                 args: [2,60],
-                msg: "Pole powinno zawierać od 2 do 60 znaków"
+                msg: "len_2_60"
             }
         }
     },
@@ -34,11 +31,11 @@ const Ksiazka = sequelize.define('Ksiazka', {
         allowNull: false,
         validate: {
             notEmpty: {
-                msg: "Pole jest wymagane"
+                msg: "notEmpty"
             },
             len: {
                 args: [2,60],
-                msg: "Pole powinno zawierać od 2 do 60 znaków"
+                msg: "len_2_60"
             }
         }
     },
@@ -47,16 +44,16 @@ const Ksiazka = sequelize.define('Ksiazka', {
         allowNull: false,
         validate: {
             notEmpty: {
-                msg: "Pole jest wymagane"
+                msg: "notEmpty"
             },
             isDate: {
-                msg: "Pole powinno zawierać datę w formacie yyyy-MM-dd (np. 2000-01-01)"
+                msg: "isDate"
             },
             isSameOrBefore(value){
                 const today = new Date();
                 const date = new Date(value);
                 if (date > today) {
-                    throw new Error("Data nie może być z przyszłości");
+                    throw new Error("isNotFutureDate");
                 }
             }
         }

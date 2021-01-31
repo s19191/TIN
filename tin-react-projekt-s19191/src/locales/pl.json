@@ -1,20 +1,20 @@
 {
   "general": {
-    "title": "Bookstore Dobra Książka"
+    "title": "Księgarnia Dobra Książka"
   },
   "main-page": {
-    "title": "Main page",
-    "content": "\nDobra Księgarnia has been on the market for 24 years. We are a valued and reputable Warsaw bookstore. The website helps to find specific items in cooperating warehouses. All books can be viewed in the \"Books\" section, while in the \"Warehouses\" section you can see a list of warehouses with their basic information. The \"Stock in stocks\" tab shows the availability of books in all warehouses. On each page, you can add new items, edit existing ones and view their details."
+    "title": "Strona główna",
+    "content": "Księgarnia Dobra Księgarnia jest na rynku już 24 lata. Jesteśmy cenioną i renomowaną warszawską księgarnią. Strona pomaga na znajdywanie konkretych pozycji w wpółpracującyh magazynach. Wszystkie ksiażki można zobaczyć w dziale \"Książki\", natomiast w dziale \"Magazyny\" można zobaczyć listę magazynów wraz z ich podstawowymi informacjami. Zakładka \"Stan w magazynach\" pokazuje dostępność książek w wszystkich magazynach. W każdej ze stron można dodawać nowe pozycje, edytować istniejące oraz wyświetlać ich szczegóły."
   },
   "authentication": {
-    "title": "Login",
+    "title": "Logowanie",
     "email": "Email:",
-    "password": "Password:",
-    "loginError": "Invalid email address or password",
-    "logOutInformation": "You are logged in as: ",
+    "password": "Hasło:",
+    "loginError": "Nieprawidłowy adres email lub hasło",
+    "logOutInformation": "Jesteś zalogowany jako: ",
     "actions": {
-      "logIn": "Sign In",
-      "logOut": "Log out"
+      "logIn": "Zaloguj się",
+      "logOut": "Wyloguj się"
     }
   },
   "nav": {
@@ -25,228 +25,228 @@
   },
   "list": {
     "actions": {
-      "title": "Actions",
-      "details": "Details",
-      "edit": "Edit",
-      "delete": "Delete"
+      "title": "Akcje",
+      "details": "Szczegóły",
+      "edit": "Edytuj",
+      "delete": "Usuń"
     }
   },
   "form": {
     "actions": {
-      "add": "Add",
-      "return": "Return",
-      "edit": "Edit",
-      "cancel": "Cancel"
+      "add": "Dodaj",
+      "return": "Powrót",
+      "edit": "Edytuj",
+      "cancel": "Anuluj"
     }
   },
   "errors": {
-    "error": "Error: "
+    "error": "Błąd: "
   },
   "ks": {
     "list": {
       "fields": {
-        "Tytul": "Title",
-        "Autor": "Author",
-        "DataWydania": "Release date"
+        "Tytul": "Tytuł",
+        "Autor": "Autor",
+        "DataWydania": "Data wydania"
       },
-      "addNew": "Add a new book",
-      "noData": "No books in the database",
-      "pageTitle": "List of books",
-      "loading": "Loading book data..."
+      "addNew": "Dodaj nową książkę",
+      "noData": "Brak książek w bazie",
+      "pageTitle": "Lista książek",
+      "loading": "Ładowanie danych książek..."
     },
     "details": {
-      "pageTitle": "Book details",
-      "subtitle": "Details of the book's condition in warehouses",
-      "loading": "Loading book data...",
+      "pageTitle": "Szczegóły książki",
+      "subtitle": "Szczegóły stanu książki w magazynach",
+      "loading": "Ładowanie danych książki...",
       "form": {
         "fields": {
-          "Tytul": "Title:",
-          "Autor": "Author:",
-          "DataWydania": "Release date:"
+          "Tytul": "Tytuł:",
+          "Autor": "Autor:",
+          "DataWydania": "Data wydania:"
         }
       },
       "table": {
-        "Magazyn": "The name of the warehouse",
-        "IloscNaStanie": "Stock quantity",
-        "CenaHurtowa": "Wholesale price",
-        "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
-        "CenaDetaliczna": "Retail price"
+        "Magazyn": "Nazwa magazynu",
+        "IloscNaStanie": "Ilość na stanie",
+        "CenaHurtowa": "Cena hurtowa",
+        "MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",
+        "CenaDetaliczna": "Cena detaliczna"
       }
     },
     "form": {
       "fields": {
-        "Tytul": "Title",
-        "Autor": "Author",
-        "DataWydania": "Release date"
+        "Tytul": "Tytuł:",
+        "Autor": "Autor:",
+        "DataWydania": "Data wydania:"
       },
       "placeholders": {
-        "Tytul": "2-60 characters",
-        "Autor": "2-60 characters",
-        "DataWydania": "Date in format yyyy-MM-dd"
+        "Tytul": "2-60 znaków",
+        "Autor": "2-60 znaków",
+        "DataWydania": "Data w formacie yyyy-MM-dd"
       },
       "add": {
-        "pageTitle": "Adding a book",
-        "btnLabel": "Add a book",
+        "pageTitle": "Dodawanie książki",
+        "btnLabel": "Dodaj książkę",
         "confirm": {
-          "header": "Operation confirmation",
-          "text": "Book added successfully"
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie dodano książkę"
         }
       },
       "edit": {
-        "pageTitle": "Editing a book",
-        "btnLabel": "Save changes",
+        "pageTitle": "Edycja książki",
+        "btnLabel": "Zapisz zmiany",
         "confirm": {
-          "header": "Operation confirmation",
-          "text": "Book edited successfully"
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie zaktualizowano książkę"
         }
       },
       "errors": {
-        "createNewOrEditErrors": "The form contains errors"
+        "createNewOrEditErrors": "Formularz zawiera błędy"
       }
     }
   },
   "mag": {
     "list": {
       "fields": {
-        "Nazwa": "Name",
-        "Adres": "Address"
+        "Nazwa": "Nazwa",
+        "Adres": "Adres"
       },
-      "addNew": "Add a new warehouse",
-      "noData": "No warehouses in the database",
-      "pageTitle": "List of warehouses",
-      "loading": "Loading warehouses data..."
+      "addNew": "Dodaj nowy magazyn",
+      "noData": "Brak magazynów w bazie",
+      "pageTitle": "Lista magazynów",
+      "loading": "Ładowanie danych magazynów..."
     },
     "details": {
-      "pageTitle": "Warehouse details",
-      "subtitle": "Details of the books in stock",
-      "loading": "Loading warehouse data...",
+      "pageTitle": "Szczegóły magazynu",
+      "subtitle": "Szczegóły książek znajdujących się w magazynie",
+      "loading": "Ładowanie danych magazynu...",
       "form": {
         "fields": {
-          "Nazwa": "Name:",
-          "Adres": "Address:"
+          "Nazwa": "Nazwa:",
+          "Adres": "Adres:"
         }
       },
       "table": {
-        "Ksiazka": "Book's title",
-        "IloscNaStanie": "Stock quantity",
-        "CenaHurtowa": "Wholesale price",
-        "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
-        "CenaDetaliczna": "Retail price"
+        "Ksiazka": "Tytuł książki",
+        "IloscNaStanie": "Ilość na stanie",
+        "CenaHurtowa": "Cena hurtowa",
+        "MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",
+        "CenaDetaliczna": "Cena detaliczna"
       }
     },
     "form": {
       "fields": {
-        "Nazwa": "Name:",
-        "Adres": "Address:"
+        "Nazwa": "Nazwa:",
+        "Adres": "Adres:"
       },
       "placeholders": {
-        "Nazwa": "2-60 characters",
-        "Adres": "e.g. ul. Gorka 15/67"
+        "Nazwa": "2-60 znaków",
+        "Adres": "np. ul. Gorka 15/67"
       },
       "add": {
-        "pageTitle": "Adding a warehouse",
-        "btnLabel": "Add a warehouse",
+        "pageTitle": "Dodawanie magazynu",
+        "btnLabel": "Dodaj magazyn",
         "confirm": {
-          "header": "Operation confirmation",
-          "text": "Book added successfully"
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie dodano magazyn"
         }
       },
       "edit": {
-        "pageTitle": "Editing the warehouse",
-        "btnLabel": "Save changes",
+        "pageTitle": "Edycja magazynu",
+        "btnLabel": "Zapisz zmiany",
         "confirm": {
-          "header": "Operation confirmation",
-          "text": "Book added successfully"
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie zaktualizowano magazyn"
         }
       },
       "errors": {
-        "createNewOrEditErrors": "The form contains errors"
+        "createNewOrEditErrors": "Formularz zawiera błędy"
       }
     }
   },
   "swm": {
     "list": {
       "fields": {
-        "Ksiazka": "Book",
-        "Magazyn": "Warehouse",
-        "IloscNaStanie": "Stock quantity",
-        "CenaHurtowa": "Wholesale price",
-        "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
-        "CenaDetaliczna": "Retail price"
+        "Ksiazka": "Książka",
+        "Magazyn": "Magazyn",
+        "IloscNaStanie": "Ilość na stanie",
+        "CenaHurtowa": "Cena hurtowa",
+        "MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",
+        "CenaDetaliczna": "Cena detaliczna"
       },
-      "addNew": "Add a new book condition in a specific warehouse",
-      "noData": "No stock of books in warehouses in the database",
-      "pageTitle": "List of book stocks in warehouses",
-      "loading": "Loading of book stock data in warehouses..."
+      "addNew": "Dodaj nowy stan książki w konkretnym magazynie",
+      "noData": "Brak stanów książek w magazynach w bazie",
+      "pageTitle": "Lista stanów książek w magazynach",
+      "loading": "Ładowanie danych stnaów książek w magazynach..."
     },
     "details": {
-      "pageTitle": "Details of the book's condition in a specific warehouse",
-      "loading": "Loading book status data in stock...",
+      "pageTitle": "Szczegóły stanu książki w konretnym magazynie",
+      "loading": "Ładowanie danych stanu książki w magazynie...",
       "form": {
         "fields": {
           "Ksiazka": {
-            "label": "Book:",
-            "select": "-- Choose a book --"
+            "label": "Książka:",
+            "select": "-- Wybierz książkę --"
           },
           "Magazyn": {
-            "label": "Warehouse:",
-            "select": "-- Choose a warehouse --"
+            "label": "Magazyn:",
+            "select": "-- Wybierz magazyn --"
           },
-          "IloscNaStanie": "Stock quantity:",
-          "CenaHurtowa": "Wholesale price:",
-          "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price:",
-          "CenaDetaliczna": "Retail price:"
+          "IloscNaStanie": "Ilość na stanie:",
+          "CenaHurtowa": "Cena hurtowa:",
+          "MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej:",
+          "CenaDetaliczna": "Cena detaliczna:"
         }
       }
     },
     "form": {
       "fields": {
         "Ksiazka": {
-          "label": "Book:",
-          "select": "-- Choose a book --"
+          "label": "Książka:",
+          "select": "-- Wybierz książkę --"
         },
         "Magazyn": {
-          "label": "Warehouse:",
-          "select": "-- Choose a warehouse --"
+          "label": "Magazyn:",
+          "select": "-- Wybierz magazyn --"
         },
-        "IloscNaStanie": "Stock quantity:",
-        "CenaHurtowa": "Wholesale price:",
-        "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price:",
-        "CenaDetaliczna": "Retail price:"
+        "IloscNaStanie": "Ilość na stanie:",
+        "CenaHurtowa": "Cena hurtowa:",
+        "MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej:",
+        "CenaDetaliczna": "Cena detaliczna:"
       },
       "add": {
-        "pageTitle": "Adding the book status in a specific warehouse",
-        "btnLabel": "Add book status in a specific warehouse",
+        "pageTitle": "Dodawanie stanu książki w konretnym magazynie",
+        "btnLabel": "Dodaj stan książki w konkretnym magazynie",
         "confirm": {
-          "header": "Operation confirmation",
-          "text": "Book added successfully"
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie dodano stan książki w magazynie"
         }
       },
       "edit": {
-        "pageTitle": "Editing the book status in a specific warehouse",
-        "btnLabel": "Save changes",
+        "pageTitle": "Edycja stanu książki w konretnym magazynie",
+        "btnLabel": "Zapisz zmiany",
         "confirm": {
-          "header": "Operation confirmation",
-          "text": "Book added successfully"
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie zaktualizowano stan książki w magazynie"
         }
       },
       "errors": {
-        "createNewOrEditErrors": "The form contains errors",
+        "createNewOrEditErrors": "Formularz zawiera błędy",
         "idsError": {
-          "ksiazka": "The selected book is already in this warehouse!",
-          "magazyn": "This book is already in the selected warehouse!"
+          "ksiazka": "Wybrana książka jest już w tym magazynie!",
+          "magazyn": "W wybranym magazynie jest już ta książka!"
         }
       }
     }
   },
   "validationMessage": {
-    "Errors": "The form contains errors",
-    "Required": "The field is required",
-    "Between2and60": "The field should contain from 2 to 60 characters",
-    "CorrectDateFormat": "The field should contain the date in the yyyy-MM-dd format (e.g. 2000-01-01)",
-    "NotFutureDate": "The date cannot be from the future",
-    "CorrectAdress": "The field should contain the address in the format, e.g. ul. Gorka 14C",
-    "IsNumber": "The field should be a number",
-    "IsNumberPlus": "The field should be a positive number"
+    "formErrors": "Formularz zawiera błędy",
+    "notEmpty": "Pole jest wymagane",
+    "len_2_60": "Pole powinno zawierać od 2 do 60 znaków",
+    "isDate": "Pole powinno zawierać datę w formacie yyyy-MM-dd (np. 2000-01-01)",
+    "isNotFutureDate": "Data nie może być z przyszłości",
+    "isCorrectAdress": "Pole powinno zawierać adres w formacie np. ul. Gorka 14C",
+    "isNumber": "Pole powinno być liczbą",
+    "isNumberPlus": "Pole powinno być liczbą dodatnią"
   }
 }
