@@ -1,7 +1,8 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
-import DetailsInput from "../form/DetailsInput";
+import DetailsInput from "../details/DetailsInput";
 import {Link} from "react-router-dom";
+import {isAuthenticated} from "../../helpers/authHelper";
 
 function WarehouseDetailsData(props) {
     const mag = props.warehouseData;
@@ -24,7 +25,9 @@ function WarehouseDetailsData(props) {
                     value={mag.Adres}
                 />
             </form>
+            {isAuthenticated() &&
             <p><Link to={`/warehouse/edit/${mag.Id_Magazyn}`} className="list-actions-button-edit">{t('list.actions.edit')}</Link></p>
+            }
             <h2>{t('mag.details.subtitle')}</h2>
             <table className="table-list">
                 <thead>

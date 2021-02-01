@@ -26,17 +26,17 @@
       "Password": "Hasło"
     },
     "placeholders": {
-      "Name": "Imie",
-      "Surname": "Nazwisko",
-      "Email": "Email",
-      "Password": "Hasło"
+      "Name": "2-60 znaków",
+      "Surname": "2-60 znaków",
+      "Email": "np. nazwa@domena.pl",
+      "Password": "2-60 znaków"
     },
     "add": {
       "pageTitle": "Rejestracja użytkownika",
       "btnLabel": "Zarejestruj się",
       "confirm": {
         "header": "Potwierdzenie operacji",
-        "text": "Pomyślnie dodano książkę"
+        "text": "Pomyślnie zarejestrowano użytkownika"
       }
     }
   },

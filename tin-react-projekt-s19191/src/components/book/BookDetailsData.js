@@ -1,8 +1,9 @@
 import React from 'react';
 import { getFormattedDate } from '../../helpers/dateHelper';
 import { useTranslation } from 'react-i18next';
-import DetailsInput from "../form/DetailsInput";
+import DetailsInput from "../details/DetailsInput";
 import { Link } from "react-router-dom";
+import {isAuthenticated} from "../../helpers/authHelper";
 
 function BookDetailsData(props) {
     const ks = props.bookData;
@@ -32,7 +33,9 @@ function BookDetailsData(props) {
                     value={ks.DataWydania ? getFormattedDate(ks.DataWydania) : ""}
                 />
             </form>
+            {isAuthenticated() &&
             <p><Link to={`/book/edit/${ks.Id_Ksiazka}`} className="list-actions-button-edit">{t('list.actions.edit')}</Link></p>
+            }
             <h2>{t('ks.details.subtitle')}</h2>
             <table className="table-list">
                 <thead>

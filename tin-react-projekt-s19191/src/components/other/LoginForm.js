@@ -120,7 +120,6 @@ class LoginForm extends React.Component {
 
         return (
             <main>
-                {/*<div id="login" className="logInDiv">*/}
                 <div id="login">
                     <h2>{t('authentication.title')}</h2>
                     <form className="form" method="post" onSubmit={this.handleSumbit}>

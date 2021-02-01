@@ -17,11 +17,35 @@
       "logOut": "Log out"
     }
   },
+  "register": {
+    "title": "Register",
+    "fields": {
+      "Name": "First name",
+      "Surname": "Last name",
+      "Email": "Email",
+      "Password": "Password"
+    },
+    "placeholders": {
+      "Name": "2-60 characters",
+      "Surname": "2-60 characters",
+      "Email": "eg. name@domian.com",
+      "Password": "2-60 characters"
+    },
+    "add": {
+      "pageTitle": "User registration",
+      "btnLabel": "Register",
+      "confirm": {
+        "header": "Operation confirmation",
+        "text": "User successfully registered"
+      }
+    }
+  },
   "nav": {
     "main-page": "Main page",
     "ksiazki": "Books",
     "magazyny": "Warehouses",
-    "stanyWMgazynach": "Condition in warehouses"
+    "stanyWMgazynach": "Condition in warehouses",
+    "register": "Register"
   },
   "list": {
     "actions": {

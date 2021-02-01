@@ -1,7 +1,8 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
-import DetailsInput from "../form/DetailsInput";
+import DetailsInput from "../details/DetailsInput";
 import {Link} from "react-router-dom";
+import {isAuthenticated} from "../../helpers/authHelper";
 
 function ConditionInWarehouseDetailsData(props) {
     const swm = props.conditionInWarehouseData;
@@ -50,10 +51,12 @@ function ConditionInWarehouseDetailsData(props) {
                     value={swm.CenaDetaliczna}
                 />
             </form>
+            {isAuthenticated() &&
             <p><Link to={`/conditionInWarehouse/edit/${swm.Id_StanWMagazynie}`} className="list-actions-button-edit">{t('list.actions.edit')}</Link></p>
+            }
             <p><Link to="/conditionInWarehouse" className="list-actions-button-details">{t('list.actions.details')}</Link></p>
         </React.Fragment>
     )
-}
+};
 
-export default ConditionInWarehouseDetailsData
+export default ConditionInWarehouseDetailsData;

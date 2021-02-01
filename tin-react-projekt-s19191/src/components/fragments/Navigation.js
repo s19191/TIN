@@ -20,7 +20,9 @@ class Navigation extends React.Component {
                     <li><Link to="/book">{t('nav.ksiazki')}</Link></li>
                     <li><Link to="/warehouse">{t('nav.magazyny')}</Link></li>
                     <li><Link to="/conditionInWarehouse">{t('nav.stanyWMgazynach')}</Link></li>
+                    {!isAuthenticated() &&
                     <li className='lang'><Link to="/register">{t('nav.register')}</Link></li>
+                    }
                     <li className='lang'>{loginLogoutLink}</li>
                     <li><button onClick={() => { this.handleLanguageChange('pl') }}>PL</button></li>
                     <li><button onClick={() => { this.handleLanguageChange('en') }}>EN</button></li>
