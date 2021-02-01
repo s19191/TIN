@@ -263,7 +263,7 @@ class BookForm extends React.Component {
                 <p className="success">{this.state.notice}</p>
             </main >
         )
-    }
+    };
 };
 
 export default withTranslation()(BookForm);

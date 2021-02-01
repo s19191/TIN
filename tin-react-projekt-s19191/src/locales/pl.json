@@ -8,8 +8,8 @@
   },
   "authentication": {
     "title": "Logowanie",
-    "email": "Email:",
-    "password": "Hasło:",
+    "email": "Email",
+    "password": "Hasło",
     "loginError": "Nieprawidłowy adres email lub hasło",
     "logOutInformation": "Jesteś zalogowany jako: ",
     "actions": {

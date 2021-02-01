@@ -17,35 +17,71 @@ import {
     Switch,
     Route,
 } from 'react-router-dom';
+import LoginForm from "./components/other/LoginForm";
+import {getCurrentUser} from "./helpers/authHelper";
 
-function App() {
-  return (
-      <Router>
-          <div>
-              <Header />
-              <Navigation />
-              <Switch>
-                  <Route exact path="/" component={MainContent} />
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            user: undefined,
+            prevPath: ''
+        };
+    };
 
-                  <Route exact path="/book" component={BookList} />
-                  <Route exact path="/book/details/:ksId" component={BookDetails} />
-                  <Route exact path="/book/add" component={BookForm} />
-                  <Route exact path="/book/edit/:ksId" component={BookForm} />
+    handleLogin = (user) => {
+        localStorage.setItem("user", user);
+        this.setState({ user: user })
+    };
 
-                  <Route exact path="/warehouse" component={WarehouseList} />
-                  <Route exact path="/warehouse/details/:magId" component={WarehouseDetails} />
-                  <Route exact path="/warehouse/add" component={WarehouseForm} />
-                  <Route exact path="/warehouse/edit/:magId" component={WarehouseForm} />
+    handleLogout = () => {
+        localStorage.removeItem("user");
+        this.setState({ user: undefined })
+    };
 
-                  <Route exact path="/conditionInWarehouse" component={ConditionInWarehouseList} />
-                  <Route exact path="/conditionInWarehouse/details/:swmId" component={ConditionInWarehouseDetails} />
-                  <Route exact path="/conditionInWarehouse/add" component={ConditionInWarehouseForm} />
-                  <Route exact path="/conditionInWarehouse/edit/:swmId" component={ConditionInWarehouseForm} />
-              </Switch>
-              <Footer />
-          </div>
-      </Router>
-  );
+    componentDidMount() {
+        const currentUser = getCurrentUser();
+        this.setState({ user: currentUser })
+    };
+
+
+    render() {
+        return (
+            <Router>
+                <div>
+                    <Header/>
+                    <Navigation handleLogout={this.handleLogout}/>
+                    <Switch>
+                        <Route exact
+                               path="/login"
+                               render={(props) => (
+                                   <LoginForm handleLogin={this.handleLogin} />
+                               )}
+                        />
+
+                        <Route exact path="/" component={MainContent}/>
+
+                        <Route exact path="/book" component={BookList}/>
+                        <Route exact path="/book/details/:ksId" component={BookDetails}/>
+                        <Route exact path="/book/add" component={BookForm}/>
+                        <Route exact path="/book/edit/:ksId" component={BookForm}/>
+
+                        <Route exact path="/warehouse" component={WarehouseList}/>
+                        <Route exact path="/warehouse/details/:magId" component={WarehouseDetails}/>
+                        <Route exact path="/warehouse/add" component={WarehouseForm}/>
+                        <Route exact path="/warehouse/edit/:magId" component={WarehouseForm}/>
+
+                        <Route exact path="/conditionInWarehouse" component={ConditionInWarehouseList}/>
+                        <Route exact path="/conditionInWarehouse/details/:swmId"
+                               component={ConditionInWarehouseDetails}/>
+                        <Route exact path="/conditionInWarehouse/add" component={ConditionInWarehouseForm}/>
+                        <Route exact path="/conditionInWarehouse/edit/:swmId" component={ConditionInWarehouseForm}/>
+                    </Switch>
+                    <Footer/>
+                </div>
+            </Router>
+        );
+    };
 };
 
 export default App;

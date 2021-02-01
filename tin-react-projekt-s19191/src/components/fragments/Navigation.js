@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
+import { isAuthenticated } from "../../helpers/authHelper";
 
 class Navigation extends React.Component {
     handleLanguageChange = (language) => {
@@ -11,6 +12,7 @@ class Navigation extends React.Component {
     }
     render() {
         const { t } = this.props;
+        const loginLogoutLink = isAuthenticated() ? <button onClick={this.props.handleLogout}>{t('authentication.actions.logOut')}</button> : <Link to="/login">{t('authentication.actions.logIn')}</Link>;
         return (
             <nav>
                 <ul>
@@ -18,7 +20,8 @@ class Navigation extends React.Component {
                     <li><Link to="/book">{t('nav.ksiazki')}</Link></li>
                     <li><Link to="/warehouse">{t('nav.magazyny')}</Link></li>
                     <li><Link to="/conditionInWarehouse">{t('nav.stanyWMgazynach')}</Link></li>
-                    <li className='lang'><button onClick={() => { this.handleLanguageChange('pl') }}>PL</button></li>
+                    <li className='lang'>{loginLogoutLink}</li>
+                    <li><button onClick={() => { this.handleLanguageChange('pl') }}>PL</button></li>
                     <li><button onClick={() => { this.handleLanguageChange('en') }}>EN</button></li>
                 </ul>
             </nav>

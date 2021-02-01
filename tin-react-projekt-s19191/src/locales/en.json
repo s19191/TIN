@@ -8,8 +8,8 @@
   },
   "authentication": {
     "title": "Login",
-    "email": "Email:",
-    "password": "Password:",
+    "email": "Email",
+    "password": "Password",
     "loginError": "Invalid email address or password",
     "logOutInformation": "You are logged in as: ",
     "actions": {
