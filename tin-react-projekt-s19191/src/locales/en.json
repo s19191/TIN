@@ -58,14 +58,7 @@
       "pageTitle": "Book details",
       "subtitle": "Details of the book's condition in warehouses",
       "loading": "Loading book data...",
-      "form": {
-        "fields": {
-          "Tytul": "Title:",
-          "Autor": "Author:",
-          "DataWydania": "Release date:"
-        }
-      },
-      "table": {
+      "fields": {
         "Magazyn": "The name of the warehouse",
         "IloscNaStanie": "Stock quantity",
         "CenaHurtowa": "Wholesale price",
@@ -120,13 +113,7 @@
       "pageTitle": "Warehouse details",
       "subtitle": "Details of the books in stock",
       "loading": "Loading warehouse data...",
-      "form": {
-        "fields": {
-          "Nazwa": "Name:",
-          "Adres": "Address:"
-        }
-      },
-      "table": {
+      "fields": {
         "Ksiazka": "Book's title",
         "IloscNaStanie": "Stock quantity",
         "CenaHurtowa": "Wholesale price",
@@ -181,23 +168,7 @@
     },
     "details": {
       "pageTitle": "Details of the book's condition in a specific warehouse",
-      "loading": "Loading book status data in stock...",
-      "form": {
-        "fields": {
-          "Ksiazka": {
-            "label": "Book",
-            "select": "-- Choose a book --"
-          },
-          "Magazyn": {
-            "label": "Warehouse",
-            "select": "-- Choose a warehouse --"
-          },
-          "IloscNaStanie": "Stock quantity",
-          "CenaHurtowa": "Wholesale price",
-          "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
-          "CenaDetaliczna": "Retail price"
-        }
-      }
+      "loading": "Loading book status data in stock..."
     },
     "form": {
       "fields": {

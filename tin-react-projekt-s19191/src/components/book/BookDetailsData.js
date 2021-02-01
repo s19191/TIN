@@ -1,24 +1,47 @@
 import React from 'react';
 import { getFormattedDate } from '../../helpers/dateHelper';
 import { useTranslation } from 'react-i18next';
+import DetailsInput from "../form/DetailsInput";
+import { Link } from "react-router-dom";
 
 function BookDetailsData(props) {
     const ks = props.bookData;
     const { t } = useTranslation();
     return (
         <React.Fragment>
-            <p>{t('ks.details.form.fields.Tytul')} {ks.Tytul}</p>
-            <p>{t('ks.details.form.fields.Autor')} {ks.Autor} </p>
-            <p>{t('ks.details.form.fields.DataWydania')} {ks.DataWydania ? getFormattedDate(ks.DataWydania) : ""} </p>
+            <form className="form">
+                <DetailsInput
+                    type="text"
+                    label={t('ks.list.fields.Tytul')}
+                    required
+                    name="Tytul"
+                    value={ks.Tytul}
+                />
+                <DetailsInput
+                    type="text"
+                    label={t('ks.list.fields.Autor')}
+                    required
+                    name="Autor"
+                    value={ks.Autor}
+                />
+                <DetailsInput
+                    type="date"
+                    label={t('ks.list.fields.DataWydania')}
+                    required
+                    name="DataWydania"
+                    value={ks.DataWydania ? getFormattedDate(ks.DataWydania) : ""}
+                />
+            </form>
+            <p><Link to={`/book/edit/${ks.Id_Ksiazka}`} className="list-actions-button-edit">{t('list.actions.edit')}</Link></p>
             <h2>{t('ks.details.subtitle')}</h2>
             <table className="table-list">
                 <thead>
                 <tr>
-                    <th>{t('ks.details.table.Magazyn')}</th>
-                    <th>{t('ks.details.table.IloscNaStanie')}</th>
-                    <th>{t('ks.details.table.CenaHurtowa')}</th>
-                    <th>{t('ks.details.table.MinimalnaIloscDoCenyHurtowej')}</th>
-                    <th>{t('ks.details.table.CenaDetaliczna')}</th>
+                    <th>{t('ks.details.fields.Magazyn')}</th>
+                    <th>{t('ks.details.fields.IloscNaStanie')}</th>
+                    <th>{t('ks.details.fields.CenaHurtowa')}</th>
+                    <th>{t('ks.details.fields.MinimalnaIloscDoCenyHurtowej')}</th>
+                    <th>{t('ks.details.fields.CenaDetaliczna')}</th>
                 </tr>
                 </thead>
                 <tbody>

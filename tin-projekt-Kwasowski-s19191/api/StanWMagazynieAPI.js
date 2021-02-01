@@ -32,7 +32,6 @@ exports.createStanWMagazynie = (req, res, next) => {
     if (swmData.MinimalnaIloscDoCenyHurtowej == '') {
         swmData.MinimalnaIloscDoCenyHurtowej = null;
     };
-    console.log(swmData)
     StanWMagazynieRepository.createStanWMagazynie(swmData)
         .then(newObj => {
             res.status(201).json(newObj);

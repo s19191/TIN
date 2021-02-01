@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { getConditionInWarehouseByIdApiCall } from '../../apiCalls/conditionInWarehouseApiCalls';
 import ConditionInWarehouseDetailsData from "../conditionInWarehouse/ConditionInWarehouseDetailsData";
 import { withTranslation } from 'react-i18next';
@@ -67,9 +66,6 @@ class ConditionInWarehouseDetails extends React.Component {
             <main>
                 <h2>{t('swm.details.pageTitle')}</h2>
                 {content}
-                <div className="section-buttons">
-                    <Link to="/conditionInWarehouse" className="list-actions-button-details">{t('list.actions.details')}</Link>
-                </div>
             </main>
         )
     };

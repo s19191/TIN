@@ -1,17 +1,57 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
+import DetailsInput from "../form/DetailsInput";
+import {Link} from "react-router-dom";
 
 function ConditionInWarehouseDetailsData(props) {
     const swm = props.conditionInWarehouseData;
     const { t } = useTranslation();
     return (
         <React.Fragment>
-            <p>{t('swm.details.form.fields.Ksiazka.label')} {swm.ksiazka.Tytul}</p>
-            <p>{t('swm.details.form.fields.Magazyn.label')} {swm.magazyn.Nazwa} </p>
-            <p>{t('swm.details.form.fields.IloscNaStanie')} {swm.IloscNaStanie} </p>
-            <p>{t('swm.details.form.fields.CenaHurtowa')} {swm.CenaHurtowa ? swm.CenaHurtowa : 0} </p>
-            <p>{t('swm.details.form.fields.MinimalnaIloscDoCenyHurtowej')} {swm.MinimalnaIloscDoCenyHurtowej ? swm.MinimalnaIloscDoCenyHurtowej : 0} </p>
-            <p>{t('swm.details.form.fields.CenaDetaliczna')} {swm.CenaDetaliczna} </p>
+            <form className="form">
+                <DetailsInput
+                    type="text"
+                    label={t('swm.list.fields.Ksiazka')}
+                    required
+                    name="Ksiazka_Id_Ksiazka"
+                    value={swm.ksiazka.Tytul}
+                />
+                <DetailsInput
+                    type="text"
+                    label={t('swm.list.fields.Magazyn')}
+                    required
+                    name="Magazyn_Id_Magazyn"
+                    value={swm.magazyn.Nazwa}
+                />
+                <DetailsInput
+                    type="number"
+                    label={t('swm.list.fields.IloscNaStanie')}
+                    required
+                    name="IloscNaStanie"
+                    value={swm.IloscNaStanie}
+                />
+                <DetailsInput
+                    type="number"
+                    label={t('swm.list.fields.CenaHurtowa')}
+                    name="CenaHurtowa"
+                    value={swm.CenaHurtowa ? swm.CenaHurtowa : 0}
+                />
+                <DetailsInput
+                    type="number"
+                    label={t('swm.list.fields.MinimalnaIloscDoCenyHurtowej')}
+                    name="MinimalnaIloscDoCenyHurtowej"
+                    value={swm.MinimalnaIloscDoCenyHurtowej ? swm.MinimalnaIloscDoCenyHurtowej : 0}
+                />
+                <DetailsInput
+                    type="number"
+                    label={t('swm.list.fields.CenaDetaliczna')}
+                    required
+                    name="CenaDetaliczna"
+                    value={swm.CenaDetaliczna}
+                />
+            </form>
+            <p><Link to={`/conditionInWarehouse/edit/${swm.Id_StanWMagazynie}`} className="list-actions-button-edit">{t('list.actions.edit')}</Link></p>
+            <p><Link to="/conditionInWarehouse" className="list-actions-button-details">{t('list.actions.details')}</Link></p>
         </React.Fragment>
     )
 }

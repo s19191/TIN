@@ -68,7 +68,7 @@ class BookDetails extends React.Component {
                 <h2>{t('ks.details.pageTitle')}</h2>
                 {content}
                 <div className="section-buttons">
-                    <Link to="/book" className="list-actions-button-details">{t('form.actions.return')}</Link>
+                    <p><Link to="/book" className="list-actions-button-details">{t('form.actions.return')}</Link></p>
                 </div>
             </main>
         )

@@ -7,6 +7,7 @@ import { getBookByIdApiCall, addBookApiCall, updateBookApiCall } from '../../api
 import FormInput from "../form/FormInput";
 import FormButtons from "../form/FormButtons";
 import { withTranslation } from 'react-i18next';
+import {getFormattedDate} from "../../helpers/dateHelper";
 
 class BookForm extends React.Component {
     constructor(props) {
@@ -251,7 +252,7 @@ class BookForm extends React.Component {
                         name="DataWydania"
                         placeholder={t('ks.form.placeholders.DataWydania')}
                         onChange={this.handleChange}
-                        value={this.state.ks.DataWydania}
+                        value={this.state.ks.DataWydania ? getFormattedDate(this.state.ks.DataWydania) : ""}
                     />
                     <FormButtons
                         formMode={this.state.formMode}
