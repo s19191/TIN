@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 function FormButtons(props) {
     const { t } = useTranslation();
-    const submitButtonLabel = props.formMode === formMode.NEW ? t('form.actions.add') : t('form.actions.edit')
+    const submitButtonLabel = props.formMode === formMode.NEW ? t('form.actions.add') : t('form.actions.edit');
 
     return (
         <div className="form-buttons">
@@ -14,6 +14,6 @@ function FormButtons(props) {
             <Link to={props.cancelPath} className="form-button-cancel">{t('form.actions.cancel')}</Link>
         </div>
     )
-}
+};
 
-export default FormButtons
+export default FormButtons;

@@ -11,12 +11,12 @@ function FormSelectOption(props) {
     } else {
         text = element.Nazwa;
         id = element.Id_Magazyn;
-    }
+    };
     return (
         <React.Fragment>
             <option selected={id===props.id} label={text}>{id}</option>
         </React.Fragment>
     )
-}
+};
 
 export default FormSelectOption;

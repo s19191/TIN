@@ -10,10 +10,9 @@ import { withTranslation } from 'react-i18next';
 
 class WarehouseForm extends React.Component {
     constructor(props) {
-        super(props)
-
-        const paramsMagId = props.match.params.magId
-        const currentFormMode = paramsMagId ? formMode.EDIT : formMode.NEW
+        super(props);
+        const paramsMagId = props.match.params.magId;
+        const currentFormMode = paramsMagId ? formMode.EDIT : formMode.NEW;
 
         this.state = {
             magId: paramsMagId,
@@ -34,7 +33,7 @@ class WarehouseForm extends React.Component {
     };
 
     componentDidMount = () => {
-        const currentFormMode = this.state.formMode
+        const currentFormMode = this.state.formMode;
         if (currentFormMode === formMode.EDIT) {
             this.fetchWarehouseDetails();
         };
@@ -68,19 +67,19 @@ class WarehouseForm extends React.Component {
     };
 
     handleChange = (event) => {
-        const { name, value } = event.target
-        const mag = { ...this.state.mag }
-        mag[name] = value
+        const { name, value } = event.target;
+        const mag = { ...this.state.mag };
+        mag[name] = value;
 
-        const errorMessage = this.validateField(name, value)
-        const errors = { ...this.state.errors }
-        errors[name] = errorMessage
+        const errorMessage = this.validateField(name, value);
+        const errors = { ...this.state.errors };
+        errors[name] = errorMessage;
 
         this.setState({
             mag: mag,
             errors: errors
         })
-    }
+    };
 
     validateField = (fieldName, fieldValue) => {
         let errorMessage = '';
@@ -89,21 +88,21 @@ class WarehouseForm extends React.Component {
                 errorMessage = formValidationKeys.notEmpty;
             } else if (!checkTextLengthRange(fieldValue, 2, 60)) {
                 errorMessage = formValidationKeys.len_2_60;
-            }
-        }
+            };
+        };
         if (fieldName === 'Adres') {
             if (!checkRequired(fieldValue)) {
                 errorMessage = formValidationKeys.notEmpty;
             } else if (!checkAdress(fieldValue)) {
                 errorMessage = formValidationKeys.isCorrectAdress;
-            }
-        }
-        return errorMessage
+            };
+        };
+        return errorMessage;
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const isValid = this.validateForm()
+        const isValid = this.validateForm();
         if (isValid) {
             const
                 mag = this.state.mag,
@@ -113,79 +112,75 @@ class WarehouseForm extends React.Component {
                 response;
             if (currentFormMode === formMode.NEW) {
                 promise = addWarehouseApiCall(mag)
-
             } else if (currentFormMode === formMode.EDIT) {
                 const magId = this.state.magId
                 promise = updateWarehouseApiCall(magId, mag)
-            }
+            };
             if (promise) {
                 promise
                     .then(
                         (data) => {
                             response = data
                             if (response.status === 201 || response.status === 500) {
-                                return data.json()
+                                return data.json();
                             }
                         })
                     .then(
                         (data) => {
                             if (!response.ok && response.status === 500) {
-                                console.log(data)
                                 for (const i in data) {
-                                    const errorItem = data[i]
-                                    const errorMessage = errorItem.message
-                                    const fieldName = errorItem.path
-                                    const errors = { ...this.state.errors }
-                                    errors[fieldName] = errorMessage
+                                    const errorItem = data[i];
+                                    const errorMessage = errorItem.message;
+                                    const fieldName = errorItem.path;
+                                    const errors = { ...this.state.errors };
+                                    errors[fieldName] = errorMessage;
                                     this.setState({
                                         errors: errors,
                                         error: null
                                     })
-                                }
+                                };
                             } else {
                                 this.setState({ redirect: true })
-                            }
+                            };
                         },
                         (error) => {
-                            this.setState({ error })
-                            console.log(error)
+                            this.setState({ error });
                         }
                     )
             }
-
         }
     };
 
     validateForm = () => {
-        const mag = this.state.mag
-        const errors = this.state.errors
+        const mag = this.state.mag;
+        const errors = this.state.errors;
         for (const fieldName in mag) {
-            const fieldValue = mag[fieldName]
-            const errorMessage = this.validateField(fieldName, fieldValue)
-            errors[fieldName] = errorMessage
-        }
+            const fieldValue = mag[fieldName];
+            const errorMessage = this.validateField(fieldName, fieldValue);
+            errors[fieldName] = errorMessage;
+        };
         this.setState({
             errors: errors
         })
-        return !this.hasErrors()
-    }
+        return !this.hasErrors();
+    };
 
     hasErrors = () => {
-        const errors = this.state.errors
+        const errors = this.state.errors;
         for (const errorField in this.state.errors) {
             if (errors[errorField].length > 0) {
-                return true
-            }
-        }
-        return false
+                return true;
+            };
+        };
+        return false;
     }
 
     render() {
         const { redirect } = this.state;
         const { t } = this.props;
         if (redirect) {
-            const currentFormMode = this.state.formMode
-            const notice = currentFormMode === formMode.NEW ? 'Pomyślnie dodano nowy magazyn' : 'Pomyślnie zaktualizowano magazyn'
+            const currentFormMode = this.state.formMode;
+            const notice = currentFormMode === formMode.NEW ? t('mag.form.add.confirm.text') : t('mag.form.add.confirm.text');
             return (
                 <Redirect to={{
                     pathname: "/warehouse/",
@@ -194,13 +189,12 @@ class WarehouseForm extends React.Component {
                     }
                 }} />
             )
-        }
+        };
 
-        const errorsSummary = this.hasErrors() ? t('validationMessage.formErrors') : ''
-        const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : ''
-        const pageTitle = this.state.formMode === formMode.NEW ? t('mag.form.add.pageTitle') : t('mag.form.edit.pageTitle')
-
-        const globalErrorMessage = errorsSummary || fetchError || this.state.message
+        const errorsSummary = this.hasErrors() ? t('validationMessage.formErrors') : '';
+        const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : '';
+        const pageTitle = this.state.formMode === formMode.NEW ? t('mag.form.add.pageTitle') : t('mag.form.edit.pageTitle');
+        const globalErrorMessage = errorsSummary || fetchError || this.state.message;
 
         return (
             <main>

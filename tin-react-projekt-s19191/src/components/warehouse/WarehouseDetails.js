@@ -6,15 +6,15 @@ import { withTranslation } from 'react-i18next';
 
 class WarehouseDetails extends React.Component {
     constructor(props) {
-        super(props)
-        let {magId} = props.match.params
+        super(props);
+        let {magId} = props.match.params;
         this.state = {
             magId: magId,
             warehouse: null,
             error: null,
             isLoaded: false,
             message: null
-        }
+        };
     };
 
     componentDidMount() {
@@ -51,18 +51,18 @@ class WarehouseDetails extends React.Component {
 
     render() {
         const { t } = this.props;
-        const { warehouse, error, isLoaded, message } = this.state
+        const { warehouse, error, isLoaded, message } = this.state;
         let content;
 
         if (error) {
-            content = <p>{t('errors.error')} {error.message}</p>
+            content = <p>{t('errors.error')} {error.message}</p>;
         } else if (!isLoaded) {
-            content = <p>{t('mag.details.loading')}</p>
+            content = <p>{t('mag.details.loading')}</p>;
         } else if (message) {
             content = <p>{message}</p>
         } else {
-            content = <WarehouseDetailsData warehouseData={warehouse} />
-        }
+            content = <WarehouseDetailsData warehouseData={warehouse} />;
+        };
         return (
             <main>
                 <h2>{t('mag.details.pageTitle')}</h2>

@@ -6,15 +6,15 @@ import { withTranslation } from 'react-i18next';
 
 class BookDetails extends React.Component {
     constructor(props) {
-        super(props)
-        let { ksId } = props.match.params
+        super(props);
+        let { ksId } = props.match.params;
         this.state = {
             ksId: ksId,
             book: null,
             error: null,
             isLoaded: false,
             message: null
-        }
+        };
     };
 
     componentDidMount() {
@@ -46,12 +46,12 @@ class BookDetails extends React.Component {
                         isLoaded: true,
                         error
                     })
-                })
+                });
     };
 
     render() {
         const { t } = this.props;
-        const { book, error, isLoaded, message } = this.state
+        const { book, error, isLoaded, message } = this.state;
         let content;
 
         if (error) {
@@ -62,7 +62,7 @@ class BookDetails extends React.Component {
             content = <p>{message}</p>
         } else {
             content = <BookDetailsData bookData={book} />
-        }
+        };
         return (
             <main>
                 <h2>{t('ks.details.pageTitle')}</h2>

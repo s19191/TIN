@@ -4,10 +4,8 @@ import { getConditionsInWarehousesApiCall } from '../../apiCalls/conditionInWare
 import ConditionInwarehouseListTable from ".//ConditionInWarehouseListTable";
 import { withTranslation } from 'react-i18next';
 
-class ConditionInWarehouseList extends React.Component
-{
-    constructor(props)
-    {
+class ConditionInWarehouseList extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
             error: null,
@@ -45,12 +43,12 @@ class ConditionInWarehouseList extends React.Component
         const { t } = this.props;
 
         if (error) {
-            content = <p>{t('errors.error')} {error.message}</p>
+            content = <p>{t('errors.error')} {error.message}</p>;
         } else if (!isLoaded) {
-            content = <p>{t('swm.list.loading')}</p>
+            content = <p>{t('swm.list.loading')}</p>;
         } else {
-            content = <ConditionInwarehouseListTable conditionsInWarehousesList={conditionsInWarehouses}/>
-        }
+            content = <ConditionInwarehouseListTable conditionsInWarehousesList={conditionsInWarehouses}/>;
+        };
 
         return (
             <main>
@@ -60,6 +58,6 @@ class ConditionInWarehouseList extends React.Component
             </main>
         )
     };
-}
+};
 
 export default withTranslation()(ConditionInWarehouseList);

@@ -17,4 +17,4 @@ export const formValidationKeys = {
 
 export function getValidationErrorKey(error) {
     return `validationMessage.${error}`
-}
+};

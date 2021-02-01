@@ -28,6 +28,6 @@ function FormInput(props) {
             <span id={errorSpanId} className="errors-text">{translatedErrorMessage!=="validationMessage." ? translatedErrorMessage : ""}</span>
         </>
     )
-}
+};
 
-export default FormInput
+export default FormInput;

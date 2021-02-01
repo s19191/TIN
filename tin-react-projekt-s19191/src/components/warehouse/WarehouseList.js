@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import WarehouseListTable from "../warehouse/WarehouseListTable";
 import { withTranslation } from 'react-i18next';
 
-class WarehouseList extends React.Component
-{
+class WarehouseList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -44,12 +43,12 @@ class WarehouseList extends React.Component
         const { t } = this.props;
 
         if (error) {
-            content = <p>{t('errors.error')} {error.message}</p>
+            content = <p>{t('errors.error')} {error.message}</p>;
         } else if (!isLoaded) {
-            content = <p>{t('mag.list.loading')}</p>
+            content = <p>{t('mag.list.loading')}</p>;
         } else {
-            content = <WarehouseListTable warehousesList={warehouses}/>
-        }
+            content = <WarehouseListTable warehousesList={warehouses}/>;
+        };
 
         return (
             <main>

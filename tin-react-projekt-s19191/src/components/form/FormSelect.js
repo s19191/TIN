@@ -1,6 +1,5 @@
 import React from "react";
 import FormSelectOption from "./FormSelectOption";
-import {useTranslation} from "react-i18next";
 
 function FormSelect(props) {
     const className = props.error === '' ? '' : 'error-input';
@@ -30,6 +29,6 @@ function FormSelect(props) {
             <span id={errorSpanId} className={"errors-text"}>{props.errors}</span>
         </>
     )
-}
+};
 
-export default FormSelect
+export default FormSelect;

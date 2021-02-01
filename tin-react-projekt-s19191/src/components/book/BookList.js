@@ -6,8 +6,8 @@ import { withTranslation } from 'react-i18next';
 
 class BookList extends React.Component {
     constructor(props) {
-        super(props)
-        let notice = props.location.state && props.location.state.notice ? props.location.state.notice : ''
+        super(props);
+        let notice = props.location.state && props.location.state.notice ? props.location.state.notice : '';
         this.state = {
             error: null,
             isLoaded: false,
@@ -50,7 +50,7 @@ class BookList extends React.Component {
             content = <p>{t('ks.list.loading')}</p>
         } else {
             content = <BookListTable booksList={books}/>
-        }
+        };
 
         return (
             <main>

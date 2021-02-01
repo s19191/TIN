@@ -10,10 +10,9 @@ import { withTranslation } from 'react-i18next';
 
 class BookForm extends React.Component {
     constructor(props) {
-        super(props)
-
-        const paramsKsId = props.match.params.ksId
-        const currentFormMode = paramsKsId ? formMode.EDIT : formMode.NEW
+        super(props);
+        const paramsKsId = props.match.params.ksId;
+        const currentFormMode = paramsKsId ? formMode.EDIT : formMode.NEW;
 
         this.state = {
             ksId: paramsKsId,
@@ -70,19 +69,19 @@ class BookForm extends React.Component {
     };
 
     handleChange = (event) => {
-        const { name, value } = event.target
-        const ks = { ...this.state.ks }
-        ks[name] = value
+        const { name, value } = event.target;
+        const ks = { ...this.state.ks };
+        ks[name] = value;
 
-        const errorMessage = this.validateField(name, value)
-        const errors = { ...this.state.errors }
-        errors[name] = errorMessage
+        const errorMessage = this.validateField(name, value);
+        const errors = { ...this.state.errors };
+        errors[name] = errorMessage;
 
         this.setState({
             ks: ks,
             errors: errors
         })
-    }
+    };
 
     validateField = (fieldName, fieldValue) => {
         let errorMessage = '';
@@ -91,15 +90,15 @@ class BookForm extends React.Component {
                 errorMessage = formValidationKeys.notEmpty;
             } else if (!checkTextLengthRange(fieldValue, 2, 60)) {
                 errorMessage = formValidationKeys.len_2_60;
-            }
-        }
+            };
+        };
         if (fieldName === 'Autor') {
             if (!checkRequired(fieldValue)) {
                 errorMessage = formValidationKeys.notEmpty;
             } else if (!checkTextLengthRange(fieldValue, 2, 60)) {
                 errorMessage = formValidationKeys.len_2_60;
-            }
-        }
+            };
+        };
         if (fieldName === 'DataWydania') {
             let nowDate = new Date(),
                 month = '' + (nowDate.getMonth() + 1),
@@ -117,55 +116,53 @@ class BookForm extends React.Component {
                 errorMessage = formValidationKeys.isDate;
             } else if (checkDateIfAfter(fieldValue, nowString)) {
                 errorMessage = formValidationKeys.isNotFutureDate;
-            }
-        }
-        return errorMessage
-    }
+            };
+        };
+        return errorMessage;
+    };
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const isValid = this.validateForm()
+        const isValid = this.validateForm();
         if (isValid) {
             const
                 ks = this.state.ks,
-                currentFormMode = this.state.formMode
+                currentFormMode = this.state.formMode;
             let
                 promise,
                 response;
             if (currentFormMode === formMode.NEW) {
-                promise = addBookApiCall(ks)
-
+                promise = addBookApiCall(ks);
             } else if (currentFormMode === formMode.EDIT) {
-                const ksId = this.state.ksId
-                promise = updateBookApiCall(ksId, ks)
-            }
+                const ksId = this.state.ksId;
+                promise = updateBookApiCall(ksId, ks);
+            };
             if (promise) {
                 promise
                     .then(
                         (data) => {
                             response = data
                             if (response.status === 201 || response.status === 500) {
-                                return data.json()
+                                return data.json();
                             }
                         })
                     .then(
                         (data) => {
                             if (!response.ok && response.status === 500) {
-                                console.log(data)
                                 for (const i in data) {
-                                    const errorItem = data[i]
-                                    const errorMessage = errorItem.message
-                                    const fieldName = errorItem.path
-                                    const errors = { ...this.state.errors }
-                                    errors[fieldName] = errorMessage
+                                    const errorItem = data[i];
+                                    const errorMessage = errorItem.message;
+                                    const fieldName = errorItem.path;
+                                    const errors = { ...this.state.errors };
+                                    errors[fieldName] = errorMessage;
                                     this.setState({
                                         errors: errors,
                                         error: null
                                     })
-                                }
+                                };
                             } else {
                                 this.setState({ redirect: true })
-                            }
+                            };
                         },
                         (error) => {
                             this.setState({ error })
@@ -178,35 +175,35 @@ class BookForm extends React.Component {
     };
 
     validateForm = () => {
-        const ks = this.state.ks
-        const errors = this.state.errors
+        const ks = this.state.ks;
+        const errors = this.state.errors;
         for (const fieldName in ks) {
-            const fieldValue = ks[fieldName]
-            const errorMessage = this.validateField(fieldName, fieldValue)
-            errors[fieldName] = errorMessage
-        }
+            const fieldValue = ks[fieldName];
+            const errorMessage = this.validateField(fieldName, fieldValue);
+            errors[fieldName] = errorMessage;
+        };
         this.setState({
             errors: errors
         })
-        return !this.hasErrors()
-    }
+        return !this.hasErrors();
+    };
 
     hasErrors = () => {
-        const errors = this.state.errors
+        const errors = this.state.errors;
         for (const errorField in this.state.errors) {
             if (errors[errorField].length > 0) {
-                return true
-            }
-        }
-        return false
-    }
+                return true;
+            };
+        };
+        return false;
+    };
 
     render() {
         const { redirect } = this.state;
         const { t } = this.props;
         if (redirect) {
-            const currentFormMode = this.state.formMode
-            const notice = currentFormMode === formMode.NEW ? t('ks.form.add.confirm.text') : t('ks.form.edit.confirm.text')
+            const currentFormMode = this.state.formMode;
+            const notice = currentFormMode === formMode.NEW ? t('ks.form.add.confirm.text') : t('ks.form.edit.confirm.text');
             return (
                 <Redirect to={{
                     pathname: "/book/",
@@ -215,13 +212,12 @@ class BookForm extends React.Component {
                     }
                 }} />
             )
-        }
+        };
 
-        const errorsSummary = this.hasErrors() ? t('validationMessage.formErrors') : ''
-        const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : ''
-        const pageTitle = this.state.formMode === formMode.NEW ? t('ks.form.add.pageTitle') : t('ks.form.edit.pageTitle')
-
-        const globalErrorMessage = errorsSummary || fetchError || this.state.message
+        const errorsSummary = this.hasErrors() ? t('validationMessage.formErrors') : '';
+        const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : '';
+        const pageTitle = this.state.formMode === formMode.NEW ? t('ks.form.add.pageTitle') : t('ks.form.edit.pageTitle');
+        const globalErrorMessage = errorsSummary || fetchError || this.state.message;
 
         return (
             <main>

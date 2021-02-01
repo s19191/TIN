@@ -6,8 +6,8 @@ import { withTranslation } from 'react-i18next';
 
 class ConditionInWarehouseDetails extends React.Component {
     constructor(props) {
-        super(props)
-        let {swmId} = props.match.params
+        super(props);
+        let {swmId} = props.match.params;
         this.state = {
             swmId: swmId,
             conditionInWarehouse: null,
@@ -50,7 +50,7 @@ class ConditionInWarehouseDetails extends React.Component {
     };
 
     render() {
-        const { conditionInWarehouse, error, isLoaded, message } = this.state
+        const { conditionInWarehouse, error, isLoaded, message } = this.state;
         let content;
         const { t } = this.props;
 
@@ -62,7 +62,7 @@ class ConditionInWarehouseDetails extends React.Component {
             content = <p>{message}</p>
         } else {
             content = <ConditionInWarehouseDetailsData conditionInWarehouseData={conditionInWarehouse} />
-        }
+        };
         return (
             <main>
                 <h2>{t('swm.details.pageTitle')}</h2>
