@@ -19,6 +19,7 @@ import {
 } from 'react-router-dom';
 import LoginForm from "./components/other/LoginForm";
 import {getCurrentUser} from "./helpers/authHelper";
+import RegisterForm from "./components/other/RegisterForm";
 
 class App extends React.Component {
     constructor(props) {
@@ -58,7 +59,7 @@ class App extends React.Component {
                                    <LoginForm handleLogin={this.handleLogin} />
                                )}
                         />
-
+                        <Route exact path="/register" component={RegisterForm}/>
                         <Route exact path="/" component={MainContent}/>
 
                         <Route exact path="/book" component={BookList}/>
@@ -72,8 +73,7 @@ class App extends React.Component {
                         <Route exact path="/warehouse/edit/:magId" component={WarehouseForm}/>
 
                         <Route exact path="/conditionInWarehouse" component={ConditionInWarehouseList}/>
-                        <Route exact path="/conditionInWarehouse/details/:swmId"
-                               component={ConditionInWarehouseDetails}/>
+                        <Route exact path="/conditionInWarehouse/details/:swmId" component={ConditionInWarehouseDetails}/>
                         <Route exact path="/conditionInWarehouse/add" component={ConditionInWarehouseForm}/>
                         <Route exact path="/conditionInWarehouse/edit/:swmId" component={ConditionInWarehouseForm}/>
                     </Switch>

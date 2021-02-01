@@ -3,6 +3,7 @@ import { getBooksApiCall } from '../../apiCalls/bookApiCalls';
 import { Link } from 'react-router-dom';
 import BookListTable from "./BookListTable";
 import { withTranslation } from 'react-i18next';
+import {isAuthenticated} from "../../helpers/authHelper";
 
 class BookList extends React.Component {
     constructor(props) {
@@ -56,7 +57,9 @@ class BookList extends React.Component {
             <main>
                 <h2>{t('ks.list.pageTitle')}</h2>
                 {content}
+                {isAuthenticated() &&
                 <p><Link to="/book/add" className="button-add">{t('ks.list.addNew')}</Link></p>
+                }
             </main>
         )
     };

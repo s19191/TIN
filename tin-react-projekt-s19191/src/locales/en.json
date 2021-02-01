@@ -218,6 +218,7 @@
     "isNotFutureDate": "The date cannot be from the future",
     "isCorrectAdress": "The field should contain the address in the format, e.g. ul. Gorka 14C",
     "isNumber": "The field should be a number",
-    "isNumberPlus": "The field should be a positive number"
+    "isNumberPlus": "The field should be a positive number",
+    "isEmail": "The field should contain a valid email address"
   }
 }

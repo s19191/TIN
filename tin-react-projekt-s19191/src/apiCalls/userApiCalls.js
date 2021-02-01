@@ -1,8 +1,8 @@
-const baseUrl = 'http://localhost:3000/api/auth';
+const userBaseUrl = 'http://localhost:3000/api/user';
 
-export function loginApiCall(user) {
-    const url = `${baseUrl}/login`;
+export function addUserApiCall(user) {
     const userString = JSON.stringify(user);
+    console.log(userString);
     const options = {
         method: 'POST',
         headers: {
@@ -10,6 +10,6 @@ export function loginApiCall(user) {
         },
         body: userString
     }
-    const promise = fetch(url, options);
+    const promise = fetch(userBaseUrl, options);
     return promise;
 };

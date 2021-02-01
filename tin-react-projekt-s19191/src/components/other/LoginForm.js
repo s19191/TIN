@@ -2,7 +2,6 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 import FormInput from '../form/FormInput';
-import FormButtons from '../form/FormButtons';
 import { loginApiCall } from '../../apiCalls/authApiCalls';
 import { checkRequired } from '../../helpers/validationCommon';
 import { formValidationKeys } from '../../helpers/formHelper';
@@ -61,10 +60,6 @@ class LoginForm extends React.Component {
         const isValid = this.validateForm();
         if (isValid) {
             const user = this.state.user;
-            // const user = {
-            //     Email: 'jan.kowalski@acme.com',
-            //     password: '12345'
-            // }
             let response;
             loginApiCall(user)
                 .then(res => {

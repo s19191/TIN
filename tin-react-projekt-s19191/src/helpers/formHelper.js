@@ -13,6 +13,7 @@ export const formValidationKeys = {
     isCorrectAdress: 'isCorrectAdress',
     isNumber: 'isNumber',
     isNumberPlus: 'isNumberPlus',
+    isEmail: 'isEmail'
 };
 
 export function getValidationErrorKey(error) {

@@ -17,11 +17,35 @@
       "logOut": "Wyloguj się"
     }
   },
+  "register": {
+    "title": "Zarejestruj się",
+    "fields": {
+      "Name": "Imie",
+      "Surname": "Nazwisko",
+      "Email": "Email",
+      "Password": "Hasło"
+    },
+    "placeholders": {
+      "Name": "Imie",
+      "Surname": "Nazwisko",
+      "Email": "Email",
+      "Password": "Hasło"
+    },
+    "add": {
+      "pageTitle": "Rejestracja użytkownika",
+      "btnLabel": "Zarejestruj się",
+      "confirm": {
+        "header": "Potwierdzenie operacji",
+        "text": "Pomyślnie dodano książkę"
+      }
+    }
+  },
   "nav": {
     "main-page": "Strona główna",
     "ksiazki": "Książki",
     "magazyny": "Magazyny",
-    "stanyWMgazynach": "Stan w magazynach"
+    "stanyWMgazynach": "Stan w magazynach",
+    "register": "Zarejestruj się"
   },
   "list": {
     "actions": {
@@ -218,6 +242,7 @@
     "isNotFutureDate": "Data nie może być z przyszłości",
     "isCorrectAdress": "Pole powinno zawierać adres w formacie np. ul. Gorka 14C",
     "isNumber": "Pole powinno być liczbą",
-    "isNumberPlus": "Pole powinno być liczbą dodatnią"
+    "isNumberPlus": "Pole powinno być liczbą dodatnią",
+    "isEmail": "Pole powinno zawierać prawidłowy adres email"
   }
 }

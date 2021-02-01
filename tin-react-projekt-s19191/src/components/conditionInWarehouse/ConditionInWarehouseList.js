@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { getConditionsInWarehousesApiCall } from '../../apiCalls/conditionInWarehouseApiCalls';
 import ConditionInwarehouseListTable from ".//ConditionInWarehouseListTable";
 import { withTranslation } from 'react-i18next';
+import {isAuthenticated} from "../../helpers/authHelper";
 
 class ConditionInWarehouseList extends React.Component {
     constructor(props) {
@@ -54,7 +55,9 @@ class ConditionInWarehouseList extends React.Component {
             <main>
                 <h2>{t('swm.list.pageTitle')}</h2>
                 {content}
+                {isAuthenticated() &&
                 <p><Link to="/conditionInWarehouse/add" className="button-add">{t('swm.list.addNew')}</Link></p>
+                }
             </main>
         )
     };

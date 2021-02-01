@@ -3,6 +3,7 @@ import { getWarehousesApiCall } from '../../apiCalls/warehouseApiCalls';
 import { Link } from 'react-router-dom';
 import WarehouseListTable from "../warehouse/WarehouseListTable";
 import { withTranslation } from 'react-i18next';
+import {isAuthenticated} from "../../helpers/authHelper";
 
 class WarehouseList extends React.Component {
     constructor(props) {
@@ -54,7 +55,9 @@ class WarehouseList extends React.Component {
             <main>
                 <h2>{t('mag.list.pageTitle')}</h2>
                 {content}
+                {isAuthenticated() &&
                 <p><Link to="/warehouse/add" className="button-add">{t('mag.list.addNew')}</Link></p>
+                }
             </main>
         )
     };

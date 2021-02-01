@@ -15,6 +15,7 @@ const ksiazkaApiRouter = require('./routes/api/KsiazkaApiRoute');
 const magazynApiRouter = require('./routes/api/MagazynApiRoute');
 const stanWMagazynieApiRouter = require('./routes/api/StanWMagazynieApiRoute');
 const authApiRouter = require('./routes/api/AuthApiRoute');
+const userApiRoute = require('./routes/api/UserApiRoute');
 
 const app = express();
 
@@ -69,6 +70,7 @@ app.use('/api/ksiazki', ksiazkaApiRouter);
 app.use('/api/magazyny', magazynApiRouter);
 app.use('/api/stanWMagazynie', stanWMagazynieApiRouter);
 app.use('/api/auth', authApiRouter);
+app.use('/api/user', userApiRoute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
