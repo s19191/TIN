@@ -185,17 +185,17 @@
       "form": {
         "fields": {
           "Ksiazka": {
-            "label": "Book:",
+            "label": "Book",
             "select": "-- Choose a book --"
           },
           "Magazyn": {
-            "label": "Warehouse:",
+            "label": "Warehouse",
             "select": "-- Choose a warehouse --"
           },
-          "IloscNaStanie": "Stock quantity:",
-          "CenaHurtowa": "Wholesale price:",
-          "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price:",
-          "CenaDetaliczna": "Retail price:"
+          "IloscNaStanie": "Stock quantity",
+          "CenaHurtowa": "Wholesale price",
+          "MinimalnaIloscDoCenyHurtowej": "The minimum order quantity needed to calculate the wholesale price",
+          "CenaDetaliczna": "Retail price"
         }
       }
     },

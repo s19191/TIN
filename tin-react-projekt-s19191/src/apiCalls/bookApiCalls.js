@@ -13,6 +13,7 @@ export function getBookByIdApiCall(ksId) {
 
 export function addBookApiCall(ks) {
     const ksString = JSON.stringify(ks)
+    console.log(ksString)
     const options = {
         method: 'POST',
         headers: {

@@ -6,7 +6,10 @@ import { checkRequired, checkNumber, checkNumberRange } from '../../helpers/vali
 import { getConditionInWarehouseByIdApiCall, addConditionInWarehouseApiCall, updateConditionInWarehouseApiCall } from '../../apiCalls/conditionInWarehouseApiCalls';
 import FormInput from "../form/FormInput";
 import FormButtons from "../form/FormButtons";
+import FormSelect from "../form/FormSelect";
 import { withTranslation } from 'react-i18next';
+import {getBooksApiCall} from "../../apiCalls/bookApiCalls";
+import {getWarehousesApiCall} from "../../apiCalls/warehouseApiCalls";
 
 class ConditionsInWarehouseForm extends React.Component {
     constructor(props) {
@@ -19,8 +22,8 @@ class ConditionsInWarehouseForm extends React.Component {
             swmId: paramsSwmId,
             swm: {
                 //TODO: Tu wrócić, jak będzie wiadomo jak zrobić selecta Książki i Magazunu
-                Ksiazka_Id_Ksiazka: 1,
-                Magazyn_Id_Magazyn: 1,
+                Ksiazka_Id_Ksiazka: '',
+                Magazyn_Id_Magazyn: '',
                 User_Id_User: 1,
                 IloscNaStanie: '',
                 CenaHurtowa: '',
@@ -29,8 +32,8 @@ class ConditionsInWarehouseForm extends React.Component {
             },
             errors: {
                 //TODO: Tu wrócić, jak będzie wiadomo jak zrobić selecta Książki i Magazunu
-                Ksiazka_Id_Ksiazka: 1,
-                Magazyn_Id_Magazyn: 1,
+                Ksiazka_Id_Ksiazka: '',
+                Magazyn_Id_Magazyn: '',
                 User_Id_User: 1,
                 IloscNaStanie: '',
                 CenaHurtowa: '',
@@ -39,7 +42,9 @@ class ConditionsInWarehouseForm extends React.Component {
             },
             formMode: currentFormMode,
             redirect: false,
-            error: null
+            error: null,
+            allKs: [],
+            allMag: []
         };
     };
 
@@ -48,6 +53,8 @@ class ConditionsInWarehouseForm extends React.Component {
         if (currentFormMode === formMode.EDIT) {
             this.fetchConditionInWarehouseDetails();
         };
+        this.fetchBookList();
+        this.fetchWarehouseList();
     };
 
     fetchConditionInWarehouseDetails = () => {
@@ -75,6 +82,44 @@ class ConditionsInWarehouseForm extends React.Component {
                         error
                     })
                 });
+    };
+
+    fetchBookList = () => {
+        getBooksApiCall()
+            .then(res => res.json())
+            .then(
+                (data) => {
+                    this.setState({
+                        isLoaded: true,
+                        allKs: data
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    });
+                }
+            )
+    };
+
+    fetchWarehouseList = () => {
+        getWarehousesApiCall()
+            .then(res => res.json())
+            .then(
+                (data) => {
+                    this.setState({
+                        isLoaded: true,
+                        allMag: data
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    });
+                }
+            )
     };
 
     handleChange = (event) => {
@@ -245,6 +290,28 @@ class ConditionsInWarehouseForm extends React.Component {
                 <h2>{pageTitle}</h2>
                 <form className="form" onSubmit={this.handleSubmit}>
                     {/*TODO: Dodać selecta Książki i Magazynu*/}
+                    <FormSelect
+                        label={t('swm.form.fields.Ksiazka.label')}
+                        select={t('swm.form.fields.Ksiazka.select')}
+                        required
+                        error={this.state.errors.Ksiazka_Id_Ksiazka}
+                        name="Ksiazka_Id_Ksiazka"
+                        onChange={this.handleChange}
+                        value={this.state.swm.Ksiazka_Id_Ksiazka}
+                        list={this.state.allKs}
+                        id={this.state.swm.Ksiazka_Id_Ksiazka}
+                    />
+                    <FormSelect
+                        label={t('swm.form.fields.Magazyn.label')}
+                        select={t('swm.form.fields.Magazyn.select')}
+                        required
+                        error={this.state.errors.Magazyn_Id_Magazyn}
+                        name="Magazyn_Id_Magazyn"
+                        onChange={this.handleChange}
+                        value={this.state.swm.Magazyn_Id_Magazyn}
+                        list={this.state.allMag}
+                        id={this.state.swm.Magazyn_Id_Magazyn}
+                    />
                     <FormInput
                         type="number"
                         label={t('swm.form.fields.IloscNaStanie')}
@@ -257,7 +324,6 @@ class ConditionsInWarehouseForm extends React.Component {
                     <FormInput
                         type="number"
                         label={t('swm.form.fields.CenaHurtowa')}
-                        required
                         error={this.state.errors.CenaHurtowa}
                         name="CenaHurtowa"
                         onChange={this.handleChange}
@@ -266,7 +332,6 @@ class ConditionsInWarehouseForm extends React.Component {
                     <FormInput
                         type="number"
                         label={t('swm.form.fields.MinimalnaIloscDoCenyHurtowej')}
-                        required
                         error={this.state.errors.MinimalnaIloscDoCenyHurtowej}
                         name="MinimalnaIloscDoCenyHurtowej"
                         onChange={this.handleChange}

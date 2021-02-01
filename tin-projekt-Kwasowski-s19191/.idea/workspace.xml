@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="dodane role, które są funkcjonalne">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Ksiazka.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/Magazyn.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Magazyn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/StanWMagazynie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/StanWMagazynieAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/StanWMagazynieAPI.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/bookApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/bookApiCalls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/conditionInWarehouse/ConditionInWarehouseForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/conditionInWarehouse/ConditionInWarehouseForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/form/FormInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/form/FormInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/warehouse/WarehouseForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/warehouse/WarehouseForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/helpers/formHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/helpers/formHelper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/locales/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/locales/pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/locales/pl.json" afterDir="false" />
     </list>
@@ -57,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tin-react-projekt-s19191" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -177,7 +173,7 @@
       <workItem from="1611962412765" duration="4275000" />
       <workItem from="1612050995958" duration="1805000" />
       <workItem from="1612095621978" duration="65000" />
-      <workItem from="1612127245869" duration="3529000" />
+      <workItem from="1612127245869" duration="7281000" />
     </task>
     <task id="LOCAL-00012" summary="dodane repozytoria">
       <created>1608250390744</created>

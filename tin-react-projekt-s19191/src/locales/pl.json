@@ -75,9 +75,9 @@
     },
     "form": {
       "fields": {
-        "Tytul": "Tytuł:",
-        "Autor": "Autor:",
-        "DataWydania": "Data wydania:"
+        "Tytul": "Tytuł",
+        "Autor": "Autor",
+        "DataWydania": "Data wydania"
       },
       "placeholders": {
         "Tytul": "2-60 znaków",
@@ -136,8 +136,8 @@
     },
     "form": {
       "fields": {
-        "Nazwa": "Nazwa:",
-        "Adres": "Adres:"
+        "Nazwa": "Nazwa",
+        "Adres": "Adres"
       },
       "placeholders": {
         "Nazwa": "2-60 znaków",
@@ -202,17 +202,17 @@
     "form": {
       "fields": {
         "Ksiazka": {
-          "label": "Książka:",
+          "label": "Książka",
           "select": "-- Wybierz książkę --"
         },
         "Magazyn": {
-          "label": "Magazyn:",
+          "label": "Magazyn",
           "select": "-- Wybierz magazyn --"
         },
-        "IloscNaStanie": "Ilość na stanie:",
-        "CenaHurtowa": "Cena hurtowa:",
-        "MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej:",
-        "CenaDetaliczna": "Cena detaliczna:"
+        "IloscNaStanie": "Ilość na stanie",
+        "CenaHurtowa": "Cena hurtowa",
+        "MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",
+        "CenaDetaliczna": "Cena detaliczna"
       },
       "add": {
         "pageTitle": "Dodawanie stanu książki w konretnym magazynie",
