@@ -5,7 +5,7 @@ function Footer() {
     let who;
     if(isAuthenticated()) {
         const user = getCurrentUser();
-        who = user.Name + " " + user.Role;
+        who = user.Name + " " + user.Surname + ", rola: " + user.Role;
     };
     return (
         <footer>

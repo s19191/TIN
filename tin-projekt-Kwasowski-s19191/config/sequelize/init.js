@@ -35,7 +35,7 @@ module.exports = () => {
             if(!ro || ro.length == 0) {
                 return Role.bulkCreate([
                     {Name: 'Admin'},
-                    {Name: 'Manager'},
+                    {Name: 'Creator'},
                 ])
                     .then( () => {
                         return Role.findAll();

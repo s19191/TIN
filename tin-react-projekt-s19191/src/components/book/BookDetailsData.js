@@ -51,7 +51,7 @@ function BookDetailsData(props) {
                 {ks.stanyWMagazynach.map(
                     swm =>
                         <tr key={swm.Id_StanWMagazynie}>
-                            <td>{swm.magazyn.Nazwa}</td>
+                            <td><Link to={`/warehouse/details/${swm.magazyn.Id_Magazyn}`}>{swm.magazyn.Nazwa}</Link></td>
                             <td>{swm.IloscNaStanie}</td>
                             <td>{swm.CenaHurtowa ? swm.CenaHurtowa : 0}</td>
                             <td>{swm.MinimalnaIloscDoCenyHurtowej ? swm.MinimalnaIloscDoCenyHurtowej : 0}</td>
