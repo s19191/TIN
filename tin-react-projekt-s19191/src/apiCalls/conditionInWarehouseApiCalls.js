@@ -37,3 +37,12 @@ export function updateConditionInWarehouseApiCall(swmId, swm) {
     const promise = fetch(url, options);
     return promise;
 };
+
+export function deleteConditionInWarehouseApiCall(swmId) {
+    const url = `${conditionInWarehouseBaseUrl}/${swmId}`;
+    const options = {
+        method: 'DELETE'
+    }
+    const promise = fetch(url, options);
+    return promise;
+};

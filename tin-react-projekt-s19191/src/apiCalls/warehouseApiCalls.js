@@ -37,3 +37,12 @@ export function updateWarehouseApiCall(magId, mag) {
     const promise = fetch(url, options);
     return promise;
 };
+
+export function deleteWarehouseApiCall(magId) {
+    const url = `${warehouseBaseUrl}/${magId}`;
+    const options = {
+        method: 'DELETE'
+    }
+    const promise = fetch(url, options);
+    return promise;
+};

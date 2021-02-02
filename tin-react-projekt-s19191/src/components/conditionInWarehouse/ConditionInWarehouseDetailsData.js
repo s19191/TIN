@@ -1,8 +1,8 @@
 import React from 'react';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import DetailsInput from "../details/DetailsInput";
-import {Link} from "react-router-dom";
-import {isAuthenticated, isCreatorOrAdmin} from "../../helpers/authHelper";
+import { Link } from "react-router-dom";
+import { isAuthenticated, isCreatorOrAdmin } from "../../helpers/authHelper";
 
 function ConditionInWarehouseDetailsData(props) {
     const swm = props.conditionInWarehouseData;

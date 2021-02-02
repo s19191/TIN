@@ -7,8 +7,8 @@ import { getBookByIdApiCall, addBookApiCall, updateBookApiCall } from '../../api
 import FormInput from "../form/FormInput";
 import FormButtons from "../form/FormButtons";
 import { withTranslation } from 'react-i18next';
-import {getFormattedDate} from "../../helpers/dateHelper";
-import {getCurrentUser} from "../../helpers/authHelper";
+import { getFormattedDate } from "../../helpers/dateHelper";
+import { getCurrentUser } from "../../helpers/authHelper";
 
 class BookForm extends React.Component {
     constructor(props) {

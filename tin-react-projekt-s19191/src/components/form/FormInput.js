@@ -1,6 +1,6 @@
 import React from 'react';
-import {useTranslation} from "react-i18next";
-import {getValidationErrorKey} from "../../helpers/formHelper";
+import { useTranslation } from "react-i18next";
+import { getValidationErrorKey } from "../../helpers/formHelper";
 
 function FormInput(props) {
     const className = props.error === '' ? '' : 'error-input';

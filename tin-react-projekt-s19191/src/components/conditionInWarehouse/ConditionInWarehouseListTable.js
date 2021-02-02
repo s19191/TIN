@@ -1,6 +1,6 @@
 import React from 'react';
 import ConditionInWarehouseListTableRaw from './ConditionInWarehouseListTableRaw';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 function ConditionInWarehouseListTable(props) {
     const conditionsInWarehouses = props.conditionsInWarehousesList;

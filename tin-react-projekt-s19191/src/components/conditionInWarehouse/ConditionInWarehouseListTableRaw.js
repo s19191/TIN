@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {useTranslation} from "react-i18next";
-import {getCurrentUser, isAuthenticated, isCreatorOrAdmin} from "../../helpers/authHelper";
+import { useTranslation } from "react-i18next";
+import { isAuthenticated, isCreatorOrAdmin } from "../../helpers/authHelper";
+import { deleteConditionInWarehouseApiCall } from "../../apiCalls/conditionInWarehouseApiCalls";
 
 function ConditionInWarehouseListTableRaw(props) {
     const swm = props.conditionInwarehouseData;
@@ -15,7 +16,11 @@ function ConditionInWarehouseListTableRaw(props) {
         deleteButton;
     if(isAuthenticated() && isAble) {
         editButton = <li><Link to={`conditionInWarehouse/edit/${swm.Id_StanWMagazynie}`} className="list-actions-button-edit">{t('list.actions.edit')}</Link></li>;
-        deleteButton = <li><Link to={`conditionInWarehouse/delete/${swm.Id_StanWMagazynie}`} className="list-actions-button-delete">{t('list.actions.delete')}</Link></li>;
+        deleteButton = <li><Link to={`/conditionInWarehouse`} onClick={() => {
+            deleteConditionInWarehouseApiCall(swm.Id_StanWMagazynie)
+                .then(() =>
+                    window.location.reload(false));
+        }} className="list-actions-button-delete">{t('list.actions.delete')}</Link></li>;
     };
 
     return (

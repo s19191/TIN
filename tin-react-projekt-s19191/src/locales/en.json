@@ -6,12 +6,17 @@
     "title": "Main page",
     "content": "\nDobra Księgarnia has been on the market for 24 years. We are a valued and reputable Warsaw bookstore. The website helps to find specific items in cooperating warehouses. All books can be viewed in the \"Books\" section, while in the \"Warehouses\" section you can see a list of warehouses with their basic information. The \"Stock in stocks\" tab shows the availability of books in all warehouses. On each page, you can add new items, edit existing ones and view their details."
   },
+  "footer": {
+    "loggedInInformation": "You are logged in as: ",
+    "loggedOutInformation": "You're not logged in: ",
+    "author": "Author: ",
+    "role": ", role"
+  },
   "authentication": {
     "title": "Login",
     "email": "Email",
     "password": "Password",
     "loginError": "Invalid email address or password",
-    "logOutInformation": "You are logged in as: ",
     "actions": {
       "logIn": "Sign In",
       "logOut": "Log out"

@@ -1,21 +1,23 @@
 import React from "react";
-import {getCurrentUser, isAuthenticated} from "../../helpers/authHelper";
+import { getCurrentUser, isAuthenticated } from "../../helpers/authHelper";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+    const { t } = useTranslation();
     let who;
     if(isAuthenticated()) {
         const user = getCurrentUser();
-        who = user.Name + " " + user.Surname + ", rola: " + user.Role;
+        who = user.Name + " " + user.Surname + t('footer.role') + user.Role;
     };
     return (
         <footer>
             {isAuthenticated()&&
-                <p>Zalogowany jako: {who}</p>
+                <p>{t('footer.loggedInInformation')} {who}</p>
             }
             {!isAuthenticated()&&
-            <p>Nie zalogowany</p>
+            <p>{t('footer.loggedOutInformation')}</p>
             }
-            <p>Jan, Kwasowski, s19191</p>
+            <p>{t('footer.author')}Jan, Kwasowski, s19191</p>
         </footer>
     )
 }

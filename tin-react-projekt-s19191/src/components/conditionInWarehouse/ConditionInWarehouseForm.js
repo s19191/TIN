@@ -8,9 +8,9 @@ import FormInput from "../form/FormInput";
 import FormButtons from "../form/FormButtons";
 import FormSelect from "../form/FormSelect";
 import { withTranslation } from 'react-i18next';
-import {getBooksApiCall} from "../../apiCalls/bookApiCalls";
-import {getWarehousesApiCall} from "../../apiCalls/warehouseApiCalls";
-import {getCurrentUser} from "../../helpers/authHelper";
+import { getBooksApiCall } from "../../apiCalls/bookApiCalls";
+import { getWarehousesApiCall } from "../../apiCalls/warehouseApiCalls";
+import { getCurrentUser } from "../../helpers/authHelper";
 
 class ConditionsInWarehouseForm extends React.Component {
     constructor(props) {

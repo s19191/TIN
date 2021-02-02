@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getConditionsInWarehousesApiCall } from '../../apiCalls/conditionInWarehouseApiCalls';
 import ConditionInwarehouseListTable from ".//ConditionInWarehouseListTable";
 import { withTranslation } from 'react-i18next';
-import {isAuthenticated} from "../../helpers/authHelper";
+import { isAuthenticated } from "../../helpers/authHelper";
 
 class ConditionInWarehouseList extends React.Component {
     constructor(props) {

@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getFormattedDate } from '../../helpers/dateHelper';
 import { useTranslation } from "react-i18next";
-import {isAuthenticated} from "../../helpers/authHelper";
+import { isAuthenticated } from "../../helpers/authHelper";
+import { deleteBookApiCall } from "../../apiCalls/bookApiCalls";
 
 function BookListTableRow(props) {
     const ks = props.bookData;
@@ -19,7 +20,11 @@ function BookListTableRow(props) {
                     <li><Link to={`book/edit/${ks.Id_Ksiazka}`} className="list-actions-button-edit">{t('list.actions.edit')}</Link></li>
                     }
                     {isAuthenticated() &&
-                    <li><Link to={`book/delete/${ks.Id_Ksiazka}`} className="list-actions-button-delete">{t('list.actions.delete')}</Link></li>
+                    <li><Link to={`/book`} onClick={() => {
+                        deleteBookApiCall(ks.Id_Ksiazka)
+                            .then(() =>
+                                window.location.reload(false));
+                    }} className="list-actions-button-delete">{t('list.actions.delete')}</Link></li>
                     }
                 </ul>
             </td>

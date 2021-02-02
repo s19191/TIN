@@ -3,7 +3,7 @@ import { getFormattedDate } from '../../helpers/dateHelper';
 import { useTranslation } from 'react-i18next';
 import DetailsInput from "../details/DetailsInput";
 import { Link } from "react-router-dom";
-import {isAuthenticated} from "../../helpers/authHelper";
+import { isAuthenticated } from "../../helpers/authHelper";
 
 function BookDetailsData(props) {
     const ks = props.bookData;

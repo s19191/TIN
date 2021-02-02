@@ -3,7 +3,7 @@ import { getBooksApiCall } from '../../apiCalls/bookApiCalls';
 import { Link } from 'react-router-dom';
 import BookListTable from "./BookListTable";
 import { withTranslation } from 'react-i18next';
-import {isAuthenticated} from "../../helpers/authHelper";
+import { isAuthenticated } from "../../helpers/authHelper";
 
 class BookList extends React.Component {
     constructor(props) {

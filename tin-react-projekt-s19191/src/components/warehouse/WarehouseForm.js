@@ -7,7 +7,7 @@ import { getWarehouseByIdApiCall, addWarehouseApiCall, updateWarehouseApiCall } 
 import FormInput from "../form/FormInput";
 import FormButtons from "../form/FormButtons";
 import { withTranslation } from 'react-i18next';
-import {getCurrentUser} from "../../helpers/authHelper";
+import { getCurrentUser } from "../../helpers/authHelper";
 
 class WarehouseForm extends React.Component {
     constructor(props) {

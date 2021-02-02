@@ -1,5 +1,5 @@
 import React from 'react';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 function MainContent() {
     const { t } = useTranslation();

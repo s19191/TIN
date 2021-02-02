@@ -3,7 +3,7 @@ import { getWarehousesApiCall } from '../../apiCalls/warehouseApiCalls';
 import { Link } from 'react-router-dom';
 import WarehouseListTable from "../warehouse/WarehouseListTable";
 import { withTranslation } from 'react-i18next';
-import {isAuthenticated} from "../../helpers/authHelper";
+import { isAuthenticated } from "../../helpers/authHelper";
 
 class WarehouseList extends React.Component {
     constructor(props) {

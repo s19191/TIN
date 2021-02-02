@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
-import {isAuthenticated, isCreatorOrAdmin} from "../../helpers/authHelper";
+import { isAuthenticated, isCreatorOrAdmin } from "../../helpers/authHelper";
+import { deleteWarehouseApiCall } from "../../apiCalls/warehouseApiCalls";
 
 function BookListTableRow(props) {
     const mag = props.warehouseData;
@@ -15,7 +16,11 @@ function BookListTableRow(props) {
         deleteButton;
     if(isAuthenticated() && isAble) {
         editButton = <li><Link to={`warehouse/edit/${mag.Id_Magazyn}`} className="list-actions-button-edit">{t('list.actions.edit')}</Link></li>;
-        deleteButton = <li><Link to={`warehouse/delete/${mag.Id_Magazyn}`} className="list-actions-button-delete">{t('list.actions.delete')}</Link></li>;
+        deleteButton = <li><Link to={`/warehouse`} onClick={() => {
+            deleteWarehouseApiCall(mag.Id_Magazyn)
+                .then(() =>
+                    window.location.reload(false));
+        }} className="list-actions-button-delete">{t('list.actions.delete')}</Link></li>;
     };
 
     return (

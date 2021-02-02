@@ -4,7 +4,6 @@ import { formValidationKeys } from '../../helpers/formHelper';
 import { checkRequired, checkTextLengthRange, checkEmail } from '../../helpers/validationCommon';
 import { addUserApiCall } from '../../apiCalls/userApiCalls';
 import FormInput from "../form/FormInput";
-import FormButtons from "../form/FormButtons";
 import { withTranslation } from 'react-i18next';
 import RegisterButtons from "../form/RegisterButtons";
 
