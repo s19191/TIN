@@ -1,3 +1,5 @@
+import { getCurrentUser } from "../helpers/authHelper";
+
 const conditionInWarehouseBaseUrl = 'http://localhost:3000/api/stanWMagazynie';
 
 export function getConditionsInWarehousesApiCall() {
@@ -13,13 +15,19 @@ export function getConditionInWarehouseByIdApiCall(swmId) {
 
 export function addConditionInWarehouseApiCall(swm) {
     const swmString = JSON.stringify(swm);
+    const user = getCurrentUser();
+    let token;
+    if (user && user.token) {
+        token = user.token;
+    };
     const options = {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
         },
         body: swmString
-    }
+    };
     const promise = fetch(conditionInWarehouseBaseUrl, options);
     return promise;
 };
@@ -27,22 +35,36 @@ export function addConditionInWarehouseApiCall(swm) {
 export function updateConditionInWarehouseApiCall(swmId, swm) {
     const url = `${conditionInWarehouseBaseUrl}/${swmId}`;
     const swmString = JSON.stringify(swm);
+    const user = getCurrentUser();
+    let token;
+    if (user && user.token) {
+        token = user.token;
+    };
     const options = {
         method: 'PUT',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
         },
         body: swmString
-    }
+    };
     const promise = fetch(url, options);
     return promise;
 };
 
 export function deleteConditionInWarehouseApiCall(swmId) {
     const url = `${conditionInWarehouseBaseUrl}/${swmId}`;
+    const user = getCurrentUser();
+    let token;
+    if (user && user.token) {
+        token = user.token;
+    };
     const options = {
-        method: 'DELETE'
-    }
+        method: 'DELETE',
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
+    };
     const promise = fetch(url, options);
     return promise;
 };

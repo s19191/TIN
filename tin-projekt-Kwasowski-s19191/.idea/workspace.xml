@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="dodane role, które są funkcjonalne">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/locales/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/locales/pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/locales/pl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/KsiazkaApiRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/KsiazkaApiRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/MagazynApiRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/MagazynApiRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/StanWMagazynieApiRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/StanWMagazynieApiRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/bookApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/bookApiCalls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/conditionInWarehouseApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/conditionInWarehouseApiCalls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/userApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/userApiCalls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/warehouseApiCalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/apiCalls/warehouseApiCalls.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tin-react-projekt-s19191" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -171,6 +177,7 @@
       <workItem from="1612127245869" duration="8387000" />
       <workItem from="1612184240231" duration="1810000" />
       <workItem from="1612206174916" duration="11758000" />
+      <workItem from="1612279043749" duration="735000" />
     </task>
     <task id="LOCAL-00012" summary="dodane repozytoria">
       <created>1608250390744</created>
