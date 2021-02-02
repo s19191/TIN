@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/MagazynApiRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/MagazynApiRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/StanWMagazynieApiRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/StanWMagazynieApiRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/conditionInWarehouse/ConditionInWarehouseForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/conditionInWarehouse/ConditionInWarehouseForm.js" afterDir="false" />
@@ -183,7 +182,7 @@
       <workItem from="1612127245869" duration="8387000" />
       <workItem from="1612184240231" duration="1810000" />
       <workItem from="1612206174916" duration="11758000" />
-      <workItem from="1612279043749" duration="13165000" />
+      <workItem from="1612279043749" duration="13530000" />
     </task>
     <task id="LOCAL-00012" summary="dodane repozytoria">
       <created>1608250390744</created>
