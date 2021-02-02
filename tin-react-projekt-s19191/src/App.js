@@ -12,14 +12,15 @@ import WarehouseForm from './components/warehouse/WarehouseForm';
 import ConditionInWarehouseList from './components/conditionInWarehouse/ConditionInWarehouseList';
 import ConditionInWarehouseDetails from './components/conditionInWarehouse/ConditionInWarehouseDetails';
 import ConditionInWarehouseForm from './components/conditionInWarehouse/ConditionInWarehouseForm';
+import LoginForm from "./components/other/LoginForm";
+import { getCurrentUser } from "./helpers/authHelper";
+import RegisterForm from "./components/other/RegisterForm";
+import ProtectedRoute from "./components/other/ProtectedRoute";
 import {
     BrowserRouter as Router,
     Switch,
     Route,
 } from 'react-router-dom';
-import LoginForm from "./components/other/LoginForm";
-import {getCurrentUser} from "./helpers/authHelper";
-import RegisterForm from "./components/other/RegisterForm";
 
 class App extends React.Component {
     constructor(props) {
@@ -64,18 +65,18 @@ class App extends React.Component {
 
                         <Route exact path="/book" component={BookList}/>
                         <Route exact path="/book/details/:ksId" component={BookDetails}/>
-                        <Route exact path="/book/add" component={BookForm}/>
-                        <Route exact path="/book/edit/:ksId" component={BookForm}/>
+                        <ProtectedRoute  exact path="/book/add" component={BookForm}/>
+                        <ProtectedRoute  exact path="/book/edit/:ksId" component={BookForm}/>
 
                         <Route exact path="/warehouse" component={WarehouseList}/>
                         <Route exact path="/warehouse/details/:magId" component={WarehouseDetails}/>
-                        <Route exact path="/warehouse/add" component={WarehouseForm}/>
-                        <Route exact path="/warehouse/edit/:magId" component={WarehouseForm}/>
+                        <ProtectedRoute exact path="/warehouse/add" component={WarehouseForm}/>
+                        <ProtectedRoute exact path="/warehouse/edit/:magId" component={WarehouseForm}/>
 
                         <Route exact path="/conditionInWarehouse" component={ConditionInWarehouseList}/>
                         <Route exact path="/conditionInWarehouse/details/:swmId" component={ConditionInWarehouseDetails}/>
-                        <Route exact path="/conditionInWarehouse/add" component={ConditionInWarehouseForm}/>
-                        <Route exact path="/conditionInWarehouse/edit/:swmId" component={ConditionInWarehouseForm}/>
+                        <ProtectedRoute exact path="/conditionInWarehouse/add" component={ConditionInWarehouseForm}/>
+                        <ProtectedRoute exact path="/conditionInWarehouse/edit/:swmId" component={ConditionInWarehouseForm}/>
                     </Switch>
                     <Footer/>
                 </div>
