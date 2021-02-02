@@ -10,19 +10,21 @@ import FormSelect from "../form/FormSelect";
 import { withTranslation } from 'react-i18next';
 import {getBooksApiCall} from "../../apiCalls/bookApiCalls";
 import {getWarehousesApiCall} from "../../apiCalls/warehouseApiCalls";
+import {getCurrentUser} from "../../helpers/authHelper";
 
 class ConditionsInWarehouseForm extends React.Component {
     constructor(props) {
         super(props);
         const paramsSwmId = props.match.params.swmId;
         const currentFormMode = paramsSwmId ? formMode.EDIT : formMode.NEW;
+        const user = getCurrentUser();
 
         this.state = {
             swmId: paramsSwmId,
             swm: {
                 Ksiazka_Id_Ksiazka: '',
                 Magazyn_Id_Magazyn: '',
-                User_Id_User: 1,
+                User_Id_User: user.userId,
                 IloscNaStanie: '',
                 CenaHurtowa: '',
                 MinimalnaIloscDoCenyHurtowej: '',
@@ -31,7 +33,7 @@ class ConditionsInWarehouseForm extends React.Component {
             errors: {
                 Ksiazka_Id_Ksiazka: '',
                 Magazyn_Id_Magazyn: '',
-                User_Id_User: 1,
+                User_Id_User: user.userId,
                 IloscNaStanie: '',
                 CenaHurtowa: '',
                 MinimalnaIloscDoCenyHurtowej: '',

@@ -14,20 +14,55 @@ const User = sequelize.define('User', {
     },
     Name: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "notEmpty"
+            },
+            len: {
+                args: [2,60],
+                msg: "len_2_60"
+            }
+        }
     },
     Surname: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "notEmpty"
+            },
+            len: {
+                args: [2,60],
+                msg: "len_2_60"
+            }
+        }
     },
     Email: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true
+        unique: true,
+        validate: {
+            notEmpty: {
+                msg: "notEmpty"
+            },
+            isEmail: {
+                msg: "isEmail"
+            }
+        }
     },
     Password: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "notEmpty"
+            },
+            len: {
+                args: [2,60],
+                msg: "len_2_60"
+            }
+        }
     }
 });
 

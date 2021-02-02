@@ -23,7 +23,12 @@ class Navigation extends React.Component {
                     {!isAuthenticated() &&
                     <li className='lang'><Link to="/register">{t('nav.register')}</Link></li>
                     }
+                    {isAuthenticated() &&
                     <li className='lang'>{loginLogoutLink}</li>
+                    }
+                    {!isAuthenticated() &&
+                    <li>{loginLogoutLink}</li>
+                    }
                     <li><button onClick={() => { this.handleLanguageChange('pl') }}>PL</button></li>
                     <li><button onClick={() => { this.handleLanguageChange('en') }}>EN</button></li>
                 </ul>

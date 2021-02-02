@@ -8,23 +8,25 @@ import FormInput from "../form/FormInput";
 import FormButtons from "../form/FormButtons";
 import { withTranslation } from 'react-i18next';
 import {getFormattedDate} from "../../helpers/dateHelper";
+import {getCurrentUser} from "../../helpers/authHelper";
 
 class BookForm extends React.Component {
     constructor(props) {
         super(props);
         const paramsKsId = props.match.params.ksId;
         const currentFormMode = paramsKsId ? formMode.EDIT : formMode.NEW;
+        const user = getCurrentUser();
 
         this.state = {
             ksId: paramsKsId,
             ks: {
-                User_Id_User: 1,
+                User_Id_User: user.userId,
                 Tytul: '',
                 Autor: '',
                 DataWydania: ''
             },
             errors: {
-                User_Id_User: 1,
+                User_Id_User: user.userId,
                 Tytul: '',
                 Autor: '',
                 DataWydania: ''

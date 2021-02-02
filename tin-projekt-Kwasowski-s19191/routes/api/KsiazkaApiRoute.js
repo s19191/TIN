@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const isAuth = require('../../middleware/isAuth');
 
 const ksiazkaApiController = require('../../api/KsiazkaAPI');
 

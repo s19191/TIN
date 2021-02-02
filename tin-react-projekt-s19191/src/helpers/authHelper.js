@@ -9,3 +9,11 @@ export function isAuthenticated() {
     };
     return false;
 };
+
+export function isCreatorOrAdmin(creatorId) {
+    const user = getCurrentUser();
+    if (user.Role === "Admin" || user.userId === creatorId) {
+        return true;
+    };
+    return false;
+};

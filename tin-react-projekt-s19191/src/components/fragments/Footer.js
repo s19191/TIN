@@ -1,9 +1,21 @@
 import React from "react";
+import {getCurrentUser, isAuthenticated} from "../../helpers/authHelper";
 
 function Footer() {
+    let who;
+    if(isAuthenticated()) {
+        const user = getCurrentUser();
+        who = user.Name + " " + user.Role;
+    };
     return (
         <footer>
-            Jan, Kwasowski, s19191
+            {isAuthenticated()&&
+                <p>Zalogowany jako: {who}</p>
+            }
+            {!isAuthenticated()&&
+            <p>Nie zalogowany</p>
+            }
+            <p>Jan, Kwasowski, s19191</p>
         </footer>
     )
 }

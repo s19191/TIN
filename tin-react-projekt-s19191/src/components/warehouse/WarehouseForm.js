@@ -7,22 +7,24 @@ import { getWarehouseByIdApiCall, addWarehouseApiCall, updateWarehouseApiCall } 
 import FormInput from "../form/FormInput";
 import FormButtons from "../form/FormButtons";
 import { withTranslation } from 'react-i18next';
+import {getCurrentUser} from "../../helpers/authHelper";
 
 class WarehouseForm extends React.Component {
     constructor(props) {
         super(props);
         const paramsMagId = props.match.params.magId;
         const currentFormMode = paramsMagId ? formMode.EDIT : formMode.NEW;
+        const user = getCurrentUser();
 
         this.state = {
             magId: paramsMagId,
             mag: {
-                User_Id_User: 1,
+                User_Id_User: user.userId,
                 Nazwa: '',
                 Adres: ''
             },
             errors: {
-                User_Id_User: 1,
+                User_Id_User: user.userId,
                 Nazwa: '',
                 Adres: '',
             },
