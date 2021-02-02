@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect } from 'react-router-dom';
+import {Redirect, withRouter} from 'react-router-dom';
 import formMode from '../../helpers/formHelper';
 import { formValidationKeys } from '../../helpers/formHelper';
 import { checkRequired, checkNumber, checkNumberRange } from '../../helpers/validationCommon';
@@ -352,4 +352,4 @@ class ConditionsInWarehouseForm extends React.Component {
     }
 };
 
-export default withTranslation()(ConditionsInWarehouseForm);
+export default withTranslation()(withRouter(ConditionsInWarehouseForm));

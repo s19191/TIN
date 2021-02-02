@@ -10,7 +10,7 @@
     "loggedInInformation": "Jesteś zalogowany jako: ",
     "loggedOutInformation": "Nie jesteś zalogowany",
     "author": "Autor: ",
-    "role": ", rola"
+    "role": ", rola: "
   },
   "authentication": {
     "title": "Logowanie",

@@ -53,6 +53,7 @@ exports.updateStanWMagazynie = (req, res, next) => {
         swmData.MinimalnaIloscDoCenyHurtowej = null;
     };
     const Id_StanWMagazynie = req.params.Id_StanWMagazynie;
+    console.log(swmData)
     StanWMagazynieRepository.updateStanWMagazynie(Id_StanWMagazynie, swmData)
         .then(result => {
             res.status(200).json({message: 'Stan w magazynie updated!', StanWMagazynie: result});

@@ -21,6 +21,7 @@ exports.login = (req, res) => {
                         {
                             Email: user.Email,
                             userId: user.Id_User,
+                            Role: user.Role_Id_Role
                         },
                         config.secret,
                         { expiresIn: '1h' }

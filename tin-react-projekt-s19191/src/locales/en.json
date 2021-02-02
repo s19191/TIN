@@ -10,7 +10,7 @@
     "loggedInInformation": "You are logged in as: ",
     "loggedOutInformation": "You're not logged in",
     "author": "Author: ",
-    "role": ", role"
+    "role": ", role: "
   },
   "authentication": {
     "title": "Login",

@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect } from 'react-router-dom';
+import {Redirect, withRouter} from 'react-router-dom';
 import formMode from '../../helpers/formHelper';
 import { formValidationKeys } from '../../helpers/formHelper';
 import { checkRequired, checkTextLengthRange, checkDate, checkDateIfAfter } from '../../helpers/validationCommon';
@@ -268,4 +268,4 @@ class BookForm extends React.Component {
     };
 };
 
-export default withTranslation()(BookForm);
+export default withTranslation()(withRouter(BookForm));
