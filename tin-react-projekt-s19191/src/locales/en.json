@@ -8,7 +8,7 @@
   },
   "footer": {
     "loggedInInformation": "You are logged in as: ",
-    "loggedOutInformation": "You're not logged in: ",
+    "loggedOutInformation": "You're not logged in",
     "author": "Author: ",
     "role": ", role"
   },
