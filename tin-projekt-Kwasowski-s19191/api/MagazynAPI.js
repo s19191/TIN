@@ -49,7 +49,6 @@ exports.updateMagazyn = (req, res, next) => {
             }
             next(err);
         });
-
 };
 
 exports.deleteMagazyn = (req, res, next) => {

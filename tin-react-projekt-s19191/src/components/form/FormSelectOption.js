@@ -1,4 +1,5 @@
 import React from "react";
+import {isCreatorOrAdmin} from "../../helpers/authHelper";
 
 function FormSelectOption(props) {
     const element = props.element;
@@ -12,11 +13,23 @@ function FormSelectOption(props) {
         text = element.Nazwa;
         id = element.Id_Magazyn;
     };
-    return (
-        <React.Fragment>
-            <option selected={id===props.id} label={text}>{id}</option>
-        </React.Fragment>
-    )
+    if (isCreatorOrAdmin(element.User_Id_User) && whitch === "Magazyn_Id_Magazyn") {
+        return (
+            <React.Fragment>
+                <option selected={id === props.id} label={text}>{id}</option>
+            </React.Fragment>
+        )
+    } else if (whitch === "Ksiazka_Id_Ksiazka") {
+        return (
+            <React.Fragment>
+                <option selected={id === props.id} label={text}>{id}</option>
+            </React.Fragment>
+        )
+    } else {
+        return (
+            <span></span>
+        )
+    }
 };
 
 export default FormSelectOption;

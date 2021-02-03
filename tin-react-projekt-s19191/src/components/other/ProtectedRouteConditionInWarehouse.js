@@ -1,30 +1,16 @@
-import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
-import { isAuthenticated, isCreatorOrAdmin } from '../../helpers/authHelper';
-import { getConditionInWarehouseByIdApiCall } from "../../apiCalls/conditionInWarehouseApiCalls";
+import React from 'react'
+import {Redirect, Route} from 'react-router-dom'
+import { isAuthenticated } from '../../helpers/authHelper'
 
-function ProtectedRouteConditionInWarehouse({ component: Component, ...rest }) {
-    // let book = getConditionInWarehouseByIdApiCall(rest.computedMatch.params.swmId);
-    // let creatorId = book.User_Id_User;
+//Nie używane
 
-    return (
-        <Route
-            {...rest}
-            render={props =>
-                isAuthenticated() ? (
-                // (isAuthenticated() && isCreatorOrAdmin(creatorId)) ? (
-                    <Component {...props} />
-                ) : (
-                    <Redirect
-                        to={{
-                            pathname: "/conditionInWarehouse",
-                            state: { from: props.location }
-                        }}
-                    />
-                )
-            }
-        />
-    );
+class ProtectedRouteConditionInWarehouse extends React.Component {
+
+    render() {
+        return isAuthenticated()
+            ? (<Route exact path={this.props.path} component={this.props.component}/> )
+            : (<Redirect to="/conditionInWarehouse" />);
+    }
 }
 
 export default ProtectedRouteConditionInWarehouse;

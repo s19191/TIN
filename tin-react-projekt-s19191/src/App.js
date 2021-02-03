@@ -73,12 +73,12 @@ class App extends React.Component {
                         <Route exact path="/warehouse" component={WarehouseList}/>
                         <Route exact path="/warehouse/details/:magId" component={WarehouseDetails}/>
                         <ProtectedRoute exact={true} exact path="/warehouse/add" component={WarehouseForm}/>
-                        <ProtectedRouteWarehouse exact={true} exact path="/warehouse/edit/:magId" component={WarehouseForm}/>
+                        <ProtectedRoute exact={true} exact path="/warehouse/edit/:magId" component={WarehouseForm}/>
 
                         <Route exact path="/conditionInWarehouse" component={ConditionInWarehouseList}/>
                         <Route exact path="/conditionInWarehouse/details/:swmId" component={ConditionInWarehouseDetails}/>
                         <ProtectedRoute exact={true} exact path="/conditionInWarehouse/add" component={ConditionInWarehouseForm}/>
-                        <ProtectedRouteConditionInWarehouse exact={true} exact path="/conditionInWarehouse/edit/:swmId" component={ConditionInWarehouseForm}/>
+                        <ProtectedRoute exact={true} exact path="/conditionInWarehouse/edit/:swmId" component={ConditionInWarehouseForm}/>
                     </Switch>
                     <Footer/>
                 </div>

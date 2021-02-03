@@ -7,7 +7,7 @@ import { getWarehouseByIdApiCall, addWarehouseApiCall, updateWarehouseApiCall } 
 import FormInput from "../form/FormInput";
 import FormButtons from "../form/FormButtons";
 import { withTranslation } from 'react-i18next';
-import { getCurrentUser } from "../../helpers/authHelper";
+import {getCurrentUser, isCreatorOrAdmin} from "../../helpers/authHelper";
 
 class WarehouseForm extends React.Component {
     constructor(props) {
@@ -178,58 +178,64 @@ class WarehouseForm extends React.Component {
     }
 
     render() {
-        const { redirect } = this.state;
-        const { t } = this.props;
-        if (redirect) {
-            const currentFormMode = this.state.formMode;
-            const notice = currentFormMode === formMode.NEW ? t('mag.form.add.confirm.text') : t('mag.form.add.confirm.text');
+        if (!isCreatorOrAdmin(this.state.mag.User_Id_User) && this.state.isLoaded) {
             return (
-                <Redirect to={{
-                    pathname: "/warehouse/",
-                    state: {
-                        notice: notice
-                    }
-                }} />
+                <Redirect to="/warehouse" />
             )
-        };
+        } else {
+            const { redirect } = this.state;
+            const { t } = this.props;
+            if (redirect) {
+                const currentFormMode = this.state.formMode;
+                const notice = currentFormMode === formMode.NEW ? t('mag.form.add.confirm.text') : t('mag.form.add.confirm.text');
+                return (
+                    <Redirect to={{
+                        pathname: "/warehouse/",
+                        state: {
+                            notice: notice
+                        }
+                    }} />
+                )
+            };
 
-        const errorsSummary = this.hasErrors() ? t('validationMessage.formErrors') : '';
-        const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : '';
-        const pageTitle = this.state.formMode === formMode.NEW ? t('mag.form.add.pageTitle') : t('mag.form.edit.pageTitle');
-        const globalErrorMessage = errorsSummary || fetchError || this.state.message;
+            const errorsSummary = this.hasErrors() ? t('validationMessage.formErrors') : '';
+            const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : '';
+            const pageTitle = this.state.formMode === formMode.NEW ? t('mag.form.add.pageTitle') : t('mag.form.edit.pageTitle');
+            const globalErrorMessage = errorsSummary || fetchError || this.state.message;
 
-        return (
-            <main>
-                <h2>{pageTitle}</h2>
-                <form className="form" onSubmit={this.handleSubmit}>
-                    <FormInput
-                        type="text"
-                        label={t('mag.form.fields.Nazwa')}
-                        required
-                        error={this.state.errors.Nazwa}
-                        name="Nazwa"
-                        placeholder={t('mag.form.placeholders.Nazwa')}
-                        onChange={this.handleChange}
-                        value={this.state.mag.Nazwa}
-                    />
-                    <FormInput
-                        type="text"
-                        label={t('mag.form.fields.Adres')}
-                        required
-                        error={this.state.errors.Adres}
-                        name="Adres"
-                        placeholder={t('mag.form.placeholders.Adres')}
-                        onChange={this.handleChange}
-                        value={this.state.mag.Adres}
-                    />
-                    <FormButtons
-                        formMode={this.state.formMode}
-                        error={globalErrorMessage}
-                        cancelPath="/warehouse"
-                    />
-                </form>
-            </main >
-        )
+            return (
+                <main>
+                    <h2>{pageTitle}</h2>
+                    <form className="form" onSubmit={this.handleSubmit}>
+                        <FormInput
+                            type="text"
+                            label={t('mag.form.fields.Nazwa')}
+                            required
+                            error={this.state.errors.Nazwa}
+                            name="Nazwa"
+                            placeholder={t('mag.form.placeholders.Nazwa')}
+                            onChange={this.handleChange}
+                            value={this.state.mag.Nazwa}
+                        />
+                        <FormInput
+                            type="text"
+                            label={t('mag.form.fields.Adres')}
+                            required
+                            error={this.state.errors.Adres}
+                            name="Adres"
+                            placeholder={t('mag.form.placeholders.Adres')}
+                            onChange={this.handleChange}
+                            value={this.state.mag.Adres}
+                        />
+                        <FormButtons
+                            formMode={this.state.formMode}
+                            error={globalErrorMessage}
+                            cancelPath="/warehouse"
+                        />
+                    </form>
+                </main >
+            )
+        }
     }
 };
 

@@ -3,19 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="e60da138-cdae-4456-954e-9924a37402c9" name="Default Changelist" comment="dodane role, które są funkcjonalne">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/AuthAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/AuthAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/KsiazkaAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/KsiazkaAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/MagazynAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/MagazynAPI.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/StanWMagazynieAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/StanWMagazynieAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/MagazynApiRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/MagazynApiRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/StanWMagazynieApiRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/StanWMagazynieApiRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/book/BookForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/sequelize/UserRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/UserRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/conditionInWarehouse/ConditionInWarehouseForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/conditionInWarehouse/ConditionInWarehouseForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/other/ProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/other/ProtectedRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/form/FormSelectOption.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/form/FormSelectOption.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/other/ProtectedRouteConditionInWarehouse.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/other/ProtectedRouteConditionInWarehouse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/other/ProtectedRouteWarehouse.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/other/ProtectedRouteWarehouse.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/warehouse/WarehouseForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/components/warehouse/WarehouseForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/locales/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/locales/pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tin-react-projekt-s19191/src/locales/pl.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tin-react-projekt-s19191" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -182,14 +179,8 @@
       <workItem from="1612127245869" duration="8387000" />
       <workItem from="1612184240231" duration="1810000" />
       <workItem from="1612206174916" duration="11758000" />
-      <workItem from="1612279043749" duration="13530000" />
-    </task>
-    <task id="LOCAL-00012" summary="dodane repozytoria">
-      <created>1608250390744</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1608250390744</updated>
+      <workItem from="1612279043749" duration="14346000" />
+      <workItem from="1612347852646" duration="2017000" />
     </task>
     <task id="LOCAL-00013" summary="nie dziłają REST API dla tabeli asocjacyjnej">
       <created>1608320061525</created>
@@ -527,7 +518,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611872467549</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="dodane role, które są funkcjonalne">
+      <created>1612304011271</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1612304011271</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

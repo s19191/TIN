@@ -15,7 +15,7 @@ exports.findByEmail = (email) => {
 exports.createUser = (newUserData) => {
     const passHash = authUtil.hashPassword(newUserData.Password);
     return User.create({
-        Role_Id_Role: 1,
+        Role_Id_Role: 2,
         Name: newUserData.Name,
         Surname: newUserData.Surname,
         Email: newUserData.Email,
