@@ -147,10 +147,9 @@ class WarehouseForm extends React.Component {
                         },
                         (error) => {
                             this.setState({ error });
-                        }
-                    )
-            }
-        }
+                        });
+            };
+        };
     };
 
     validateForm = () => {
@@ -235,8 +234,8 @@ class WarehouseForm extends React.Component {
                     </form>
                 </main >
             )
-        }
-    }
+        };
+    };
 };
 
 export default withTranslation()(withRouter(WarehouseForm));

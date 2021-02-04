@@ -9,6 +9,7 @@ function Footer() {
         const user = getCurrentUser();
         who = user.Name + " " + user.Surname + t('footer.role') + user.Role;
     };
+
     return (
         <footer>
             {isAuthenticated()&&
@@ -20,6 +21,6 @@ function Footer() {
             <p>{t('footer.author')}Jan, Kwasowski, s19191</p>
         </footer>
     )
-}
+};
 
 export default Footer;

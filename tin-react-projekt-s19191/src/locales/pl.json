@@ -17,6 +17,7 @@
     "email": "Email",
     "password": "Hasło",
     "loginError": "Nieprawidłowy adres email lub hasło",
+    "loading": "Ładowanie formularza logowania...",
     "actions": {
       "logIn": "Zaloguj się",
       "logOut": "Wyloguj się"

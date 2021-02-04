@@ -15,7 +15,7 @@ function ConditionInWarehouseListTableRaw(props) {
     let editButton,
         deleteButton;
     if(isAuthenticated() && isAble) {
-        editButton = <li><Link to={`conditionInWarehouse/edit/${swm.Id_StanWMagazynie}`} className="list-actions-button-edit">{t('list.actions.edit')}</Link></li>;
+        editButton = <li><Link to={`/conditionInWarehouse/edit/${swm.Id_StanWMagazynie}`} className="list-actions-button-edit">{t('list.actions.edit')}</Link></li>;
         deleteButton = <li><Link to={`/conditionInWarehouse`} onClick={() => {
             deleteConditionInWarehouseApiCall(swm.Id_StanWMagazynie)
                 .then(() =>
@@ -33,7 +33,7 @@ function ConditionInWarehouseListTableRaw(props) {
             <td>{swm.CenaDetaliczna}</td>
             <td>
                 <ul className="list-actions">
-                    <li><Link to={`conditionInWarehouse/details/${swm.Id_StanWMagazynie}`} className="list-actions-button-details">{t('list.actions.details')}</Link></li>
+                    <li><Link to={`/conditionInWarehouse/details/${swm.Id_StanWMagazynie}`} className="list-actions-button-details">{t('list.actions.details')}</Link></li>
                     {editButton}
                     {deleteButton}
                 </ul>

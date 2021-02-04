@@ -55,7 +55,7 @@ class WarehouseList extends React.Component {
             <main>
                 <h2>{t('mag.list.pageTitle')}</h2>
                 {content}
-                {isAuthenticated() &&
+                {(isAuthenticated() && isLoaded) &&
                 <p><Link to="/warehouse/add" className="button-add">{t('mag.list.addNew')}</Link></p>
                 }
             </main>

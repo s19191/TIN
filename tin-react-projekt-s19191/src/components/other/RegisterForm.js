@@ -11,7 +11,6 @@ class RegisterForm extends React.Component {
     constructor(props) {
         super(props);
         const paramsKsId = props.match.params.ksId;
-
         this.state = {
             ksId: paramsKsId,
             user: {
@@ -43,7 +42,7 @@ class RegisterForm extends React.Component {
         this.setState({
             user: user,
             errors: errors
-        })
+        });
     };
 
     validateField = (fieldName, fieldValue) => {
@@ -84,8 +83,7 @@ class RegisterForm extends React.Component {
         const isValid = this.validateForm();
         if (isValid) {
             const user = this.state.user;
-            let
-                promise,
+            let promise,
                 response;
                 promise = addUserApiCall(user);
             if (promise) {

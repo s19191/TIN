@@ -278,8 +278,7 @@ class ConditionsInWarehouseForm extends React.Component {
                         }
                     }}/>
                 )
-            }
-            ;
+            };
 
             const errorsSummary = this.hasErrors() ? t('validationMessage.formErrors') : '';
             const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : '';
@@ -355,8 +354,8 @@ class ConditionsInWarehouseForm extends React.Component {
                     <p className="success">{this.state.notice}</p>
                 </main>
             )
-        }
-    }
+        };
+    };
 };
 
 export default withTranslation()(withRouter(ConditionsInWarehouseForm));

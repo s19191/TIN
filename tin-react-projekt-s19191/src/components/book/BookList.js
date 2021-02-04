@@ -57,7 +57,7 @@ class BookList extends React.Component {
             <main>
                 <h2>{t('ks.list.pageTitle')}</h2>
                 {content}
-                {isAuthenticated() &&
+                {(isAuthenticated() && isLoaded) &&
                 <p><Link to="/book/add" className="button-add">{t('ks.list.addNew')}</Link></p>
                 }
             </main>

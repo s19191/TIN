@@ -170,11 +170,9 @@ class BookForm extends React.Component {
                         (error) => {
                             this.setState({ error })
                             console.log(error)
-                        }
-                    )
-            }
-
-        }
+                        });
+            };
+        };
     };
 
     validateForm = () => {

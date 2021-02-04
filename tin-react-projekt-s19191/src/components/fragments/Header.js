@@ -9,6 +9,6 @@ function Header() {
             <img src="/img/logo.jpg" alt="Księgarnia Dobra Książka Logo" />
         </header>
     )
-}
+};
 
 export default Header;

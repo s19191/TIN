@@ -45,7 +45,7 @@ class ConditionInWarehouseDetails extends React.Component {
                         isLoaded: true,
                         error
                     })
-                })
+                });
     };
 
     render() {

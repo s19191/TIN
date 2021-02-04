@@ -9,7 +9,8 @@ class Navigation extends React.Component {
         i18n.changeLanguage(language, (err, t) => {
             if (err) return console.log('something went wrong loading', err);
         });
-    }
+    };
+
     render() {
         const { t } = this.props;
         const loginLogoutLink = isAuthenticated() ? <button onClick={this.props.handleLogout}>{t('authentication.actions.logOut')}</button> : <Link to="/login">{t('authentication.actions.logIn')}</Link>;
@@ -34,7 +35,7 @@ class Navigation extends React.Component {
                 </ul>
             </nav>
         )
-    }
+    };
 };
 
 export default withTranslation()(Navigation);

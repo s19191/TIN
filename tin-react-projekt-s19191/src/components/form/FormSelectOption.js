@@ -29,7 +29,7 @@ function FormSelectOption(props) {
         return (
             <span></span>
         )
-    }
+    };
 };
 
 export default FormSelectOption;

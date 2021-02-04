@@ -17,6 +17,7 @@
     "email": "Email",
     "password": "Password",
     "loginError": "Invalid email address or password",
+    "loading": "Loading login form ...",
     "actions": {
       "logIn": "Sign In",
       "logOut": "Log out"

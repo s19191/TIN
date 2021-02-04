@@ -1,7 +1,7 @@
 import React from 'react';
 import {Redirect, Route} from 'react-router-dom';
-import {isAuthenticated, isCreatorOrAdmin} from '../../helpers/authHelper';
-import {getBookByIdApiCall} from "../../apiCalls/bookApiCalls";
+import { isAuthenticated, isCreatorOrAdmin } from '../../helpers/authHelper';
+import { getBookByIdApiCall } from "../../apiCalls/bookApiCalls";
 
 //Nie używane
 
@@ -27,6 +27,6 @@ function ProtectedRouteBook({ component: Component, ...rest }) {
             }
         />
     );
-}
+};
 
 export default ProtectedRouteBook;

@@ -55,7 +55,7 @@ class ConditionInWarehouseList extends React.Component {
             <main>
                 <h2>{t('swm.list.pageTitle')}</h2>
                 {content}
-                {isAuthenticated() &&
+                {(isAuthenticated() && isLoaded) &&
                 <p><Link to="/conditionInWarehouse/add" className="button-add">{t('swm.list.addNew')}</Link></p>
                 }
             </main>

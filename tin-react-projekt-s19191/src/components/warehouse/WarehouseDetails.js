@@ -46,7 +46,7 @@ class WarehouseDetails extends React.Component {
                         isLoaded: true,
                         error
                     })
-                })
+                });
     };
 
     render() {

@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 function BookListTable(props) {
     const books = props.booksList;
     const { t } = useTranslation();
+
     return (
         <table className="table-list" >
             <thead>

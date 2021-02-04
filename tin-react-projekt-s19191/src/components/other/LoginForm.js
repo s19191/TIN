@@ -37,7 +37,7 @@ class LoginForm extends React.Component {
         this.setState({
             user: user,
             errors: errors
-        })
+        });
     };
 
     validateField = (fieldName, fieldValue) => {
@@ -84,7 +84,7 @@ class LoginForm extends React.Component {
                             isLoaded: true,
                             error
                         })
-                    })
+                    });
         };
     };
 
