@@ -7,7 +7,7 @@ import { getWarehouseByIdApiCall, addWarehouseApiCall, updateWarehouseApiCall } 
 import FormInput from "../form/FormInput";
 import FormButtons from "../form/FormButtons";
 import { withTranslation } from 'react-i18next';
-import {getCurrentUser, isCreatorOrAdmin} from "../../helpers/authHelper";
+import { getCurrentUser, isCreatorOrAdmin } from "../../helpers/authHelper";
 
 class WarehouseForm extends React.Component {
     constructor(props) {
@@ -30,7 +30,8 @@ class WarehouseForm extends React.Component {
             },
             formMode: currentFormMode,
             redirect: false,
-            error: null
+            error: null,
+            isLoaded: false
         };
     };
 
@@ -182,7 +183,7 @@ class WarehouseForm extends React.Component {
                 <Redirect to="/warehouse" />
             )
         } else {
-            const { redirect } = this.state;
+            const { redirect, isLoaded } = this.state;
             const { t } = this.props;
             if (redirect) {
                 const currentFormMode = this.state.formMode;
@@ -202,38 +203,47 @@ class WarehouseForm extends React.Component {
             const pageTitle = this.state.formMode === formMode.NEW ? t('mag.form.add.pageTitle') : t('mag.form.edit.pageTitle');
             const globalErrorMessage = errorsSummary || fetchError || this.state.message;
 
-            return (
-                <main>
-                    <h2>{pageTitle}</h2>
-                    <form className="form" onSubmit={this.handleSubmit}>
-                        <FormInput
-                            type="text"
-                            label={t('mag.form.fields.Nazwa')}
-                            required
-                            error={this.state.errors.Nazwa}
-                            name="Nazwa"
-                            placeholder={t('mag.form.placeholders.Nazwa')}
-                            onChange={this.handleChange}
-                            value={this.state.mag.Nazwa}
-                        />
-                        <FormInput
-                            type="text"
-                            label={t('mag.form.fields.Adres')}
-                            required
-                            error={this.state.errors.Adres}
-                            name="Adres"
-                            placeholder={t('mag.form.placeholders.Adres')}
-                            onChange={this.handleChange}
-                            value={this.state.mag.Adres}
-                        />
-                        <FormButtons
-                            formMode={this.state.formMode}
-                            error={globalErrorMessage}
-                            cancelPath="/warehouse"
-                        />
-                    </form>
-                </main >
-            )
+            const pattern = /Magazyn with id: \d+ not found/;
+            if (isLoaded && this.state.formMode === formMode.EDIT && pattern.test(globalErrorMessage)){
+                return (
+                    <main>
+                        <p>{globalErrorMessage}</p>
+                    </main>
+                )
+            } else {
+                return (
+                    <main>
+                        <h2>{pageTitle}</h2>
+                        <form className="form" onSubmit={this.handleSubmit}>
+                            <FormInput
+                                type="text"
+                                label={t('mag.form.fields.Nazwa')}
+                                required
+                                error={this.state.errors.Nazwa}
+                                name="Nazwa"
+                                placeholder={t('mag.form.placeholders.Nazwa')}
+                                onChange={this.handleChange}
+                                value={this.state.mag.Nazwa}
+                            />
+                            <FormInput
+                                type="text"
+                                label={t('mag.form.fields.Adres')}
+                                required
+                                error={this.state.errors.Adres}
+                                name="Adres"
+                                placeholder={t('mag.form.placeholders.Adres')}
+                                onChange={this.handleChange}
+                                value={this.state.mag.Adres}
+                            />
+                            <FormButtons
+                                formMode={this.state.formMode}
+                                error={globalErrorMessage}
+                                cancelPath="/warehouse"
+                            />
+                        </form>
+                    </main>
+                )
+            }
         };
     };
 };

@@ -10,7 +10,7 @@ import FormSelect from "../form/FormSelect";
 import { withTranslation } from 'react-i18next';
 import { getBooksApiCall } from "../../apiCalls/bookApiCalls";
 import { getWarehousesApiCall } from "../../apiCalls/warehouseApiCalls";
-import {getCurrentUser, isCreatorOrAdmin} from "../../helpers/authHelper";
+import { getCurrentUser, isCreatorOrAdmin } from "../../helpers/authHelper";
 
 class ConditionsInWarehouseForm extends React.Component {
     constructor(props) {
@@ -43,7 +43,8 @@ class ConditionsInWarehouseForm extends React.Component {
             redirect: false,
             error: null,
             allKs: [],
-            allMag: []
+            allMag: [],
+            isLoaded: false
         };
     };
 
@@ -265,7 +266,7 @@ class ConditionsInWarehouseForm extends React.Component {
                 <Redirect to="/conditionInWarehouse" />
             )
         } else {
-            const {redirect} = this.state;
+            const { redirect, isLoaded } = this.state;
             const {t} = this.props;
             if (redirect) {
                 const currentFormMode = this.state.formMode;
@@ -285,75 +286,84 @@ class ConditionsInWarehouseForm extends React.Component {
             const pageTitle = this.state.formMode === formMode.NEW ? t('swm.form.add.pageTitle') : t('swm.form.edit.pageTitle');
             const globalErrorMessage = errorsSummary || fetchError || this.state.message;
 
-            return (
-                <main>
-                    <h2>{pageTitle}</h2>
-                    <form className="form" onSubmit={this.handleSubmit}>
-                        <FormSelect
-                            label={t('swm.form.fields.Ksiazka.label')}
-                            select={t('swm.form.fields.Ksiazka.select')}
-                            required
-                            error={this.state.errors.Ksiazka_Id_Ksiazka}
-                            name="Ksiazka_Id_Ksiazka"
-                            onChange={this.handleChange}
-                            value={this.state.swm.Ksiazka_Id_Ksiazka}
-                            list={this.state.allKs}
-                            id={this.state.swm.Ksiazka_Id_Ksiazka}
-                        />
-                        <FormSelect
-                            label={t('swm.form.fields.Magazyn.label')}
-                            select={t('swm.form.fields.Magazyn.select')}
-                            required
-                            error={this.state.errors.Magazyn_Id_Magazyn}
-                            name="Magazyn_Id_Magazyn"
-                            onChange={this.handleChange}
-                            value={this.state.swm.Magazyn_Id_Magazyn}
-                            list={this.state.allMag}
-                            id={this.state.swm.Magazyn_Id_Magazyn}
-                        />
-                        <FormInput
-                            type="number"
-                            label={t('swm.form.fields.IloscNaStanie')}
-                            required
-                            error={this.state.errors.IloscNaStanie}
-                            name="IloscNaStanie"
-                            onChange={this.handleChange}
-                            value={this.state.swm.IloscNaStanie}
-                        />
-                        <FormInput
-                            type="number"
-                            label={t('swm.form.fields.CenaHurtowa')}
-                            error={this.state.errors.CenaHurtowa}
-                            name="CenaHurtowa"
-                            onChange={this.handleChange}
-                            value={this.state.swm.CenaHurtowa}
-                        />
-                        <FormInput
-                            type="number"
-                            label={t('swm.form.fields.MinimalnaIloscDoCenyHurtowej')}
-                            error={this.state.errors.MinimalnaIloscDoCenyHurtowej}
-                            name="MinimalnaIloscDoCenyHurtowej"
-                            onChange={this.handleChange}
-                            value={this.state.swm.MinimalnaIloscDoCenyHurtowej}
-                        />
-                        <FormInput
-                            type="number"
-                            label={t('swm.form.fields.CenaDetaliczna')}
-                            required
-                            error={this.state.errors.CenaDetaliczna}
-                            name="CenaDetaliczna"
-                            onChange={this.handleChange}
-                            value={this.state.swm.CenaDetaliczna}
-                        />
-                        <FormButtons
-                            formMode={this.state.formMode}
-                            error={globalErrorMessage}
-                            cancelPath="/conditionInWarehouse"
-                        />
-                    </form>
-                    <p className="success">{this.state.notice}</p>
-                </main>
-            )
+            const pattern = /Stan w magazynie with Id_StanWMagazynie: \d+ not found/;
+            if (isLoaded && this.state.formMode === formMode.EDIT && pattern.test(globalErrorMessage)){
+                return (
+                    <main>
+                        <p>{globalErrorMessage}</p>
+                    </main>
+                )
+            } else {
+                return (
+                    <main>
+                        <h2>{pageTitle}</h2>
+                        <form className="form" onSubmit={this.handleSubmit}>
+                            <FormSelect
+                                label={t('swm.form.fields.Ksiazka.label')}
+                                select={t('swm.form.fields.Ksiazka.select')}
+                                required
+                                error={this.state.errors.Ksiazka_Id_Ksiazka}
+                                name="Ksiazka_Id_Ksiazka"
+                                onChange={this.handleChange}
+                                value={this.state.swm.Ksiazka_Id_Ksiazka}
+                                list={this.state.allKs}
+                                id={this.state.swm.Ksiazka_Id_Ksiazka}
+                            />
+                            <FormSelect
+                                label={t('swm.form.fields.Magazyn.label')}
+                                select={t('swm.form.fields.Magazyn.select')}
+                                required
+                                error={this.state.errors.Magazyn_Id_Magazyn}
+                                name="Magazyn_Id_Magazyn"
+                                onChange={this.handleChange}
+                                value={this.state.swm.Magazyn_Id_Magazyn}
+                                list={this.state.allMag}
+                                id={this.state.swm.Magazyn_Id_Magazyn}
+                            />
+                            <FormInput
+                                type="number"
+                                label={t('swm.form.fields.IloscNaStanie')}
+                                required
+                                error={this.state.errors.IloscNaStanie}
+                                name="IloscNaStanie"
+                                onChange={this.handleChange}
+                                value={this.state.swm.IloscNaStanie}
+                            />
+                            <FormInput
+                                type="number"
+                                label={t('swm.form.fields.CenaHurtowa')}
+                                error={this.state.errors.CenaHurtowa}
+                                name="CenaHurtowa"
+                                onChange={this.handleChange}
+                                value={this.state.swm.CenaHurtowa}
+                            />
+                            <FormInput
+                                type="number"
+                                label={t('swm.form.fields.MinimalnaIloscDoCenyHurtowej')}
+                                error={this.state.errors.MinimalnaIloscDoCenyHurtowej}
+                                name="MinimalnaIloscDoCenyHurtowej"
+                                onChange={this.handleChange}
+                                value={this.state.swm.MinimalnaIloscDoCenyHurtowej}
+                            />
+                            <FormInput
+                                type="number"
+                                label={t('swm.form.fields.CenaDetaliczna')}
+                                required
+                                error={this.state.errors.CenaDetaliczna}
+                                name="CenaDetaliczna"
+                                onChange={this.handleChange}
+                                value={this.state.swm.CenaDetaliczna}
+                            />
+                            <FormButtons
+                                formMode={this.state.formMode}
+                                error={globalErrorMessage}
+                                cancelPath="/conditionInWarehouse"
+                            />
+                        </form>
+                        <p className="success">{this.state.notice}</p>
+                    </main>
+                )
+            }
         };
     };
 };

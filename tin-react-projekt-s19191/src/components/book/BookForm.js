@@ -33,7 +33,8 @@ class BookForm extends React.Component {
             },
             formMode: currentFormMode,
             redirect: false,
-            error: null
+            error: null,
+            isLoaded: false
         };
     };
 
@@ -200,7 +201,7 @@ class BookForm extends React.Component {
     };
 
     render() {
-        const { redirect } = this.state;
+        const { redirect, isLoaded } = this.state;
         const { t } = this.props;
         if (redirect) {
             const currentFormMode = this.state.formMode;
@@ -214,55 +215,63 @@ class BookForm extends React.Component {
                 }} />
             )
         };
-
         const errorsSummary = this.hasErrors() ? t('validationMessage.formErrors') : '';
         const fetchError = this.state.error ? t('errors.error') + `${this.state.error.message}` : '';
         const pageTitle = this.state.formMode === formMode.NEW ? t('ks.form.add.pageTitle') : t('ks.form.edit.pageTitle');
         const globalErrorMessage = errorsSummary || fetchError || this.state.message;
 
-        return (
-            <main>
-                <h2>{pageTitle}</h2>
-                <form className="form" onSubmit={this.handleSubmit}>
-                    <FormInput
-                        type="text"
-                        label={t('ks.form.fields.Tytul')}
-                        required
-                        error={this.state.errors.Tytul}
-                        name="Tytul"
-                        placeholder={t('ks.form.placeholders.Tytul')}
-                        onChange={this.handleChange}
-                        value={this.state.ks.Tytul}
-                    />
-                    <FormInput
-                        type="text"
-                        label={t('ks.form.fields.Autor')}
-                        required
-                        error={this.state.errors.Autor}
-                        name="Autor"
-                        placeholder={t('ks.form.placeholders.Autor')}
-                        onChange={this.handleChange}
-                        value={this.state.ks.Autor}
-                    />
-                    <FormInput
-                        type="date"
-                        label={t('ks.form.fields.DataWydania')}
-                        required
-                        error={this.state.errors.DataWydania}
-                        name="DataWydania"
-                        placeholder={t('ks.form.placeholders.DataWydania')}
-                        onChange={this.handleChange}
-                        value={this.state.ks.DataWydania ? getFormattedDate(this.state.ks.DataWydania) : ""}
-                    />
-                    <FormButtons
-                        formMode={this.state.formMode}
-                        error={globalErrorMessage}
-                        cancelPath="/book"
-                    />
-                </form>
-                <p className="success">{this.state.notice}</p>
-            </main >
-        )
+        const pattern = /Ksiazka with id: \d+ not found/;
+        if (isLoaded && this.state.formMode === formMode.EDIT && pattern.test(globalErrorMessage)){
+            return (
+                <main>
+                    <p>{globalErrorMessage}</p>
+                </main>
+            )
+        } else {
+            return (
+                <main>
+                    <h2>{pageTitle}</h2>
+                    <form className="form" onSubmit={this.handleSubmit}>
+                        <FormInput
+                            type="text"
+                            label={t('ks.form.fields.Tytul')}
+                            required
+                            error={this.state.errors.Tytul}
+                            name="Tytul"
+                            placeholder={t('ks.form.placeholders.Tytul')}
+                            onChange={this.handleChange}
+                            value={this.state.ks.Tytul}
+                        />
+                        <FormInput
+                            type="text"
+                            label={t('ks.form.fields.Autor')}
+                            required
+                            error={this.state.errors.Autor}
+                            name="Autor"
+                            placeholder={t('ks.form.placeholders.Autor')}
+                            onChange={this.handleChange}
+                            value={this.state.ks.Autor}
+                        />
+                        <FormInput
+                            type="date"
+                            label={t('ks.form.fields.DataWydania')}
+                            required
+                            error={this.state.errors.DataWydania}
+                            name="DataWydania"
+                            placeholder={t('ks.form.placeholders.DataWydania')}
+                            onChange={this.handleChange}
+                            value={this.state.ks.DataWydania ? getFormattedDate(this.state.ks.DataWydania) : ""}
+                        />
+                        <FormButtons
+                            formMode={this.state.formMode}
+                            error={globalErrorMessage}
+                            cancelPath="/book"
+                        />
+                    </form>
+                    <p className="success">{this.state.notice}</p>
+                </main>
+            )
+        }
     };
 };
 
