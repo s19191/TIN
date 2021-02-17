@@ -4,6 +4,9 @@
     <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
 <!--    <form class="form" method="post" action="<%=formAction%>" novalidate>-->
         <input type="hidden" name="Id_Magazyn" value="<%= mag.Id_Magazyn %>">
+        <% if(loggedUser) { %>
+        <input type="hidden" name="User_Id_User" value="<%= loggedUser.Id_User %>">
+        <% } %>
         <label for="Nazwa"><%= __('mag.form.fields.Nazwa') %><abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="Nazwa" placeholder="<%= __('mag.form.placeholders.Nazwa') %>" id="Nazwa" value="<%= mag.Nazwa %>"
                 <%= (formMode == 'showDetails') ? 'disabled' : '' %>
@@ -42,8 +45,10 @@
         <span id="errorMessage-between2and60"><%= __('validationMessage.Between2and60') %></span>
         <span id="errorMessage-correctAdress"><%= __('validationMessage.CorrectAdress') %></span>
     </div>
-    <% if (formMode == 'showDetails') { %>
-        <p><a href="/magazyn/edit/<%= mag.Id_Magazyn %>" class="list-actions-button-edit"><%= __('form.actions.edit') %></a></p>
+    <% if (formMode == 'showDetails' && loggedUser) { %>
+        <% if (mag.user.Id_User == loggedUser.Id_User || loggedUser.role.Name == 'Admin') { %>
+            <p><a href="/magazyn/edit/<%= mag.Id_Magazyn %>" class="list-actions-button-edit"><%= __('form.actions.edit') %></a></p>
+        <% } %>
     <% } %>
     <% if (formMode == 'showDetails' || formMode == 'edit' || formMode == 'editErrors') { %>
         <h2><%= __('mag.form.details.subtitle') %></h2>
@@ -62,8 +67,8 @@
                 <tr>
                     <td><a href="/ksiazka/details/<%= m.ksiazka.Id_Ksiazka %>"><%= m.ksiazka.Tytul %></a></td>
                     <td><%= m.IloscNaStanie %></td>
-                    <td><%= m.CenaHurtowa %></td>
-                    <td><%= m.MinimalnaIloscDoCenyHurtowej %></td>
+                    <td><%= m.CenaHurtowa ? m.CenaHurtowa : 0 %></td>
+                    <td><%= m.MinimalnaIloscDoCenyHurtowej ? m.MinimalnaIloscDoCenyHurtowej : 0 %></td>
                     <td><%= m.CenaDetaliczna %></td>
                 </tr>
             <% } %>

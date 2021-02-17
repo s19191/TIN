@@ -1,0 +1,254 @@
+{
+  "general": {
+    "title": "Księgarnia Dobra Książka"
+  },
+  "main-page": {
+    "title": "Strona główna",
+    "content": "Księgarnia Dobra Księgarnia jest na rynku już 24 lata. Jesteśmy cenioną i renomowaną warszawską księgarnią. Strona pomaga na znajdywanie konkretych pozycji w wpółpracującyh magazynach. Wszystkie ksiażki można zobaczyć w dziale \"Książki\", natomiast w dziale \"Magazyny\" można zobaczyć listę magazynów wraz z ich podstawowymi informacjami. Zakładka \"Stan w magazynach\" pokazuje dostępność książek w wszystkich magazynach. W każdej ze stron można dodawać nowe pozycje, edytować istniejące oraz wyświetlać ich szczegóły."
+  },
+  "footer": {
+    "loggedInInformation": "Jesteś zalogowany jako: ",
+    "loggedOutInformation": "Nie jesteś zalogowany",
+    "author": "Autor: ",
+    "role": ", rola: "
+  },
+  "authentication": {
+    "title": "Logowanie",
+    "email": "Email",
+    "password": "Hasło",
+    "loginError": "Nieprawidłowy adres email lub hasło",
+    "loading": "Ładowanie formularza logowania...",
+    "actions": {
+      "logIn": "Zaloguj się",
+      "logOut": "Wyloguj się"
+    }
+  },
+  "register": {
+    "title": "Zarejestruj się",
+    "fields": {
+      "Name": "Imie",
+      "Surname": "Nazwisko",
+      "Email": "Email",
+      "Password": "Hasło"
+    },
+    "placeholders": {
+      "Name": "2-60 znaków",
+      "Surname": "2-60 znaków",
+      "Email": "np. nazwa@domena.pl",
+      "Password": "2-60 znaków"
+    },
+    "add": {
+      "pageTitle": "Rejestracja użytkownika",
+      "btnLabel": "Zarejestruj się",
+      "confirm": {
+        "header": "Potwierdzenie operacji",
+        "text": "Pomyślnie zarejestrowano użytkownika"
+      }
+    }
+  },
+  "nav": {
+    "main-page": "Strona główna",
+    "ksiazki": "Książki",
+    "magazyny": "Magazyny",
+    "stanyWMgazynach": "Stan w magazynach",
+    "register": "Zarejestruj się"
+  },
+  "list": {
+    "actions": {
+      "title": "Akcje",
+      "details": "Szczegóły",
+      "edit": "Edytuj",
+      "delete": "Usuń"
+    }
+  },
+  "form": {
+    "actions": {
+      "add": "Dodaj",
+      "return": "Powrót",
+      "edit": "Edytuj",
+      "cancel": "Anuluj"
+    }
+  },
+  "errors": {
+    "error": "Błąd: "
+  },
+  "ks": {
+    "list": {
+      "fields": {
+        "Tytul": "Tytuł",
+        "Autor": "Autor",
+        "DataWydania": "Data wydania"
+      },
+      "addNew": "Dodaj nową książkę",
+      "noData": "Brak książek w bazie",
+      "pageTitle": "Lista książek",
+      "loading": "Ładowanie danych książek..."
+    },
+    "details": {
+      "pageTitle": "Szczegóły książki",
+      "subtitle": "Szczegóły stanu książki w magazynach",
+      "loading": "Ładowanie danych książki...",
+      "fields": {
+        "Magazyn": "Nazwa magazynu",
+        "IloscNaStanie": "Ilość na stanie",
+        "CenaHurtowa": "Cena hurtowa",
+        "MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",
+        "CenaDetaliczna": "Cena detaliczna"
+      }
+    },
+    "form": {
+      "fields": {
+        "Tytul": "Tytuł",
+        "Autor": "Autor",
+        "DataWydania": "Data wydania"
+      },
+      "placeholders": {
+        "Tytul": "2-60 znaków",
+        "Autor": "2-60 znaków",
+        "DataWydania": "Data w formacie yyyy-MM-dd"
+      },
+      "add": {
+        "pageTitle": "Dodawanie książki",
+        "btnLabel": "Dodaj książkę",
+        "confirm": {
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie dodano książkę"
+        }
+      },
+      "edit": {
+        "pageTitle": "Edycja książki",
+        "btnLabel": "Zapisz zmiany",
+        "confirm": {
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie zaktualizowano książkę"
+        }
+      },
+      "errors": {
+        "createNewOrEditErrors": "Formularz zawiera błędy"
+      }
+    }
+  },
+  "mag": {
+    "list": {
+      "fields": {
+        "Nazwa": "Nazwa",
+        "Adres": "Adres"
+      },
+      "addNew": "Dodaj nowy magazyn",
+      "noData": "Brak magazynów w bazie",
+      "pageTitle": "Lista magazynów",
+      "loading": "Ładowanie danych magazynów..."
+    },
+    "details": {
+      "pageTitle": "Szczegóły magazynu",
+      "subtitle": "Szczegóły książek znajdujących się w magazynie",
+      "loading": "Ładowanie danych magazynu...",
+      "fields": {
+        "Ksiazka": "Tytuł książki",
+        "IloscNaStanie": "Ilość na stanie",
+        "CenaHurtowa": "Cena hurtowa",
+        "MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",
+        "CenaDetaliczna": "Cena detaliczna"
+      }
+    },
+    "form": {
+      "fields": {
+        "Nazwa": "Nazwa",
+        "Adres": "Adres"
+      },
+      "placeholders": {
+        "Nazwa": "2-60 znaków",
+        "Adres": "np. ul. Gorka 15/67"
+      },
+      "add": {
+        "pageTitle": "Dodawanie magazynu",
+        "btnLabel": "Dodaj magazyn",
+        "confirm": {
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie dodano magazyn"
+        }
+      },
+      "edit": {
+        "pageTitle": "Edycja magazynu",
+        "btnLabel": "Zapisz zmiany",
+        "confirm": {
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie zaktualizowano magazyn"
+        }
+      },
+      "errors": {
+        "createNewOrEditErrors": "Formularz zawiera błędy"
+      }
+    }
+  },
+  "swm": {
+    "list": {
+      "fields": {
+        "Ksiazka": "Książka",
+        "Magazyn": "Magazyn",
+        "IloscNaStanie": "Ilość na stanie",
+        "CenaHurtowa": "Cena hurtowa",
+        "MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",
+        "CenaDetaliczna": "Cena detaliczna"
+      },
+      "addNew": "Dodaj nowy stan książki w konkretnym magazynie",
+      "noData": "Brak stanów książek w magazynach w bazie",
+      "pageTitle": "Lista stanów książek w magazynach",
+      "loading": "Ładowanie danych stnaów książek w magazynach..."
+    },
+    "details": {
+      "pageTitle": "Szczegóły stanu książki w konretnym magazynie",
+      "loading": "Ładowanie danych stanu książki w magazynie..."
+    },
+    "form": {
+      "fields": {
+        "Ksiazka": {
+          "label": "Książka",
+          "select": "-- Wybierz książkę --"
+        },
+        "Magazyn": {
+          "label": "Magazyn",
+          "select": "-- Wybierz magazyn --"
+        },
+        "IloscNaStanie": "Ilość na stanie",
+        "CenaHurtowa": "Cena hurtowa",
+        "MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",
+        "CenaDetaliczna": "Cena detaliczna"
+      },
+      "add": {
+        "pageTitle": "Dodawanie stanu książki w konretnym magazynie",
+        "btnLabel": "Dodaj stan książki w konkretnym magazynie",
+        "confirm": {
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie dodano stan książki w magazynie"
+        }
+      },
+      "edit": {
+        "pageTitle": "Edycja stanu książki w konretnym magazynie",
+        "btnLabel": "Zapisz zmiany",
+        "confirm": {
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie zaktualizowano stan książki w magazynie"
+        }
+      },
+      "errors": {
+        "createNewOrEditErrors": "Formularz zawiera błędy",
+        "idsError": {
+          "ksiazka": "Wybrana książka jest już w tym magazynie!",
+          "magazyn": "W wybranym magazynie jest już ta książka!"
+        }
+      }
+    }
+  },
+  "validationMessage": {
+    "formErrors": "Formularz zawiera błędy",
+    "notEmpty": "Pole jest wymagane",
+    "len_2_60": "Pole powinno zawierać od 2 do 60 znaków",
+    "isDate": "Pole powinno zawierać datę w formacie yyyy-MM-dd (np. 2000-01-01)",
+    "isNotFutureDate": "Data nie może być z przyszłości",
+    "isCorrectAdress": "Pole powinno zawierać adres w formacie np. ul. Gorka 14C",
+    "isNumber": "Pole powinno być liczbą",
+    "isNumberPlus": "Pole powinno być liczbą dodatnią",
+    "isEmail": "Pole powinno zawierać prawidłowy adres email"
+  }
+}

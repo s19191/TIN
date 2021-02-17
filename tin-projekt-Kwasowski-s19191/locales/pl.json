@@ -96,7 +96,7 @@
 		"list": {
 			"fields": {
 				"Nazwa": "Nazwa",
-				"Autor": "Adres"
+				"Adres": "Adres"
 			},
 			"addNew": "Dodaj nowy magazyn",
 			"noData": "Brak magazynów w bazie",
@@ -131,7 +131,7 @@
 				"pageTitle": "Szczegóły magazynu",
 				"subtitle": "Szczegóły książek znajdujących się w magazynie",
 				"fields": {
-					"Ksiazka": "Nazwa książki",
+					"Ksiazka": "Tytuł książki",
 					"IloscNaStanie": "Ilość na stanie",
 					"CenaHurtowa": "Cena hurtowa",
 					"MinimalnaIloscDoCenyHurtowej": "Minimalna ilość zamówienia potrzebna do naliczenia ceny hurowej",

@@ -22,6 +22,7 @@ exports.getKsiazkaById = (Id_Ksiazka) => {
 
 exports.createKsiazka = (newKsiazkaData) => {
     return Ksiazka.create({
+        User_Id_User: newKsiazkaData.User_Id_User,
         Tytul: newKsiazkaData.Tytul,
         Autor: newKsiazkaData.Autor,
         DataWydania: newKsiazkaData.DataWydania
@@ -29,9 +30,6 @@ exports.createKsiazka = (newKsiazkaData) => {
 };
 
 exports.updateKsiazka = (Id_Ksiazka, ksiazkaData) => {
-    const Tytul = ksiazkaData.Tytul;
-    const Autor = ksiazkaData.Autor;
-    const DataWydania = ksiazkaData.DataWydania;
     return Ksiazka.update(ksiazkaData, {where: {Id_Ksiazka: Id_Ksiazka }});
 };
 

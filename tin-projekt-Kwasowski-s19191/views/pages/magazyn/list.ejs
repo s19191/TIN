@@ -5,7 +5,7 @@
         <thead>
         <tr>
             <th><%= __('mag.list.fields.Nazwa') %></th>
-            <th><%= __('mag.list.fields.Autor') %></th>
+            <th><%= __('mag.list.fields.Adres') %></th>
             <th class="list-actions"><%= __('list.actions.title') %></th>
         </tr>
         </thead>
@@ -17,14 +17,24 @@
                 <td>
                     <ul class="list-actions">
                         <li><a href="/magazyn/details/<%=mag.Id_Magazyn%>" class="list-actions-button-details"><%= __('list.actions.details') %></a></li>
-                        <li><a href="/magazyn/edit/<%=mag.Id_Magazyn%>" class="list-actions-button-edit"><%= __('list.actions.edit') %></a></li>
-                        <li><a href="/magazyn/delete/<%=mag.Id_Magazyn%>" class="list-actions-button-delete"><%= __('list.actions.delete') %></a></li>
+                        <% if(loggedUser) { %>
+                            <% if(mag.user.Id_User == loggedUser.Id_User || loggedUser.role.Name == 'Admin') { %>
+                            <li><a href="/magazyn/edit/<%=mag.Id_Magazyn%>" class="list-actions-button-edit"><%= __('list.actions.edit') %></a></li>
+                            <% } %>
+                        <% } %>
+                        <% if(loggedUser) { %>
+                            <% if(mag.user.Id_User == loggedUser.Id_User || loggedUser.role.Name == 'Admin') { %>
+                            <li><a href="/magazyn/delete/<%=mag.Id_Magazyn%>" class="list-actions-button-delete"><%= __('list.actions.delete') %></a></li>
+                            <% } %>
+                        <% } %>
                     </ul>
                 </td>
             </tr>
         <% } %>
         </tbody>
     </table>
+    <% if(loggedUser) { %>
     <p><a href="/magazyn/add" class="button-add"><%= __('mag.list.addNew') %></a></p>
+    <% } %>
 </main>
 <%- include('../../fragments/footer.ejs') %>

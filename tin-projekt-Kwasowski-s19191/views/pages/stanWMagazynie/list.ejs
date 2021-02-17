@@ -25,14 +25,24 @@
                 <td>
                     <ul class="list-actions">
                         <li><a href="/stanWMagazynie/details/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-details"><%= __('list.actions.details') %></a></li>
-                        <li><a href="/stanWMagazynie/edit/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-edit"><%= __('list.actions.edit') %></a></li>
-                        <li><a href="/stanWMagazynie/delete/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-delete"><%= __('list.actions.delete') %></a></li>
+                        <% if(loggedUser) { %>
+                            <% if(swm.user.Id_User == loggedUser.Id_User || loggedUser.role.Name == 'Admin') { %>
+                            <li><a href="/stanWMagazynie/edit/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-edit"><%= __('list.actions.edit') %></a></li>
+                            <% } %>
+                        <% } %>
+                        <% if(loggedUser) { %>
+                            <% if(swm.user.Id_User == loggedUser.Id_User || loggedUser.role.Name == 'Admin') { %>
+                            <li><a href="/stanWMagazynie/delete/<%=swm.Id_StanWMagazynie%>" class="list-actions-button-delete"><%= __('list.actions.delete') %></a></li>
+                            <% } %>
+                        <% } %>
                     </ul>
                 </td>
             </tr>
         <% } %>
         </tbody>
     </table>
+    <% if(loggedUser) { %>
     <p><a href="/stanWMagazynie/add" class="button-add"><%= __('swm.list.addNew') %></a></p>
+    <% } %>
 </main>
 <%- include('../../fragments/footer.ejs') %>
